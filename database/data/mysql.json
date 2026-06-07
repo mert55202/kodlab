@@ -1,0 +1,1222 @@
+[
+  {
+    "order": 1,
+    "title": "Veritabanı Nedir?",
+    "slug": "veritabani-nedir",
+    "content": "<h1>Veritabanı Nedir?</h1><p>Veritabanı, yapılandırılmış verilerin depolandığı, yönetildiği ve sorgulandığı bir sistemdir. Bilgiler tablolar halinde organize edilir.</p>",
+    "video_url": "",
+    "code_example": "-- Veritabanı oluşturma\nCREATE DATABASE okul;\n\n-- Tablo oluşturma\nCREATE TABLE ogrenciler (\n    id INT PRIMARY KEY,\n    ad VARCHAR(50),\n    soyad VARCHAR(50)\n);\n\n-- Veri ekleme\nINSERT INTO ogrenciler VALUES (1, 'Ali', 'Yılmaz');\n\n-- Veri sorgulama\nSELECT * FROM ogrenciler;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html",
+    "quiz": [
+      {
+        "question": "Veritabanı nedir?",
+        "options": [
+          "Bir dosya sistemi",
+          "Yapılandırılmış veri deposu",
+          "Bir programlama dili",
+          "Bir işletim sistemi"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "SQL açılımı nedir?",
+        "options": [
+          "Simple Query Language",
+          "Structured Query Language",
+          "Standard Query Language",
+          "System Query Language"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Veriler tablolarda nasıl saklanır?",
+        "options": [
+          "Dosya olarak",
+          "Satır ve sütunlar halinde",
+          "Liste olarak",
+          "Metin olarak"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Aşağıdakilerden hangisi bir DBMS'dir?",
+        "options": [
+          "HTML",
+          "MySQL",
+          "PHP",
+          "JavaScript"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "İlişkisel veritabanlarında tablolar arası bağlantı nasıl kurulur?",
+        "options": [
+          "Primary key",
+          "Foreign key",
+          "Index",
+          "Unique"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 2,
+    "title": "MySQL Kurulumu",
+    "slug": "mysql-kurulumu",
+    "content": "<h1>MySQL Kurulumu</h1><p>MySQL'i kurmak için XAMPP, WAMP, MAMP gibi hazır paketler kullanılabilir.</p>",
+    "video_url": "",
+    "code_example": "-- MySQL'e bağlanma\nmysql -u root -p\n\n-- Veritabanlarını listele\nSHOW DATABASES;\n\n-- MySQL sürümü\nSELECT VERSION();",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/installing.html",
+    "quiz": [
+      {
+        "question": "MySQL hangi paketle birlikte gelir?",
+        "options": [
+          "Node.js",
+          "XAMPP",
+          "Python",
+          "Docker"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "MySQL'e komut satırından bağlanmak için hangi komut kullanılır?",
+        "options": [
+          "mysql connect",
+          "mysql -u root -p",
+          "mysql login",
+          "mysql start"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Mevcut veritabanlarını hangi komut listeler?",
+        "options": [
+          "LIST DATABASES",
+          "SHOW DATABASES",
+          "GET DATABASES",
+          "DISPLAY DATABASES"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "phpMyAdmin hangi amaçla kullanılır?",
+        "options": [
+          "Kod yazmak",
+          "Veritabanı web arayüzü",
+          "Web sunucusu",
+          "Dosya yönetimi"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "MySQL varsayılan port numarası kaçtır?",
+        "options": [
+          "80",
+          "443",
+          "3306",
+          "8080"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "order": 3,
+    "title": "Veritabanı Oluşturma ve Silme",
+    "slug": "veritabani-olusturma-silme",
+    "content": "<h1>Veritabanı Oluşturma ve Silme</h1><p>CREATE DATABASE ve DROP DATABASE komutları ile veritabanı oluşturulur ve silinir.</p>",
+    "video_url": "",
+    "code_example": "-- Veritabanı oluşturma\nCREATE DATABASE kodlab;\n\n-- Karakter seti ile\nCREATE DATABASE kodlab\nCHARACTER SET utf8mb4\nCOLLATE utf8mb4_unicode_ci;\n\n-- Veritabanını kullanma\nUSE kodlab;\n\n-- Silme\nDROP DATABASE IF EXISTS kodlab_eski;\n\n-- Mevcut DB\nSELECT DATABASE();",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/create-database.html",
+    "quiz": [
+      {
+        "question": "Veritabanı oluşturmak için hangi komut kullanılır?",
+        "options": [
+          "CREATE DATABASE",
+          "NEW DATABASE",
+          "ADD DATABASE",
+          "MAKE DATABASE"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Türkçe karakterler için hangi karakter seti önerilir?",
+        "options": [
+          "latin1",
+          "utf8mb4",
+          "ascii",
+          "utf16"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Aktif veritabanını seçmek için hangi komut kullanılır?",
+        "options": [
+          "SELECT DATABASE",
+          "OPEN DATABASE",
+          "USE DATABASE",
+          "SET DATABASE"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Veritabanını silmek için hangi komut kullanılır?",
+        "options": [
+          "DELETE DATABASE",
+          "REMOVE DATABASE",
+          "DROP DATABASE",
+          "CLEAR DATABASE"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Mevcut aktif veritabanını görmek için hangi fonksiyon kullanılır?",
+        "options": [
+          "DATABASE()",
+          "DB_NAME()",
+          "CURRENT_DB()",
+          "ACTIVE_DB()"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 4,
+    "title": "Tablo Oluşturma (CREATE TABLE, Constraints)",
+    "slug": "tablo-olusturma",
+    "content": "<h1>Tablo Oluşturma (CREATE TABLE)</h1><p>Tablolar verilerin saklandığı yapılardır. Constraints ile kısıtlamalar eklenir.</p>",
+    "video_url": "",
+    "code_example": "CREATE TABLE kullanicilar (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    ad VARCHAR(50) NOT NULL,\n    soyad VARCHAR(50) NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    yas INT CHECK (yas >= 18),\n    maas DECIMAL(10,2) DEFAULT 0.00,\n    aktif BOOLEAN DEFAULT TRUE,\n    kayit_tarihi DATETIME DEFAULT CURRENT_TIMESTAMP\n);\n\nCREATE TABLE siparisler (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    kullanici_id INT,\n    tutar DECIMAL(10,2),\n    FOREIGN KEY (kullanici_id) REFERENCES kullanicilar(id)\n);",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/create-table.html",
+    "quiz": [
+      {
+        "question": "Otomatik artan sayı için hangi özellik kullanılır?",
+        "options": [
+          "AUTO_INCREMENT",
+          "INCREMENT",
+          "SEQUENCE",
+          "AI"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Boş değer kabul etmeyen sütun için hangi kısıtlama kullanılır?",
+        "options": [
+          "UNIQUE",
+          "NOT NULL",
+          "PRIMARY KEY",
+          "CHECK"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Benzersiz değer için hangi kısıtlama kullanılır?",
+        "options": [
+          "PRIMARY KEY",
+          "UNIQUE",
+          "NOT NULL",
+          "DEFAULT"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Tablolar arası ilişki hangi kısıtlama ile kurulur?",
+        "options": [
+          "PRIMARY KEY",
+          "FOREIGN KEY",
+          "INDEX",
+          "UNIQUE"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Varsayılan değer atamak için hangi anahtar kelime kullanılır?",
+        "options": [
+          "DEFAULT",
+          "VALUE",
+          "STANDARD",
+          "INITIAL"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 5,
+    "title": "Veri Ekleme (INSERT)",
+    "slug": "veri-ekleme-insert",
+    "content": "<h1>Veri Ekleme (INSERT)</h1><p>INSERT komutu ile tablolara yeni kayıtlar eklenir.</p>",
+    "video_url": "",
+    "code_example": "-- Temel ekleme\nINSERT INTO kullanicilar (ad, soyad, email, yas)\nVALUES ('Ali', 'Yılmaz', 'ali@example.com', 25);\n\n-- Çoklu ekleme\nINSERT INTO kullanicilar (ad, soyad, email, yas)\nVALUES\n    ('Ayşe', 'Kaya', 'ayse@example.com', 22),\n    ('Mehmet', 'Demir', 'mehmet@example.com', 30);\n\n-- SELECT ile ekleme\nINSERT INTO eski_kullanicilar (ad, soyad, email)\nSELECT ad, soyad, email FROM kullanicilar WHERE yas > 30;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/insert.html",
+    "quiz": [
+      {
+        "question": "Veri eklemek için hangi komut kullanılır?",
+        "options": [
+          "ADD",
+          "INSERT",
+          "CREATE",
+          "UPDATE"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Birden fazla kaydı tek sorguda eklemek için hangi yöntem kullanılır?",
+        "options": [
+          "Ardışık VALUES",
+          "VALUES ile çoklu satır",
+          "INSERT ALL",
+          "MULTIPLE INSERT"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "INSERT ... SELECT ne işe yarar?",
+        "options": [
+          "Veri sorgular",
+          "Veri kopyalar",
+          "Tablo oluşturur",
+          "Veri siler"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "INSERT INTO tablo VALUES (NULL, ...) ifadesinde NULL neyi ifade eder?",
+        "options": [
+          "Hata",
+          "AUTO_INCREMENT sütunu için otomatik değer",
+          "Silinecek",
+          "Boş değer"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "INSERT sorgusunda sütun isimleri belirtilmezse ne olur?",
+        "options": [
+          "Hata alınır",
+          "Tüm sütunlara sırayla değer atanır",
+          "Sadece ilk sütuna eklenir",
+          "Rastgele sütunlara eklenir"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 6,
+    "title": "Veri Okuma (SELECT, WHERE, ORDER BY)",
+    "slug": "veri-okuma-select-where-orderby",
+    "content": "<h1>Veri Okuma (SELECT, WHERE, ORDER BY)</h1><p>SELECT komutu veri sorgulamak için kullanılır.</p>",
+    "video_url": "",
+    "code_example": "-- Tüm kayıtlar\nSELECT * FROM kullanicilar;\n\n-- Belirli sütunlar\nSELECT ad, soyad, email FROM kullanicilar;\n\n-- WHERE ile filtrele\nSELECT * FROM kullanicilar WHERE yas >= 18;\nSELECT * FROM kullanicilar WHERE ad = 'Ali' AND yas > 20;\n\n-- Sıralama\nSELECT * FROM kullanicilar ORDER BY yas DESC;\nSELECT * FROM kullanicilar ORDER BY soyad ASC, ad ASC;\n\n-- DISTINCT\nSELECT DISTINCT sehir FROM kullanicilar;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/select.html",
+    "quiz": [
+      {
+        "question": "Tüm sütunları seçmek için hangi ifade kullanılır?",
+        "options": [
+          "ALL",
+          "*",
+          "EVERY",
+          "TOTAL"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Sorgu sonuçlarını sıralamak için hangi ifade kullanılır?",
+        "options": [
+          "SORT BY",
+          "ORDER BY",
+          "ARRANGE BY",
+          "SEQUENCE BY"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Azalan sıralama için hangi anahtar kelime kullanılır?",
+        "options": [
+          "ASC",
+          "DESC",
+          "DOWN",
+          "DEC"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Benzersiz kayıtları getirmek için hangi anahtar kelime kullanılır?",
+        "options": [
+          "UNIQUE",
+          "DISTINCT",
+          "DIFFERENT",
+          "ONLY"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "WHERE koşulunda AND ile OR arasındaki fark nedir?",
+        "options": [
+          "AND daha hızlıdır",
+          "AND tüm koşullar true olmalı, OR en az biri true olmalı",
+          "OR daha hızlıdır",
+          "Fark yoktur"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 7,
+    "title": "Veri Güncelleme ve Silme (UPDATE, DELETE)",
+    "slug": "veri-guncelleme-silme",
+    "content": "<h1>Veri Güncelleme ve Silme (UPDATE, DELETE)</h1><p>UPDATE ile güncelleme, DELETE ile silme işlemi yapılır. WHERE kullanmazsanız tüm kayıtlar etkilenir.</p>",
+    "video_url": "",
+    "code_example": "-- UPDATE\nUPDATE kullanicilar\nSET email = 'yeni@example.com', yas = 26\nWHERE id = 1;\n\n-- Tüm kayıtları güncelleme (dikkatli!)\nUPDATE kullanicilar SET aktif = FALSE;\n\n-- DELETE\nDELETE FROM kullanicilar WHERE id = 5;\n\n-- Tüm kayıtları silme\nDELETE FROM kullanicilar;\n\n-- TRUNCATE (tabloyu sıfırlar)\nTRUNCATE TABLE kullanicilar;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/update.html",
+    "quiz": [
+      {
+        "question": "UPDATE komutundan sonra hangi anahtar kelime gelir?",
+        "options": [
+          "SET",
+          "VALUES",
+          "CHANGE",
+          "MODIFY"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "DELETE komutunda WHERE kullanılmazsa ne olur?",
+        "options": [
+          "Hata alınır",
+          "Tüm kayıtlar silinir",
+          "Sadece ilk kayıt silinir",
+          "Hiçbir şey olmaz"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "TRUNCATE ile DELETE arasındaki fark nedir?",
+        "options": [
+          "TRUNCATE daha yavaştır",
+          "TRUNCATE tabloyu sıfırlar ve hızlıdır",
+          "DELETE daha güvenlidir",
+          "Fark yoktur"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "UPDATE sorgusunda birden fazla sütun nasıl güncellenir?",
+        "options": [
+          "SET ile virgülle ayrılarak",
+          "Ardışık UPDATE",
+          "SET ile AND kullanarak",
+          "Her sütun için ayrı sorgu"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Silme işlemi öncesi hangi sorgu çalıştırılmalıdır?",
+        "options": [
+          "INSERT",
+          "SELECT ile kontrol",
+          "UPDATE",
+          "ALTER"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 8,
+    "title": "NULL Değerler",
+    "slug": "null-degerler",
+    "content": "<h1>NULL Değerler</h1><p>NULL, bir sütunda değer olmadığını belirtir. Sıfır veya boş string ile karıştırılmamalıdır.</p>",
+    "video_url": "",
+    "code_example": "-- NULL kayıtları bulma\nSELECT * FROM kullanicilar WHERE email IS NULL;\n\n-- NULL olmayan kayıtlar\nSELECT * FROM kullanicilar WHERE email IS NOT NULL;\n\n-- IFNULL kullanımı\nSELECT ad, IFNULL(email, 'E-posta yok') AS email FROM kullanicilar;\n\n-- COALESCE kullanımı\nSELECT ad, COALESCE(telefon, email, 'İletişim bilgisi yok') AS iletisim\nFROM kullanicilar;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/working-with-null.html",
+    "quiz": [
+      {
+        "question": "NULL değerleri kontrol etmek için hangi operatör kullanılır?",
+        "options": [
+          "= NULL",
+          "== NULL",
+          "IS NULL",
+          "EQ NULL"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "NULL olmayan değerleri kontrol eden ifade hangisidir?",
+        "options": [
+          "NOT NULL",
+          "IS NOT NULL",
+          "!= NULL",
+          "<> NULL"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "NULL değer yerine yedek değer döndüren fonksiyon hangisidir?",
+        "options": [
+          "IFNULL()",
+          "NULLIF()",
+          "ISNULL()",
+          "IF()"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "NULL + 5 işleminin sonucu nedir?",
+        "options": [
+          "5",
+          "Hata",
+          "NULL",
+          "0"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Birden çok değer içinden ilk NULL olmayanı döndüren fonksiyon hangisidir?",
+        "options": [
+          "IFNULL()",
+          "COALESCE()",
+          "NULLIF()",
+          "FIRST_NULL()"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 9,
+    "title": "LIMIT ve Alias",
+    "slug": "limit-ve-alias",
+    "content": "<h1>LIMIT ve Alias Kullanımı</h1><p>LIMIT ile kayıt sayısı sınırlanır. Alias ile sütun/tablo geçici isimlendirilir.</p>",
+    "video_url": "",
+    "code_example": "-- LIMIT\nSELECT * FROM kullanicilar LIMIT 5;\n\n-- LIMIT + OFFSET (sayfalama)\nSELECT * FROM kullanicilar LIMIT 10 OFFSET 0;\nSELECT * FROM kullanicilar LIMIT 10 OFFSET 10;\n\n-- Kısa OFFSET kullanımı\nSELECT * FROM kullanicilar LIMIT 10, 10;\n\n-- Sütun alias\nSELECT ad AS isim, email AS 'e-posta' FROM kullanicilar;\n\n-- Tablo alias\nSELECT k.ad, s.tutar\nFROM kullanicilar AS k\nJOIN siparisler AS s ON k.id = s.kullanici_id;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/limit-optimization.html",
+    "quiz": [
+      {
+        "question": "Sorgu sonucunu sınırlamak için hangi ifade kullanılır?",
+        "options": [
+          "LIMIT",
+          "MAX",
+          "COUNT",
+          "TOP"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Sayfalama için LIMIT ile birlikte hangi ifade kullanılır?",
+        "options": [
+          "OFFSET",
+          "PAGE",
+          "SKIP",
+          "START"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Sütuna geçici isim vermek için hangi anahtar kelime kullanılır?",
+        "options": [
+          "ALIAS",
+          "AS",
+          "NAME",
+          "TITLE"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "LIMIT 10 OFFSET 20 ne anlama gelir?",
+        "options": [
+          "10 kayıt getir, 20 atla",
+          "20 kayıt getir, 10 atla",
+          "30 kayıt getir",
+          "10 kayıt atla"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "LIMIT 5, 10 ifadesindeki 5 neyi ifade eder?",
+        "options": [
+          "Getirilecek kayıt sayısı",
+          "Atlanacak kayıt sayısı",
+          "Toplam kayıt",
+          "Başlangıç ID"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 10,
+    "title": "LIKE ve Wildcards",
+    "slug": "like-ve-wildcards",
+    "content": "<h1>LIKE ve Wildcards</h1><p>LIKE operatörü metin sütunlarında desen eşleştirme yapar. % sıfır/çok karakter, _ tek karakter.</p>",
+    "video_url": "",
+    "code_example": "-- %% wildcard\nSELECT * FROM kullanicilar WHERE ad LIKE 'Ali%%';\nSELECT * FROM kullanicilar WHERE ad LIKE '%%can';\nSELECT * FROM kullanicilar WHERE ad LIKE '%%meh%%';\n\n-- _ wildcard (tek karakter)\nSELECT * FROM kullanicilar WHERE ad LIKE 'Ali_';\nSELECT * FROM kullanicilar WHERE ad LIKE '____';\n\n-- NOT LIKE\nSELECT * FROM kullanicilar WHERE ad NOT LIKE '%%a%%';",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/pattern-matching.html",
+    "quiz": [
+      {
+        "question": "LIKE operatöründe % karakteri neyi ifade eder?",
+        "options": [
+          "Tek karakter",
+          "Sıfır veya daha fazla karakter",
+          "Sayısal karakter",
+          "Özel karakter"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "LIKE operatöründe _ karakteri kaç karakteri ifade eder?",
+        "options": [
+          "Sıfır",
+          "Bir",
+          "İki",
+          "Sınırsız"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "'Ali%%' deseni hangi değerlerle eşleşir?",
+        "options": [
+          "Sadece Ali",
+          "Ali ile başlayan tüm değerler",
+          "Ali ile biten tüm değerler",
+          "4 karakterli değerler"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "NOT LIKE ne işe yarar?",
+        "options": [
+          "Desene uyanları getirir",
+          "Desene uymayanları getirir",
+          "Sadece NULL'ları getirir",
+          "Sadece NOT NULL'ları getirir"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Escape karakteri hangi amaçla kullanılır?",
+        "options": [
+          "Özel karakterleri aramak",
+          "Sorguyu hızlandırmak",
+          "İndeks kullanmak",
+          "Tablo birleştirmek"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 11,
+    "title": "IN ve BETWEEN",
+    "slug": "in-ve-between",
+    "content": "<h1>IN ve BETWEEN Operatörleri</h1><p>IN: Liste içinde olma kontrolü. BETWEEN: Aralık kontrolü (sınırlar dahil).</p>",
+    "video_url": "",
+    "code_example": "-- IN kullanımı\nSELECT * FROM kullanicilar WHERE sehir IN ('İstanbul', 'Ankara', 'İzmir');\n\n-- NOT IN\nSELECT * FROM kullanicilar WHERE sehir NOT IN ('İstanbul', 'Ankara');\n\n-- BETWEEN (sayısal)\nSELECT * FROM kullanicilar WHERE yas BETWEEN 18 AND 30;\n\n-- BETWEEN (tarih)\nSELECT * FROM siparisler WHERE siparis_tarihi BETWEEN '2024-01-01' AND '2024-12-31';\n\n-- NOT BETWEEN\nSELECT * FROM urunler WHERE fiyat NOT BETWEEN 100 AND 500;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html",
+    "quiz": [
+      {
+        "question": "IN operatörü ne işe yarar?",
+        "options": [
+          "Aralık kontrolü",
+          "Liste içinde olma kontrolü",
+          "NULL kontrolü",
+          "Desen eşleştirme"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "BETWEEN operatöründe sınırlar dahil midir?",
+        "options": [
+          "Evet",
+          "Hayır",
+          "Sadece başlangıç dahil",
+          "Sadece bitiş dahil"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "WHERE yas NOT BETWEEN 18 AND 30 ne döndürür?",
+        "options": [
+          "18-30 arası",
+          "18-30 dışındakiler",
+          "Sadece 18",
+          "Sadece 30"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "IN operatörü alternatifi hangi operatördür?",
+        "options": [
+          "AND",
+          "OR",
+          "LIKE",
+          "= "
+        ],
+        "correct": 1
+      },
+      {
+        "question": "BETWEEN hangi veri tipleriyle kullanılabilir?",
+        "options": [
+          "Sadece sayı",
+          "Sayı, tarih ve metin",
+          "Sadece tarih",
+          "Sadece metin"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 12,
+    "title": "Aggregate Fonksiyonlar (COUNT, SUM, AVG, MIN, MAX)",
+    "slug": "agrega-fonksiyonlar",
+    "content": "<h1>Aggregate Fonksiyonlar</h1><p>COUNT, SUM, AVG, MIN, MAX gibi fonksiyonlar birden çok satır üzerinde hesaplama yapar.</p>",
+    "video_url": "",
+    "code_example": "-- COUNT\nSELECT COUNT(*) AS toplam_kullanici FROM kullanicilar;\nSELECT COUNT(DISTINCT sehir) AS farkli_sehir FROM kullanicilar;\n\n-- SUM\nSELECT SUM(bakiye) AS toplam_bakiye FROM hesaplar;\n\n-- AVG\nSELECT AVG(yas) AS ortalama_yas FROM kullanicilar;\n\n-- MIN / MAX\nSELECT MIN(yas) AS en_genc, MAX(yas) AS en_yasli FROM kullanicilar;\n\n-- Hepsi bir arada\nSELECT COUNT(*) AS toplam, SUM(tutar) AS toplam_tutar,\nAVG(tutar) AS ortalama_tutar, MIN(tutar) AS en_dusuk,\nMAX(tutar) AS en_yuksek FROM siparisler;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html",
+    "quiz": [
+      {
+        "question": "Satır sayısını döndüren fonksiyon hangisidir?",
+        "options": [
+          "COUNT()",
+          "SUM()",
+          "AVG()",
+          "TOTAL()"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Değerlerin ortalamasını hesaplayan fonksiyon hangisidir?",
+        "options": [
+          "SUM()",
+          "AVG()",
+          "MEAN()",
+          "MEDIAN()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "En büyük değeri döndüren fonksiyon hangisidir?",
+        "options": [
+          "BIG()",
+          "MAX()",
+          "HIGH()",
+          "TOP()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "COUNT(DISTINCT sutun) neyi hesaplar?",
+        "options": [
+          "NULL'lar dahil tüm değerler",
+          "Benzersiz değer sayısı",
+          "Tekrarlayan değer sayısı",
+          "Toplam satır sayısı"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Aggregate fonksiyonlar kaç değer döndürür?",
+        "options": [
+          "Birden çok",
+          "Tek bir değer",
+          "Sınırsız",
+          "NULL"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 13,
+    "title": "GROUP BY ve HAVING",
+    "slug": "group-by-having",
+    "content": "<h1>GROUP BY ve HAVING</h1><p>GROUP BY ile gruplama, HAVING ile gruplanmış verileri filtreleme yapılır.</p>",
+    "video_url": "",
+    "code_example": "-- Şehre göre kullanıcı sayısı\nSELECT sehir, COUNT(*) AS kullanici_sayisi\nFROM kullanicilar\nGROUP BY sehir;\n\n-- HAVING ile filtreleme\nSELECT sehir, COUNT(*) AS kullanici_sayisi\nFROM kullanicilar\nGROUP BY sehir\nHAVING kullanici_sayisi > 5;\n\n-- WHERE + GROUP BY + HAVING\nSELECT sehir, AVG(yas) AS ortalama_yas\nFROM kullanicilar\nWHERE aktif = TRUE\nGROUP BY sehir\nHAVING ortalama_yas > 25\nORDER BY ortalama_yas DESC;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/group-by-modifiers.html",
+    "quiz": [
+      {
+        "question": "Aynı değere sahip satırları gruplamak için hangi ifade kullanılır?",
+        "options": [
+          "GROUP BY",
+          "ORDER BY",
+          "HAVING",
+          "PARTITION BY"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Gruplanmış verileri filtrelemek için hangi ifade kullanılır?",
+        "options": [
+          "WHERE",
+          "HAVING",
+          "FILTER",
+          "LIMIT"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "WHERE ile HAVING arasındaki fark nedir?",
+        "options": [
+          "WHERE gruplamadan önce, HAVING gruplamadan sonra filtreler",
+          "WHERE daha hızlıdır",
+          "HAVING sadece sayılarla çalışır",
+          "Fark yoktur"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "GROUP BY olmadan HAVING kullanılabilir mi?",
+        "options": [
+          "Evet",
+          "Hayır",
+          "Sadece aggregate ile",
+          "Sadece sayılarla"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "GROUP BY ile birlikte SELECT'te hangi tür sütunlar olabilir?",
+        "options": [
+          "Herhangi bir sütun",
+          "GROUP BY'daki sütunlar ve aggregate fonksiyonlar",
+          "Sadece aggregate fonksiyonlar",
+          "Sadece sayısal sütunlar"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 14,
+    "title": "JOIN - INNER/LEFT/RIGHT",
+    "slug": "join-inner-left-right",
+    "content": "<h1>JOIN - INNER, LEFT, RIGHT</h1><p>JOIN ile tablolar birleştirilir. INNER: eşleşenler. LEFT: sol tüm. RIGHT: sağ tüm.</p>",
+    "video_url": "",
+    "code_example": "-- INNER JOIN\nSELECT k.ad, k.soyad, s.tutar, s.siparis_tarihi\nFROM kullanicilar k\nINNER JOIN siparisler s ON k.id = s.kullanici_id;\n\n-- LEFT JOIN\nSELECT k.ad, k.soyad, s.tutar\nFROM kullanicilar k\nLEFT JOIN siparisler s ON k.id = s.kullanici_id;\n\n-- RIGHT JOIN\nSELECT k.ad, k.soyad, s.tutar\nFROM kullanicilar k\nRIGHT JOIN siparisler s ON k.id = s.kullanici_id;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/join.html",
+    "quiz": [
+      {
+        "question": "Her iki tabloda da eşleşen kayıtları döndüren JOIN hangisidir?",
+        "options": [
+          "LEFT JOIN",
+          "RIGHT JOIN",
+          "INNER JOIN",
+          "FULL JOIN"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Sol tablodaki tüm kayıtları döndüren JOIN hangisidir?",
+        "options": [
+          "LEFT JOIN",
+          "RIGHT JOIN",
+          "INNER JOIN",
+          "OUTER JOIN"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "INNER JOIN'de eşleşmeyen kayıtlar ne olur?",
+        "options": [
+          "NULL döner",
+          "Gösterilmez",
+          "Silinir",
+          "Hata verir"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "JOIN işleminde tablo alias kullanımı hangi amaçla yapılır?",
+        "options": [
+          "Güvenlik",
+          "Kodu kısaltmak ve okunabilirlik",
+          "Hız",
+          "Zorunluluk"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Bir kullanıcının hiç siparişi olmasa da listelenmesi için hangi JOIN kullanılır?",
+        "options": [
+          "INNER JOIN",
+          "LEFT JOIN",
+          "RIGHT JOIN",
+          "CROSS JOIN"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 15,
+    "title": "JOIN - Multiple Tables/CROSS",
+    "slug": "join-multiple-cross",
+    "content": "<h1>JOIN - Çoklu Tablo ve CROSS JOIN</h1><p>İkiden fazla tablo JOIN ile birleştirilebilir. CROSS JOIN kartezyen çarpım yapar.</p>",
+    "video_url": "",
+    "code_example": "-- Çoklu JOIN (3 tablo)\nSELECT k.ad, k.soyad, s.tutar, u.urun_adi\nFROM kullanicilar k\nINNER JOIN siparisler s ON k.id = s.kullanici_id\nINNER JOIN siparis_detay sd ON s.id = sd.siparis_id\nINNER JOIN urunler u ON sd.urun_id = u.id;\n\n-- CROSS JOIN\nSELECT k.ad, u.urun_adi\nFROM kullanicilar k\nCROSS JOIN urunler u;\n\n-- SELF JOIN (çalışan - yönetici)\nSELECT c.ad AS calisan, y.ad AS yonetici\nFROM calisanlar c\nLEFT JOIN calisanlar y ON c.yonetici_id = y.id;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/join.html",
+    "quiz": [
+      {
+        "question": "CROSS JOIN ne yapar?",
+        "options": [
+          "Eşleşen kayıtları getirir",
+          "Kartezyen çarpım yapar",
+          "NULL kayıtları getirir",
+          "Sadece sol tabloyu getirir"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Bir tablonun kendisiyle JOIN yapılmasına ne denir?",
+        "options": [
+          "INNER JOIN",
+          "SELF JOIN",
+          "AUTO JOIN",
+          "DUAL JOIN"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Çoklu JOIN'de kaç tablo birleştirilebilir?",
+        "options": [
+          "En fazla 2",
+          "En fazla 5",
+          "Sınırsız",
+          "En fazla 10"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "SELF JOIN için hangi JOIN türü kullanılmalıdır?",
+        "options": [
+          "Sadece INNER",
+          "Herhangi bir JOIN türü",
+          "Sadece LEFT",
+          "Sadece CROSS"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Bir siparişin hangi kullanıcıya ait olduğunu ve hangi ürünleri içerdiğini sorgulamak için kaç JOIN gerekir?",
+        "options": [
+          "1",
+          "2 veya 3",
+          "4",
+          "5"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 16,
+    "title": "Subqueries",
+    "slug": "subqueries",
+    "content": "<h1>Subqueries (Alt Sorgular)</h1><p>Alt sorgu, başka bir SQL sorgusunun içinde yer alan sorgudur. Parantez içinde yazılır.</p>",
+    "video_url": "",
+    "code_example": "-- WHERE ile alt sorgu\nSELECT * FROM siparisler\nWHERE kullanici_id IN (\n    SELECT id FROM kullanicilar WHERE aktif = TRUE\n);\n\n-- Scalar alt sorgu\nSELECT ad, (SELECT COUNT(*) FROM siparisler WHERE kullanici_id = k.id) AS siparis_sayisi\nFROM kullanicilar k;\n\n-- FROM ile alt sorgu\nSELECT sehir, ortalama_yas\nFROM (SELECT sehir, AVG(yas) AS ortalama_yas FROM kullanicilar GROUP BY sehir) AS yas_ort\nWHERE ortalama_yas > 25;\n\n-- EXISTS\nSELECT * FROM kullanicilar k\nWHERE EXISTS (SELECT 1 FROM siparisler WHERE kullanici_id = k.id);",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/subqueries.html",
+    "quiz": [
+      {
+        "question": "Alt sorgu hangi karakterler arasına yazılır?",
+        "options": [
+          "Köşeli parantez []",
+          "Parantez ()",
+          "Süslü parantez {}",
+          "Tırnak \"\""
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Alt sorguda IN operatörü ne zaman kullanılır?",
+        "options": [
+          "Alt sorgu tek değer döndürdüğünde",
+          "Alt sorgu çoklu değer döndürdüğünde",
+          "Her zaman",
+          "Hiçbir zaman"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "EXISTS operatörü neyi kontrol eder?",
+        "options": [
+          "Değer eşitliğini",
+          "Sonuç varlığını",
+          "NULL kontrolü",
+          "Sayısal büyüklük"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Scalar alt sorgu kaç değer döndürmelidir?",
+        "options": [
+          "Birden çok",
+          "Tek bir değer",
+          "Sınırsız",
+          "NULL"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "FROM içinde alt sorgu kullanıldığında alias (AS) zorunlu mudur?",
+        "options": [
+          "Evet",
+          "Hayır",
+          "Sadece bazı durumlarda",
+          "İsteğe bağlı"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 17,
+    "title": "UNION ve UNION ALL",
+    "slug": "union-union-all",
+    "content": "<h1>UNION ve UNION ALL</h1><p>UNION: sorguları birleştirir ve tekrarları kaldırır. UNION ALL: tüm kayıtları gösterir.</p>",
+    "video_url": "",
+    "code_example": "-- UNION\nSELECT ad, soyad, 'Kullanıcı' AS tip FROM kullanicilar\nUNION\nSELECT ad, soyad, 'Yönetici' AS tip FROM yoneticiler\nORDER BY ad;\n\n-- UNION ALL (tekrarları da göster)\nSELECT sehir FROM kullanicilar\nUNION ALL\nSELECT sehir FROM adresler;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/union.html",
+    "quiz": [
+      {
+        "question": "UNION ile UNION ALL arasındaki fark nedir?",
+        "options": [
+          "UNION tekrarları kaldırır, UNION ALL tüm kayıtları gösterir",
+          "UNION daha hızlıdır",
+          "UNION ALL tekrarları kaldırır",
+          "Fark yoktur"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "UNION işleminde SELECT sorguları aynı sayıda ... içermelidir?",
+        "options": [
+          "Satır",
+          "Sütun",
+          "Tablo",
+          "İndeks"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "UNION sorgusunda ORDER BY nereye yazılır?",
+        "options": [
+          "Her SELECT'e ayrı",
+          "Son SELECT'ten sonra",
+          "İlk SELECT'ten önce",
+          "FROM'dan önce"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Hangisi daha hızlıdır?",
+        "options": [
+          "UNION",
+          "UNION ALL",
+          "Aynı hız",
+          "Duruma göre değişir"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "UNION sonucunda tekrarlanan kayıtlar ne olur?",
+        "options": [
+          "Gösterilir",
+          "Silinir",
+          "Tekrarlanır",
+          "Hata verir"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 18,
+    "title": "Indexes ve Performans",
+    "slug": "indexes-performans",
+    "content": "<h1>Indexes ve Performans</h1><p>Index (dizin), sorgulama hızını artırmak için kullanılır. INSERT/UPDATE'ı yavaşlatır, SELECT'i hızlandırır.</p>",
+    "video_url": "",
+    "code_example": "-- Index oluşturma\nCREATE INDEX idx_soyad ON kullanicilar(soyad);\n\n-- Benzersiz index\nCREATE UNIQUE INDEX idx_email ON kullanicilar(email);\n\n-- Çoklu sütun index\nCREATE INDEX idx_ad_soyad ON kullanicilar(ad, soyad);\n\n-- FULLTEXT index\nCREATE FULLTEXT INDEX idx_icerik ON makaleler(baslik, icerik);\n\n-- Index görüntüleme\nSHOW INDEX FROM kullanicilar;\n\n-- Index silme\nDROP INDEX idx_soyad ON kullanicilar;\n\n-- Sorgu planı\nEXPLAIN SELECT * FROM kullanicilar WHERE email = 'ali@example.com';",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/indexes.html",
+    "quiz": [
+      {
+        "question": "Index hangi amaçla kullanılır?",
+        "options": [
+          "Veri depolama",
+          "Sorgu hızlandırma",
+          "Veri silme",
+          "Güvenlik"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Hangi işlemler indeksten etkilenir?",
+        "options": [
+          "INSERT/UPDATE yavaşlar, SELECT hızlanır",
+          "Tüm işlemler hızlanır",
+          "SELECT yavaşlar",
+          "Hiçbir etkisi yoktur"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "EXPLAIN komutu ne işe yarar?",
+        "options": [
+          "Sorguyu çalıştırır",
+          "Sorgu planını gösterir",
+          "İndeks oluşturur",
+          "Tablo oluşturur"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "FULLTEXT index hangi amaçla kullanılır?",
+        "options": [
+          "Sayısal arama",
+          "Metin arama",
+          "Görsel arama",
+          "Ses arama"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Birden çok sütunda indekse ne ad verilir?",
+        "options": [
+          "Simple index",
+          "Composite index",
+          "Multi index",
+          "Double index"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 19,
+    "title": "Normalizasyon (1NF, 2NF, 3NF)",
+    "slug": "normalizasyon",
+    "content": "<h1>Veritabanı Normalizasyonu</h1><p>Normalizasyon, veri tekrarını azaltmak ve bütünlüğü sağlamak için yapılır.</p>",
+    "video_url": "",
+    "code_example": "-- 1NF öncesi (tekrarlayan gruplar)\nCREATE TABLE siparis1nf (\n    id INT PRIMARY KEY,\n    musteri_adi VARCHAR(50),\n    urun1 VARCHAR(50), urun2 VARCHAR(50), urun3 VARCHAR(50)\n);\n\n-- 1NF sonrası (atomik)\nCREATE TABLE siparis (\n    id INT PRIMARY KEY,\n    musteri_adi VARCHAR(50)\n);\nCREATE TABLE siparis_kalem (\n    id INT PRIMARY KEY,\n    siparis_id INT,\n    urun_adi VARCHAR(50),\n    FOREIGN KEY (siparis_id) REFERENCES siparis(id)\n);\n\n-- 3NF\nCREATE TABLE sehir (\n    id INT PRIMARY KEY,\n    sehir_adi VARCHAR(50),\n    ulke VARCHAR(50)\n);",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/normalization.html",
+    "quiz": [
+      {
+        "question": "1NF hangi koşulu sağlamalıdır?",
+        "options": [
+          "Sütunlar atomik olmalı",
+          "Geçişli bağımlılık olmamalı",
+          "Kısmi bağımlılık olmamalı",
+          "Tablolar birleşik olmalı"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "2NF hangi bağımlılığı engeller?",
+        "options": [
+          "Geçişli bağımlılık",
+          "Kısmi bağımlılık",
+          "Fonksiyonel bağımlılık",
+          "Döngüsel bağımlılık"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "3NF hangi bağımlılığı engeller?",
+        "options": [
+          "Kısmi bağımlılık",
+          "Geçişli bağımlılık",
+          "Doğrudan bağımlılık",
+          "Çapraz bağımlılık"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Normalizasyonun amacı nedir?",
+        "options": [
+          "Hız artışı",
+          "Veri tekrarını azaltmak",
+          "Güvenlik",
+          "Depolama artışı"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Bir sütunda virgülle ayrılmış değerler varsa hangi NF ihlal edilir?",
+        "options": [
+          "1NF",
+          "2NF",
+          "3NF",
+          "Tümü"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 20,
+    "title": "Stored Procedures ve Triggers",
+    "slug": "stored-procedures-triggers",
+    "content": "<h1>Stored Procedures ve Triggers</h1><p>Stored Procedure: Veritabanında saklanan hazır sorgular. Trigger: INSERT/UPDATE/DELETE'de otomatik çalışan kod.</p>",
+    "video_url": "",
+    "code_example": "-- Stored Procedure\nDELIMITER $$\nCREATE PROCEDURE kullanici_getir(IN kullanici_id INT)\nBEGIN\n    SELECT * FROM kullanicilar WHERE id = kullanici_id;\nEND$$\nDELIMITER ;\n\n-- Procedure çağırma\nCALL kullanici_getir(1);\n\n-- Trigger\nCREATE TRIGGER kullanici_log\nAFTER INSERT ON kullanicilar\nFOR EACH ROW\nBEGIN\n    INSERT INTO logs(tablo, islem, kayit_id, tarih)\n    VALUES ('kullanicilar', 'INSERT', NEW.id, NOW());\nEND;",
+    "source_ref": "MySQL Documentation: https://dev.mysql.com/doc/refman/8.0/en/stored-procedures.html",
+    "quiz": [
+      {
+        "question": "Stored Procedure çağırmak için hangi komut kullanılır?",
+        "options": [
+          "RUN",
+          "CALL",
+          "EXECUTE",
+          "START"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Trigger hangi olaylarda çalışır?",
+        "options": [
+          "SELECT işlemlerinde",
+          "INSERT, UPDATE, DELETE işlemlerinde",
+          "Tablo oluşturmada",
+          "Index oluşturmada"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "BEFORE trigger ne zaman çalışır?",
+        "options": [
+          "İşlemden sonra",
+          "İşlemden önce",
+          "İşlem sırasında",
+          "İşlem yerine"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Stored Procedure'ün avantajı nedir?",
+        "options": [
+          "Kod tekrarını önler ve performans artışı",
+          "Daha fazla disk alanı",
+          "Daha karmaşık kod",
+          "Daha yavaş sorgu"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Trigger'da NEW anahtar kelimesi neyi ifade eder?",
+        "options": [
+          "Eski kaydı",
+          "Yeni kaydı",
+          "Tabloyu",
+          "Veritabanını"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]

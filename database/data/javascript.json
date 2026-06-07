@@ -1,0 +1,2842 @@
+[
+  {
+    "order": 1,
+    "title": "JavaScript Nedir?",
+    "slug": "javascript-nedir",
+    "content": "<h1>JavaScript Nedir?</h1><p>JavaScript, web sayfalarına etkileşimli özellikler eklemek için kullanılan bir programlama dilidir. Brendan Eich tarafından 1995 yılında geliştirilmiştir.</p><h2>Kullanım Alanları</h2><ul><li><strong>İstemci Taraflı:</strong> Web tarayıcılarında çalışır, DOM manipülasyonu, event handling.</li><li><strong>Sunucu Taraflı:</strong> Node.js ile sunucu uygulamaları.</li><li><strong>Mobil:</strong> React Native ile mobil uygulama.</li></ul><h2>Tarihçe</h2><p>İlk olarak Mocha, sonra LiveScript, en son JavaScript. ECMAScript standardı ile sürümler belirlenir.</p>",
+    "video_url": "https://www.youtube.com/embed/hl7vlYga1xM",
+    "code_example": "console.log('Merhaba, JavaScript!');\n\nlet a = 5, b = 10;\nconsole.log('Toplam:', a + b);\n\nfunction selam(isim) {\n    return 'Merhaba, ' + isim;\n}\nconsole.log(selam('Ali'));",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction",
+    "quiz": [
+      {
+        "question_text": "JavaScript hangi yıl geliştirilmiştir?",
+        "options": {
+          "a": "1990",
+          "b": "1995",
+          "c": "2000",
+          "d": "2005"
+        },
+        "correct_answer": "b",
+        "explanation": "Brendan Eich tarafından 1995'te geliştirilmiştir.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "JavaScript'i kim geliştirmiştir?",
+        "options": {
+          "a": "Tim Berners-Lee",
+          "b": "Brendan Eich",
+          "c": "Linus Torvalds",
+          "d": "Dennis Ritchie"
+        },
+        "correct_answer": "b",
+        "explanation": "Brendan Eich, 1995'te Netscape için.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "JavaScript'in ilk adı nedir?",
+        "options": {
+          "a": "Java",
+          "b": "Mocha",
+          "c": "Script",
+          "d": "WebScript"
+        },
+        "correct_answer": "b",
+        "explanation": "İlk adı Mocha, sonra LiveScript, sonra JavaScript.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "JavaScript hangi ortamlarda çalışır?",
+        "options": {
+          "a": "Sadece tarayıcı",
+          "b": "Sadece sunucu",
+          "c": "Tarayıcı ve sunucu",
+          "d": "Sadece mobil"
+        },
+        "correct_answer": "c",
+        "explanation": "Hem tarayıcıda hem Node.js ile sunucuda.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "ES6 hangi yıl gelmiştir?",
+        "options": {
+          "a": "2014",
+          "b": "2015",
+          "c": "2016",
+          "d": "2017"
+        },
+        "correct_answer": "b",
+        "explanation": "ECMAScript 2015 (ES6).",
+        "source": "MDN Web Docs"
+      }
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Değişkenler (var, let, const)",
+    "slug": "degiskenler-var-let-const",
+    "content": "<h1>Değişkenler: var, let, const</h1><h2>var</h2><p>ES6 öncesi. Fonksiyon kapsamlı, tekrar tanımlanabilir.</p><h2>let</h2><p>ES6 ile gelen blok kapsamlı değişken. Tekrar tanımlanamaz, değer değiştirilebilir.</p><h2>const</h2><p>Sabit. Bir kez atanır. Blok kapsamlı. Referans tiplerinde içerik değiştirilebilir.</p>",
+    "video_url": "",
+    "code_example": "// var\nvar x = 1;\nvar x = 2; // tekrar tanımlanabilir\nconsole.log(x);\n\n// let\nlet y = 5;\ny = 6; // değer değişir\n\n// const\nconst z = 10;\n\n// const obje\nconst k = { ad: 'Ali' };\nk.ad = 'Veli'; // içerik değişir",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let",
+    "quiz": [
+      {
+        "question_text": "Hangi anahtar kelime blok kapsamlı ve değeri değiştirilebilir?",
+        "options": {
+          "a": "var",
+          "b": "let",
+          "c": "const",
+          "d": "static"
+        },
+        "correct_answer": "b",
+        "explanation": "let blok kapsamlı ve değeri değiştirilebilir.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "const özelliği nedir?",
+        "options": {
+          "a": "Değer değişir",
+          "b": "Bir kez atanır",
+          "c": "Globaldir",
+          "d": "Sadece sayı alır"
+        },
+        "correct_answer": "b",
+        "explanation": "const bir kez atanır, tekrar atanamaz.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Hangisi tekrar tanımlanabilir?",
+        "options": {
+          "a": "var",
+          "b": "let",
+          "c": "const",
+          "d": "Hiçbiri"
+        },
+        "correct_answer": "a",
+        "explanation": "var ile tekrar tanımlanabilir.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Hoisting hangisinde olur?",
+        "options": {
+          "a": "Sadece var",
+          "b": "let ve const",
+          "c": "Tümü",
+          "d": "Hiçbiri"
+        },
+        "correct_answer": "a",
+        "explanation": "var hoisting yapar, let/const TDZ'ye sahiptir.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "const objede içerik değişir mi?",
+        "options": {
+          "a": "Evet",
+          "b": "Hayır",
+          "c": "Sadece sayı",
+          "d": "Sadece ekleme"
+        },
+        "correct_answer": "a",
+        "explanation": "const referansı sabit, içeriği değişebilir.",
+        "source": "MDN Web Docs"
+      }
+    ]
+  },
+  {
+    "order": 3,
+    "title": "Veri Tipleri",
+    "slug": "veri-tipleri",
+    "content": "<h1>JavaScript Veri Tipleri</h1><h2>Primitive Tipler</h2><ul><li>String, Number, Boolean, Null, Undefined</li><li>Symbol (ES6), BigInt (ES2020)</li></ul><h2>Referans Tipi</h2><p>Object (obje, dizi, fonksiyon)</p><h2>typeof Operatörü</h2><p>Veri tipini öğrenmek için kullanılır.</p>",
+    "video_url": "https://www.youtube.com/embed/bI0DqW4oZ5E",
+    "code_example": "console.log(typeof 'merhaba'); // string\nconsole.log(typeof 42);        // number\nconsole.log(typeof true);      // boolean\nconsole.log(typeof null);      // object (hata!)\nconsole.log(typeof undefined); // undefined\nconsole.log(typeof Symbol());  // symbol\nconsole.log(typeof 1n);        // bigint\nconsole.log(typeof {});        // object",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures",
+    "quiz": [
+      {
+        "question_text": "typeof null sonucu?",
+        "options": {
+          "a": "'null'",
+          "b": "'undefined'",
+          "c": "'object'",
+          "d": "'boolean'"
+        },
+        "correct_answer": "c",
+        "explanation": "typeof null, bilinen hata ile 'object' döndürür.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Hangisi primitive DEĞİL?",
+        "options": {
+          "a": "String",
+          "b": "Number",
+          "c": "Object",
+          "d": "Boolean"
+        },
+        "correct_answer": "c",
+        "explanation": "Object referans tipidir.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "BigInt ne için?",
+        "options": {
+          "a": "Ondalıklı",
+          "b": "Büyük tam sayı",
+          "c": "Metin",
+          "d": "Mantıksal"
+        },
+        "correct_answer": "b",
+        "explanation": "BigInt büyük tam sayılar içindir.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "typeof [1,2,3]?",
+        "options": {
+          "a": "'array'",
+          "b": "'object'",
+          "c": "'list'",
+          "d": "'number'"
+        },
+        "correct_answer": "b",
+        "explanation": "Diziler objedir, typeof object döndürür.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Symbol özelliği?",
+        "options": {
+          "a": "Değişir",
+          "b": "Benzersizdir",
+          "c": "Sayısal",
+          "d": "String'e dönüşür"
+        },
+        "correct_answer": "b",
+        "explanation": "Symbol her zaman benzersizdir.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 4,
+    "title": "Operatörler",
+    "slug": "operatorler",
+    "content": "<h1>JavaScript Operatörler</h1><h2>Aritmetik</h2><p>+, -, *, /, %, ** (üs), ++, --</p><h2>Atama</h2><p>=, +=, -=, *=, /=</p><h2>Karşılaştırma</h2><p>== (değer), === (değer+tip), !=, !==, >, <, >=, <=</p><h2>Mantıksal</h2><p>&& (ve), || (veya), ! (değil)</p><h2>Ternary</h2><p>kosul ? ifade1 : ifade2</p>",
+    "video_url": "",
+    "code_example": "let a = 10, b = 3;\nconsole.log(a + b); // 13\nconsole.log(a ** b); // 1000\n\nconsole.log(5 == '5');  // true\nconsole.log(5 === '5'); // false\n\nlet y = 20, e = true;\nconsole.log(y >= 18 && e); // true\n\nlet n = 70;\nlet s = n >= 50 ? 'Geçti' : 'Kaldı';\nconsole.log(s); // Geçti",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators",
+    "quiz": [
+      {
+        "question_text": "=== neyi kontrol eder?",
+        "options": {
+          "a": "Değer",
+          "b": "Tip",
+          "c": "Değer ve tip",
+          "d": "Referans"
+        },
+        "correct_answer": "c",
+        "explanation": "=== değer ve tip kontrolü yapar.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "5 == '5' sonucu?",
+        "options": {
+          "a": "true",
+          "b": "false",
+          "c": "Hata",
+          "d": "undefined"
+        },
+        "correct_answer": "a",
+        "explanation": "== tip dönüşümü yaparak karşılaştırır.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Üs alma operatörü?",
+        "options": {
+          "a": "^",
+          "b": "**",
+          "c": "^^",
+          "d": "pow()"
+        },
+        "correct_answer": "b",
+        "explanation": "** ES6 ile gelen üs alma operatörüdür.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Ternary yapısı?",
+        "options": {
+          "a": "ifade ? d : y",
+          "b": "ifade : d ? y",
+          "c": "? ifade : d : y",
+          "d": "d ? ifade : y"
+        },
+        "correct_answer": "a",
+        "explanation": "kosul ? ifade1 : ifade2",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "!true çıktısı?",
+        "options": {
+          "a": "true",
+          "b": "false",
+          "c": "0",
+          "d": "null"
+        },
+        "correct_answer": "b",
+        "explanation": "! tersine çevirir.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 5,
+    "title": "Koşul İfadeleri",
+    "slug": "kosul-ifadeleri",
+    "content": "<h1>Koşul İfadeleri</h1><h2>if - else if - else</h2><p>Koşula göre kod blokları çalıştırır.</p><h2>switch - case</h2><p>Sabit değerlerle karşılaştırma için uygundur.</p>",
+    "video_url": "",
+    "code_example": "let not = 85;\nif (not >= 90) {\n    console.log('AA');\n} else if (not >= 80) {\n    console.log('BA');\n} else {\n    console.log('Kaldı');\n}\n\nlet gun = 3, gunAdi;\nswitch (gun) {\n    case 1: gunAdi='Pzt'; break;\n    case 3: gunAdi='Çarş'; break;\n    default: gunAdi='?';\n}\nconsole.log(gunAdi);",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else",
+    "quiz": [
+      {
+        "question_text": "switch'te her case'den sonra ne kullanılmalı?",
+        "options": {
+          "a": "stop",
+          "b": "break",
+          "c": "exit",
+          "d": "return"
+        },
+        "correct_answer": "b",
+        "explanation": "break ile switch'ten çıkılır.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "switch'te hiçbiri eşleşmezse hangi blok?",
+        "options": {
+          "a": "default",
+          "b": "else",
+          "c": "finally",
+          "d": "catch"
+        },
+        "correct_answer": "a",
+        "explanation": "default hiçbiri eşleşmezse çalışır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Hangisi falsy?",
+        "options": {
+          "a": "'false' str",
+          "b": "[]",
+          "c": "0",
+          "d": "{}"
+        },
+        "correct_answer": "c",
+        "explanation": "0 falsy değerdir.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "break kullanılmazsa ne olur?",
+        "options": {
+          "a": "Hata",
+          "b": "Fall-through",
+          "c": "Default çalışır",
+          "d": "Sonsuz döngü"
+        },
+        "correct_answer": "b",
+        "explanation": "break yoksa sonraki case'ler de çalışır.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Ternary ile if-else farkı?",
+        "options": {
+          "a": "Ternary daha yavaş",
+          "b": "Ternary ifadedir, if-else deyimdir",
+          "c": "Aynı",
+          "d": "Ternary sadece sayı"
+        },
+        "correct_answer": "b",
+        "explanation": "Ternary ifade döndürür, if-else deyimdir.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 6,
+    "title": "Döngüler",
+    "slug": "donguler",
+    "content": "<h1>Döngüler</h1><h2>for</h2><p>Başlangıç, koşul, artış.</p><h2>while</h2><p>Koşul başta kontrol.</p><h2>do...while</h2><p>En az bir kez çalışır.</p><h2>for...of</h2><p>Iterable nesneler için.</p><h2>for...in</h2><p>Obje anahtarları için.</p>",
+    "video_url": "https://www.youtube.com/embed/s9wW2Pp2SM4",
+    "code_example": "// for\nfor (let i = 0; i < 3; i++) { console.log(i); }\n\n// while\nlet s = 0;\nwhile (s < 3) { console.log(s); s++; }\n\n// do...while\nlet j = 0;\ndo { console.log(j); j++; } while (j < 3);\n\n// for...of\nfor (let r of ['Kırmızı','Yeşil']) { console.log(r); }\n\n// for...in\nlet k = {ad:'Ali', yas:25};\nfor (let key in k) { console.log(key, k[key]); }",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+    "quiz": [
+      {
+        "question_text": "En az bir kez çalışan döngü?",
+        "options": {
+          "a": "for",
+          "b": "while",
+          "c": "do...while",
+          "d": "for...of"
+        },
+        "correct_answer": "c",
+        "explanation": "do...while en az bir kez çalışır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "for...of hangilerinde kullanılır?",
+        "options": {
+          "a": "Sadece obje",
+          "b": "Sadece dizi",
+          "c": "Iterable nesneler",
+          "d": "Sadece string"
+        },
+        "correct_answer": "c",
+        "explanation": "for...of tüm iterable'larda kullanılır.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "for...in ne üzerinde dolaşır?",
+        "options": {
+          "a": "Değerler",
+          "b": "Anahtarlar",
+          "c": "Index",
+          "d": "Metotlar"
+        },
+        "correct_answer": "b",
+        "explanation": "for...in anahtarlar üzerinde dolaşır.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "continue ne yapar?",
+        "options": {
+          "a": "Durdurur",
+          "b": "İterasyonu atlar",
+          "c": "Başa sarar",
+          "d": "Hata fırlatır"
+        },
+        "correct_answer": "b",
+        "explanation": "continue mevcut iterasyonu atlar.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "break ne yapar?",
+        "options": {
+          "a": "Döngüyü durdurur",
+          "b": "İterasyonu atlar",
+          "c": "Devam eder",
+          "d": "Hata fırlatır"
+        },
+        "correct_answer": "a",
+        "explanation": "break döngüyü tamamen durdurur.",
+        "source": "MDN Web Docs"
+      }
+    ]
+  },
+  {
+    "order": 7,
+    "title": "Fonksiyonlar - Temel",
+    "slug": "fonksiyonlar-temel",
+    "content": "<h1>Fonksiyonlar - Temel</h1><p>function anahtar kelimesi ile tanımlanır.</p><h2>Parametreler</h2><p>Fonksiyon çağrılırken argüman alır.</p><h2>return</h2><p>Değer döndürür. Yoksa undefined döner.</p>",
+    "video_url": "",
+    "code_example": "function selamla() { console.log('Merhaba'); }\nselamla();\n\nfunction topla(a, b) { return a + b; }\nconsole.log(topla(5, 3)); // 8\n\nfunction tamAd(ad, soyad) {\n    return ad + ' ' + soyad;\n}\nconsole.log(tamAd('Ali','Yılmaz'));",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+    "quiz": [
+      {
+        "question_text": "return yoksa fonksiyon ne döndürür?",
+        "options": {
+          "a": "null",
+          "b": "undefined",
+          "c": "0",
+          "d": "false"
+        },
+        "correct_answer": "b",
+        "explanation": "return yoksa undefined döner.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Fonksiyon anahtar kelimesi?",
+        "options": {
+          "a": "func",
+          "b": "define",
+          "c": "function",
+          "d": "method"
+        },
+        "correct_answer": "c",
+        "explanation": "function anahtar kelimesi kullanılır.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Kaç değer döndürebilir?",
+        "options": {
+          "a": "1",
+          "b": "Sınırsız",
+          "c": "2",
+          "d": "Hiçbiri"
+        },
+        "correct_answer": "a",
+        "explanation": "Bir fonksiyon tek değer döndürebilir.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Parametre-Argüman farkı?",
+        "options": {
+          "a": "Aynı",
+          "b": "Parametre tanımda, argüman çağrıda",
+          "c": "Argüman tanımda",
+          "d": "Fark yok"
+        },
+        "correct_answer": "b",
+        "explanation": "Parametre tanımda, argüman çağrıda kullanılır.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Fonksiyon içinde başka fonksiyon çağrılabilir mi?",
+        "options": {
+          "a": "Evet",
+          "b": "Hayır",
+          "c": "Sadece arrow",
+          "d": "Sadece aynı isimle"
+        },
+        "correct_answer": "a",
+        "explanation": "Fonksiyon içinde başka fonksiyon çağrılabilir.",
+        "source": "MDN Web Docs"
+      }
+    ]
+  },
+  {
+    "order": 8,
+    "title": "Fonksiyonlar - İleri",
+    "slug": "fonksiyonlar-ileri",
+    "content": "<h1>Fonksiyonlar - İleri</h1><h2>Arrow Fonksiyonlar</h2><p>Kısa tanım, kendi this'i yok.</p><h2>Varsayılan Parametre</h2><p>Parametrelere varsayılan değer atanabilir.</p><h2>Rest Parametreler</h2><p>... ile tüm argümanları dizi olarak alır.</p><h2>IIFE</h2><p>Tanımlanır tanımlanmaz çalışır.</p>",
+    "video_url": "https://www.youtube.com/embed/PEC0M4xw_0E",
+    "code_example": "// Arrow\nconst topla = (a,b) => a + b;\nconst kare = x => x * x;\n\n// Varsayılan parametre\nconst selam = (isim='Misafir') => 'Merhaba '+isim;\n\n// Rest\nconst max = (...s) => Math.max(...s);\nconsole.log(max(3,7,2,9)); // 9\n\n// IIFE\n(function() { console.log('Çalıştı!'); })();",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions",
+    "quiz": [
+      {
+        "question_text": "Arrow fonksiyon farkı?",
+        "options": {
+          "a": "Daha yavaş",
+          "b": "Kendi this'i yok",
+          "c": "Parametre alamaz",
+          "d": "Sadece sayı"
+        },
+        "correct_answer": "b",
+        "explanation": "Arrow kendi this'ine sahip değildir.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Rest parametre sembolü?",
+        "options": {
+          "a": "?",
+          "b": "&",
+          "c": "...",
+          "d": "*"
+        },
+        "correct_answer": "c",
+        "explanation": "... ile rest parametre tanımlanır.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "IIFE açılımı?",
+        "options": {
+          "a": "Internal Function Imp",
+          "b": "Immediately Invoked Function Expression",
+          "c": "Inline Function Exec",
+          "d": "Independent Function"
+        },
+        "correct_answer": "b",
+        "explanation": "Immediately Invoked Function Expression",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Varsayılan parametre nasıl?",
+        "options": {
+          "a": "a = 5",
+          "b": "a: 5",
+          "c": "a := 5",
+          "d": "a -> 5"
+        },
+        "correct_answer": "a",
+        "explanation": "function test(a = 5) {}",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Callback nedir?",
+        "options": {
+          "a": "Arrow fonksiyon",
+          "b": "Parametre olarak gönderilen fonksiyon",
+          "c": "Kendi kendini çağıran",
+          "d": "Obje metodu"
+        },
+        "correct_answer": "b",
+        "explanation": "Callback, parametre olarak gönderilen fonksiyondur.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 9,
+    "title": "Diziler (Arrays)",
+    "slug": "diziler-arrays",
+    "content": "<h1>Diziler (Arrays)</h1><p>[] ile oluşturulur. Index 0'dan başlar.</p><h2>Temel Metotlar</h2><ul><li>push() - sona ekle</li><li>pop() - sondan sil</li><li>unshift() - başa ekle</li><li>shift() - baştan sil</li></ul>",
+    "video_url": "",
+    "code_example": "let m = ['Elma','Armut','Muz'];\nconsole.log(m[0]); // Elma\nconsole.log(m.length); // 3\n\nm.push('Kiraz');\nlet s = m.pop();\nconsole.log('Silinen:', s);\n\nm.unshift('Portakal');\nlet b = m.shift();\nconsole.log('Baştan silinen:', b);",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "quiz": [
+      {
+        "question_text": "İlk eleman index?",
+        "options": {
+          "a": "1",
+          "b": "0",
+          "c": "-1",
+          "d": "length-1"
+        },
+        "correct_answer": "b",
+        "explanation": "Index 0'dan başlar.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Başa eleman ekleyen metot?",
+        "options": {
+          "a": "push()",
+          "b": "pop()",
+          "c": "unshift()",
+          "d": "shift()"
+        },
+        "correct_answer": "c",
+        "explanation": "unshift() başa ekler.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "push() ne döndürür?",
+        "options": {
+          "a": "Eklenen",
+          "b": "Yeni uzunluk",
+          "c": "undefined",
+          "d": "true"
+        },
+        "correct_answer": "b",
+        "explanation": "push() yeni uzunluğu döndürür.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "length-1 ne verir?",
+        "options": {
+          "a": "İlk",
+          "b": "Son",
+          "c": "Uzunluk",
+          "d": "Ortanca"
+        },
+        "correct_answer": "b",
+        "explanation": "length-1 son eleman index'idir.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Sondan silen metot?",
+        "options": {
+          "a": "push()",
+          "b": "pop()",
+          "c": "unshift()",
+          "d": "shift()"
+        },
+        "correct_answer": "b",
+        "explanation": "pop() sondan siler.",
+        "source": "W3Schools"
+      }
+    ]
+  },
+  {
+    "order": 10,
+    "title": "Dizi Metotları - 1",
+    "slug": "dizi-metotlari-1",
+    "content": "<h1>Dizi Metotları - 1</h1><h2>map()</h2><p>Her elemanı işler, yeni dizi döndürür.</p><h2>filter()</h2><p>Koşulu sağlayanlarla yeni dizi.</p><h2>forEach()</h2><p>Her eleman için işlem yapar, dizi döndürmez.</p>",
+    "video_url": "",
+    "code_example": "const s = [1,2,3,4,5];\n\nconst kareler = s.map(x => x * x);\nconsole.log(kareler); // [1,4,9,16,25]\n\nconst cift = s.filter(x => x % 2 === 0);\nconsole.log(cift); // [2,4]\n\nlet t = 0;\ns.forEach(x => { t += x; });\nconsole.log('Toplam:', t); // 15",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+    "quiz": [
+      {
+        "question_text": "map() ne döndürür?",
+        "options": {
+          "a": "Orijinal",
+          "b": "Yeni dizi",
+          "c": "undefined",
+          "d": "Boolean"
+        },
+        "correct_answer": "b",
+        "explanation": "map() yeni dizi döndürür.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "filter() ne döndürür?",
+        "options": {
+          "a": "Tümü",
+          "b": "Koşulu sağlayanlar",
+          "c": "İlk 3",
+          "d": "Son 3"
+        },
+        "correct_answer": "b",
+        "explanation": "filter() koşulu sağlayanları döndürür.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "forEach vs map farkı?",
+        "options": {
+          "a": "forEach hızlı",
+          "b": "forEach dizi döndürmez",
+          "c": "Sadece string",
+          "d": "Fark yok"
+        },
+        "correct_answer": "b",
+        "explanation": "forEach dizi döndürmez.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "[1,2,3].map(x=>x*2) çıktısı?",
+        "options": {
+          "a": "[1,2,3]",
+          "b": "[2,4,6]",
+          "c": "6",
+          "d": "undefined"
+        },
+        "correct_answer": "b",
+        "explanation": "Her eleman 2 ile çarpılır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "filter callback ne döndürmeli?",
+        "options": {
+          "a": "Number",
+          "b": "Boolean",
+          "c": "String",
+          "d": "Array"
+        },
+        "correct_answer": "b",
+        "explanation": "filter callback true/false döndürmeli.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 11,
+    "title": "Dizi Metotları - 2",
+    "slug": "dizi-metotlari-2",
+    "content": "<h1>Dizi Metotları - 2</h1><h2>reduce()</h2><p>Diziyi tek değere indirger.</p><h2>find()</h2><p>Koşulu sağlayan ilk eleman.</p><h2>some() / every()</h2><p>some() en az bir, every() tümü.</p><h2>sort()</h2><p>Sıralama yapar. String'e çevirip sıralar.</p>",
+    "video_url": "",
+    "code_example": "const s = [5,2,8,1,9];\n\nconst t = s.reduce((a,b) => a + b, 0);\nconsole.log('Toplam:', t); // 25\n\nconst ilk = s.find(x => x > 5);\nconsole.log('İlk 5ten büyük:', ilk); // 8\n\nconsole.log(s.some(x => x > 10)); // false\nconsole.log(s.every(x => x > 0)); // true\n\ns.sort((a,b) => a - b);\nconsole.log('Sıralı:', s); // [1,2,5,8,9]",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce",
+    "quiz": [
+      {
+        "question_text": "reduce() parametre sayısı?",
+        "options": {
+          "a": "1",
+          "b": "2 (callback, initial)",
+          "c": "3",
+          "d": "Sadece callback"
+        },
+        "correct_answer": "b",
+        "explanation": "reduce() callback ve initial value alır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "find() ne döndürür?",
+        "options": {
+          "a": "Tümü",
+          "b": "İlk eşleşen",
+          "c": "Son eşleşen",
+          "d": "Boolean"
+        },
+        "correct_answer": "b",
+        "explanation": "find() ilk eşleşeni döndürür.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "some vs every farkı?",
+        "options": {
+          "a": "some tümü, every bazı",
+          "b": "some en az bir, every tümü",
+          "c": "some sayısal",
+          "d": "Fark yok"
+        },
+        "correct_answer": "b",
+        "explanation": "some en az bir, every tümü.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "sort varsayılan sıralama?",
+        "options": {
+          "a": "Sayısal",
+          "b": "String/alfabetik",
+          "c": "Rastgele",
+          "d": "Ters"
+        },
+        "correct_answer": "b",
+        "explanation": "sort() string'e çevirip alfabetik sıralar.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "[1,2,3].reduce((a,b)=>a+b) sonucu?",
+        "options": {
+          "a": "3",
+          "b": "6",
+          "c": "123",
+          "d": "undefined"
+        },
+        "correct_answer": "b",
+        "explanation": "1+2+3 = 6",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 12,
+    "title": "Objeler (Objects)",
+    "slug": "objeler-objects",
+    "content": "<h1>Objeler (Objects)</h1><p>Anahtar-değer çiftleri. {} ile oluşturulur.</p><h2>Erişim</h2><p>Nokta (.) veya [] ile.</p><h2>this</h2><p>Metot içinde ait olduğu objeyi referans alır.</p><h2>Object.keys/values/entries</h2>",
+    "video_url": "",
+    "code_example": "const k = {\n    ad: 'Ali',\n    yas: 25,\n    tamAd() { return this.ad; }\n};\nconsole.log(k.ad); // Ali\nconsole.log(k['yas']); // 25\n\nk.meslek = 'Müh';\nconsole.log(k.tamAd());\n\nconsole.log(Object.keys(k));\nconsole.log(Object.values(k));\nconsole.log(Object.entries(k));",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "quiz": [
+      {
+        "question_text": "Obje özelliğine erişim?",
+        "options": {
+          "a": "Sadece nokta",
+          "b": "Sadece []",
+          "c": "Nokta veya []",
+          "d": "Object.get()"
+        },
+        "correct_answer": "c",
+        "explanation": "Nokta veya [] ile erişilir.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Object.keys() ne döndürür?",
+        "options": {
+          "a": "Değerler",
+          "b": "Anahtarlar",
+          "c": "Çiftler",
+          "d": "Uzunluk"
+        },
+        "correct_answer": "b",
+        "explanation": "Object.keys() anahtarları döndürür.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Metotta this neyi ifade eder?",
+        "options": {
+          "a": "Global",
+          "b": "Ait olduğu obje",
+          "c": "Kendisi",
+          "d": "undefined"
+        },
+        "correct_answer": "b",
+        "explanation": "this metoda ait objeyi ifade eder.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "const objeye özellik eklenebilir mi?",
+        "options": {
+          "a": "Hayır",
+          "b": "Evet",
+          "c": "Sadece değişir",
+          "d": "Sadece sayı"
+        },
+        "correct_answer": "b",
+        "explanation": "const obje içeriği değiştirilebilir.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Object.entries() formatı?",
+        "options": {
+          "a": "Anahtarlar",
+          "b": "Değerler",
+          "c": "[key,value] çiftleri",
+          "d": "String"
+        },
+        "correct_answer": "c",
+        "explanation": "[anahtar, değer] çiftleri döndürür.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 13,
+    "title": "JSON",
+    "slug": "json",
+    "content": "<h1>JSON</h1><p>Veri alışverişi için hafif format.</p><h2>JSON.stringify()</h2><p>JS objesi -> JSON string</p><h2>JSON.parse()</h2><p>JSON string -> JS objesi</p>",
+    "video_url": "",
+    "code_example": "const k = { ad: 'Ali', yas: 25 };\n\nconst json = JSON.stringify(k);\nconsole.log(json);\n\nconst pr = JSON.parse(json);\nconsole.log(pr.ad); // Ali\n\n// Hata yönetimi\ntry {\n    JSON.parse('{hata}');\n} catch(e) {\n    console.log('JSON hatası');\n}",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "quiz": [
+      {
+        "question_text": "JSON.stringify() ne yapar?",
+        "options": {
+          "a": "JSON'u objeye çevirir",
+          "b": "JS objesini JSON string'ine çevirir",
+          "c": "JSON okur",
+          "d": "Doğrular"
+        },
+        "correct_answer": "b",
+        "explanation": "JS objesini JSON string'ine çevirir.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "JSON'da anahtarlar nasıl?",
+        "options": {
+          "a": "Tek tırnak",
+          "b": "Çift tırnak",
+          "c": "Tırnaksız",
+          "d": "Backtick"
+        },
+        "correct_answer": "b",
+        "explanation": "JSON anahtarları çift tırnaklıdır.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "JSON.parse() hatası?",
+        "options": {
+          "a": "null",
+          "b": "Geçersiz format",
+          "c": "Boş string",
+          "d": "Sayı"
+        },
+        "correct_answer": "b",
+        "explanation": "Geçersiz JSON'da SyntaxError.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "JSON'da hangisi desteklenmez?",
+        "options": {
+          "a": "String",
+          "b": "Number",
+          "c": "Function",
+          "d": "Boolean"
+        },
+        "correct_answer": "c",
+        "explanation": "JSON fonksiyon desteklemez.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "stringify'da 3. parametre ne işe yarar?",
+        "options": {
+          "a": "Basamak",
+          "b": "Girinti",
+          "c": "Özellik sayısı",
+          "d": "Derinlik"
+        },
+        "correct_answer": "b",
+        "explanation": "3. parametre girinti miktarıdır.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 14,
+    "title": "DOM - Giriş",
+    "slug": "dom-giris",
+    "content": "<h1>DOM - Document Object Model</h1><p>HTML belgesinin programlı temsili.</p><h2>Element Seçme</h2><ul><li>getElementById()</li><li>getElementsByClassName()</li><li>querySelector()</li><li>querySelectorAll()</li></ul>",
+    "video_url": "https://www.youtube.com/embed/0ik6Xz6E8tA",
+    "code_example": "// id ile\nconst baslik = document.getElementById('baslik');\n\n// class ile\nconst kartlar = document.getElementsByClassName('kart');\n\n// querySelector\nconst ilk = document.querySelector('.kart');\n\n// querySelectorAll\nconst tum = document.querySelectorAll('.kart');\ntum.forEach(k => console.log(k.textContent));",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
+    "quiz": [
+      {
+        "question_text": "DOM kök node?",
+        "options": {
+          "a": "<html>",
+          "b": "document",
+          "c": "window",
+          "d": "<body>"
+        },
+        "correct_answer": "b",
+        "explanation": "Kök node document'tir.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "querySelectorAll() ne döndürür?",
+        "options": {
+          "a": "HTMLCollection",
+          "b": "NodeList",
+          "c": "Array",
+          "d": "Object"
+        },
+        "correct_answer": "b",
+        "explanation": "NodeList döndürür.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "getElementById() ile seçim?",
+        "options": {
+          "a": "Class'a göre",
+          "b": "Id'ye göre",
+          "c": "Tag'a göre",
+          "d": "Attribute'a göre"
+        },
+        "correct_answer": "b",
+        "explanation": "Id'ye göre element seçer.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "querySelector() kaç element?",
+        "options": {
+          "a": "Tümü",
+          "b": "İlk eşleşen",
+          "c": "Son eşleşen",
+          "d": "Rastgele"
+        },
+        "correct_answer": "b",
+        "explanation": "İlk eşleşeni döndürür.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "getElementsByClassName() ne döndürür?",
+        "options": {
+          "a": "NodeList",
+          "b": "HTMLCollection",
+          "c": "Array",
+          "d": "Element"
+        },
+        "correct_answer": "b",
+        "explanation": "Canlı HTMLCollection döndürür.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 15,
+    "title": "DOM - Element Manipülasyonu",
+    "slug": "dom-element-manipulasyonu",
+    "content": "<h1>DOM Element Manipülasyonu</h1><h2>innerHTML</h2><p>HTML içerik. Etiketleri işler.</p><h2>textContent</h2><p>Düz metin. Etiketleri işlemez.</p><h2>createElement / appendChild</h2><p>Element oluşturma ve ekleme.</p>",
+    "video_url": "",
+    "code_example": "// innerHTML\ndocument.getElementById('con').innerHTML = '<h2>Başlık</h2>';\n\n// createElement\nconst div = document.createElement('div');\ndiv.textContent = 'Yeni element';\ndocument.body.appendChild(div);\n\n// Silme\nconst el = document.getElementById('sil');\nif (el) el.remove();",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild",
+    "quiz": [
+      {
+        "question_text": "innerHTML vs textContent?",
+        "options": {
+          "a": "innerHTML hızlı",
+          "b": "innerHTML HTML işler, textContent işlemez",
+          "c": "textContent okuma",
+          "d": "Fark yok"
+        },
+        "correct_answer": "b",
+        "explanation": "innerHTML HTML işler.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Yeni element oluşturma metodu?",
+        "options": {
+          "a": "createElement()",
+          "b": "newElement()",
+          "c": "makeElement()",
+          "d": "buildElement()"
+        },
+        "correct_answer": "a",
+        "explanation": "document.createElement()",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "DOM'a ekleme metodu?",
+        "options": {
+          "a": "insertElement()",
+          "b": "addElement()",
+          "c": "appendChild()",
+          "d": "pushElement()"
+        },
+        "correct_answer": "c",
+        "explanation": "appendChild() ekler.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "remove() ne yapar?",
+        "options": {
+          "a": "Temizler",
+          "b": "DOM'dan kaldırır",
+          "c": "Gizler",
+          "d": "Devre dışı"
+        },
+        "correct_answer": "b",
+        "explanation": "remove() DOM'dan kaldırır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Birden çok child eklemek için?",
+        "options": {
+          "a": "appendChild()",
+          "b": "append()",
+          "c": "addChild()",
+          "d": "insertChild()"
+        },
+        "correct_answer": "b",
+        "explanation": "append() birden çok ekler.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 16,
+    "title": "DOM - CSS Sınıfları",
+    "slug": "dom-css-siniflari",
+    "content": "<h1>DOM - CSS Sınıfları</h1><h2>classList</h2><ul><li>add() - ekle</li><li>remove() - kaldır</li><li>toggle() - aç/kapa</li><li>contains() - sorgula</li></ul><h2>style</h2><p>Inline CSS (camelCase)</p>",
+    "video_url": "",
+    "code_example": "const el = document.getElementById('kutum');\nel.classList.add('aktif');\nel.classList.remove('pasif');\nel.classList.toggle('gizli');\nif (el.classList.contains('aktif')) {\n    console.log('Aktif');\n}\n\nel.style.backgroundColor = 'blue';\nel.style.color = 'white';",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList",
+    "quiz": [
+      {
+        "question_text": "toggle() ne yapar?",
+        "options": {
+          "a": "Sadece ekler",
+          "b": "Varsa kaldır yoksa ekle",
+          "c": "Sorgular",
+          "d": "Temizler"
+        },
+        "correct_answer": "b",
+        "explanation": "toggle() açar/kapar.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "contains() ne döndürür?",
+        "options": {
+          "a": "String",
+          "b": "Boolean",
+          "c": "Array",
+          "d": "undefined"
+        },
+        "correct_answer": "b",
+        "explanation": "contains() Boolean döndürür.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "style hangi yazım stili?",
+        "options": {
+          "a": "background-color",
+          "b": "backgroundColor",
+          "c": "background_color",
+          "d": "BackgroundColor"
+        },
+        "correct_answer": "b",
+        "explanation": "camelCase kullanılır.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "add() ile kaç sınıf?",
+        "options": {
+          "a": "1",
+          "b": "3",
+          "c": "Birden fazla",
+          "d": "Sınırsız tek tek"
+        },
+        "correct_answer": "c",
+        "explanation": "add() birden fazla sınıf alabilir.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Tüm sınıfları temizleme?",
+        "options": {
+          "a": "clear()",
+          "b": "remove()",
+          "c": "className=''",
+          "d": "reset()"
+        },
+        "correct_answer": "c",
+        "explanation": "className='' temizler.",
+        "source": "W3Schools"
+      }
+    ]
+  },
+  {
+    "order": 17,
+    "title": "DOM - Eventler",
+    "slug": "dom-eventler",
+    "content": "<h1>DOM Eventler</h1><h2>addEventListener()</h2><p>Olay dinleyicisi ekler.</p><h2>Event Türleri</h2><ul><li>click, mouseover, mouseout</li><li>keydown, keyup</li><li>submit, load, input</li></ul>",
+    "video_url": "https://www.youtube.com/embed/R5B1rruFkko",
+    "code_example": "const btn = document.getElementById('btn');\nbtn.addEventListener('click', () => {\n    console.log('Tıklandı!');\n});\n\ndocument.addEventListener('keydown', (e) => {\n    console.log('Tuş:', e.key);\n});\n\nconst form = document.getElementById('form');\nform.addEventListener('submit', (e) => {\n    e.preventDefault();\n    console.log('Gönderildi');\n});",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+    "quiz": [
+      {
+        "question_text": "Event ekleme metodu?",
+        "options": {
+          "a": "attachEvent()",
+          "b": "addEventListener()",
+          "c": "onEvent()",
+          "d": "bindEvent()"
+        },
+        "correct_answer": "b",
+        "explanation": "addEventListener()",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Tuş olayı hangisi?",
+        "options": {
+          "a": "click",
+          "b": "keydown",
+          "c": "input",
+          "d": "press"
+        },
+        "correct_answer": "b",
+        "explanation": "keydown tuşa basılınca tetiklenir.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "addEventListener parametre sayısı?",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3 (tür, callback, options)",
+          "d": "4"
+        },
+        "correct_answer": "c",
+        "explanation": "3 parametre alır.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "event.target neyi ifade eder?",
+        "options": {
+          "a": "Dinlenen element",
+          "b": "Olayın olduğu element",
+          "c": "Parent",
+          "d": "Document"
+        },
+        "correct_answer": "b",
+        "explanation": "target olayın olduğu element.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Varsayılan davranışı engelleme?",
+        "options": {
+          "a": "stopPropagation()",
+          "b": "preventDefault()",
+          "c": "stopImmediate()",
+          "d": "return false"
+        },
+        "correct_answer": "b",
+        "explanation": "preventDefault() engeller.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 18,
+    "title": "DOM - Event Bubbling ve Delegasyon",
+    "slug": "dom-event-bubbling-delegasyon",
+    "content": "<h1>Event Bubbling ve Delegasyon</h1><h2>Bubbling</h2><p>Olay child'dan parent'a yayılır.</p><h2>Delegasyon</h2><p>Parent'ta tek event ile tüm child'ları yönetme.</p><h2>stopPropagation()</h2><p>Yayılmayı durdurur.</p>",
+    "video_url": "",
+    "code_example": "// Delegasyon\nconst liste = document.getElementById('liste');\nliste.addEventListener('click', (e) => {\n    if (e.target.tagName === 'LI') {\n        console.log('Tıklanan:', e.target.textContent);\n    }\n});\n\n// stopPropagation\nchild.addEventListener('click', (e) => {\n    e.stopPropagation();\n});",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling",
+    "quiz": [
+      {
+        "question_text": "Bubbling yönü?",
+        "options": {
+          "a": "Parent->Child",
+          "b": "Child->Parent",
+          "c": "Aynı seviye",
+          "d": "Rastgele"
+        },
+        "correct_answer": "b",
+        "explanation": "Child'dan parent'a yayılır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Yayılmayı durduran metot?",
+        "options": {
+          "a": "preventDefault()",
+          "b": "stopPropagation()",
+          "c": "stopBubbling()",
+          "d": "cancelBubble()"
+        },
+        "correct_answer": "b",
+        "explanation": "stopPropagation() durdurur.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Delegasyon neden kullanılır?",
+        "options": {
+          "a": "Hız",
+          "b": "Dinamik elementler için",
+          "c": "Mobil için",
+          "d": "CSS için"
+        },
+        "correct_answer": "b",
+        "explanation": "Dinamik elementleri yönetmek için.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Delegasyonda hedef kontrolü?",
+        "options": {
+          "a": "currentTarget",
+          "b": "target",
+          "c": "srcElement",
+          "d": "fromElement"
+        },
+        "correct_answer": "b",
+        "explanation": "event.target ile kontrol.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "addEventListener(true) ne yapar?",
+        "options": {
+          "a": "Capturing",
+          "b": "Bir kere",
+          "c": "Pasif",
+          "d": "Bubbling"
+        },
+        "correct_answer": "a",
+        "explanation": "true capturing, false bubbling.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 19,
+    "title": "String Metotları",
+    "slug": "string-metotlari",
+    "content": "<h1>String Metotları</h1><h2>Temel Metotlar</h2><ul><li>length - uzunluk</li><li>toUpperCase/toLowerCase</li><li>trim() - boşluk temizle</li><li>split() - diziye böl</li><li>includes() - içeriyor mu</li><li>replace() - değiştir</li><li>slice() - kes</li></ul>",
+    "video_url": "",
+    "code_example": "const m = '  Merhaba Dünya!  ';\nconsole.log(m.length);\nconsole.log(m.toUpperCase());\nconsole.log(m.trim());\nconsole.log('elma,armut'.split(','));\nconsole.log(m.includes('Merhaba'));\nconsole.log(m.replace('Dünya','JS'));\nconsole.log(m.trim().slice(0,7)); // 'Merhaba'",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "quiz": [
+      {
+        "question_text": "trim() ne yapar?",
+        "options": {
+          "a": "Tüm boşluk",
+          "b": "Baş/son boşluk",
+          "c": "Sadece baş",
+          "d": "Sadece son"
+        },
+        "correct_answer": "b",
+        "explanation": "Baş ve son boşluğu temizler.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "String'i diziye bölen metot?",
+        "options": {
+          "a": "split()",
+          "b": "divide()",
+          "c": "slice()",
+          "d": "separate()"
+        },
+        "correct_answer": "a",
+        "explanation": "split() diziye böler.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "includes() ne döndürür?",
+        "options": {
+          "a": "Index",
+          "b": "Boolean",
+          "c": "String",
+          "d": "Array"
+        },
+        "correct_answer": "b",
+        "explanation": "includes() Boolean.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "replace() kaçını değiştirir?",
+        "options": {
+          "a": "Tümü",
+          "b": "İlkini",
+          "c": "Hiçbirini",
+          "d": "Rastgele"
+        },
+        "correct_answer": "b",
+        "explanation": "replace() ilkini değiştirir.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "'Merhaba Dünya'.slice(0,7) sonucu?",
+        "options": {
+          "a": "'Merhaba'",
+          "b": "'Merhaba '",
+          "c": "'Merhaba Dü'",
+          "d": "'Merhaba Dünya'"
+        },
+        "correct_answer": "a",
+        "explanation": "0-7 arası (7 hariç) alır.",
+        "source": "W3Schools"
+      }
+    ]
+  },
+  {
+    "order": 20,
+    "title": "Number ve Math",
+    "slug": "number-ve-math",
+    "content": "<h1>Number ve Math</h1><h2>Number Metotları</h2><ul><li>parseInt() - tam sayı</li><li>parseFloat() - ondalıklı</li></ul><h2>Math</h2><ul><li>random() - rastgele</li><li>floor() - aşağı yuvarla</li><li>ceil() - yukarı yuvarla</li><li>round() - en yakın</li><li>max() / min()</li></ul>",
+    "video_url": "",
+    "code_example": "console.log(parseInt('42')); // 42\nconsole.log(parseInt('100px')); // 100\nconsole.log(parseFloat('3.14')); // 3.14\n\nconst r = Math.floor(Math.random() * 10) + 1;\nconsole.log('Rastgele:', r);\n\nconsole.log(Math.floor(3.7)); // 3\nconsole.log(Math.ceil(3.2)); // 4\nconsole.log(Math.round(3.5)); // 4\nconsole.log(Math.max(1,5,3)); // 5",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math",
+    "quiz": [
+      {
+        "question_text": "parseInt('100px')?",
+        "options": {
+          "a": "NaN",
+          "b": "100",
+          "c": "'100px'",
+          "d": "Hata"
+        },
+        "correct_answer": "b",
+        "explanation": "parseInt sayısal kısmı alır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "1-10 rastgele tam sayı?",
+        "options": {
+          "a": "random()*10",
+          "b": "floor(random()*10)+1",
+          "c": "round(random()*10)",
+          "d": "ceil(random()*10)"
+        },
+        "correct_answer": "b",
+        "explanation": "floor(random()*10)+1",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "floor(4.9)?",
+        "options": {
+          "a": "4",
+          "b": "5",
+          "c": "4.9",
+          "d": "5.0"
+        },
+        "correct_answer": "a",
+        "explanation": "floor aşağı yuvarlar.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Math.max() parametre?",
+        "options": {
+          "a": "Dizi",
+          "b": "Virgüllü sayılar",
+          "c": "Obje",
+          "d": "String"
+        },
+        "correct_answer": "b",
+        "explanation": "Math.max() virgüllü sayı alır.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "En yakına yuvarlayan metot?",
+        "options": {
+          "a": "floor()",
+          "b": "ceil()",
+          "c": "round()",
+          "d": "trunc()"
+        },
+        "correct_answer": "c",
+        "explanation": "round() en yakına yuvarlar.",
+        "source": "MDN Web Docs"
+      }
+    ]
+  },
+  {
+    "order": 21,
+    "title": "Tarih ve Saat (Date)",
+    "slug": "tarih-ve-saat-date",
+    "content": "<h1>Date Objesi</h1><h2>Oluşturma</h2><ul><li>new Date() - şimdi</li><li>new Date(yıl, ay, gün)</li></ul><h2>Metotlar</h2><ul><li>getFullYear(), getMonth(), getDate()</li><li>getDay() - 0(Pazar)</li><li>getTime() - timestamp</li><li>toLocaleDateString()</li></ul>",
+    "video_url": "",
+    "code_example": "const simdi = new Date();\nconsole.log('Yıl:', simdi.getFullYear());\nconsole.log('Ay:', simdi.getMonth()+1);\nconsole.log('Gün:', simdi.getDate());\nconsole.log('Gün adı:', simdi.getDay()); // 0=Pazar\n\nconst dogum = new Date(1995, 0, 15);\nconsole.log(dogum.toLocaleDateString('tr-TR'));\n\nconsole.log(Date.now());",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "quiz": [
+      {
+        "question_text": "Aylar kaçtan başlar?",
+        "options": {
+          "a": "1 (Ocak)",
+          "b": "0 (Ocak)",
+          "c": "1 (Şubat)",
+          "d": "Rastgele"
+        },
+        "correct_answer": "b",
+        "explanation": "Aylar 0-indexed.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "getDay() ne döndürür?",
+        "options": {
+          "a": "Ayın günü",
+          "b": "Haftanın günü (0-6)",
+          "c": "Yılın günü",
+          "d": "Saat"
+        },
+        "correct_answer": "b",
+        "explanation": "getDay() 0-6 arası haftanın günü.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Date.now() ne döndürür?",
+        "options": {
+          "a": "Tarih",
+          "b": "Epoch'dan ms",
+          "c": "Saat string",
+          "d": "Yeni Date"
+        },
+        "correct_answer": "b",
+        "explanation": "1 Ocak 1970'den ms.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Hangisi Date oluşturmaz?",
+        "options": {
+          "a": "new Date()",
+          "b": "new Date(2024,0,1)",
+          "c": "Date.create()",
+          "d": "new Date('2024-01-01')"
+        },
+        "correct_answer": "c",
+        "explanation": "Date.create() yoktur.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "İki tarih farkı nasıl?",
+        "options": {
+          "a": "Toplama",
+          "b": "Çıkarma (-)",
+          "c": "dateDiff()",
+          "d": "diff()"
+        },
+        "correct_answer": "b",
+        "explanation": "Çıkarma ile ms farkı.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 22,
+    "title": "Set ve Map",
+    "slug": "set-ve-map",
+    "content": "<h1>Set ve Map</h1><h2>Set</h2><p>Benzersiz değerler koleksiyonu. add, has, delete, size.</p><h2>Map</h2><p>Anahtar-değer. Her tür anahtar olabilir. set, get, has, size.</p><h2>WeakSet/WeakMap</h2><p>Zayıf referans, sadece obje anahtarı.</p>",
+    "video_url": "",
+    "code_example": "// Set\nconst renk = new Set();\nrenk.add('Kırmızı');\nrenk.add('Kırmızı');\nconsole.log(renk.size); // 1\nconsole.log(renk.has('Kırmızı')); // true\n\nconst s = [...new Set([1,2,2,3,3,4])];\nconsole.log(s); // [1,2,3,4]\n\n// Map\nconst m = new Map();\nm.set('ali', {ad:'Ali'});\nm.set(1, 'sayı');\nconsole.log(m.get('ali'));\nconsole.log(m.size); // 2",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "quiz": [
+      {
+        "question_text": "Set ne için?",
+        "options": {
+          "a": "Sıralı depolama",
+          "b": "Benzersiz değerler",
+          "c": "Anahtar-değer",
+          "d": "Sadece string"
+        },
+        "correct_answer": "b",
+        "explanation": "Set benzersiz değerler.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Map vs obje farkı?",
+        "options": {
+          "a": "Map hızlı",
+          "b": "Map her tür anahtar",
+          "c": "Sadece sayısal",
+          "d": "Fark yok"
+        },
+        "correct_answer": "b",
+        "explanation": "Map her tür anahtar kabul eder.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Set'e ekleme metodu?",
+        "options": {
+          "a": "push()",
+          "b": "add()",
+          "c": "set()",
+          "d": "insert()"
+        },
+        "correct_answer": "b",
+        "explanation": "Set'te add()",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "WeakMap farkı?",
+        "options": {
+          "a": "Daha fazla özellik",
+          "b": "Sadece obje anahtarı, zayıf referans",
+          "c": "Hızlı",
+          "d": "Iterable değil"
+        },
+        "correct_answer": "b",
+        "explanation": "WeakMap obje anahtarı, zayıf referans.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Map'te okuma metodu?",
+        "options": {
+          "a": "get()",
+          "b": "read()",
+          "c": "value()",
+          "d": "find()"
+        },
+        "correct_answer": "a",
+        "explanation": "Map'te get()",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 23,
+    "title": "Hata Yönetimi",
+    "slug": "hata-yonetimi",
+    "content": "<h1>Hata Yönetimi</h1><h2>try...catch...finally</h2><ul><li>try - hata olabilecek kod</li><li>catch - hata yakalama</li><li>finally - her durumda çalışır</li></ul><h2>throw</h2><p>Kendi hatamızı fırlatma.</p><h2>Hata Tipleri</h2><p>Error, SyntaxError, ReferenceError, TypeError</p>",
+    "video_url": "",
+    "code_example": "try {\n    let y = -5;\n    if (y < 0) throw new Error('Negatif!');\n    console.log(tanimlanmamis);\n} catch (h) {\n    console.log('Hata:', h.message);\n} finally {\n    console.log('Her zaman çalışır');\n}\n\nclass ValError extends Error {\n    constructor(m, alan) { super(m); this.alan = alan; }\n}\nthrow new ValError('Zorunlu', 'email');",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch",
+    "quiz": [
+      {
+        "question_text": "finally ne zaman çalışır?",
+        "options": {
+          "a": "Sadece hata",
+          "b": "Sadece başarı",
+          "c": "Her durumda",
+          "d": "Hiçbir zaman"
+        },
+        "correct_answer": "c",
+        "explanation": "finally her zaman çalışır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "throw ne işe yarar?",
+        "options": {
+          "a": "Hata yok sayar",
+          "b": "Hata fırlatır",
+          "c": "Günlük tutar",
+          "d": "Düzeltir"
+        },
+        "correct_answer": "b",
+        "explanation": "throw hata fırlatır.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Tanımlanmamış değişken hatası?",
+        "options": {
+          "a": "TypeError",
+          "b": "ReferenceError",
+          "c": "SyntaxError",
+          "d": "RangeError"
+        },
+        "correct_answer": "b",
+        "explanation": "ReferenceError.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "null.toString() hatası?",
+        "options": {
+          "a": "TypeError",
+          "b": "ReferenceError",
+          "c": "SyntaxError",
+          "d": "RangeError"
+        },
+        "correct_answer": "a",
+        "explanation": "TypeError.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Hata mesajı hangi özellik?",
+        "options": {
+          "a": "name",
+          "b": "message",
+          "c": "stack",
+          "d": "code"
+        },
+        "correct_answer": "b",
+        "explanation": "message özelliği.",
+        "source": "W3Schools"
+      }
+    ]
+  },
+  {
+    "order": 24,
+    "title": "ES6+ Özellikler",
+    "slug": "es6-ozellikler",
+    "content": "<h1>ES6+ Özellikler</h1><h2>Destructuring</h2><p>Dizi/obje değerlerini çıkarma.</p><h2>Spread</h2><p>... ile yayma/genişletme.</p><h2>Template Literals</h2><p>`string ${ifade}`</p><h2>Modüller</h2><p>import/export</p>",
+    "video_url": "",
+    "code_example": "// Destructuring dizi\nconst [a,b,...k] = [1,2,3,4,5];\nconsole.log(a,b,k); // 1 2 [3,4,5]\n\n// Destructuring obje\nconst {ad, yas=18} = {ad:'Ali', yas:25};\nconsole.log(ad, yas);\n\n// Spread\nconst d1 = [1,2], d2 = [3,4];\nconsole.log([...d1, ...d2]); // [1,2,3,4]\n\n// Template\nconst i = 'Dünya';\nconsole.log(`Merhaba ${i}!`);",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+    "quiz": [
+      {
+        "question_text": "Dizi destructuring parantezi?",
+        "options": {
+          "a": "{}",
+          "b": "[]",
+          "c": "()",
+          "d": "<>"
+        },
+        "correct_answer": "b",
+        "explanation": "[] kullanılır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Spread ne yapar?",
+        "options": {
+          "a": "Daraltır",
+          "b": "Yayar/genişletir",
+          "c": "Siler",
+          "d": "Ekleme"
+        },
+        "correct_answer": "b",
+        "explanation": "Spread yayar.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Template literal karakteri?",
+        "options": {
+          "a": "' (tek)",
+          "b": "\" (çift)",
+          "c": "` (backtick)",
+          "d": "~"
+        },
+        "correct_answer": "c",
+        "explanation": "Backtick kullanılır.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Rest vs spread?",
+        "options": {
+          "a": "Aynı",
+          "b": "Rest toplar, spread yayar",
+          "c": "Rest yayar",
+          "d": "Sadece dizi"
+        },
+        "correct_answer": "b",
+        "explanation": "Rest toplar, spread yayar.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Obje destructuring'de varsayılan?",
+        "options": {
+          "a": "a=5",
+          "b": "a:5",
+          "c": "a->5",
+          "d": "a:=5"
+        },
+        "correct_answer": "a",
+        "explanation": "= ile varsayılan.",
+        "source": "MDN Web Docs"
+      }
+    ]
+  },
+  {
+    "order": 25,
+    "title": "Callback Fonksiyonlar",
+    "slug": "callback-fonksiyonlar",
+    "content": "<h1>Callback Fonksiyonlar</h1><p>Parametre olarak gönderilen ve işlem bitince çağrılan fonksiyon.</p><h2>Asenkron İşlemler</h2><p>setTimeout, dosya okuma, API çağrıları.</p><h2>Callback Hell</h2><p>İç içe callback'lerin zor okunması.</p>",
+    "video_url": "",
+    "code_example": "function beklet(ms, cb) {\n    setTimeout(() => {\n        console.log(ms + 'ms');\n        cb();\n    }, ms);\n}\nbeklet(500, () => console.log('Bitti'));\n\n// Callback hell\nsetTimeout(() => {\n    console.log(1);\n    setTimeout(() => {\n        console.log(2);\n        setTimeout(() => {\n            console.log(3);\n        }, 500);\n    }, 500);\n}, 500);",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Glossary/Callback_function",
+    "quiz": [
+      {
+        "question_text": "Callback nedir?",
+        "options": {
+          "a": "Arrow",
+          "b": "Parametre olarak gönderilen fonksiyon",
+          "c": "IIFE",
+          "d": "Constructor"
+        },
+        "correct_answer": "b",
+        "explanation": "Callback parametre olarak gönderilir.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Callback hell nedir?",
+        "options": {
+          "a": "Hata",
+          "b": "İç içe callback'ler",
+          "c": "Çalışmayan",
+          "d": "Silinmiş"
+        },
+        "correct_answer": "b",
+        "explanation": "İç içe çok callback.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Hangisi asenkron?",
+        "options": {
+          "a": "String birleştirme",
+          "b": "setTimeout",
+          "c": "Toplama",
+          "d": "Karşılaştırma"
+        },
+        "correct_answer": "b",
+        "explanation": "setTimeout asenkron.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Callback hangi durumda kullanılır?",
+        "options": {
+          "a": "Senkron",
+          "b": "Asenkron",
+          "c": "Döngüler",
+          "d": "DOM"
+        },
+        "correct_answer": "b",
+        "explanation": "Asenkron işlemlerde.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Callback hell çözümü?",
+        "options": {
+          "a": "Daha çok callback",
+          "b": "Promise/async-await",
+          "c": "Döngüler",
+          "d": "try-catch"
+        },
+        "correct_answer": "b",
+        "explanation": "Promise/async-await.",
+        "source": "MDN Web Docs"
+      }
+    ]
+  },
+  {
+    "order": 26,
+    "title": "Promises",
+    "slug": "promises",
+    "content": "<h1>Promises</h1><p>Asenkron işlemin nihai sonucunu temsil eder.</p><h2>Durumlar</h2><ul><li>pending - beklemede</li><li>fulfilled - başarılı</li><li>rejected - başarısız</li></ul><h2>Metotlar</h2><p>.then(), .catch(), .finally(), Promise.all(), Promise.race()</p>",
+    "video_url": "",
+    "code_example": "const p = new Promise((resolve, reject) => {\n    setTimeout(() => resolve('Veri'), 500);\n});\n\np.then(sonuc => {\n    console.log(sonuc);\n    return 'İşlenmiş';\n}).then(i => console.log(i))\n.catch(h => console.log('Hata:', h))\n.finally(() => console.log('Bitti'));\n\nPromise.all([\n    Promise.resolve(1),\n    Promise.resolve(2)\n]).then(console.log); // [1,2]",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "quiz": [
+      {
+        "question_text": "Promise durumları?",
+        "options": {
+          "a": "start/process/end",
+          "b": "pending/fulfilled/rejected",
+          "c": "wait/done/fail",
+          "d": "open/closed/error"
+        },
+        "correct_answer": "b",
+        "explanation": "pending, fulfilled, rejected.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Başarılıda hangisi çalışır?",
+        "options": {
+          "a": "catch()",
+          "b": "then()",
+          "c": "finally()",
+          "d": "error()"
+        },
+        "correct_answer": "b",
+        "explanation": "then() başarılı.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Promise.all() ne döndürür?",
+        "options": {
+          "a": "İlk biten",
+          "b": "Tüm sonuçlar dizi",
+          "c": "Sırayla",
+          "d": "Hata"
+        },
+        "correct_answer": "b",
+        "explanation": "Tüm sonuçlar dizi.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Promise.race()?",
+        "options": {
+          "a": "Tümü",
+          "b": "İlk biten",
+          "c": "En yavaş",
+          "d": "Hatalar"
+        },
+        "correct_answer": "b",
+        "explanation": "İlk bitenin sonucu.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Promise hangi sorunu çözer?",
+        "options": {
+          "a": "DOM",
+          "b": "Callback hell",
+          "c": "Performans",
+          "d": "Güvenlik"
+        },
+        "correct_answer": "b",
+        "explanation": "Callback hell.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 27,
+    "title": "Async/Await",
+    "slug": "async-await",
+    "content": "<h1>Async/Await</h1><p>ES2017. Promise'leri daha okunabilir yapar.</p><h2>async</h2><p>Promise döndüren fonksiyon.</p><h2>await</h2><p>Promise çözülene kadar bekler.</p><h2>Hata Yönetimi</h2><p>try...catch ile.</p>",
+    "video_url": "",
+    "code_example": "function veriGetir() {\n    return Promise.resolve('API verisi');\n}\n\nasync function isle() {\n    try {\n        const veri = await veriGetir();\n        console.log('Veri:', veri);\n        return veri.toUpperCase();\n    } catch (h) {\n        console.log('Hata:', h);\n    }\n}\n\nisle().then(console.log);\n\nasync function paralel() {\n    const s = await Promise.all([\n        veriGetir(), veriGetir()\n    ]);\n    console.log(s);\n}",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+    "quiz": [
+      {
+        "question_text": "async fonksiyon ne döndürür?",
+        "options": {
+          "a": "undefined",
+          "b": "Promise",
+          "c": "null",
+          "d": "Object"
+        },
+        "correct_answer": "b",
+        "explanation": "async her zaman Promise döndürür.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "await nerede kullanılır?",
+        "options": {
+          "a": "Her yerde",
+          "b": "Sadece async içinde",
+          "c": "Normal fonksiyon",
+          "d": "Döngü"
+        },
+        "correct_answer": "b",
+        "explanation": "await async içinde.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "async/await'te hata yönetimi?",
+        "options": {
+          "a": "catch()",
+          "b": "try...catch",
+          "c": "error()",
+          "d": "throw"
+        },
+        "correct_answer": "b",
+        "explanation": "try...catch.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "await ne yapar?",
+        "options": {
+          "a": "Promise oluşturur",
+          "b": "Bekler",
+          "c": "İptal eder",
+          "d": "Hızlandırır"
+        },
+        "correct_answer": "b",
+        "explanation": "Promise çözülene kadar bekler.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Paralel için hangi yapı?",
+        "options": {
+          "a": "Promise.all()",
+          "b": "Promise.race()",
+          "c": "Promise.parallel()",
+          "d": "Promise.every()"
+        },
+        "correct_answer": "a",
+        "explanation": "Promise.all()",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 28,
+    "title": "Fetch API",
+    "slug": "fetch-api",
+    "content": "<h1>Fetch API</h1><p>Ağ istekleri yapmak için modern arayüz.</p><h2>GET</h2><p>Veri almak için.</p><h2>POST</h2><p>method, headers, body belirtilir.</p><h2>Yanıt</h2><p>response.json(), response.ok</p>",
+    "video_url": "",
+    "code_example": "// GET\nfetch('https://api.example.com/data')\n    .then(r => {\n        if (!r.ok) throw Error(r.status);\n        return r.json();\n    })\n    .then(d => console.log(d))\n    .catch(e => console.log(e));\n\n// POST\nfetch('https://api.example.com/data', {\n    method: 'POST',\n    headers: {'Content-Type': 'application/json'},\n    body: JSON.stringify({ad:'Ali'})\n}).then(r => r.json()).then(console.log);",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+    "quiz": [
+      {
+        "question_text": "Fetch ne için?",
+        "options": {
+          "a": "DOM",
+          "b": "Ağ istekleri",
+          "c": "Depolama",
+          "d": "Tarih"
+        },
+        "correct_answer": "b",
+        "explanation": "Fetch ağ istekleri.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "JSON'a çevirme metodu?",
+        "options": {
+          "a": "json()",
+          "b": "parse()",
+          "c": "stringify()",
+          "d": "text()"
+        },
+        "correct_answer": "a",
+        "explanation": "response.json()",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "HTTP hatası kontrol?",
+        "options": {
+          "a": "code",
+          "b": "ok",
+          "c": "success",
+          "d": "error"
+        },
+        "correct_answer": "b",
+        "explanation": "response.ok.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "POST body nasıl?",
+        "options": {
+          "a": "Düz metin",
+          "b": "JSON.stringify()",
+          "c": "XML",
+          "d": "Dosya"
+        },
+        "correct_answer": "b",
+        "explanation": "JSON.stringify() ile.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Fetch avantajı?",
+        "options": {
+          "a": "Yavaş",
+          "b": "Promise tabanlı modern",
+          "c": "Sadece GET",
+          "d": "Eski"
+        },
+        "correct_answer": "b",
+        "explanation": "Promise tabanlı, modern.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 29,
+    "title": "AJAX ve XMLHttpRequest",
+    "slug": "ajax-ve-xmlhttprequest",
+    "content": "<h1>AJAX ve XMLHttpRequest</h1><p>Sayfa yenilemeden sunucudan veri alma.</p><h2>XMLHttpRequest (XHR)</h2><p>readyState, onload, onerror, responseText</p>",
+    "video_url": "",
+    "code_example": "const xhr = new XMLHttpRequest();\nxhr.open('GET', 'https://api.example.com/data', true);\nxhr.onload = function() {\n    if (xhr.status === 200) {\n        console.log(JSON.parse(xhr.responseText));\n    }\n};\nxhr.onerror = function() { console.log('Ağ hatası'); };\nxhr.send();\n\n// POST\nconst x2 = new XMLHttpRequest();\nx2.open('POST', 'https://api.example.com/data', true);\nx2.setRequestHeader('Content-Type', 'application/json');\nx2.send(JSON.stringify({ad:'Ali'}));",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest",
+    "quiz": [
+      {
+        "question_text": "readyState=4 ne demek?",
+        "options": {
+          "a": "Başlatıldı",
+          "b": "Tamamlandı",
+          "c": "Yükleniyor",
+          "d": "Bağlantı"
+        },
+        "correct_answer": "b",
+        "explanation": "İstek tamamlandı.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "AJAX açılımı?",
+        "options": {
+          "a": "Advanced JS And XML",
+          "b": "Asynchronous JavaScript And XML",
+          "c": "Active JS And XML",
+          "d": "Automated JS And XML"
+        },
+        "correct_answer": "b",
+        "explanation": "Asynchronous JavaScript and XML.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "XHR'de gönderme metodu?",
+        "options": {
+          "a": "send()",
+          "b": "dispatch()",
+          "c": "fire()",
+          "d": "execute()"
+        },
+        "correct_answer": "a",
+        "explanation": "send()",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "HTTP metodu belirleme?",
+        "options": {
+          "a": "open()",
+          "b": "config()",
+          "c": "setup()",
+          "d": "prepare()"
+        },
+        "correct_answer": "a",
+        "explanation": "open(method, url, async)",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Header ekleme metodu?",
+        "options": {
+          "a": "setHeader()",
+          "b": "setRequestHeader()",
+          "c": "addHeader()",
+          "d": "header()"
+        },
+        "correct_answer": "b",
+        "explanation": "setRequestHeader()",
+        "source": "W3Schools"
+      }
+    ]
+  },
+  {
+    "order": 30,
+    "title": "localStorage ve sessionStorage",
+    "slug": "localstorage-sessionstorage",
+    "content": "<h1>Web Storage API</h1><h2>localStorage</h2><p>Kalıcı. Tarayıcı kapanınca silinmez.</p><h2>sessionStorage</h2><p>Oturumluk. Sekme kapanınca silinir.</p><h2>Metotlar</h2><p>setItem, getItem, removeItem, clear, length</p>",
+    "video_url": "",
+    "code_example": "// localStorage\nlocalStorage.setItem('kullanici', 'Ali');\nconsole.log(localStorage.getItem('kullanici'));\nlocalStorage.removeItem('kullanici');\n\n// Obje depolama\nconst k = {ad:'Ali', yas:25};\nlocalStorage.setItem('k', JSON.stringify(k));\nconst okunan = JSON.parse(localStorage.getItem('k'));\nconsole.log(okunan.ad);\n\n// sessionStorage\nsessionStorage.setItem('tmp', 'geçici');",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API",
+    "quiz": [
+      {
+        "question_text": "localStorage vs sessionStorage?",
+        "options": {
+          "a": "localStorage hızlı",
+          "b": "localStorage kalıcı, sessionStorage oturumluk",
+          "c": "sessionStorage büyük",
+          "d": "Fark yok"
+        },
+        "correct_answer": "b",
+        "explanation": "localStorage kalıcı.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Kaydetme metodu?",
+        "options": {
+          "a": "setItem()",
+          "b": "saveItem()",
+          "c": "storeItem()",
+          "d": "addItem()"
+        },
+        "correct_answer": "a",
+        "explanation": "setItem(key, value)",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Obje nasıl kaydedilir?",
+        "options": {
+          "a": "Direkt",
+          "b": "JSON.stringify() ile",
+          "c": "toString()",
+          "d": "Sayı olarak"
+        },
+        "correct_answer": "b",
+        "explanation": "JSON.stringify() ile.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Temizleme metodu?",
+        "options": {
+          "a": "deleteAll()",
+          "b": "clear()",
+          "c": "removeAll()",
+          "d": "reset()"
+        },
+        "correct_answer": "b",
+        "explanation": "clear()",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Storage değişiklik eventi?",
+        "options": {
+          "a": "change",
+          "b": "storage",
+          "c": "update",
+          "d": "modify"
+        },
+        "correct_answer": "b",
+        "explanation": "'storage' eventi.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 31,
+    "title": "Closures",
+    "slug": "closures",
+    "content": "<h1>Closures</h1><p>Fonksiyonun lexical scope'taki değişkenlere erişmesi.</p><h2>Kullanım</h2><ul><li>Private değişkenler</li><li>Factory fonksiyonlar</li></ul>",
+    "video_url": "",
+    "code_example": "function disFonksiyon(isim) {\n    return function() {\n        console.log('Merhaba ' + isim);\n    };\n}\nconst selamAli = disFonksiyon('Ali');\nselamAli();\n\n// Private sayaç\nfunction sayaç() {\n    let s = 0;\n    return {\n        artir: () => ++s,\n        deger: () => s\n    };\n}\nconst sc = sayaç();\nconsole.log(sc.artir()); // 1\nconsole.log(sc.artir()); // 2",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures",
+    "quiz": [
+      {
+        "question_text": "Closure nedir?",
+        "options": {
+          "a": "Fonksiyonun kendini çağırması",
+          "b": "Dış kapsamdaki değişkenlere erişim",
+          "c": "Fonksiyon silme",
+          "d": "Parametre"
+        },
+        "correct_answer": "b",
+        "explanation": "Dış kapsam değişkenlerine erişim.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Closure hangi amaçla?",
+        "options": {
+          "a": "Hız",
+          "b": "Private değişken",
+          "c": "DOM",
+          "d": "Döngü"
+        },
+        "correct_answer": "b",
+        "explanation": "Private değişken için.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Lexical scope nedir?",
+        "options": {
+          "a": "Çağrıldığı yer",
+          "b": "Tanımlandığı yer",
+          "c": "Global",
+          "d": "Blok"
+        },
+        "correct_answer": "b",
+        "explanation": "Fonksiyonun tanımlandığı yer.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Hangisi closure örneği?",
+        "options": {
+          "a": "İç içe döngü",
+          "b": "Dış değişkene erişen iç fonksiyon",
+          "c": "Ardışık çağrı",
+          "d": "Rekürsif"
+        },
+        "correct_answer": "b",
+        "explanation": "İç fonksiyonun dış değişkene erişimi.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Private değişkene dışarıdan erişilir mi?",
+        "options": {
+          "a": "Evet",
+          "b": "Hayır",
+          "c": "Sadece okuma",
+          "d": "Sadece yazma"
+        },
+        "correct_answer": "b",
+        "explanation": "Private değişkenlere dışarıdan erişilemez.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 32,
+    "title": "JavaScript OOP - Sınıflar",
+    "slug": "javascript-oop-siniflar",
+    "content": "<h1>Sınıflar (Classes)</h1><p>ES6 ile gelen syntactic sugar.</p><h2>class, constructor, metotlar</h2><h2>extends, super</h2><p>Kalıtım ve parent constructor çağrısı.</p><h2>Static metotlar</h2>",
+    "video_url": "",
+    "code_example": "class Kullanici {\n    constructor(ad, yas) {\n        this.ad = ad;\n        this.yas = yas;\n    }\n    bilgi() { return `${this.ad} - ${this.yas}`; }\n    static yasKontrol(y) { return y >= 18; }\n}\n\nclass Admin extends Kullanici {\n    constructor(ad, yas, yetki) {\n        super(ad, yas);\n        this.yetki = yetki;\n    }\n    bilgi() { return super.bilgi() + ' - ' + this.yetki; }\n}\n\nconst a = new Admin('Ali', 25, 'admin');\nconsole.log(a.bilgi());\nconsole.log(Kullanici.yasKontrol(20)); // true",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+    "quiz": [
+      {
+        "question_text": "Sınıf anahtar kelimesi?",
+        "options": {
+          "a": "class",
+          "b": "struct",
+          "c": "interface",
+          "d": "object"
+        },
+        "correct_answer": "a",
+        "explanation": "class",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "constructor ne zaman çağrılır?",
+        "options": {
+          "a": "Tanımda",
+          "b": "new ile",
+          "c": "Metotta",
+          "d": "Hiçbir zaman"
+        },
+        "correct_answer": "b",
+        "explanation": "new ile nesne oluşturulunca.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Kalıtım için hangisi?",
+        "options": {
+          "a": "extends",
+          "b": "inherits",
+          "c": "derives",
+          "d": "implements"
+        },
+        "correct_answer": "a",
+        "explanation": "extends",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Parent constructor çağrısı?",
+        "options": {
+          "a": "parent()",
+          "b": "super()",
+          "c": "base()",
+          "d": "this()"
+        },
+        "correct_answer": "b",
+        "explanation": "super()",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Static metot çağrısı?",
+        "options": {
+          "a": "Nesne ile",
+          "b": "Sınıf adı ile",
+          "c": "Direkt",
+          "d": "Constructor'da"
+        },
+        "correct_answer": "b",
+        "explanation": "Sınıf.adı() ile.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 33,
+    "title": "JavaScript OOP - Prototypes",
+    "slug": "javascript-oop-prototypes",
+    "content": "<h1>Prototipler</h1><p>JavaScript prototype tabanlıdır.</p><h2>Prototype Chain</h2><p>Özellik önce nesnede, sonra prototype'ında aranır.</p><h2>Prototype ile Kalıtım</h2>",
+    "video_url": "",
+    "code_example": "function Kullanici(ad, yas) {\n    this.ad = ad;\n    this.yas = yas;\n}\nKullanici.prototype.selam = function() {\n    console.log('Merhaba ' + this.ad);\n};\n\nconst ali = new Kullanici('Ali', 25);\nali.selam();\n\nfunction Admin(ad, yas, y) {\n    Kullanici.call(this, ad, yas);\n    this.y = y;\n}\nAdmin.prototype = Object.create(Kullanici.prototype);\nAdmin.prototype.constructor = Admin;\n\nconst a = new Admin('Ayşe', 30, 'admin');\na.selam();",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain",
+    "quiz": [
+      {
+        "question_text": "JavaScript hangi tabanlı?",
+        "options": {
+          "a": "Sınıf",
+          "b": "Prototype",
+          "c": "Fonksiyon",
+          "d": "Nesne"
+        },
+        "correct_answer": "b",
+        "explanation": "Prototype tabanlı.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Prototype chain nedir?",
+        "options": {
+          "a": "Fonksiyon zinciri",
+          "b": "Özelliklerin prototype'ta aranması",
+          "c": "Sınıf hiyerarşisi",
+          "d": "Event"
+        },
+        "correct_answer": "b",
+        "explanation": "Prototype chain.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Kendi özelliğini kontrol?",
+        "options": {
+          "a": "hasOwnProperty()",
+          "b": "isOwnProperty()",
+          "c": "checkProperty()",
+          "d": "ownProperty()"
+        },
+        "correct_answer": "a",
+        "explanation": "hasOwnProperty()",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Prototype'a metot ekleme?",
+        "options": {
+          "a": "prototype",
+          "b": "__proto__",
+          "c": "constructor",
+          "d": "extends"
+        },
+        "correct_answer": "a",
+        "explanation": "prototype özelliğine.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Class'lar prototype'ın?",
+        "options": {
+          "a": "Farklı",
+          "b": "Syntactic sugar",
+          "c": "Daha yavaş",
+          "d": "Daha az"
+        },
+        "correct_answer": "b",
+        "explanation": "Syntactic sugar.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 34,
+    "title": "this Anahtar Kelimesi",
+    "slug": "this-anahtar-kelimesi",
+    "content": "<h1>this Anahtar Kelimesi</h1><p>Çağrıldığı bağlama göre değer alır.</p><h2>Kullanım</h2><ul><li>Global: window</li><li>Metot: ait olduğu obje</li><li>Arrow: kapsamın this'i</li><li>Event: bağlı element</li></ul>",
+    "video_url": "",
+    "code_example": "const k = {\n    ad: 'Ali',\n    selam() { console.log(this.ad); }\n};\nk.selam();\n\nconst k2 = {\n    ad: 'Ayşe',\n    selam: () => console.log(this.ad)\n};\n\nfunction tanis() { console.log(this.ad); }\ntanis.call({ad:'Ali'});\nconst bagli = tanis.bind({ad:'Veli'});\nbagli();",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this",
+    "quiz": [
+      {
+        "question_text": "Arrow fonksiyonda this?",
+        "options": {
+          "a": "Kendi",
+          "b": "Kapsamın this'i",
+          "c": "undefined",
+          "d": "Global"
+        },
+        "correct_answer": "b",
+        "explanation": "Arrow kapsamın this'ini kullanır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Metot içinde this?",
+        "options": {
+          "a": "Global",
+          "b": "Ait olduğu obje",
+          "c": "Kendisi",
+          "d": "undefined"
+        },
+        "correct_answer": "b",
+        "explanation": "Metodun ait olduğu obje.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "this'i belirleme metotları?",
+        "options": {
+          "a": "call/apply/bind",
+          "b": "setThis()",
+          "c": "configThis()",
+          "d": "this()"
+        },
+        "correct_answer": "a",
+        "explanation": "call, apply, bind.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Event handler'da this?",
+        "options": {
+          "a": "Window",
+          "b": "Element",
+          "c": "Parent",
+          "d": "Document"
+        },
+        "correct_answer": "b",
+        "explanation": "Event'in bağlı olduğu element.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "call vs apply farkı?",
+        "options": {
+          "a": "call virgül, apply dizi",
+          "b": "call hızlı",
+          "c": "apply sadece obje",
+          "d": "Fark yok"
+        },
+        "correct_answer": "a",
+        "explanation": "call parametreleri virgülle, apply diziyle alır.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 35,
+    "title": "Modüller (import/export)",
+    "slug": "moduller-import-export",
+    "content": "<h1>Modüller</h1><p>ES6 ile gelen modül sistemi.</p><h2>export</h2><p>Named ve default export.</p><h2>import</h2><p>{} ile named, direkt default.</p>",
+    "video_url": "",
+    "code_example": "// math.js\nexport const topla = (a,b) => a + b;\nexport const carp = (a,b) => a * b;\nexport default function selam(isim) {\n    return 'Merhaba ' + isim;\n}\n\n// main.js\nimport selam, { topla, carp } from './math.js';\nconsole.log(topla(5,3)); // 8\nconsole.log(carp(4,2)); // 8\nconsole.log(selam('Ali'));",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+    "quiz": [
+      {
+        "question_text": "Named export hangi parantezle?",
+        "options": {
+          "a": "[]",
+          "b": "{}",
+          "c": "()",
+          "d": "<>"
+        },
+        "correct_answer": "b",
+        "explanation": "{} ile named import.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Default export nasıl import edilir?",
+        "options": {
+          "a": "{} ile",
+          "b": "Direkt isimle",
+          "c": "[] ile",
+          "d": "default ile"
+        },
+        "correct_answer": "b",
+        "explanation": "Direkt isimle.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Export çeşitleri?",
+        "options": {
+          "a": "Named ve default",
+          "b": "Public ve private",
+          "c": "Static ve dynamic",
+          "d": "Internal ve external"
+        },
+        "correct_answer": "a",
+        "explanation": "Named ve default.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Tümünü import etme?",
+        "options": {
+          "a": "import * as X",
+          "b": "import all X",
+          "c": "import everything X",
+          "d": "import X.*"
+        },
+        "correct_answer": "a",
+        "explanation": "import * as X",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Modül avantajı?",
+        "options": {
+          "a": "Daha hızlı",
+          "b": "Kod bölümlendirme",
+          "c": "Sadece server",
+          "d": "Sadece client"
+        },
+        "correct_answer": "b",
+        "explanation": "Kod bölümlendirme.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 36,
+    "title": "Regular Expressions",
+    "slug": "regular-expressions",
+    "content": "<h1>Regular Expressions</h1><p>Metin desenleri eşleştirme.</p><h2>RegExp Objesi</h2><p>// veya new RegExp()</p><h2>Metotlar</h2><p>test(), exec(), match(), replace()</p>",
+    "video_url": "",
+    "code_example": "const regex = /\\d+/g;\nconsole.log(/\\d+/.test('abc123')); // true\nconsole.log(/\\d+/.exec('abc123'));\nconsole.log('abc123'.match(/\\d+/));\nconsole.log('Merhaba 123'.replace(/\\d+/, 'sayı'));\nconsole.log('ABC'.match(/abc/i));",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions",
+    "quiz": [
+      {
+        "question_text": "RegExp'te eşleşme kontrolü?",
+        "options": {
+          "a": "test()",
+          "b": "exec()",
+          "c": "match()",
+          "d": "Hepsi"
+        },
+        "correct_answer": "d",
+        "explanation": "test() boolean, exec() detaylı.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "g flag ne işe yarar?",
+        "options": {
+          "a": "Case insensitive",
+          "b": "Global (tüm eşleşmeler)",
+          "c": "Tek satır",
+          "d": "Çok satır"
+        },
+        "correct_answer": "b",
+        "explanation": "g = global.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "\\d hangi karakter?",
+        "options": {
+          "a": "Harf",
+          "b": "Rakam",
+          "c": "Boşluk",
+          "d": "Noktalama"
+        },
+        "correct_answer": "b",
+        "explanation": "\\d = rakam.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "i flag ne işe yarar?",
+        "options": {
+          "a": "Global",
+          "b": "Case insensitive",
+          "c": "Tek satır",
+          "d": "Çok satır"
+        },
+        "correct_answer": "b",
+        "explanation": "i = ignore case.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "E-posta kontrolünde hangi ifade?",
+        "options": {
+          "a": "Regular Expression",
+          "b": "String metotları",
+          "c": "IF-ELSE",
+          "d": "Switch"
+        },
+        "correct_answer": "a",
+        "explanation": "RegExp ile desen kontrolü.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 37,
+    "title": "Temporal API ve Intl",
+    "slug": "temporal-api-ve-intl",
+    "content": "<h1>Internationalization</h1><h2>Intl</h2><p>Tarih, sayı, para birimi formatlama.</p><h2>Intl.DateTimeFormat</h2><p>Locale'e göre tarih formatı.</p><h2>Intl.NumberFormat</h2><p>Sayı ve para birimi formatı.</p>",
+    "video_url": "",
+    "code_example": "const tarih = new Date();\nconsole.log(new Intl.DateTimeFormat('tr-TR').format(tarih));\nconsole.log(new Intl.DateTimeFormat('en-US').format(tarih));\n\nconsole.log(new Intl.NumberFormat('tr-TR').format(1234567.89));\n\nconsole.log(new Intl.NumberFormat('tr-TR', {\n    style: 'currency',\n    currency: 'TRY'\n}).format(150.5));\n\nconst rtf = new Intl.RelativeTimeFormat('tr', { numeric: 'auto' });\nconsole.log(rtf.format(-1, 'day')); // dün",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl",
+    "quiz": [
+      {
+        "question_text": "Tarih formatlama için hangi Intl sınıfı?",
+        "options": {
+          "a": "DateTimeFormat",
+          "b": "NumberFormat",
+          "c": "RelativeTimeFormat",
+          "d": "Collator"
+        },
+        "correct_answer": "a",
+        "explanation": "Intl.DateTimeFormat.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Para birimi için hangi style?",
+        "options": {
+          "a": "decimal",
+          "b": "currency",
+          "c": "percent",
+          "d": "unit"
+        },
+        "correct_answer": "b",
+        "explanation": "style: 'currency'.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Türkiye için locale kodu?",
+        "options": {
+          "a": "tr-TR",
+          "b": "tur",
+          "c": "TR",
+          "d": "Türkçe"
+        },
+        "correct_answer": "a",
+        "explanation": "tr-TR.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Göreceli zaman için hangi sınıf?",
+        "options": {
+          "a": "RelativeTime",
+          "b": "RelativeTimeFormat",
+          "c": "TimeFormat",
+          "d": "DateFormat"
+        },
+        "correct_answer": "b",
+        "explanation": "Intl.RelativeTimeFormat.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Intl amacı?",
+        "options": {
+          "a": "Performans",
+          "b": "Uluslararasılaştırma",
+          "c": "Güvenlik",
+          "d": "Hata yönetimi"
+        },
+        "correct_answer": "b",
+        "explanation": "Uluslararasılaştırma.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 38,
+    "title": "Web API'leri",
+    "slug": "web-apileri",
+    "content": "<h1>Web API'leri</h1><h2>Geolocation</h2><p>Kullanıcı konumu.</p><h2>Notification</h2><p>Bildirim gönderme.</p><h2>Canvas</h2><p>Grafik çizim.</p>",
+    "video_url": "",
+    "code_example": "// Geolocation\nnavigator.geolocation.getCurrentPosition(\n    pos => console.log('Enlem:', pos.coords.latitude),\n    err => console.log('Hata:', err.message)\n);\n\n// Notification\nNotification.requestPermission().then(per => {\n    if (per === 'granted') {\n        new Notification('Başlık', { body: 'İçerik' });\n    }\n});\n\n// Canvas\nconst canvas = document.getElementById('canvas');\nconst ctx = canvas.getContext('2d');\nctx.fillStyle = 'red';\nctx.fillRect(10, 10, 100, 50);",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API",
+    "quiz": [
+      {
+        "question_text": "Geolocation hangi amaçla?",
+        "options": {
+          "a": "Harita",
+          "b": "Kullanıcı konumu",
+          "c": "Hava durumu",
+          "d": "Navigasyon"
+        },
+        "correct_answer": "b",
+        "explanation": "Kullanıcı konumu.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Bildirim izni hangi metot?",
+        "options": {
+          "a": "requestPermission()",
+          "b": "askPermission()",
+          "c": "getPermission()",
+          "d": "checkPermission()"
+        },
+        "correct_answer": "a",
+        "explanation": "requestPermission()",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Canvas çizim için hangi context?",
+        "options": {
+          "a": "2d",
+          "b": "3d",
+          "c": "webgl",
+          "d": "canvas"
+        },
+        "correct_answer": "a",
+        "explanation": "'2d' context.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Konum alınamazsa hangi callback?",
+        "options": {
+          "a": "success",
+          "b": "error",
+          "c": "finally",
+          "d": "complete"
+        },
+        "correct_answer": "b",
+        "explanation": "İkinci parametre error callback.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Notification.state hangi durumları alır?",
+        "options": {
+          "a": "granted/denied/default",
+          "b": "on/off",
+          "c": "yes/no",
+          "d": "allow/block"
+        },
+        "correct_answer": "a",
+        "explanation": "granted, denied, default.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 39,
+    "title": "Performans ve Optimizasyon",
+    "slug": "performans-ve-optimizasyon",
+    "content": "<h1>Performans ve Optimizasyon</h1><h2>Debounce</h2><p>İşlemi belirli süre geciktirir, sürekli çağrı varsa sıfırlar.</p><h2>Throttle</h2><p>İşlemi belirli aralıklarla çalıştırır.</p><h2>Lazy Loading</h2><p>İhtiyaç halinde yükleme.</p>",
+    "video_url": "",
+    "code_example": "// Debounce\nfunction debounce(fn, ms) {\n    let timeout;\n    return function(...args) {\n        clearTimeout(timeout);\n        timeout = setTimeout(() => fn.apply(this, args), ms);\n    };\n}\n\n// Throttle\nfunction throttle(fn, ms) {\n    let calisiyor = false;\n    return function(...args) {\n        if (calisiyor) return;\n        calisiyor = true;\n        setTimeout(() => {\n            fn.apply(this, args);\n            calisiyor = false;\n        }, ms);\n    };\n}",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/Performance",
+    "quiz": [
+      {
+        "question_text": "Debounce ne yapar?",
+        "options": {
+          "a": "Anında çalıştırır",
+          "b": "Son çağrıdan sonra belirli süre bekler",
+          "c": "Sürekli çalıştırır",
+          "d": "Hızlandırır"
+        },
+        "correct_answer": "b",
+        "explanation": "Son çağrıdan sonra gecikmeli çalıştırır.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Throttle ne yapar?",
+        "options": {
+          "a": "Anında",
+          "b": "Belirli aralıkla çalıştırır",
+          "c": "Geciktirir",
+          "d": "Dur durur"
+        },
+        "correct_answer": "b",
+        "explanation": "Belirli aralıklarla çalıştırır.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Debounce nerelerde kullanılır?",
+        "options": {
+          "a": "Scroll",
+          "b": "Arama kutusu",
+          "c": "Animasyon",
+          "d": "Tıklama"
+        },
+        "correct_answer": "b",
+        "explanation": "Arama kutusu gibi sürekli girdilerde.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Throttle nerelerde kullanılır?",
+        "options": {
+          "a": "Arama kutusu",
+          "b": "Scroll/resize eventleri",
+          "c": "Form validasyon",
+          "d": "Click"
+        },
+        "correct_answer": "b",
+        "explanation": "Scroll, resize olaylarında.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Lazy loading amacı?",
+        "options": {
+          "a": "Hızlandırma",
+          "b": "Gecikmeli yükleme",
+          "c": "Ön yükleme",
+          "d": "Anında yükleme"
+        },
+        "correct_answer": "b",
+        "explanation": "İhtiyaç halinde yükleme.",
+        "source": "JavaScript.info"
+      }
+    ]
+  },
+  {
+    "order": 40,
+    "title": "JS Proje - Todo Uygulaması",
+    "slug": "js-proje-todo-uygulamasi",
+    "content": "<h1>Todo Uygulaması</h1><p>localStorage ile kalıcı Todo uygulaması.</p><h2>Özellikler</h2><ul><li>Görev ekleme/silme/tamamlama</li><li>localStorage'a kaydetme</li><li>Event delegation</li></ul>",
+    "video_url": "",
+    "code_example": "const input = document.getElementById('input');\nconst ekleBtn = document.getElementById('ekle');\nconst liste = document.getElementById('liste');\n\nlet gorevler = JSON.parse(localStorage.getItem('gorevler')) || [];\n\nfunction render() {\n    liste.innerHTML = gorevler.map((g, i) =>\n        `<li class='${g.tamam ? 'tamam' : ''}' data-index='${i}'>\n            ${g.metin} <button class='sil'>Sil</button>\n        </li>`\n    ).join('');\n    localStorage.setItem('gorevler', JSON.stringify(gorevler));\n}\n\nekleBtn.addEventListener('click', () => {\n    if (input.value.trim()) {\n        gorevler.push({ metin: input.value, tamam: false });\n        input.value = '';\n        render();\n    }\n});\n\nliste.addEventListener('click', (e) => {\n    const idx = e.target.parentElement.dataset.index;\n    if (e.target.classList.contains('sil')) {\n        gorevler.splice(idx, 1);\n    } else {\n        gorevler[idx].tamam = !gorevler[idx].tamam;\n    }\n    render();\n});\n\ninput.addEventListener('keydown', (e) => {\n    if (e.key === 'Enter') ekleBtn.click();\n});\n\nrender();",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API",
+    "quiz": [
+      {
+        "question_text": "Todo'da veriler nerede saklanır?",
+        "options": {
+          "a": "Veritabanı",
+          "b": "localStorage",
+          "c": "Session",
+          "d": "Cookie"
+        },
+        "correct_answer": "b",
+        "explanation": "localStorage'da.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Görevleri render etmek için hangi metot?",
+        "options": {
+          "a": "createElement",
+          "b": "innerHTML",
+          "c": "textContent",
+          "d": "append"
+        },
+        "correct_answer": "b",
+        "explanation": "innerHTML ile render.",
+        "source": "JavaScript.info"
+      },
+      {
+        "question_text": "Event delegation hangi amaçla?",
+        "options": {
+          "a": "Hız",
+          "b": "Dinamik elementler için",
+          "c": "CSS",
+          "d": "Animasyon"
+        },
+        "correct_answer": "b",
+        "explanation": "Tüm liste elementlerini yönetmek için.",
+        "source": "W3Schools"
+      },
+      {
+        "question_text": "Veriler hangi formatta saklanır?",
+        "options": {
+          "a": "XML",
+          "b": "JSON string",
+          "c": "CSV",
+          "d": "Düz metin"
+        },
+        "correct_answer": "b",
+        "explanation": "JSON.stringify ile JSON string.",
+        "source": "MDN Web Docs"
+      },
+      {
+        "question_text": "Yeniden yüklemede veriler nasıl yüklenir?",
+        "options": {
+          "a": "API",
+          "b": "localStorage.getItem",
+          "c": "Cookie",
+          "d": "Session"
+        },
+        "correct_answer": "b",
+        "explanation": "localStorage.getItem ile.",
+        "source": "JavaScript.info"
+      }
+    ]
+  }
+]

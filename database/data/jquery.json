@@ -1,0 +1,612 @@
+[
+  {
+    "order": 1,
+    "title": "jQuery Nedir? (Kurulum, Syntax)",
+    "slug": "jquery-nedir",
+    "content": "<h1>jQuery Nedir?</h1><p>jQuery, JavaScript kütüphanesidir. \"Write less, do more\" felsefesiyle çalışır. DOM işlemleri, event yönetimi, animasyonlar ve AJAX işlemlerini kolaylaştırır.</p><h2>Kurulum</h2><p>CDN: &lt;script src=\"https://code.jquery.com/jquery-3.7.1.min.js\"&gt;&lt;/script&gt; veya npm ile yükleme.</p><h2>Document Ready</h2><p>$(document).ready(function() { ... }) veya kısa: $(function() { ... }) - DOM hazır olduğunda çalışır.</p><h2>Syntax</h2><p>$(selector).action() - $ işareti jQuery'yi tanımlar, selector HTML elementi seçer, action yapılacak işlemi belirtir.</p>",
+    "video_url": "",
+    "code_example": "<script>\n// Document Ready\n$(document).ready(function() {\n    // jQuery kodları buraya\n    $(\"h1\").css(\"color\", \"blue\");\n    $(\"p\").text(\"jQuery ile değiştirildi!\");\n});\n\n// Kısa yazılış\n$(function() {\n    console.log(\"DOM hazır!\");\n});\n</script>",
+    "source_ref": "jQuery API: https://api.jquery.com/",
+    "quiz": [
+      {
+        "question": "jQuery hangi amaçla kullanılır?",
+        "options": [
+          "Sunucu programlama",
+          "JavaScript işlemlerini kolaylaştırma",
+          "Veritabanı yönetimi",
+          "Stil tanımlama"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "jQuery'de $ işareti neyi temsil eder?",
+        "options": [
+          "Dolar işareti",
+          "jQuery nesnesi",
+          "Sayısal değer",
+          "CSS seçici"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Document Ready olayı ne zaman çalışır?",
+        "options": [
+          "Sayfa yüklendiğinde",
+          "DOM hazır olduğunda",
+          "Resimler yüklendiğinde",
+          "Sunucu yanıt verdiğinde"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "jQuery'de selector ne işe yarar?",
+        "options": [
+          "Stil belirler",
+          "HTML elementi seçer",
+          "Veri gönderir",
+          "Animasyon yapar"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "jQuery hangi sürümü günceldir?",
+        "options": [
+          "3.x",
+          "4.x",
+          "2.x",
+          "1.x"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 2,
+    "title": "jQuery Selectors",
+    "slug": "jquery-selectors",
+    "content": "<h1>jQuery Selectors (Seçiciler)</h1><p>jQuery, CSS seçicilerini kullanarak HTML elementlerini seçer. Ayrıca jQuery'ye özel seçiciler de vardır.</p><h2>Temel Seçiciler</h2><p>$(\"*\"): Tüm elementler. $(\"#id\"): ID seçici. $(\".class\"): Sınıf seçici. $(\"element\"): Element seçici. $(\"selector1, selector2\"): Çoklu seçici.</p><h2>Hiyerarşi Seçicileri</h2><p>$(\"parent child\"): Alt öğeler. $(\"parent > child\"): Doğrudan alt. $(\"prev + next\"): Bitişik kardeş. $(\"prev ~ siblings\"): Kardeşler.</p><h2>Filtre Seçicileri</h2><p>$(\":first\"), $(\":last\"), $(\":even\"), $(\":odd\"), $(\":eq(index)\"), $(\":gt(n)\"), $(\":lt(n)\"), $(\":not(selector)\"), $(\":contains(text)\"), $(\":visible\"), $(\":hidden\")</p><h2>Atribüt Seçicileri</h2><p>$(\"[attribute]\"), $(\"[attribute=value]\"), $(\"[attribute^=value]\") (başlayan), $(\"[attribute$=value]\") (biten), $(\"[attribute*=value]\") (içeren)</p>",
+    "video_url": "",
+    "code_example": "<script>\n$(function() {\n    // Temel seçiciler\n    $(\"#baslik\").css(\"color\", \"red\");\n    $(\".kutu\").hide();\n    $(\"p\").addClass(\"vurgulu\");\n\n    // Filtreler\n    $(\"li:first\").css(\"font-weight\", \"bold\");\n    $(\"li:even\").css(\"background\", \"#eee\");\n    $(\"li:eq(2)\").text(\"Üçüncü eleman\");\n\n    // Atribüt seçicileri\n    $(\"input[type=text]\").val(\"Varsayılan değer\");\n    $(\"a[href^=https]\").attr(\"target\", \"_blank\");\n});\n</script>",
+    "source_ref": "jQuery API: https://api.jquery.com/category/selectors/",
+    "quiz": [
+      {
+        "question": "ID seçmek için hangi seçici kullanılır?",
+        "options": [
+          "$(\".id\")",
+          "$(\"#id\")",
+          "$(\"%id\")",
+          "$(\"@id\")"
+        ],
+        "correct": 1
+      },
+      {
+        "question": ":eq(index) filtresi ne işe yarar?",
+        "options": [
+          "Belirtilen indeksteki elementi seçer",
+          "Eşit olanları seçer",
+          "Son elementi seçer",
+          "İlk elementi seçer"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "$(\"[attribute]\") hangi amaçla kullanılır?",
+        "options": [
+          "Element seçer",
+          "Atribütü olan elementleri seçer",
+          "Sınıf seçer",
+          "ID seçer"
+        ],
+        "correct": 1
+      },
+      {
+        "question": ":even filtresi hangi sıradaki elementleri seçer?",
+        "options": [
+          "Tek sıradaki",
+          "Çift sıradaki (0,2,4...)",
+          "Tümünü",
+          "Hiçbirini"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "$(\"parent > child\") ile $(\"parent child\") arasındaki fark nedir?",
+        "options": [
+          "Fark yoktur",
+          "> sadece doğrudan alt öğeleri seçer",
+          "> tüm alt öğeleri seçer",
+          "child tüm öğeleri seçer"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 3,
+    "title": "jQuery Events",
+    "slug": "jquery-events",
+    "content": "<h1>jQuery Events (Olaylar)</h1><p>jQuery, kullanıcı etkileşimlerini yakalamak için event yöntemleri sunar.</p><h2>Mouse Events</h2><p>click(), dblclick(), mouseenter(), mouseleave(), mousedown(), mouseup(), hover(), focusin(), focusout()</p><h2>Keyboard Events</h2><p>keypress(), keydown(), keyup()</p><h2>Form Events</h2><p>submit(), change(), focus(), blur(), select()</p><h2>Document/Window Events</h2><p>ready(), resize(), scroll(), load(), unload()</p><h2>Event Object</h2><p>Callback fonksiyon parametresi olarak event objesi gelir: event.type, event.target, event.pageX, event.pageY, event.which, event.preventDefault(), event.stopPropagation()</p><h2>Event Binding</h2><p>on(): Güncel event bağlama yöntemi. off(): Event kaldırma. one(): Bir kez çalışan event.</p>",
+    "video_url": "",
+    "code_example": "<script>\n$(function() {\n    // Mouse events\n    $(\"button\").click(function() {\n        alert(\"Butona tıklandı!\");\n    });\n\n    $(\"div\").hover(\n        function() { $(this).css(\"background\", \"yellow\"); },\n        function() { $(this).css(\"background\", \"white\"); }\n    );\n\n    // Keyboard events\n    $(\"input\").keyup(function() {\n        $(\"#karakter-sayisi\").text($(this).val().length);\n    });\n\n    // Form events\n    $(\"form\").submit(function(e) {\n        e.preventDefault();\n        alert(\"Form gönderildi!\");\n    });\n\n    // on() ile event binding\n    $(\"ul\").on(\"click\", \"li\", function() {\n        alert($(this).text() + \" tıklandı\");\n    });\n});\n</script>",
+    "source_ref": "jQuery API: https://api.jquery.com/category/events/",
+    "quiz": [
+      {
+        "question": "click() event'i hangi durumda tetiklenir?",
+        "options": [
+          "Çift tıklamada",
+          "Tek tıklamada",
+          "Fare üzerine geldiğinde",
+          "Tuşa basıldığında"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "hover() event'i kaç fonksiyon parametresi alır?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "0"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "e.preventDefault() ne işe yarar?",
+        "options": [
+          "Olayı durdurur",
+          "Varsayılan davranışı engeller",
+          "Olayı tekrarlar",
+          "Elementi siler"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "on() metodu hangi amaçla kullanılır?",
+        "options": [
+          "Event bağlamak",
+          "Event silmek",
+          "Element seçmek",
+          "Animasyon yapmak"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "one() metodunun özelliği nedir?",
+        "options": [
+          "Sürekli çalışır",
+          "Bir kez çalışır",
+          "Hiç çalışmaz",
+          "Sonsuz kere çalışır"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 4,
+    "title": "jQuery Effects (hide/show, fade, slide, animate)",
+    "slug": "jquery-effects",
+    "content": "<h1>jQuery Effects (Efektler)</h1><p>jQuery ile animasyonlar ve görsel efektler kolayca yapılabilir.</p><h2>Hide/Show/Toggle</h2><p>hide(speed), show(speed), toggle(speed) - Elementleri gizler/gösterir. Speed: \"slow\", \"fast\" veya milisaniye.</p><h2>Fade Efektleri</h2><p>fadeIn(), fadeOut(), fadeToggle(), fadeTo(speed, opacity) - Opaklıkla oynar.</p><h2>Slide Efektleri</h2><p>slideDown(), slideUp(), slideToggle() - Kaydırma efekti yapar.</p><h2>Animate</h2><p>animate({params}, speed, callback) - Özel animasyonlar oluşturur. CSS özellikleri kullanılır. Renk animasyonu için jQuery UI gerekir.</p><h2>Durdurma ve Zincirleme</h2><p>stop(): Animasyonu durdurur. finish(): Animasyonu tamamlar. jQuery metotları zincirleme olarak kullanılabilir: $(\"div\").css().slideUp().slideDown()</p>",
+    "video_url": "",
+    "code_example": "<script>\n$(function() {\n    // Hide/Show\n    $(\"#gizle\").click(function() {\n        $(\"p\").hide(500);\n    });\n    $(\"#goster\").click(function() {\n        $(\"p\").show(\"slow\");\n    });\n\n    // Fade\n    $(\"#soluk\").click(function() {\n        $(\"div\").fadeOut(1000);\n    });\n    $(\"#goster\").click(function() {\n        $(\"div\").fadeIn(1000);\n    });\n    $(\"#yarim\").click(function() {\n        $(\"div\").fadeTo(500, 0.5);\n    });\n\n    // Slide\n    $(\"#kaydir\").click(function() {\n        $(\"div\").slideToggle(500);\n    });\n\n    // Animate\n    $(\"#hareket\").click(function() {\n        $(\"div\").animate({\n            left: \"250px\",\n            opacity: 0.5,\n            height: \"150px\",\n            width: \"150px\"\n        }, 1000);\n    });\n\n    // Zincirleme\n    $(\"p\").css(\"color\", \"red\").slideUp(500).slideDown(500);\n});\n</script>",
+    "source_ref": "jQuery API: https://api.jquery.com/category/effects/",
+    "quiz": [
+      {
+        "question": "hide(500) ifadesindeki 500 neyi ifade eder?",
+        "options": [
+          "Mesafe",
+          "Süre (milisaniye)",
+          "Yükseklik",
+          "Genişlik"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "fadeTo() metodunun parametreleri nelerdir?",
+        "options": [
+          "speed, callback",
+          "speed, opacity",
+          "opacity, callback",
+          "speed, opacity, callback"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "animate() metodunda hangi CSS özelliği kullanılamaz?",
+        "options": [
+          "left",
+          "opacity",
+          "color (tek başına)",
+          "height"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "stop() metodu ne işe yarar?",
+        "options": [
+          "Animasyonu başlatır",
+          "Animasyonu durdurur",
+          "Elementi siler",
+          "Stil değiştirir"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "jQuery'de metot zincirleme nasıl çalışır?",
+        "options": [
+          "Her metot jQuery nesnesi döndürür",
+          "Metotlar sırayla çalışmaz",
+          "Sadece CSS metotları zincirlenebilir",
+          "Zincirleme desteklenmez"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 5,
+    "title": "DOM Manipülasyonu",
+    "slug": "jquery-dom-manipulasyonu",
+    "content": "<h1>jQuery DOM Manipülasyonu</h1><p>jQuery ile HTML içeriği, nitelikler, CSS stilleri kolayca değiştirilebilir.</p><h2>İçerik Değiştirme</h2><p>html(): HTML içeriğini alır/değiştirir. text(): Metin içeriğini alır/değiştirir. val(): Form değerini alır/değiştirir.</p><h2>Eleman Ekleme</h2><p>append(): İçine sona ekler. prepend(): İçine başa ekler. after(): Eleman sonrasına ekler. before(): Eleman öncesine ekler.</p><h2>Eleman Silme</h2><p>remove(): Elemanı ve alt öğelerini siler. empty(): İçindekileri siler (eleman kalır).</p><h2>CSS ve Atribüt</h2><p>css(): CSS özelliklerini alır/değiştirir. addClass(), removeClass(), toggleClass(): Sınıf yönetimi. attr(): Atribüt alır/değiştirir. removeAttr(): Atribüt siler.</p><h2>Boyutlar</h2><p>width(), height(), innerWidth(), innerHeight(), outerWidth(), outerHeight()</p>",
+    "video_url": "",
+    "code_example": "<script>\n$(function() {\n    // İçerik\n    var mevcutHtml = $(\"#kutu\").html();\n    $(\"#kutu\").html(\"<b>Yeni HTML içeriği</b>\");\n    $(\"#kutu\").text(\"Sadece metin\");\n    var deger = $(\"input\").val();\n    $(\"input\").val(\"Yeni değer\");\n\n    // Ekleme\n    $(\"ul\").append(\"<li>Sona eklendi</li>\");\n    $(\"ul\").prepend(\"<li>Başa eklendi</li>\");\n    $(\"h2\").after(\"<p>Başlık sonrası</p>\");\n    $(\"h2\").before(\"<p>Başlık öncesi</p>\");\n\n    // Silme\n    $(\".sil\").remove();\n    $(\".temizle\").empty();\n\n    // CSS ve sınıflar\n    $(\"div\").css(\"background-color\", \"blue\");\n    $(\"div\").css({\"color\": \"white\", \"font-size\": \"16px\"});\n    $(\"p\").addClass(\"vurgulu\");\n    $(\"p\").removeClass(\"vurgulu\");\n    $(\"p\").toggleClass(\"gizli\");\n\n    // Atribütler\n    $(\"a\").attr(\"href\", \"https://kodlab.com\");\n    $(\"img\").attr(\"src\", \"resim.jpg\");\n    $(\"input\").removeAttr(\"disabled\");\n\n    // Boyutlar\n    var genislik = $(\"#kutu\").width();\n    var yukseklik = $(\"#kutu\").innerHeight();\n});\n</script>",
+    "source_ref": "jQuery API: https://api.jquery.com/category/manipulation/",
+    "quiz": [
+      {
+        "question": "html() ile text() arasındaki fark nedir?",
+        "options": [
+          "html() HTML etiketlerini işler, text() etiketleri metin olarak gösterir",
+          "Fark yoktur",
+          "text() daha hızlıdır",
+          "html() sadece okur"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "append() ile prepend() arasındaki fark nedir?",
+        "options": [
+          "append() sona, prepend() başa ekler",
+          "append() başa, prepend() sona ekler",
+          "append() dışarı, prepend() içeri ekler",
+          "Fark yoktur"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "remove() ile empty() arasındaki fark nedir?",
+        "options": [
+          "remove() elemanı siler, empty() içindekileri siler",
+          "remove() içindekileri siler, empty() elemanı siler",
+          "Sadece empty() siler",
+          "Sadece remove() siler"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "attr() metodu hangi amaçla kullanılır?",
+        "options": [
+          "CSS değiştirmek",
+          "Atribüt okumak/değiştirmek",
+          "İçerik değiştirmek",
+          "Boyut almak"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "toggleClass() ne işe yarar?",
+        "options": [
+          "Sınıf ekler",
+          "Sınıf ekler/kaldırır (varsa kaldırır, yoksa ekler)",
+          "Sınıf kaldırır",
+          "Sınıf kontrol eder"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 6,
+    "title": "AJAX ile jQuery",
+    "slug": "jquery-ajax",
+    "content": "<h1>AJAX ile jQuery</h1><p>jQuery, AJAX işlemlerini kolaylaştıran metotlar sunar. Sayfa yenilemeden sunucu ile veri alışverişi yapılır.</p><h2>load()</h2><p>$(\"#sonuc\").load(\"dosya.html #bolum\") - Bir dosyadaki belirli bölümü yükler.</p><h2>$.get()</h2><p>$.get(url, data, callback, dataType) - GET isteği yapar. Basit veri almak için idealdir.</p><h2>$.post()</h2><p>$.post(url, data, callback, dataType) - POST isteği yapar. Veri göndermek için kullanılır.</p><h2>$.ajax()</h2><p>En kapsamlı AJAX metodu. type, url, data, dataType, success, error, beforeSend, complete gibi birçok seçenek sunar.</p><h2>JSON ve AJAX</h2><p>$.getJSON(url, callback) - JSON verisi almak için kısa yöntem.</p>",
+    "video_url": "",
+    "code_example": "<script>\n$(function() {\n    // load()\n    $(\"#icerik\").load(\"hakkimizda.html #misyon\");\n\n    // $.get()\n    $.get(\"https://api.example.com/kullanicilar\", {limit: 10}, function(data) {\n        $.each(data, function(i, kullanici) {\n            $(\"ul\").append(\"<li>\" + kullanici.ad + \"</li>\");\n        });\n    });\n\n    // $.post()\n    $.post(\"kayit.php\", {\n        ad: \"Ali\",\n        email: \"ali@example.com\"\n    }, function(cevap) {\n        alert(cevap.mesaj);\n    }, \"json\");\n\n    // $.ajax()\n    $.ajax({\n        url: \"api/kullanicilar\",\n        type: \"GET\",\n        dataType: \"json\",\n        beforeSend: function() {\n            $(\"#yukleniyor\").show();\n        },\n        success: function(data) {\n            console.log(data);\n        },\n        error: function(xhr, durum, hata) {\n            console.error(\"Hata: \" + hata);\n        },\n        complete: function() {\n            $(\"#yukleniyor\").hide();\n        }\n    });\n\n    // $.getJSON()\n    $.getJSON(\"data.json\", function(data) {\n        console.log(data);\n    });\n});\n</script>",
+    "source_ref": "jQuery API: https://api.jquery.com/category/ajax/",
+    "quiz": [
+      {
+        "question": "$.get() ile $.post() arasındaki temel fark nedir?",
+        "options": [
+          "$.get() GET, $.post() POST isteği yapar",
+          "$.get() daha hızlıdır",
+          "$.post() sadece JSON alır",
+          "Fark yoktur"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "$.ajax() metodunda hangi ayar ile başarılı yanıt işlenir?",
+        "options": [
+          "complete",
+          "success",
+          "done",
+          "finished"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "load() metodu ne işe yarar?",
+        "options": [
+          "Sayfayı yeniler",
+          "Bir dosyadaki içeriği elemente yükler",
+          "Veri gönderir",
+          "Form gönderir"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "beforeSend hangi amaçla kullanılır?",
+        "options": [
+          "İstek öncesi işlem yapmak",
+          "İstek sonrası işlem yapmak",
+          "Hata durumunda",
+          "Her durumda"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "$.getJSON() hangi veri formatını bekler?",
+        "options": [
+          "XML",
+          "JSON",
+          "HTML",
+          "Metin"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 7,
+    "title": "jQuery Traversing (parent, children, find, each)",
+    "slug": "jquery-traversing",
+    "content": "<h1>jQuery Traversing (Dolaşma)</h1><p>Traversing, DOM üzerinde elementler arasında gezinmeyi sağlar.</p><h2>Atalar (Ancestors)</h2><p>parent(): Bir üst eleman. parents(): Tüm atalar. parentsUntil(): Belirtilene kadar atalar.</p><h2>Torunlar (Descendants)</h2><p>children(): Doğrudan alt elemanlar. find(): Tüm alt elemanlar (derinlemesine).</p><h2>Kardeşler (Siblings)</h2><p>siblings(): Tüm kardeşler. next(): Sonraki kardeş. nextAll(): Sonraki tüm kardeşler. prev(): Önceki kardeş. prevAll(): Önceki tüm kardeşler.</p><h2>Filtreleme</h2><p>first(), last(), eq(), filter(), not(), slice()</p><h2>each() Metodu</h2><p>$.each(array, function(index, value)) veya $(selector).each(function(index, element)) - Döngü yapmak için.</p>",
+    "video_url": "",
+    "code_example": "<script>\n$(function() {\n    // Atalar\n    $(\"span\").parent().css(\"border\", \"1px solid\");\n    $(\"span\").parents(\"div\").css(\"background\", \"#f0f0f0\");\n    $(\"span\").parentsUntil(\"body\").addClass(\"ara\");\n\n    // Torunlar\n    $(\"div\").children(\"p\").css(\"color\", \"blue\");\n    $(\"div\").find(\"span\").css(\"font-weight\", \"bold\");\n\n    // Kardeşler\n    $(\"li.aktif\").siblings().css(\"opacity\", \"0.5\");\n    $(\"li.aktif\").next().addClass(\"sonraki\");\n    $(\"li.aktif\").prev().addClass(\"onceki\");\n\n    // Filtreleme\n    $(\"li\").first().addClass(\"ilk\");\n    $(\"li\").last().addClass(\"son\");\n    $(\"li\").eq(2).addClass(\"ucuncu\");\n    $(\"li\").filter(\".secili\").hide();\n    $(\"li\").not(\".secili\").css(\"color\", \"gray\");\n\n    // each döngüsü\n    $(\"li\").each(function(index) {\n        $(this).text((index + 1) + \". \" + $(this).text());\n    });\n\n    // Dizi üzerinde each\n    var renkler = [\"Kırmızı\", \"Mavi\", \"Yeşil\"];\n    $.each(renkler, function(i, renk) {\n        console.log(i + \": \" + renk);\n    });\n});\n</script>",
+    "source_ref": "jQuery API: https://api.jquery.com/category/traversing/",
+    "quiz": [
+      {
+        "question": "parent() ile parents() arasındaki fark nedir?",
+        "options": [
+          "parent() bir üst, parents() tüm atalar",
+          "parent() tüm atalar, parents() bir üst",
+          "Fark yoktur",
+          "parent() sadece div döndürür"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "find() metodu ne işe yarar?",
+        "options": [
+          "Bir üst elemanı bulur",
+          "Tüm alt elemanları (derinlemesine) bulur",
+          "Kardeşleri bulur",
+          "Ebeveyni bulur"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "next() ile prev() arasındaki fark nedir?",
+        "options": [
+          "next() sonraki, prev() önceki kardeşi bulur",
+          "next() önceki, prev() sonraki kardeşi bulur",
+          "next() alt, prev() üst bulur",
+          "Fark yoktur"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "each() metodu hangi amaçla kullanılır?",
+        "options": [
+          "Element seçmek",
+          "Döngü yapmak",
+          "Stil değiştirmek",
+          "Event eklemek"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "$(\"li\").eq(2) hangi elemanı seçer?",
+        "options": [
+          "İlk elemanı",
+          "İkinci elemanı (indeks 2)",
+          "Üçüncü elemanı (indeks 2)",
+          "Son elemanı"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "order": 8,
+    "title": "jQuery ve Form İşlemleri",
+    "slug": "jquery-form-islemleri",
+    "content": "<h1>jQuery ve Form İşlemleri</h1><p>jQuery ile form elemanlarına erişim, form doğrulama ve veri gönderme işlemleri yapılır.</p><h2>Form Elemanlarına Erişim</h2><p>val(): Input değerini alır/değiştirir. checkbox/progress/radio için prop() kullanılır.</p><h2>serialize()</h2><p>Form verilerini URL-encoded string'e çevirir. AJAX ile göndermek için idealdir. serializeArray() ile dizi olarak alınabilir.</p><h2>Form Doğrulama</h2><p>change(), keyup(), blur() event'leri ile anlık doğrulama. submit() event'inde son kontrol.</p><h2>Özel Doğrulama</h2><p>required alan kontrolü, e-posta formatı, şifre eşleştirme, minimum karakter sayısı, özel desen kontrolü.</p>",
+    "video_url": "",
+    "code_example": "<script>\n$(function() {\n    // Form elemanlarına erişim\n    var ad = $(\"#ad\").val();\n    var seciliMi = $(\"#kabul\").prop(\"checked\");\n    var secilen = $(\"#sehir\").val();\n\n    // serialize() - AJAX için hazırlama\n    $(\"form\").submit(function(e) {\n        e.preventDefault();\n        var formVerisi = $(this).serialize();\n        console.log(formVerisi); // ad=Ali&email=ali@example.com\n        \n        $.post(\"kayit.php\", $(this).serialize(), function(cevap) {\n            alert(\"Gönderildi!\");\n        });\n    });\n\n    // Form doğrulama\n    $(\"#email\").blur(function() {\n        var email = $(this).val();\n        if (email.indexOf(\"@\") === -1) {\n            $(\"#email-hatasi\").text(\"Geçerli bir e-posta giriniz\");\n        } else {\n            $(\"#email-hatasi\").text(\"\");\n        }\n    });\n\n    $(\"#sifre, #sifre-tekrar\").keyup(function() {\n        var sifre = $(\"#sifre\").val();\n        var tekrar = $(\"#sifre-tekrar\").val();\n        if (sifre !== tekrar) {\n            $(\"#sifre-hatasi\").text(\"Şifreler eşleşmiyor\");\n        } else {\n            $(\"#sifre-hatasi\").text(\"\");\n        }\n    });\n\n    // Karakter sayacı\n    $(\"#mesaj\").keyup(function() {\n        var kalan = 200 - $(this).val().length;\n        $(\"#karakter-sayaci\").text(kalan + \" karakter kaldı\");\n    });\n});\n</script>\n\n<form>\n    <input type=\"text\" id=\"ad\" name=\"ad\" required>\n    <input type=\"email\" id=\"email\" name=\"email\">\n    <div id=\"email-hatasi\" class=\"hata\"></div>\n    <input type=\"password\" id=\"sifre\" name=\"sifre\">\n    <input type=\"password\" id=\"sifre-tekrar\">\n    <div id=\"sifre-hatasi\" class=\"hata\"></div>\n    <textarea id=\"mesaj\" name=\"mesaj\" maxlength=\"200\"></textarea>\n    <div id=\"karakter-sayaci\">200 karakter kaldı</div>\n    <label><input type=\"checkbox\" id=\"kabul\" name=\"kabul\"> Kabul ediyorum</label>\n    <select id=\"sehir\" name=\"sehir\">\n        <option value=\"34\">İstanbul</option>\n        <option value=\"6\">Ankara</option>\n    </select>\n    <button type=\"submit\">Gönder</button>\n</form>",
+    "source_ref": "jQuery API: https://api.jquery.com/category/forms/",
+    "quiz": [
+      {
+        "question": "serialize() metodu ne işe yarar?",
+        "options": [
+          "Formu temizler",
+          "Form verilerini URL-encoded string'e çevirir",
+          "Formu gönderir",
+          "Formu doğrular"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "prop() metodu hangi amaçla kullanılır?",
+        "options": [
+          "CSS değiştirmek",
+          "Checkbox/radio gibi özellikleri okumak/değiştirmek",
+          "İçerik değiştirmek",
+          "Boyut almak"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Form doğrulamada blur event'i ne zaman tetiklenir?",
+        "options": [
+          "Input odaklandığında",
+          "Input odak kaybettiğinde",
+          "Tuşa basıldığında",
+          "Form gönderildiğinde"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "serializeArray() ile serialize() arasındaki fark nedir?",
+        "options": [
+          "serializeArray() dizi döndürür, serialize() string döndürür",
+          "serializeArray() JSON döndürür",
+          "serialize() dizi döndürür",
+          "Fark yoktur"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "preventDefault() form işlemlerinde neden kullanılır?",
+        "options": [
+          "Formu göndermek için",
+          "Formun sayfayı yenilemesini engellemek için",
+          "Formu temizlemek için",
+          "Formu doğrulamak için"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 9,
+    "title": "jQuery Plugin Kullanımı",
+    "slug": "jquery-plugin-kullanimi",
+    "content": "<h1>jQuery Plugin Kullanımı</h1><p>jQuery plugin'leri, jQuery'nin işlevselliğini genişleten eklentilerdir.</p><h2>Popüler jQuery Plugin'leri</h2><p>jQuery UI (arayüz bileşenleri), Slick Carousel (slider), Magnific Popup (lightbox), DataTables (tablo), Select2 (gelişmiş select), Bootstrap (UI framework), jQuery Mask (input maskeleme), Validation (form doğrulama)</p><h2>Plugin Kullanımı</h2><p>CDN veya indirerek eklenir. Önce jQuery, sonra plugin JS ve CSS dosyaları eklenir. Plugin genellikle $(selector).pluginName(options) şeklinde çağrılır.</p><h2>Plugin Yazma</h2><p>$.fn.pluginAdi = function(options) { ... } ile özel plugin yazılabilir. Varsayılan ayarlar $.extend() ile birleştirilir.</p>",
+    "video_url": "",
+    "code_example": "<script>\n// jQuery UI (datepicker)\n$(\"#tarih\").datepicker({\n    dateFormat: \"dd.mm.yy\",\n    changeMonth: true,\n    changeYear: true,\n    minDate: 0\n});\n\n// Select2\n$(\"#sehirler\").select2({\n    placeholder: \"Şehir seçiniz\",\n    allowClear: true\n});\n\n// DataTables\n$(\"#tablo\").DataTable({\n    language: {\n        url: \"//cdn.datatables.net/plug-ins/1.13.4/i18n/tr.json\"\n    },\n    pageLength: 25,\n    order: [[0, \"desc\"]]\n});\n\n// Magnific Popup\n$(\".galeri a\").magnificPopup({\n    type: \"image\",\n    gallery: { enabled: true }\n});\n\n// Özel plugin yazma\n$.fn.kodlabYaz = function(options) {\n    var ayarlar = $.extend({\n        renk: \"blue\",\n        boyut: \"16px\",\n        metin: \"KodLab\"\n    }, options);\n    \n    return this.each(function() {\n        $(this).css({\n            color: ayarlar.renk,\n            \"font-size\": ayarlar.boyut\n        }).text(ayarlar.metin);\n    });\n};\n\n// Özel plugin kullanımı\n$(\"p\").kodlabYaz({ renk: \"red\", boyut: \"20px\" });\n</script>\n\n<!-- CDN ekleme -->\n<!-- \n<link rel=\"stylesheet\" href=\"https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css\">\n<script src=\"https://code.jquery.com/ui/1.13.2/jquery-ui.min.js\"></script>\n<link href=\"https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css\" rel=\"stylesheet\">\n<script src=\"https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js\"></script>\n-->",
+    "source_ref": "jQuery API: https://api.jquery.com/jquery/#jQuery-plugins",
+    "quiz": [
+      {
+        "question": "jQuery plugin'leri hangi amaçla kullanılır?",
+        "options": [
+          "jQuery'yi hızlandırmak",
+          "jQuery'nin işlevselliğini genişletmek",
+          "jQuery'yi yavaşlatmak",
+          "jQuery'yi silmek"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Plugin çağrılırken genellikle hangi desen kullanılır?",
+        "options": [
+          "$.pluginName()",
+          "$(selector).pluginName()",
+          "pluginName(selector)",
+          "selector.pluginName()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "$.fn uzantısı ne işe yarar?",
+        "options": [
+          "Yeni bir fonksiyon tanımlar",
+          "jQuery prototipine yeni metot ekler",
+          "Değişken tanımlar",
+          "Sınıf oluşturur"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "$.extend() hangi amaçla kullanılır?",
+        "options": [
+          "Nesneleri birleştirmek",
+          "Dizi oluşturmak",
+          "String birleştirmek",
+          "Sayı toplamak"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Plugin kullanırken önce hangi dosya yüklenmelidir?",
+        "options": [
+          "Plugin CSS",
+          "jQuery",
+          "Plugin JS",
+          "Tümü aynı anda"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 10,
+    "title": "jQuery Proje - Galeri Uygulaması",
+    "slug": "jquery-proje-galeri",
+    "content": "<h1>jQuery Proje - Galeri Uygulaması</h1><p>Bu derste öğrendiğimiz jQuery konularını kullanarak bir resim galerisi uygulaması geliştireceğiz.</p><h2>Özellikler</h2><ul><li>Thumbnail galerisi</li><li>Lightbox görüntüleme (Magnific Popup)</li><li>Filtreleme (kategoriye göre) </li><li>Slider ile otomatik geçiş (Slick Carousel)</li><li>Lazy loading (gecikmeli yükleme)</li><li>Animasyonlu geçişler</li></ul><h2>Proje Yapısı</h2><p>HTML yapı, CSS stilleri, jQuery ile işlevsellik eklenir. Plugin'ler ile gelişmiş özellikler sağlanır.</p>",
+    "video_url": "",
+    "code_example": "<!DOCTYPE html>\n<html>\n<head>\n    <title>KodLab Galeri</title>\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css\">\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css\">\n    <script src=\"https://code.jquery.com/jquery-3.7.1.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js\"></script>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { font-family: Arial, sans-serif; background: #f5f5f5; }\n        .galeri { max-width: 1200px; margin: 50px auto; padding: 20px; }\n        h1 { text-align: center; margin-bottom: 30px; color: #333; }\n        .filtreler { text-align: center; margin-bottom: 20px; }\n        .filtreler button { \n            padding: 10px 20px; margin: 5px; border: none;\n            background: #ddd; cursor: pointer; border-radius: 5px;\n            transition: all 0.3s;\n        }\n        .filtreler button.aktif { background: #3498db; color: white; }\n        .galeri-item { padding: 10px; }\n        .galeri-item img {\n            width: 100%; height: 250px; object-fit: cover;\n            border-radius: 8px; cursor: pointer;\n            transition: transform 0.3s;\n        }\n        .galeri-item img:hover { transform: scale(1.05); }\n        .yukle { \n            text-align: center; margin-top: 20px; display: none;\n        }\n        .yukle.aktif { display: block; }\n    </style>\n</head>\n<body>\n<div class=\"galeri\">\n    <h1>KodLab Resim Galerisi</h1>\n    <div class=\"filtreler\">\n        <button class=\"aktif\" data-filtre=\"tum\">Tümü</button>\n        <button data-filtre=\"dogal\">Doğal</button>\n        <button data-filtre=\"sehir\">Şehir</button>\n        <button data-filtre=\"teknoloji\">Teknoloji</button>\n    </div>\n    <div class=\"galeri-slider\">\n        <div class=\"galeri-item\" data-kategori=\"dogal\"><img src=\"https://picsum.photos/400/300?random=1\" alt=\"Doğal\"></div>\n        <div class=\"galeri-item\" data-kategori=\"sehir\"><img src=\"https://picsum.photos/400/300?random=2\" alt=\"Şehir\"></div>\n        <div class=\"galeri-item\" data-kategori=\"teknoloji\"><img src=\"https://picsum.photos/400/300?random=3\" alt=\"Teknoloji\"></div>\n        <div class=\"galeri-item\" data-kategori=\"dogal\"><img src=\"https://picsum.photos/400/300?random=4\" alt=\"Doğal\"></div>\n        <div class=\"galeri-item\" data-kategori=\"sehir\"><img src=\"https://picsum.photos/400/300?random=5\" alt=\"Şehir\"></div>\n    </div>\n    <div class=\"yukle\">Yükleniyor...</div>\n</div>\n\n<script>\n$(function() {\n    // Slick Carousel başlatma\n    $(\".galeri-slider\").slick({\n        slidesToShow: 3,\n        slidesToScroll: 1,\n        autoplay: true,\n        autoplaySpeed: 3000,\n        dots: true,\n        responsive: [\n            { breakpoint: 768, settings: { slidesToShow: 2 } },\n            { breakpoint: 480, settings: { slidesToShow: 1 } }\n        ]\n    });\n\n    // Magnific Popup\n    $(\".galeri-slider\").magnificPopup({\n        delegate: \"img\",\n        type: \"image\",\n        gallery: { enabled: true },\n        image: { titleSrc: function() { return $(this).attr(\"alt\"); } }\n    });\n\n    // Filtreleme\n    $(\".filtreler button\").click(function() {\n        $(\".filtreler button\").removeClass(\"aktif\");\n        $(this).addClass(\"aktif\");\n        var filtre = $(this).data(\"filtre\");\n        \n        if (filtre === \"tum\") {\n            $(\".galeri-item\").show();\n        } else {\n            $(\".galeri-item\").hide();\n            $(\".galeri-item[data-kategori=\" + filtre + \"]\").show();\n        }\n        \n        $(\".galeri-slider\").slick(\"slickUnfilter\");\n        if (filtre !== \"tum\") {\n            $(\".galeri-slider\").slick(\"slickFilter\", function() {\n                return $(this).data(\"kategori\") === filtre;\n            });\n        }\n    });\n\n    // Animasyonlu gösterim\n    $(\".galeri-item img\").each(function(index) {\n        $(this).delay(200 * index).animate({ opacity: 1 }, 500);\n    });\n\n    // Lazy loading (örnek)\n    $(\".galeri-item img\").on(\"load\", function() {\n        $(this).css(\"border\", \"3px solid #2ecc71\");\n    });\n});\n</script>\n</body>\n</html>",
+    "source_ref": "jQuery API: https://api.jquery.com/ | Slick: https://kenwheeler.github.io/slick/ | Magnific: https://dimsemenov.com/plugins/magnific-popup/",
+    "quiz": [
+      {
+        "question": "Slick Carousel hangi amaçla kullanılır?",
+        "options": [
+          "Form doğrulama",
+          "Slider/carousel oluşturma",
+          "Tablo yönetimi",
+          "Tarih seçici"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Magnific Popup ne işe yarar?",
+        "options": [
+          "Popup pencere açar",
+          "Lightbox ile resim/video gösterir",
+          "Menü oluşturur",
+          "Form düzenler"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Galeri projesinde filtreleme için hangi jQuery metodu kullanılmıştır?",
+        "options": [
+          "show()/hide()",
+          "fadeIn()/fadeOut()",
+          "slideUp()/slideDown()",
+          "toggle()"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Slick slider responsive ayarları hangi seçenekle yapılır?",
+        "options": [
+          "responsive",
+          "breakpoint",
+          "mobile",
+          "adaptive"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Galeri projesinde animasyon için hangi jQuery metotları kullanılmıştır?",
+        "options": [
+          "animate() ve delay()",
+          "fadeIn() ve setTimeout()",
+          "slideDown() ve delay()",
+          "show() ve wait()"
+        ],
+        "correct": 0
+      }
+    ]
+  }
+]

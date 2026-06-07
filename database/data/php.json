@@ -1,0 +1,2137 @@
+[
+  {
+    "order": 1,
+    "title": "PHP Nedir?",
+    "slug": "php-nedir",
+    "content": "<h1>PHP Nedir?</h1><p>PHP (Hypertext Preprocessor), sunucu tarafında çalışan, dinamik web sayfaları oluşturmak için kullanılan bir programlama dilidir. Rasmus Lerdorf tarafından 1994 yılında geliştirilmiştir.</p><p>PHP, HTML'in içine gömülebilir ve veritabanı işlemleri, dosya yönetimi, oturum yönetimi gibi birçok işlemi kolayca yapmanızı sağlar.</p><h2>PHP'nin Özellikleri</h2><ul><li>Açık kaynak kodludur ve ücretsizdir</li><li>Sunucu tarafında çalışır</li><li>Veritabanı desteği geniştir (MySQL, PostgreSQL, MongoDB vb.)</li><li>Geniş bir topluluğa sahiptir</li><li>Platform bağımsızdır (Windows, Linux, macOS)</li></ul>",
+    "video_url": "",
+    "code_example": "<?php\necho \"Merhaba, PHP Dünyası!\";\n$isim = \"KodLab\";\necho \"Hoş geldin, \" . $isim;\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/intro-whatis.php",
+    "quiz": [
+      {
+        "question": "PHP açılımı nedir?",
+        "options": [
+          "Personal Home Page",
+          "Hypertext Preprocessor",
+          "Private Hosting Protocol",
+          "PHP: Hypertext Preprocessor"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHP hangi tür bir dildir?",
+        "options": [
+          "İstemci tarafı dili",
+          "Sunucu tarafı dili",
+          "Derleme dili",
+          "İşletim sistemi dili"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHP'yi kim geliştirmiştir?",
+        "options": [
+          "Bill Gates",
+          "Rasmus Lerdorf",
+          "Linus Torvalds",
+          "Brendan Eich"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHP hangi yıl geliştirilmeye başlanmıştır?",
+        "options": [
+          "1990",
+          "1994",
+          "2000",
+          "1989"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHP dosyaları hangi uzantıyı kullanır?",
+        "options": [
+          ".html",
+          ".js",
+          ".php",
+          ".css"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Kurulum ve XAMPP",
+    "slug": "kurulum-xampp",
+    "content": "<h1>PHP Kurulumu ve XAMPP</h1><p>PHP'nin çalışabilmesi için bir web sunucusuna (Apache, Nginx) ve bir veritabanı yönetim sistemine ihtiyacınız vardır. Bunları tek tek kurmak yerine XAMPP gibi hazır paketler kullanabilirsiniz.</p><h2>XAMPP Nedir?</h2><p>XAMPP, Apache + MariaDB + PHP + Perl içeren, ücretsiz ve açık kaynaklı bir web sunucusu çözümüdür. Cross-platform (Windows, Linux, macOS) olarak çalışır.</p><h2>XAMPP Kurulum Adımları</h2><ol><li>apachefriends.org adresinden XAMPP'i indirin</li><li>Kurulum sihirbazını çalıştırın</li><li>Bileşenlerden Apache ve PHP'yi seçin</li><li>Kurulum tamamlandıktan sonra XAMPP Control Panel'i açın</li><li>Apache ve MySQL servislerini başlatın</li><li>Tarayıcıdan http://localhost adresine giderek test edin</li></ol>",
+    "video_url": "",
+    "code_example": "<?php\nphpinfo();\necho phpversion();\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/install.php",
+    "quiz": [
+      {
+        "question": "XAMPP açılımında hangi bileşenler bulunur?",
+        "options": [
+          "Apache, MySQL, PHP, Perl",
+          "XML, Apache, MySQL, PHP",
+          "Windows, Linux, macOS",
+          "Apache, MariaDB, PHP, Perl"
+        ],
+        "correct": 3
+      },
+      {
+        "question": "XAMPP'de web sayfaları hangi klasöre konulur?",
+        "options": [
+          "htdocs",
+          "www",
+          "public_html",
+          "web"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "PHP yapılandırma dosyasının adı nedir?",
+        "options": [
+          ".htaccess",
+          "php.ini",
+          "config.php",
+          "httpd.conf"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "XAMPP Control Panel'den hangi servis başlatılmalıdır?",
+        "options": [
+          "Sadece Apache",
+          "Apache ve MySQL",
+          "Sadece PHP",
+          "Apache, MySQL ve FileZilla"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHP kurulumunu kontrol eden fonksiyon hangisidir?",
+        "options": [
+          "phpinfo()",
+          "php_version()",
+          "info_php()",
+          "php_check()"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 3,
+    "title": "PHP Syntax ve Yorumlar",
+    "slug": "php-syntax-yorumlar",
+    "content": "<h1>PHP Syntax ve Yorum Satırları</h1><p>PHP kodları &lt;?php etiketi ile başlar ve ?&gt; etiketi ile biter. PHP dosyaları genellikle sadece PHP kodu içeriyorsa kapanış etiketi yazılmaz.</p><h2>PHP Etiketleri</h2><p>PHP, HTML içerisine gömülebilir.</p><h2>Yorum Satırları</h2><p>PHP'de üç tür yorum satırı vardır:</p><ul><li>// ile tek satır yorum</li><li>/* ... */ ile çok satırlı yorum</li><li># ile tek satır yorum (Perl stili)</li></ul>",
+    "video_url": "",
+    "code_example": "<?php\n// Bu tek satırlık bir yorumdur\n# Bu da tek satırlık bir yorumdur\n/*\nBu çok satırlı bir yorumdur.\n*/\necho \"Merhaba Dünya!\";\n$isim = \"Ali\";\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.basic-syntax.php",
+    "quiz": [
+      {
+        "question": "PHP kodu hangi etiket ile başlar?",
+        "options": [
+          "<?php",
+          "<script>",
+          "<?",
+          "<php>"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "PHP'de çok satırlı yorum nasıl yapılır?",
+        "options": [
+          "// yorum",
+          "/* yorum */",
+          "# yorum",
+          "<!-- yorum -->"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHP'de ifadeler hangi karakterle sonlandırılır?",
+        "options": [
+          ".",
+          ";",
+          ":",
+          ","
+        ],
+        "correct": 1
+      },
+      {
+        "question": "<?= ifadesinin karşılığı nedir?",
+        "options": [
+          "include",
+          "require",
+          "echo",
+          "return"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "PHP değişkenleri büyük-küçük harfe duyarlı mıdır?",
+        "options": [
+          "Evet",
+          "Hayır",
+          "Sadece fonksiyonlar",
+          "Sadece sınıflar"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 4,
+    "title": "PHP Değişkenler",
+    "slug": "php-degiskenler",
+    "content": "<h1>PHP Değişkenler</h1><p>PHP'de değişkenler $ işareti ile başlar ve tür belirtmeksizin tanımlanır. PHP zayıf türlü (loosely typed) bir dildir.</p><h2>Değişken Tanımlama Kuralları</h2><ul><li>$ işareti ile başlar</li><li>Harfler, rakamlar ve alt çizgi içerebilir</li><li>Rakam ile başlayamaz</li><li>Büyük-küçük harfe duyarlıdır</li></ul><h2>Değişken Kapsamları (Scope)</h2><p>PHP'de üç tür değişken kapsamı vardır: local, global, static.</p>",
+    "video_url": "",
+    "code_example": "<?php\n$isim = \"Ali\";\n$yas = 25;\n$puvar = 89.5;\n$aktif = true;\n$metin = \"Merhaba, ben \" . $isim . \" ve \" . $yas . \" yaşındayım.\";\necho $metin;\nglobal $siteAdi;\n$siteAdi = \"KodLab\";\nfunction test() {\n    global $siteAdi;\n    echo $siteAdi;\n}\ntest();\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.variables.php",
+    "quiz": [
+      {
+        "question": "PHP'de değişkenler hangi işaretle başlar?",
+        "options": [
+          "@",
+          "$",
+          "&",
+          "#"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Aşağıdakilerden hangisi geçerli bir PHP değişken adıdır?",
+        "options": [
+          "$1isim",
+          "$_isim",
+          "$is-im",
+          "$isim 1"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Global bir değişkene fonksiyon içinden erişmek için hangi anahtar kelime kullanılır?",
+        "options": [
+          "global",
+          "public",
+          "this",
+          "static"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Static değişkenlerin özelliği nedir?",
+        "options": [
+          "Her fonksiyon çağrısında sıfırlanır",
+          "Değerini fonksiyon çağrıları arasında korur",
+          "Sadece sınıflarda kullanılabilir",
+          "Globaldir"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHP'de değişken türü ne zaman belirlenir?",
+        "options": [
+          "Tanımlama anında",
+          "Değer atandığında otomatik",
+          "Derleme zamanında",
+          "Hiçbir zaman"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 5,
+    "title": "PHP Veri Tipleri",
+    "slug": "php-veri-tipleri",
+    "content": "<h1>PHP Veri Tipleri</h1><p>PHP, 10 farklı veri tipini destekler. Bunlar scalar, compound ve special tipler olarak gruplandırılabilir.</p><h2>Skaler Tipler</h2><ul><li><strong>string</strong>: Metin değerleri</li><li><strong>int</strong>: Tam sayılar</li><li><strong>float</strong>: Ondalıklı sayılar</li><li><strong>bool</strong>: Mantıksal değerler (true, false)</li></ul><h2>Bileşik Tipler</h2><ul><li><strong>array</strong>: Diziler</li><li><strong>object</strong>: Nesneler</li><li><strong>callable</strong>: Çağrılabilir fonksiyonlar</li><li><strong>iterable</strong>: Döngüye alınabilir değerler</li></ul><h2>Özel Tipler</h2><ul><li><strong>null</strong>: Değeri olmayan değişkenler</li><li><strong>resource</strong>: Veritabanı bağlantısı gibi harici kaynaklar</li></ul>",
+    "video_url": "",
+    "code_example": "<?php\n$string = \"Merhaba PHP\";\n$int = 42;\n$float = 3.14;\n$bool = true;\n$null = null;\n$dizi = [1, 2, 3];\necho gettype($string);\necho gettype($int);\necho gettype($float);\necho gettype($bool);\n$sayi = \"123\";\n$tamsayi = (int)$sayi;\nvar_dump($tamsayi);\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.types.intro.php",
+    "quiz": [
+      {
+        "question": "PHP'de kaç temel veri tipi vardır?",
+        "options": [
+          "5",
+          "8",
+          "10",
+          "6"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Aşağıdakilerden hangisi skaler bir tiptir?",
+        "options": [
+          "array",
+          "object",
+          "string",
+          "resource"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "gettype() fonksiyonu ne işe yarar?",
+        "options": [
+          "Değişkenin türünü değiştirir",
+          "Değişkenin türünü döndürür",
+          "Değişkeni siler",
+          "Değişkenin boyutunu döndürür"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "int tipini string'e dönüştürmek için hangi cast kullanılır?",
+        "options": [
+          "(int)",
+          "(string)",
+          "(float)",
+          "(array)"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "null değeri neyi ifade eder?",
+        "options": [
+          "Boş string",
+          "Değeri olmayan değişken",
+          "false değeri",
+          "0 sayısı"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 6,
+    "title": "PHP Sabitler",
+    "slug": "php-sabitler",
+    "content": "<h1>PHP Sabitler (Constants)</h1><p>Sabitler, betik boyunca değeri değişmeyen tanımlayıcılardır. Başlarında $ işareti olmaz ve değerleri bir kez tanımlandıktan sonra değiştirilemez.</p><h2>Sabit Tanımlama</h2><p>define() fonksiyonu ile: define('SABIT_ADI', değer); veya const anahtar kelimesi ile: const SABIT_ADI = değer;</p><h2>Önceden Tanımlı Sabitler</h2><p>PHP_VERSION, PHP_OS, PHP_INT_MAX, DIRECTORY_SEPARATOR, TRUE, FALSE, NULL gibi.</p><h2>Sihirli Sabitler</h2><p>__LINE__, __FILE__, __DIR__, __FUNCTION__, __CLASS__, __TRAIT__, __METHOD__, __NAMESPACE__</p>",
+    "video_url": "",
+    "code_example": "<?php\ndefine(\"SITE_ADI\", \"KodLab\");\ndefine(\"KURULUM_YILI\", 2024);\nconst API_VERSION = \"1.0.0\";\necho SITE_ADI;\necho PHP_VERSION;\necho __LINE__;\nfunction test() {\n    echo __FUNCTION__;\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.constants.php",
+    "quiz": [
+      {
+        "question": "Sabit tanımlamak için hangi fonksiyon kullanılır?",
+        "options": [
+          "constant()",
+          "define()",
+          "set_constant()",
+          "const()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Sabitlerin başında hangi işaret bulunur?",
+        "options": [
+          "$",
+          "@",
+          "Hiçbir işaret",
+          "&"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Aşağıdakilerden hangisi sihirli bir sabittir?",
+        "options": [
+          "PHP_VERSION",
+          "TRUE",
+          "__LINE__",
+          "PHP_OS"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "define() ile case-insensitive sabit nasıl tanımlanır?",
+        "options": [
+          "define('SABIT', deger, true)",
+          "const('SABIT', deger)",
+          "define('SABIT', deger, false)",
+          "define_case('SABIT', deger)"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Sabit değeri değiştirilebilir mi?",
+        "options": [
+          "Evet, her zaman",
+          "Hayır",
+          "Sadece define() ile tanımlananlar",
+          "Sadece const ile tanımlananlar"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 7,
+    "title": "PHP Operatörler",
+    "slug": "php-operatorler",
+    "content": "<h1>PHP Operatörler</h1><p>Operatörler, değişkenler veya değerler üzerinde işlem yapmak için kullanılır.</p><h2>Aritmetik Operatörler</h2><p>+, -, *, /, % (mod), ** (üs)</p><h2>Atama Operatörleri</h2><p>=, +=, -=, *=, /=, %=, .=</p><h2>Karşılaştırma Operatörleri</h2><p>==, === (değer ve tip), !=, !==, &lt; &gt;, &lt;=, &gt;=, &lt;=&gt; (spaceship)</p><h2>Mantıksal Operatörler</h2><p>&amp;&amp; (ve), || (veya), ! (değil), and, or, xor</p><h2>Artırma/Azaltma Operatörleri</h2><p>++$x, $x++, --$x, $x--</p><h2>String Operatörleri</h2><p>. (birleştirme), .= (birleştirerek atama)</p>",
+    "video_url": "",
+    "code_example": "<?php\n$a = 10;\n$b = 3;\necho $a + $b;\necho $a % $b;\necho $a ** $b;\nvar_dump($a == $b);\nvar_dump($a !== $b);\nvar_dump($a <=> $b);\n$isim = \"Ali\";\n$isim .= \" Veli\";\necho $isim;\nif ($a > 0 && $b > 0) {\n    echo \"İkisi de pozitif\";\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.operators.php",
+    "quiz": [
+      {
+        "question": "% operatörü ne işe yarar?",
+        "options": [
+          "Bölme",
+          "Mod alma",
+          "Çarpma",
+          "Üs alma"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "=== operatörü neyi kontrol eder?",
+        "options": [
+          "Sadece değer",
+          "Değer ve tip",
+          "Sadece tip",
+          "Referans"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "String birleştirme operatörü hangisidir?",
+        "options": [
+          "+",
+          ".",
+          ",",
+          "&"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "$x++ ifadesi ne anlama gelir?",
+        "options": [
+          "Önce artır, sonra kullan",
+          "Kullan, sonra artır",
+          "Sadece artır",
+          "Sadece kullan"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Spaceship operatörü (<=>) ne döndürür?",
+        "options": [
+          "true/false",
+          "-1, 0 veya 1",
+          "Sadece 0",
+          "String"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 8,
+    "title": "PHP Koşullar",
+    "slug": "php-kosullar",
+    "content": "<h1>PHP Koşul İfadeleri</h1><p>Koşul ifadeleri, belirli bir koşulun doğru veya yanlış olmasına göre farklı kod bloklarının çalıştırılmasını sağlar.</p><h2>if - else if - else</h2><p>Temel koşul yapısıdır. if ile başlar, elseif ve else ile devam eder.</p><h2>Switch</h2><p>Bir değişkenin birden fazla değerini kontrol etmek için kullanılır. Her case'den sonra break kullanılmalıdır.</p><h2>Ternary Operatör</h2><p>(koşul) ? doğru_ise : yanlış_ise</p><h2>Null Coalescing (??)</h2><p>$deger ?? $varsayilan - $deger null değilse $deger'i, null ise $varsayilan'ı döndürür.</p>",
+    "video_url": "",
+    "code_example": "<?php\n$not = 85;\nif ($not >= 90) { echo \"AA\"; }\nelseif ($not >= 80) { echo \"BA\"; }\nelseif ($not >= 70) { echo \"BB\"; }\nelse { echo \"CC\"; }\n$gun = \"Pazartesi\";\nswitch ($gun) {\n    case \"Pazartesi\":\n        echo \"Haftanın ilk günü\";\n        break;\n    case \"Cuma\":\n        echo \"Haftanın son günü\";\n        break;\n    default:\n        echo \"Diğer\";\n}\n$isim = $kullanici ?? \"Misafir\";\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.control-structures.php",
+    "quiz": [
+      {
+        "question": "Switch yapısında her case'den sonra ne kullanılmalıdır?",
+        "options": [
+          "continue",
+          "break",
+          "exit",
+          "return"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Null Coalescing operatörü (??) hangi PHP sürümünde eklenmiştir?",
+        "options": [
+          "PHP 5",
+          "PHP 7",
+          "PHP 8",
+          "PHP 4"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Ternary operatörünün yazılışı nedir?",
+        "options": [
+          "koşul ? doğru : yanlış",
+          "koşul :: doğru :: yanlış",
+          "koşul if doğru else yanlış",
+          "if koşul doğru else yanlış"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "elseif ile else if arasındaki fark nedir?",
+        "options": [
+          "Fark yoktur",
+          "elseif tek kelimedir, ayrı yazılamaz",
+          "else if sadece süslü parantezle çalışır",
+          "elseif daha hızlıdır"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Switch'te default ne işe yarar?",
+        "options": [
+          "Hiçbir case eşleşmezse çalışır",
+          "İlk case'dir",
+          "Sadece son case'de çalışır",
+          "Hata durumunda çalışır"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 9,
+    "title": "PHP Döngüler",
+    "slug": "php-donguler",
+    "content": "<h1>PHP Döngüler</h1><p>Döngüler, belirli bir kod bloğunu birden fazla kez çalıştırmak için kullanılır.</p><h2>while Döngüsü</h2><p>Koşul true olduğu sürece kod bloğunu çalıştırır.</p><h2>do...while Döngüsü</h2><p>Kod bloğu en az bir kez çalışır (koşul sonda kontrol edilir).</p><h2>for Döngüsü</h2><p>Başlangıç, koşul ve artış olmak üzere üç parametre alır.</p><h2>foreach Döngüsü</h2><p>Diziler üzerinde döngü yapmak için kullanılır.</p><h2>Döngü Kontrolleri</h2><p>break: Döngüyü sonlandırır. continue: Sonraki iterasyona geçer.</p>",
+    "video_url": "",
+    "code_example": "<?php\n$i = 1;\nwhile ($i <= 5) { echo $i; $i++; }\nfor ($j = 0; $j < 10; $j++) { echo $j; }\n$ogrenciler = [\"Ali\", \"Ayşe\", \"Mehmet\"];\nforeach ($ogrenciler as $index => $ogrenci) {\n    echo \"$index: $ogrenci\";\n}\nfor ($k = 0; $k < 10; $k++) {\n    if ($k == 3) continue;\n    if ($k == 7) break;\n    echo $k;\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.control-structures.php",
+    "quiz": [
+      {
+        "question": "En az bir kez çalışması garanti olan döngü hangisidir?",
+        "options": [
+          "while",
+          "for",
+          "do...while",
+          "foreach"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Döngüyü tamamen sonlandırmak için hangi ifade kullanılır?",
+        "options": [
+          "continue",
+          "break",
+          "exit",
+          "stop"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Diziler üzerinde döngü yapmak için hangi döngü kullanılır?",
+        "options": [
+          "for",
+          "while",
+          "foreach",
+          "do...while"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "continue ifadesi ne işe yarar?",
+        "options": [
+          "Döngüyü sonlandırır",
+          "Bir sonraki iterasyona geçer",
+          "Döngüyü başa sarar",
+          "Hata fırlatır"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "for döngüsü kaç parametre alır?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "1"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 10,
+    "title": "PHP Diziler (Indexed/Associative/Multidimensional)",
+    "slug": "php-diziler",
+    "content": "<h1>PHP Diziler (Arrays)</h1><p>Diziler, birden fazla değeri tek bir değişkende saklamak için kullanılır.</p><h2>Indexed Diziler</h2><p>Sayısal anahtarlarla erişilen dizilerdir. Varsayılan indeks 0'dan başlar.</p><h2>Associative Diziler</h2><p>String anahtarlarla erişilen dizilerdir.</p><h2>Multidimensional Diziler</h2><p>Dizilerin içinde dizi barındıran yapılardır.</p><h2>Dizi İşlemleri</h2><p>count(): Boyut, isset(): Varlık kontrolü, unset(): Silme, print_r()/var_dump(): Görüntüleme</p>",
+    "video_url": "",
+    "code_example": "<?php\n$renkler = [\"Kırmızı\", \"Mavi\", \"Yeşil\"];\necho $renkler[0];\n$ogrenci = [\"ad\" => \"Ali\", \"soyad\" => \"Yılmaz\", \"yas\" => 25];\necho $ogrenci[\"ad\"];\n$sinif = [\n    [\"ad\" => \"Ali\", \"not\" => 85],\n    [\"ad\" => \"Ayşe\", \"not\" => 92],\n    [\"ad\" => \"Mehmet\", \"not\" => 78]\n];\necho $sinif[1][\"ad\"];\necho count($renkler);\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.types.array.php",
+    "quiz": [
+      {
+        "question": "Indexed dizilerde varsayılan başlangıç indeksi kaçtır?",
+        "options": [
+          "-1",
+          "1",
+          "0",
+          "İsteğe bağlı"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Associative dizi nedir?",
+        "options": [
+          "Sayısal anahtarlı dizi",
+          "String anahtarlı dizi",
+          "İç içe diziler",
+          "Sıralanmış dizi"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHP 5.4+ ile dizi oluşturmak için hangi sözdizimi kullanılır?",
+        "options": [
+          "array()",
+          "{}",
+          "[]",
+          "()"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Dizi boyutunu öğrenmek için hangi fonksiyon kullanılır?",
+        "options": [
+          "size()",
+          "count()",
+          "length()",
+          "sizeof()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Dizi elemanını silmek için hangi fonksiyon kullanılır?",
+        "options": [
+          "delete()",
+          "remove()",
+          "unset()",
+          "destroy()"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "order": 11,
+    "title": "PHP Dizi Fonksiyonları",
+    "slug": "php-dizi-fonksiyonlari",
+    "content": "<h1>PHP Dizi Fonksiyonları</h1><p>PHP, dizilerle çalışmak için 80'den fazla hazır fonksiyon sunar.</p><h2>Sıralama</h2><p>sort(), rsort(), asort(), ksort(), usort()</p><h2>Birleştirme ve Ayırma</h2><p>array_merge(), array_combine(), implode(), explode()</p><h2>Filtreleme ve Dönüştürme</h2><p>array_filter(), array_map(), array_reduce(), in_array(), array_search()</p>",
+    "video_url": "",
+    "code_example": "<?php\n$sayilar = [3, 1, 4, 1, 5, 9];\nsort($sayilar);\nprint_r($sayilar);\n$isimler = [\"Ali\", \"Ayşe\", \"Mehmet\"];\necho implode(\", \", $isimler);\n$dizi1 = [\"a\", \"b\"];\n$dizi2 = [\"c\", \"d\"];\n$birlesik = array_merge($dizi1, $dizi2);\nprint_r($birlesik);\n$kareler = array_map(function($n) { return $n * $n; }, $sayilar);\nprint_r($kareler);\nvar_dump(in_array(5, $sayilar));\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/ref.array.php",
+    "quiz": [
+      {
+        "question": "Diziyi artan sırada sıralayan fonksiyon hangisidir?",
+        "options": [
+          "rsort()",
+          "sort()",
+          "ksort()",
+          "asort()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "İki diziyi birleştiren fonksiyon hangisidir?",
+        "options": [
+          "array_combine()",
+          "array_merge()",
+          "array_join()",
+          "array_concat()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Diziyi stringe çeviren fonksiyon hangisidir?",
+        "options": [
+          "explode()",
+          "implode()",
+          "join()",
+          "split()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Bir değerin dizide var olup olmadığını kontrol eden fonksiyon hangisidir?",
+        "options": [
+          "array_search()",
+          "in_array()",
+          "array_key_exists()",
+          "isset()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "array_map() fonksiyonu ne işe yarar?",
+        "options": [
+          "Diziyi sıralar",
+          "Her elemana bir fonksiyon uygular",
+          "Diziyi filtreler",
+          "Diziyi tersine çevirir"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 12,
+    "title": "PHP Fonksiyonlar",
+    "slug": "php-fonksiyonlar",
+    "content": "<h1>PHP Fonksiyonlar</h1><p>Fonksiyonlar, belirli bir işlemi yapan ve gerektiğinde çağrılabilen kod bloklarıdır.</p><h2>Fonksiyon Tanımlama</h2><p>function anahtar kelimesi ile başlar: function fonksiyonAdi($param1, $param2) { }</p><h2>Parametreler</h2><p>Zorunlu parametreler, varsayılan değerli parametreler, type hint, variadic (...$sayilar)</p><h2>Değer Döndürme</h2><p>return ifadesi ile değer döndürülür.</p><h2>Anonim Fonksiyonlar (Closure)</h2><p>$islem = function($x) { return $x * 2; };</p><h2>Arrow Functions (PHP 7.4+)</h2><p>$katla = fn($x) => $x * 2;</p>",
+    "video_url": "",
+    "code_example": "<?php\nfunction selamla($isim) {\n    return \"Merhaba, $isim!\";\n}\necho selamla(\"Ali\");\nfunction usAl($taban, $us = 2) {\n    return $taban ** $us;\n}\necho usAl(5);\nfunction topla(int $a, int $b): int {\n    return $a + $b;\n}\nfunction toplam(...$sayilar) {\n    return array_sum($sayilar);\n}\necho toplam(1, 2, 3, 4, 5);\n$carpi = function($x, $y) { return $x * $y; };\necho $carpi(3, 4);\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.functions.php",
+    "quiz": [
+      {
+        "question": "PHP'de fonksiyon hangi anahtar kelime ile tanımlanır?",
+        "options": [
+          "function",
+          "func",
+          "def",
+          "method"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Değişken sayıda parametre almak için hangi ifade kullanılır?",
+        "options": [
+          "...$param",
+          "$param...",
+          "variadic $param",
+          "*$param"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Arrow function hangi PHP sürümünde gelmiştir?",
+        "options": [
+          "PHP 7.0",
+          "PHP 7.4",
+          "PHP 8.0",
+          "PHP 5.6"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Fonksiyonda tip belirtme (type hint) hangi amaçla kullanılır?",
+        "options": [
+          "Performans artışı",
+          "Parametre ve dönüş tiplerini belirtmek",
+          "Değişken adlandırmak",
+          "Dokümantasyon"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Anonim fonksiyonda dış değişkenleri yakalamak için hangi anahtar kelime kullanılır?",
+        "options": [
+          "global",
+          "use",
+          "import",
+          "bind"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 13,
+    "title": "PHP String Fonksiyonları",
+    "slug": "php-string-fonksiyonlari",
+    "content": "<h1>PHP String Fonksiyonları</h1><p>PHP, string işlemleri için çok sayıda hazır fonksiyon sunar.</p><h2>String Uzunluk ve Düzenleme</h2><p>strlen(), trim(), strtoupper(), strtolower(), ucfirst(), ucwords()</p><h2>Arama ve Değiştirme</h2><p>strpos(), strstr(), substr(), str_replace(), substr_replace()</p><h2>Parçalama ve Birleştirme</h2><p>explode(), implode(), str_split()</p><h2>Güvenlik</h2><p>htmlspecialchars(), strip_tags(), addslashes(), trim()</p>",
+    "video_url": "",
+    "code_example": "<?php\n$metin = \"  Merhaba PHP Dünyası!  \";\necho strlen($metin);\necho trim($metin);\necho strtoupper($metin);\necho strtolower($metin);\n$konum = strpos($metin, \"PHP\");\necho $konum;\necho substr($metin, 2, 7);\necho str_replace(\"PHP\", \"KodLab\", $metin);\n$dizi = explode(\" \", trim($metin));\nprint_r($dizi);\necho htmlspecialchars(\"<script>alert(1)</script>\");\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/ref.strings.php",
+    "quiz": [
+      {
+        "question": "String uzunluğunu döndüren fonksiyon hangisidir?",
+        "options": [
+          "strlen()",
+          "strlength()",
+          "length()",
+          "size()"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "HTML etiketlerini temizleyen fonksiyon hangisidir?",
+        "options": [
+          "htmlspecialchars()",
+          "strip_tags()",
+          "trim()",
+          "addslashes()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "String içinde arama yapan fonksiyon hangisidir?",
+        "options": [
+          "str_search()",
+          "strpos()",
+          "in_str()",
+          "find_str()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Stringi belli bir kısmını almak için hangi fonksiyon kullanılır?",
+        "options": [
+          "str_slice()",
+          "substr()",
+          "str_cut()",
+          "mid_str()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Özel HTML karakterlerini dönüştüren fonksiyon hangisidir?",
+        "options": [
+          "htmlspecialchars()",
+          "strip_tags()",
+          "trim()",
+          "addslashes()"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 14,
+    "title": "Include ve Require",
+    "slug": "php-include-require",
+    "content": "<h1>Include ve Require</h1><p>PHP'de bir dosyayı başka bir dosyaya dahil etmek için include, require, include_once ve require_once kullanılır.</p><h2>include vs require</h2><p>include: Dosya bulunamazsa uyarı (warning) verir ve çalışmaya devam eder. require: Dosya bulunamazsa fatal error verir ve çalışma durur.</p><h2>_once Kullanımı</h2><p>include_once ve require_once: Dosyanın daha önce dahil edilip edilmediğini kontrol eder. Tekrar eklenmesini engeller.</p><h2>Kullanım Alanları</h2><p>Header/footer dosyaları, konfigürasyon dosyaları, fonksiyon kütüphaneleri, sınıf tanımlamaları.</p>",
+    "video_url": "",
+    "code_example": "<?php\n// config.php\n$db_host = \"localhost\";\n$db_user = \"root\";\n$db_pass = \"\";\n\n// index.php\ninclude \"header.php\";\nrequire \"config.php\";\ninclude_once \"functions.php\";\nrequire_once \"Database.php\";\necho \"Site içeriği\";\ninclude \"footer.php\";\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/function.include.php",
+    "quiz": [
+      {
+        "question": "include ile require arasındaki fark nedir?",
+        "options": [
+          "include daha hızlıdır",
+          "require hata verirse durur, include uyarı verip devam eder",
+          "require daha güvenlidir",
+          "include sadece bir kez ekler"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Bir dosyayı yalnızca bir kez dahil etmek için hangisi kullanılır?",
+        "options": [
+          "include",
+          "require",
+          "include_once",
+          "include_single"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "require_once ne işe yarar?",
+        "options": [
+          "Dosyayı zorunlu kılar ve bir kez ekler",
+          "Dosyayı sadece bir kez ekler",
+          "Dosyayı zorunlu kılar",
+          "Sadece bir kez çalıştırır"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Hangi durumda require kullanılmalıdır?",
+        "options": [
+          "Zorunlu dosyalar için",
+          "İsteğe bağlı dosyalar için",
+          "Stil dosyaları için",
+          "Resim dosyaları için"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "include başarısız olursa ne olur?",
+        "options": [
+          "Fatal error",
+          "Warning",
+          "Notice",
+          "Parse error"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 15,
+    "title": "Form GET ve POST",
+    "slug": "php-form-get-post",
+    "content": "<h1>Form GET ve POST</h1><p>PHP ile HTML formlarından veri almak için $_GET ve $_POST süper global değişkenleri kullanılır.</p><h2>GET Metodu</h2><p>Veriler URL üzerinden iletilir. $_GET ile erişilir. Sınırlı veri gönderilebilir. URL'de görünür.</p><h2>POST Metodu</h2><p>Veriler HTTP gövdesinde iletilir. $_POST ile erişilir. Sınırsız veri gönderilebilir. URL'de görünmez.</p><h2>$_REQUEST</h2><p>$_REQUEST, $_GET, $_POST ve $_COOKIE'yı birleştirir. Hangi metodun kullanıldığı önemli değilse kullanılabilir.</p><h2>Form Güvenliği</h2><p>htmlspecialchars() ile çıktı temizleme, isset() ile kontrol, required atribütleri, sunucu taraflı validasyon.</p>",
+    "video_url": "",
+    "code_example": "<?php\n// form.html\n?>\n<form method=\"POST\" action=\"islem.php\">\n    <input type=\"text\" name=\"isim\">\n    <input type=\"email\" name=\"email\">\n    <button type=\"submit\">Gönder</button>\n</form>\n<?php\n// islem.php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $isim = htmlspecialchars($_POST[\"isim\"]);\n    $email = htmlspecialchars($_POST[\"email\"]);\n    echo \"Hoş geldin, $isim. E-posta: $email\";\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.variables.superglobals.php",
+    "quiz": [
+      {
+        "question": "GET metodunda veriler nerede iletilir?",
+        "options": [
+          "HTTP gövdesinde",
+          "URL'de",
+          "Cookie'de",
+          "Sesi̇onda"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "POST metoduna hangi değişkenle erişilir?",
+        "options": [
+          "$_GET",
+          "$_POST",
+          "$_SERVER",
+          "$_SESSION"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "$_REQUEST değişkeni hangilerini içerir?",
+        "options": [
+          "$_GET ve $_POST",
+          "$_GET, $_POST ve $_COOKIE",
+          "$_SESSION ve $_COOKIE",
+          "$_SERVER ve $_ENV"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Form verilerini güvenli göstermek için hangi fonksiyon kullanılır?",
+        "options": [
+          "strip_tags()",
+          "htmlspecialchars()",
+          "trim()",
+          "addslashes()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "POST mu yoksa GET mi kontrolü için hangisi kullanılır?",
+        "options": [
+          "$_SERVER[\"REQUEST_METHOD\"]",
+          "$_POST[\"method\"]",
+          "$_GET[\"type\"]",
+          "$_SERVER[\"HTTP_METHOD\"]"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 16,
+    "title": "PHP Süper Globaller",
+    "slug": "php-super-globaller",
+    "content": "<h1>PHP Süper Globaller</h1><p>Süper globaller, PHP'de her yerden erişilebilen hazır değişkenlerdir.</p><h2>$_SERVER</h2><p>Sunucu ve çalışma ortamı bilgilerini içerir. $_SERVER[\"SERVER_NAME\"], $_SERVER[\"REQUEST_METHOD\"], $_SERVER[\"REMOTE_ADDR\"]</p><h2>$_SESSION</h2><p>Oturum verilerini saklamak için kullanılır. session_start() ile başlatılır.</p><h2>$_COOKIE</h2><p>Tarayıcıda saklanan küçük veri parçalarıdır. setcookie() ile oluşturulur.</p><h2>$_FILES</h2><p>Dosya yükleme işlemlerinde kullanılır.</p><h2>$_ENV</h2><p>Çevre değişkenlerini içerir.</p>",
+    "video_url": "",
+    "code_example": "<?php\nsession_start();\n$_SESSION[\"kullanici\"] = \"ali\";\necho $_SERVER[\"SERVER_NAME\"];\necho $_SERVER[\"REMOTE_ADDR\"];\nsetcookie(\"dil\", \"tr\", time() + 3600);\necho $_COOKIE[\"dil\"];\n// $_ENV\nputenv(\"UYGULAMA=KodLab\");\necho getenv(\"UYGULAMA\");\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.variables.superglobals.php",
+    "quiz": [
+      {
+        "question": "$_SERVER hangi tür bilgileri içerir?",
+        "options": [
+          "Kullanıcı bilgisi",
+          "Sunucu bilgileri",
+          "Veritabanı bilgisi",
+          "Dosya bilgisi"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Session başlatmak için hangi fonksiyon kullanılır?",
+        "options": [
+          "session_start()",
+          "session_begin()",
+          "start_session()",
+          "init_session()"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Cookie oluşturmak için hangi fonksiyon kullanılır?",
+        "options": [
+          "create_cookie()",
+          "setcookie()",
+          "cookie_set()",
+          "make_cookie()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "$_FILES hangi amaçla kullanılır?",
+        "options": [
+          "Dosya okuma",
+          "Dosya yükleme",
+          "Dosya silme",
+          "Dosya listeleme"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "$_SESSION verileri nerede saklanır?",
+        "options": [
+          "Tarayıcıda",
+          "Sunucuda",
+          "Veritabanında",
+          "Dosyada"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 17,
+    "title": "Session ve Cookie Yönetimi",
+    "slug": "php-session-cookie",
+    "content": "<h1>Session ve Cookie Yönetimi</h1><p>Session ve cookie, kullanıcı durumunu korumak için kullanılan iki farklı yöntemdir.</p><h2>Session</h2><p>Sunucu taraflıdır. session_start() ile başlatılır. $_SESSION dizisi ile yönetilir. session_destroy() ile silinir.</p><h2>Cookie</h2><p>İstemci taraflıdır. setcookie() ile oluşturulur. Süre ve yol belirtilebilir.</p><h2>Güvenlik Farkları</h2><p>Session verileri sunucuda saklandığı için daha güvenlidir. Cookie verileri tarayıcıda saklanır ve değiştirilebilir.</p>",
+    "video_url": "",
+    "code_example": "<?php\nsession_start();\n// Session işlemleri\n$_SESSION[\"kullanici_id\"] = 1;\n$_SESSION[\"kullanici_adi\"] = \"ali\";\necho $_SESSION[\"kullanici_adi\"];\n// Session silme\nsession_unset();\nsession_destroy();\n// Cookie işlemleri\nsetcookie(\"tema\", \"koyu\", time() + (86400 * 30), \"/\");\nif (isset($_COOKIE[\"tema\"])) {\n    echo \"Tema: \" . $_COOKIE[\"tema\"];\n}\n// Cookie silme\nsetcookie(\"tema\", \"\", time() - 3600, \"/\");\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/features.sessions.php",
+    "quiz": [
+      {
+        "question": "Session verileri nerede saklanır?",
+        "options": [
+          "İstemcide",
+          "Sunucuda",
+          "Veritabanında",
+          "Konfigürasyon dosyasında"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Session başlatmak için hangi fonksiyon kullanılır?",
+        "options": [
+          "session_start()",
+          "session_begin()",
+          "start_session()",
+          "init_session()"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Cookie'nin süresi nasıl belirlenir?",
+        "options": [
+          "setcookie() ile zaman belirterek",
+          "Cookie süresizdir",
+          "php.ini ile",
+          "Otomatik belirlenir"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Session'ı tamamen silmek için hangisi kullanılır?",
+        "options": [
+          "session_delete()",
+          "session_destroy()",
+          "session_remove()",
+          "session_clear()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Cookie hangi amaçla kullanılır?",
+        "options": [
+          "Sunucu verilerini saklamak",
+          "Küçük verileri tarayıcıda saklamak",
+          "Veritabanı bağlantısı",
+          "Dosya yönetimi"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 18,
+    "title": "Dosya İşlemleri (fopen, fwrite, fread)",
+    "slug": "php-dosya-islemleri",
+    "content": "<h1>PHP Dosya İşlemleri</h1><p>PHP ile dosyalar üzerinde okuma, yazma, ekleme gibi işlemler yapılabilir.</p><h2>Dosya Açma: fopen()</h2><p>fopen(dosya, mod): r (okuma), w (yazma, içeriği siler), a (ekleme), r+ (okuma/yazma)</p><h2>Dosya Okuma: fread()</h2><p>fread(dosya, bayt_sayısı) veya fgets() ile satır satır okuma. file_get_contents() ile tek seferde okuma.</p><h2>Dosya Yazma: fwrite()</h2><p>fwrite(dosya, metin) veya file_put_contents() ile tek seferde yazma.</p><h2>Dosya Kapatma: fclose()</h2><p>Açılan her dosya işlem sonunda kapatılmalıdır.</p><h2>Diğer Fonksiyonlar</h2><p>file_exists(), filesize(), unlink(), rename(), copy(), feof()</p>",
+    "video_url": "",
+    "code_example": "<?php\n// Dosya yazma\n$dosya = fopen(\"deneme.txt\", \"w\");\nfwrite($dosya, \"Merhaba KodLab!\n\");\nfwrite($dosya, \"PHP Dosya İşlemleri\");\nfclose($dosya);\n// Dosya okuma\n$dosya = fopen(\"deneme.txt\", \"r\");\nwhile (!feof($dosya)) {\n    echo fgets($dosya) . \"<br>\";\n}\nfclose($dosya);\n// Kısa yöntem\n$icerik = file_get_contents(\"deneme.txt\");\necho $icerik;\nfile_put_contents(\"yeni.txt\", \"Yeni içerik\");\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/ref.filesystem.php",
+    "quiz": [
+      {
+        "question": "fopen() ile dosya açarken hangi mod içeriği siler?",
+        "options": [
+          "r",
+          "w",
+          "a",
+          "r+"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Dosyayı satır satır okumak için hangi fonksiyon kullanılır?",
+        "options": [
+          "fread()",
+          "fgets()",
+          "file()",
+          "readfile()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "file_get_contents() ne işe yarar?",
+        "options": [
+          "Dosyayı açar",
+          "Dosyayı tek seferde okur",
+          "Dosyayı siler",
+          "Dosyayı kopyalar"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Dosyanın var olup olmadığını kontrol eden fonksiyon hangisidir?",
+        "options": [
+          "file_exists()",
+          "is_file()",
+          "exist()",
+          "file_check()"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Dosyayı silmek için hangi fonksiyon kullanılır?",
+        "options": [
+          "delete()",
+          "unlink()",
+          "remove()",
+          "rmdir()"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 19,
+    "title": "Dosya Yükleme",
+    "slug": "php-dosya-yukleme",
+    "content": "<h1>PHP Dosya Yükleme</h1><p>PHP ile sunucuya dosya yüklemek için HTML form ve PHP işleme kodu yazılır.</p><h2>HTML Form</h2><p>enctype=\"multipart/form-data\" atribütü zorunludur. method=\"POST\" olmalıdır.</p><h2>$_FILES Dizisi</h2><p>$_FILES[\"dosya\"][\"name\"]: Orijinal ad, $_FILES[\"dosya\"][\"tmp_name\"]: Geçici konum, $_FILES[\"dosya\"][\"size\"]: Boyut, $_FILES[\"dosya\"][\"error\"]: Hata kodu</p><h2>Dosyayı Taşıma</h2><p>move_uploaded_file(geçici_konum, hedef_konum) ile dosya kalıcı konuma taşınır.</p><h2>Güvenlik Önlemleri</h2><p>Dosya türü kontrolü (getimagesize(), mime_content_type()), boyut sınırlaması, dosya adı sanitizasyonu, izin verilen uzantılar.</p>",
+    "video_url": "",
+    "code_example": "<?php\n// HTML form\n?>\n<form method=\"POST\" enctype=\"multipart/form-data\">\n    <input type=\"file\" name=\"dosya\">\n    <button type=\"submit\">Yükle</button>\n</form>\n<?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $hedef_klasor = \"uploads/\";\n    $hedef_dosya = $hedef_klasor . basename($_FILES[\"dosya\"][\"name\"]);\n    $dogrulama = getimagesize($_FILES[\"dosya\"][\"tmp_name\"]);\n    if ($dogrulama !== false) {\n        if (move_uploaded_file($_FILES[\"dosya\"][\"tmp_name\"], $hedef_dosya)) {\n            echo \"Dosya yüklendi: \" . $hedef_dosya;\n        }\n    }\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/features.file-upload.php",
+    "quiz": [
+      {
+        "question": "Dosya yükleme formunda hangi enctype kullanılmalıdır?",
+        "options": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data",
+          "text/plain",
+          "application/json"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Yüklenen dosyanın geçici adı hangi anahtarda tutulur?",
+        "options": [
+          "name",
+          "tmp_name",
+          "size",
+          "error"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Yüklenen dosyayı kalıcı konuma taşımak için hangi fonksiyon kullanılır?",
+        "options": [
+          "move_file()",
+          "move_uploaded_file()",
+          "upload_file()",
+          "copy_file()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "$_FILES[\"dosya\"][\"error\"] neyi belirtir?",
+        "options": [
+          "Dosya adını",
+          "Hata kodunu",
+          "Dosya boyutunu",
+          "Dosya türünü"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Dosya yükleme için form method'u ne olmalıdır?",
+        "options": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 20,
+    "title": "PHP Hata Yönetimi",
+    "slug": "php-hata-yonetimi",
+    "content": "<h1>PHP Hata Yönetimi</h1><p>PHP'de hataları yönetmek için try-catch blokları ve özel hata yöneticileri kullanılır.</p><h2>try-catch-finally</h2><p>try: Hata oluşabilecek kod. catch: Hatayı yakalar. finally: Her durumda çalışır.</p><h2>throw</h2><p>throw new Exception(\"Hata mesajı\") ile özel hata fırlatılır.</p><h2>Özel Hata Yöneticisi</h2><p>set_error_handler() ile özel hata işleme fonksiyonu tanımlanabilir.</p><h2>Hata Türleri</h2><p>Exception, Error, TypeError, ValueError, ParseError, ArithmeticError</p>",
+    "video_url": "",
+    "code_example": "<?php\n// Try-catch\ntry {\n    $bolum = 10 / 0;\n    if ($bolum === false) {\n        throw new Exception(\"Bölme hatası\");\n    }\n} catch (DivisionByZeroError $e) {\n    echo \"Hata: \" . $e->getMessage();\n} catch (Exception $e) {\n    echo \"Genel hata: \" . $e->getMessage();\n} finally {\n    echo \"Bu her zaman çalışır.\";\n}\n\n// Özel hata yöneticisi\nfunction ozelHata($seviye, $mesaj, $dosya, $satir) {\n    echo \"[Özel Hata] $mesaj - $dosya:$satir\";\n    return true;\n}\nset_error_handler(\"ozelHata\");\necho $tanimsizDegisken;\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.exceptions.php",
+    "quiz": [
+      {
+        "question": "Hata yakalamak için hangi blok kullanılır?",
+        "options": [
+          "try",
+          "catch",
+          "finally",
+          "throw"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Her durumda çalışan blok hangisidir?",
+        "options": [
+          "try",
+          "catch",
+          "finally",
+          "throw"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Özel hata fırlatmak için hangi anahtar kelime kullanılır?",
+        "options": [
+          "error",
+          "throw",
+          "raise",
+          "exception"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Özel hata yöneticisi tanımlamak için hangi fonksiyon kullanılır?",
+        "options": [
+          "error_handler()",
+          "set_error_handler()",
+          "custom_error()",
+          "handle_error()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Exception sınıfının hata mesajını döndüren metodu hangisidir?",
+        "options": [
+          "getMessage()",
+          "getError()",
+          "getText()",
+          "toString()"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 21,
+    "title": "PHP Tarih/Zaman Fonksiyonları",
+    "slug": "php-tarih-zaman",
+    "content": "<h1>PHP Tarih ve Zaman Fonksiyonları</h1><p>PHP ile tarih ve zaman işlemleri için date(), time(), strtotime() gibi fonksiyonlar kullanılır.</p><h2>date()</h2><p>date(format, timestamp): Tarihi belirtilen formatta döndürür. d (gün), m (ay), Y (yıl), H (saat), i (dakika), s (saniye)</p><h2>time()</h2><p>Unix timestamp (1 Ocak 1970'den bu yana geçen saniye) döndürür.</p><h2>strtotime()</h2><p>Metin olarak verilen tarihi timestamp'e çevirir: strtotime(\"next Monday\")</p><h2>DateTime Sınıfı</h2><p>Daha gelişmiş tarih işlemleri için DateTime, DateInterval, DatePeriod sınıfları kullanılır.</p><h2>Zaman Dilimi</h2><p>date_default_timezone_set(\"Europe/Istanbul\") ile zaman dilimi ayarlanır.</p>",
+    "video_url": "",
+    "code_example": "<?php\ndate_default_timezone_set(\"Europe/Istanbul\");\necho date(\"d.m.Y H:i:s\");\necho time();\necho strtotime(\"next Monday\");\necho date(\"d.m.Y\", strtotime(\"+1 week\"));\n// DateTime Sınıfı\n$tarih = new DateTime(\"2024-01-01\");\n$tarih->modify(\"+10 days\");\necho $tarih->format(\"d.m.Y\");\n$simdi = new DateTime();\n$fark = $simdi->diff($tarih);\necho $fark->days . \" gün\";\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/ref.datetime.php",
+    "quiz": [
+      {
+        "question": "PHP'de tarih formatlamak için hangi fonksiyon kullanılır?",
+        "options": [
+          "date()",
+          "time()",
+          "format_date()",
+          "strftime()"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Unix timestamp döndüren fonksiyon hangisidir?",
+        "options": [
+          "date()",
+          "time()",
+          "timestamp()",
+          "now()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Metin tarihi timestamp'e çevirmek için hangi fonksiyon kullanılır?",
+        "options": [
+          "date_parse()",
+          "strtotime()",
+          "date_create()",
+          "time_parse()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Zaman dilimi ayarlamak için hangi fonksiyon kullanılır?",
+        "options": [
+          "timezone_set()",
+          "date_default_timezone_set()",
+          "set_timezone()",
+          "timezone_default()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "DateTime sınıfında iki tarih arasındaki farkı bulmak için hangi metot kullanılır?",
+        "options": [
+          "diff()",
+          "difference()",
+          "interval()",
+          "sub()"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 22,
+    "title": "PHP OOP - Class ve Obje",
+    "slug": "php-oop-class-obje",
+    "content": "<h1>PHP OOP - Class ve Object</h1><p>Nesne Yönelimli Programlama (OOP), kodun daha düzenli ve tekrar kullanılabilir olmasını sağlar.</p><h2>Class Tanımlama</h2><p>class anahtar kelimesi ile tanımlanır. Özellikler (properties) ve metotlar (methods) içerir.</p><h2>Nesne Oluşturma</h2><p>new ClassName() ile nesne oluşturulur. -> operatörü ile özelliklere ve metotlara erişilir.</p><h2>Constructor ve Destructor</h2><p>__construct(): Nesne oluşturulurken otomatik çağrılır. __destruct(): Nesne yok edilirken çağrılır.</p><h2>Erişim Belirleyiciler</h2><p>public: Her yerden erişim. private: Sadece sınıf içinden. protected: Sınıf ve alt sınıflardan.</p>",
+    "video_url": "",
+    "code_example": "<?php\nclass Ogrenci {\n    public $ad;\n    private $not;\n    \n    public function __construct($ad, $not) {\n        $this->ad = $ad;\n        $this->not = $not;\n    }\n    \n    public function getNot() {\n        return $this->not;\n    }\n    \n    public function bilgiGoster() {\n        return \"Öğrenci: {$this->ad}, Not: {$this->getNot()}\";\n    }\n}\n\n$ogrenci1 = new Ogrenci(\"Ali\", 85);\necho $ogrenci1->bilgiGoster();\necho $ogrenci1->ad;\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.oop5.php",
+    "quiz": [
+      {
+        "question": "Class tanımlamak için hangi anahtar kelime kullanılır?",
+        "options": [
+          "class",
+          "struct",
+          "object",
+          "function"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Nesne oluşturmak için hangi anahtar kelime kullanılır?",
+        "options": [
+          "create",
+          "new",
+          "make",
+          "instance"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Constructor metodu hangisidir?",
+        "options": [
+          "__create()",
+          "__construct()",
+          "__init()",
+          "__start()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "private erişim belirleyicisi ne anlama gelir?",
+        "options": [
+          "Her yerden erişilebilir",
+          "Sadece sınıf içinden erişilebilir",
+          "Sadece alt sınıflardan erişilebilir",
+          "Hiçbir yerden erişilemez"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Nesnenin özelliğine/metoduna erişmek için hangi operatör kullanılır?",
+        "options": [
+          ".",
+          "->",
+          "::",
+          "=>"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 23,
+    "title": "PHP OOP - Inheritance",
+    "slug": "php-oop-inheritance",
+    "content": "<h1>PHP OOP - Kalıtım (Inheritance)</h1><p>Kalıtım, bir sınıfın başka bir sınıfın özelliklerini ve metotlarını miras almasını sağlar.</p><h2>extends Anahtar Kelimesi</h2><p>class AltSinif extends UstSinif { } şeklinde kullanılır. Alt sınıf, üst sınıfın public ve protected üyelerine erişebilir.</p><h2>parent Anahtar Kelimesi</h2><p>parent:: ile üst sınıfın metotlarına erişilir. Özellikle override edilmiş metotlarda kullanılır.</p><h2>Metot Override</h2><p>Alt sınıf, üst sınıfın metodunu aynı isimle yeniden tanımlayabilir.</p><h2>final Anahtar Kelimesi</h2><p>final class: Kalıtım alınamaz. final method: Override edilemez.</p>",
+    "video_url": "",
+    "code_example": "<?php\nclass Hayvan {\n    protected $isim;\n    \n    public function __construct($isim) {\n        $this->isim = $isim;\n    }\n    \n    public function sesCikar() {\n        return \"Hayvan ses çıkarıyor\";\n    }\n}\n\nclass Kedi extends Hayvan {\n    public function sesCikar() {\n        return parent::sesCikar() . \" - Miyav!\";\n    }\n    \n    public function getIsim() {\n        return $this->isim;\n    }\n}\n\n$kedi = new Kedi(\"Tekir\");\necho $kedi->sesCikar();\necho $kedi->getIsim();\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.oop5.inheritance.php",
+    "quiz": [
+      {
+        "question": "Kalıtım için hangi anahtar kelime kullanılır?",
+        "options": [
+          "implements",
+          "extends",
+          "inherits",
+          "parent"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Üst sınıfın metoduna erişmek için hangi anahtar kelime kullanılır?",
+        "options": [
+          "this",
+          "parent",
+          "self",
+          "super"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "final class ne işe yarar?",
+        "options": [
+          "Kalıtım alınamaz",
+          "Override edilemez",
+          "Private yapar",
+          "Silinemez"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Alt sınıfta üst sınıf metodunu yeniden tanımlamaya ne denir?",
+        "options": [
+          "Overload",
+          "Override",
+          "Overwrite",
+          "Overflow"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "protected üyelere kimler erişebilir?",
+        "options": [
+          "Herkes",
+          "Sınıf ve alt sınıflar",
+          "Sadece sınıf",
+          "Sadece alt sınıflar"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 24,
+    "title": "PHP OOP - Interface/Trait/Abstract",
+    "slug": "php-oop-interface-trait-abstract",
+    "content": "<h1>PHP OOP - Interface, Trait ve Abstract</h1><h2>Abstract Class</h2><p>abstract class: Doğrudan nesnesi oluşturulamaz. abstract method: Alt sınıflarda implemente edilmelidir.</p><h2>Interface</h2><p>Sadece metot imzalarını içerir. Bir sınıf birden fazla interface implemente edebilir (implements).</p><h2>Trait</h2><p>Birden fazla sınıfta kullanılabilen kod parçalarıdır. use TraitAdi; ile kullanılır. PHP tek kalıtımı destekler, trait ile çoklu kalıtım benzeri yapı sağlanır.</p>",
+    "video_url": "",
+    "code_example": "<?php\n// Abstract\nabstract class Sekil {\n    abstract public function alanHesapla();\n    public function bilgi() {\n        return \"Bu bir şekildir.\";\n    }\n}\n\n// Interface\ninterface Yazdirilabilir {\n    public function yazdir();\n}\n\n// Trait\ntrait Logger {\n    public function log($mesaj) {\n        echo \"[LOG]: $mesaj\";\n    }\n}\n\nclass Daire extends Sekil implements Yazdirilabilir {\n    use Logger;\n    \n    private $yaricap;\n    \n    public function __construct($r) {\n        $this->yaricap = $r;\n    }\n    \n    public function alanHesapla() {\n        return pi() * $this->yaricap * $this->yaricap;\n    }\n    \n    public function yazdir() {\n        echo \"Daire, yarıçap: $this->yaricap\";\n    }\n}\n\n$daire = new Daire(5);\necho $daire->alanHesapla();\n$daire->yazdir();\n$daire->log(\"Daire oluşturuldu\");\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.oop5.interfaces.php",
+    "quiz": [
+      {
+        "question": "Abstract sınıfın nesnesi oluşturulabilir mi?",
+        "options": [
+          "Evet",
+          "Hayır",
+          "Sadece alt sınıflarda",
+          "Sadece trait ile"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Interface'deki metotlar nasıl olmalıdır?",
+        "options": [
+          "Gövdeli",
+          "Gövdesiz (imza)",
+          "Private",
+          "Static"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Trait hangi amaçla kullanılır?",
+        "options": [
+          "Kalıtım için",
+          "Kod paylaşımı için",
+          "Arayüz için",
+          "Güvenlik için"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Interface implemente etmek için hangi anahtar kelime kullanılır?",
+        "options": [
+          "extends",
+          "implements",
+          "use",
+          "include"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Trait kullanmak için hangi anahtar kelime kullanılır?",
+        "options": [
+          "import",
+          "use",
+          "trait",
+          "include"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 25,
+    "title": "PHP Namespace",
+    "slug": "php-namespace",
+    "content": "<h1>PHP Namespace</h1><p>Namespace (isim alanı), aynı isimdeki sınıf, fonksiyon ve sabitlerin birbiriyle çakışmasını önler.</p><h2>Namespace Tanımlama</h2><p>namespace Adi; ile tanımlanır. İç içe namespace: namespace Adi\\AltAdi;</p><h2>Namespace Kullanma</h2><p>use Adi\\Sinif; ile import edilir. as ile alias verilebilir: use Adi\\Sinif as Aktarma;</p><h2>Global Namespace</h2><p>use \\Exception; veya doğrudan \\Exception ile global namespace'e erişilir.</p><h2>Otomatik Yükleme (Autoloading)</h2><p>Composer ile PSR-4 autoloading, spl_autoload_register() ile özel autoload.</p>",
+    "video_url": "",
+    "code_example": "<?php\nnamespace KodLab\\Araclar;\n\nclass Yardimci {\n    public static function temizle($metin) {\n        return htmlspecialchars($metin);\n    }\n}\n\n// Başka dosyada\nnamespace KodLab\\Uygulama;\n\nuse KodLab\\Araclar\\Yardimci;\nuse KodLab\\Araclar\\Yardimci as Yrd;\n\n$temiz = Yardimci::temizle(\"<script>alert(1)</script>\");\necho Yrd::temizle($temiz);\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/language.namespaces.php",
+    "quiz": [
+      {
+        "question": "Namespace hangi amaçla kullanılır?",
+        "options": [
+          "Performans artışı",
+          "İsim çakışmalarını önlemek",
+          "Güvenlik",
+          "Veritabanı bağlantısı"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Namespace tanımlamak için hangi anahtar kelime kullanılır?",
+        "options": [
+          "namespace",
+          "use",
+          "import",
+          "package"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Namespace import etmek için hangi anahtar kelime kullanılır?",
+        "options": [
+          "namespace",
+          "use",
+          "import",
+          "include"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Namespace'e alias vermek için hangisi kullanılır?",
+        "options": [
+          "as",
+          "alias",
+          "=>",
+          "like"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "PSR-4 autoloading hangi araçla sağlanır?",
+        "options": [
+          "npm",
+          "Composer",
+          "Bower",
+          "Webpack"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 26,
+    "title": "PDO - Veritabanı Bağlantısı",
+    "slug": "php-pdo-baglanti",
+    "content": "<h1>PDO - Veritabanı Bağlantısı</h1><p>PDO (PHP Data Objects), PHP'de veritabanı işlemleri için kullanılan bir arayüzdür. MySQL, PostgreSQL, SQLite gibi birçok veritabanını destekler.</p><h2>PDO Avantajları</h2><p>Veritabanı bağımsızlığı, prepared statement desteği, güvenli sorgulama, exception hata yönetimi.</p><h2>Bağlantı Oluşturma</h2><p>new PDO(\"mysql:host=localhost;dbname=test\", \"kullanici\", \"sifre\")</p><h2>Bağlantı Ayarları</h2><p>setAttribute() ile hata modu, fetch modu gibi ayarlar yapılır. PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION</p>",
+    "video_url": "",
+    "code_example": "<?php\n$host = \"localhost\";\n$dbname = \"kodlab\";\n$kullanici = \"root\";\n$sifre = \"\";\n\ntry {\n    $dsn = \"mysql:host=$host;dbname=$dbname;charset=utf8mb4\";\n    $pdo = new PDO($dsn, $kullanici, $sifre);\n    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);\n    echo \"Bağlantı başarılı!\";\n} catch (PDOException $e) {\n    die(\"Bağlantı hatası: \" . $e->getMessage());\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/book.pdo.php",
+    "quiz": [
+      {
+        "question": "PDO açılımı nedir?",
+        "options": [
+          "PHP Data Objects",
+          "Personal Data Operations",
+          "PHP Database Output",
+          "Public Data Object"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "PDO hangi veritabanlarını destekler?",
+        "options": [
+          "Sadece MySQL",
+          "Birçok veritabanı",
+          "Sadece SQLite",
+          "Sadece PostgreSQL"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PDO bağlantısı hangi sınıfla oluşturulur?",
+        "options": [
+          "PDOConnection",
+          "PDO",
+          "MySQLi",
+          "Database"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PDO'da hata modunu ayarlamak için hangi metot kullanılır?",
+        "options": [
+          "errorMode()",
+          "setAttribute()",
+          "setError()",
+          "config()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PDOException hangi durumda fırlatılır?",
+        "options": [
+          "Sorgu çalıştığında",
+          "Veritabanı hatasında",
+          "Bağlantı kapandığında",
+          "Fetch yapıldığında"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 27,
+    "title": "PDO ile CRUD İşlemleri",
+    "slug": "php-pdo-crud",
+    "content": "<h1>PDO ile CRUD İşlemleri</h1><p>CRUD: Create (Oluşturma), Read (Okuma), Update (Güncelleme), Delete (Silme).</p><h2>Prepared Statement</h2><p>prepare() ile sorgu hazırlanır, bindParam() veya bindValue() ile parametreler bağlanır, execute() ile çalıştırılır. SQL injection'a karşı korur.</p><h2>CREATE (INSERT)</h2><p>INSERT INTO tablo (kolonlar) VALUES (:param1, :param2)</p><h2>READ (SELECT)</h2><p>fetch() tek kayıt, fetchAll() tüm kayıtlar, fetchColumn() tek sütun.</p><h2>UPDATE ve DELETE</h2><p>UPDATE tablo SET kolon=:deger WHERE id=:id / DELETE FROM tablo WHERE id=:id</p>",
+    "video_url": "",
+    "code_example": "<?php\n$pdo = new PDO(\"mysql:host=localhost;dbname=test\", \"root\", \"\");\n$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n\n// CREATE\n$stmt = $pdo->prepare(\"INSERT INTO kullanicilar (ad, email) VALUES (:ad, :email)\");\n$stmt->execute([\":ad\" => \"Ali\", \":email\" => \"ali@example.com\"]);\n\n// READ\n$stmt = $pdo->prepare(\"SELECT * FROM kullanicilar WHERE id = :id\");\n$stmt->execute([\":id\" => 1]);\n$kullanici = $stmt->fetch(PDO::FETCH_ASSOC);\n\n// UPDATE\n$stmt = $pdo->prepare(\"UPDATE kullanicilar SET ad = :ad WHERE id = :id\");\n$stmt->execute([\":ad\" => \"Veli\", \":id\" => 1]);\n\n// DELETE\n$stmt = $pdo->prepare(\"DELETE FROM kullanicilar WHERE id = :id\");\n$stmt->execute([\":id\" => 1]);\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/pdo.queries.php",
+    "quiz": [
+      {
+        "question": "PDO'da sorgu hazırlamak için hangi metot kullanılır?",
+        "options": [
+          "query()",
+          "prepare()",
+          "exec()",
+          "run()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Tek kayıt almak için hangi metot kullanılır?",
+        "options": [
+          "fetch()",
+          "fetchAll()",
+          "fetchOne()",
+          "get()"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Tüm kayıtları almak için hangi metot kullanılır?",
+        "options": [
+          "fetch()",
+          "fetchAll()",
+          "fetchMany()",
+          "all()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Prepared statement hangi güvenlik sorununu çözer?",
+        "options": [
+          "XSS",
+          "SQL Injection",
+          "CSRF",
+          "Session hijacking"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Sorguya parametre göndermek için hangi metot kullanılır?",
+        "options": [
+          "bind()",
+          "execute()",
+          "send()",
+          "set()"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 28,
+    "title": "SQL Injection ve Güvenlik",
+    "slug": "php-sql-injection-guvenlik",
+    "content": "<h1>SQL Injection ve Güvenlik</h1><p>SQL Injection, saldırganın veritabanı sorgularına müdahale etmesine izin veren bir güvenlik açığıdır.</p><h2>SQL Injection Nasıl Çalışır?</h2><p>Kullanıcı girdisinin doğrudan sorguya eklenmesiyle çalışır. Örnek: SELECT * FROM users WHERE username = 'admin' OR '1'='1'</p><h2>Korunma Yöntemleri</h2><ul><li>Prepared statement (PDO / MySQLi)</li><li>Girdi doğrulama ve sanitizasyon</li><li>Minimum yetki prensibi</li><li>Güvenli hata yönetimi</li></ul><h2>Diğer Güvenlik Önlemleri</h2><p>XSS koruması (htmlspecialchars), CSRF token, password_hash() ile şifreleme, HTTPS kullanımı.</p>",
+    "video_url": "",
+    "code_example": "<?php\n// GÜVENLİ DEĞİL - SQL Injection açığı\n$kullaniciAdi = $_POST[\"kullanici\"];\n$sifre = $_POST[\"sifre\"];\n// $sql = \"SELECT * FROM users WHERE username = '$kullaniciAdi' AND password = '$sifre'\"; // SAKINCALI!\n\n// GÜVENLİ - Prepared statement\n$stmt = $pdo->prepare(\"SELECT * FROM users WHERE username = :kullanici AND password = :sifre\");\n$stmt->execute([\":kullanici\" => $kullaniciAdi, \":sifre\" => $sifre]);\n\n// Şifre güvenliği\n$hash = password_hash(\"sifre123\", PASSWORD_BCRYPT);\nif (password_verify(\"sifre123\", $hash)) {\n    echo \"Şifre doğru\";\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/security.database.sql-injection.php",
+    "quiz": [
+      {
+        "question": "SQL Injection nedir?",
+        "options": [
+          "Veritabanı optimizasyonu",
+          "Sorgulara müdahale açığı",
+          "Özel SQL sorgusu",
+          "Veritabanı yedekleme"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "SQL Injection'a karşı en etkili korunma yöntemi nedir?",
+        "options": [
+          "addslashes()",
+          "Prepared statement",
+          "trim()",
+          "strip_tags()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHP'de şifre hash'lemek için hangi fonksiyon kullanılır?",
+        "options": [
+          "md5()",
+          "sha1()",
+          "password_hash()",
+          "crypt()"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "password_verify() ne işe yarar?",
+        "options": [
+          "Şifre oluşturur",
+          "Şifre doğrular",
+          "Şifre siler",
+          "Şifre değiştirir"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "XSS koruması için hangi fonksiyon kullanılır?",
+        "options": [
+          "htmlspecialchars()",
+          "strip_tags()",
+          "trim()",
+          "addslashes()"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 29,
+    "title": "MVC Mimarisi",
+    "slug": "php-mvc-mimarisi",
+    "content": "<h1>MVC Mimarisi</h1><p>MVC (Model-View-Controller), yazılım geliştirmede kullanılan bir mimari desendir. Uygulamayı üç katmana ayırır.</p><h2>Model</h2><p>Veritabanı işlemlerini ve iş mantığını içerir. Verilerin alınması, işlenmesi ve saklanmasından sorumludur.</p><h2>View</h2><p>Kullanıcı arayüzünü oluşturur. Model'den gelen verileri görselleştirir. Genellikle HTML ve PHP karışımıdır.</p><h2>Controller</h2><p>Kullanıcı isteklerini alır, uygun model ve view'ı yönlendirir. HTTP isteklerini işler.</p><h2>Router</h2><p>URL'leri uygun controller ve metodlara yönlendirir. Genellikle .htaccess ve index.php ile sağlanır.</p>",
+    "video_url": "",
+    "code_example": "<?php\n// Router (index.php)\n$url = $_GET[\"url\"] ?? \"anasayfa\";\nswitch ($url) {\n    case \"kullanicilar\":\n        $controller = new KullaniciController();\n        $controller->index();\n        break;\n    default:\n        include \"views/anasayfa.php\";\n}\n\n// Model (models/Kullanici.php)\nclass KullaniciModel {\n    public function getAll() {\n        global $pdo;\n        return $pdo->query(\"SELECT * FROM kullanicilar\")->fetchAll();\n    }\n}\n\n// Controller (controllers/KullaniciController.php)\nclass KullaniciController {\n    public function index() {\n        $model = new KullaniciModel();\n        $kullanicilar = $model->getAll();\n        include \"views/kullanicilar.php\";\n    }\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/oop5.intro.php",
+    "quiz": [
+      {
+        "question": "MVC'de veritabanı işlemleri hangi katmanda yapılır?",
+        "options": [
+          "Model",
+          "View",
+          "Controller",
+          "Router"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "MVC'de kullanıcı arayüzü hangi katmanda oluşturulur?",
+        "options": [
+          "Model",
+          "View",
+          "Controller",
+          "Router"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "MVC'de kullanıcı isteklerini hangi katman işler?",
+        "options": [
+          "Model",
+          "View",
+          "Controller",
+          "Database"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "URL'leri controller'lara yönlendiren yapıya ne denir?",
+        "options": [
+          "Router",
+          "Dispatcher",
+          "Gateway",
+          "Proxy"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "MVC'nin avantajı nedir?",
+        "options": [
+          "Hız",
+          "Modülerlik ve ayrıştırma",
+          "Güvenlik",
+          "Veritabanı desteği"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 30,
+    "title": "PHP ile E-posta Gönderme",
+    "slug": "php-email-gonderme",
+    "content": "<h1>PHP ile E-posta Gönderme</h1><p>PHP'de mail() fonksiyonu veya PHPMailer gibi kütüphanelerle e-posta gönderilebilir.</p><h2>mail() Fonksiyonu</h2><p>mail(alici, konu, mesaj, basliklar): Temel e-posta gönderimi. SMTP ayarları php.ini'den yapılır.</p><h2>PHPMailer Kütüphanesi</h2><p>Composer ile yüklenir. SMTP doğrulama, HTML e-posta, ek dosya, CC/BCC desteği sağlar.</p><h2>HTML E-posta</h2><p>Content-Type: text/html başlığı ile HTML formatında e-posta gönderilebilir.</p><h2>Güvenlik</h2><p>E-posta başlık enjeksiyonuna karşı koruma, spam filtreleme, doğrulama.</p>",
+    "video_url": "",
+    "code_example": "<?php\n// mail() ile basit e-posta\n$alici = \"ornek@example.com\";\n$konu = \"KodLab Hoş Geldiniz\";\n$mesaj = \"Merhaba, KodLab platformuna hoş geldiniz!\";\n$basliklar = \"From: info@kodlab.com\\r\\n\";\n$basliklar .= \"Reply-To: info@kodlab.com\\r\\n\";\n$basliklar .= \"Content-Type: text/html; charset=UTF-8\\r\\n\";\n\nif (mail($alici, $konu, $mesaj, $basliklar)) {\n    echo \"E-posta gönderildi\";\n} else {\n    echo \"E-posta gönderilemedi\";\n}\n\n// PHPMailer ile (Composer gerektirir)\n// use PHPMailer\\PHPMailer\\PHPMailer;\n// $mail = new PHPMailer();\n// $mail->isSMTP();\n// $mail->Host = \"smtp.gmail.com\";\n// $mail->SMTPAuth = true;\n// $mail->Username = \"ornek@gmail.com\";\n// $mail->Password = \"sifre\";\n// $mail->setFrom(\"info@kodlab.com\", \"KodLab\");\n// $mail->addAddress($alici);\n// $mail->Subject = $konu;\n// $mail->Body = $mesaj;\n// $mail->send();\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/function.mail.php",
+    "quiz": [
+      {
+        "question": "PHP'de e-posta göndermek için hangi fonksiyon kullanılır?",
+        "options": [
+          "email()",
+          "mail()",
+          "sendmail()",
+          "smtp()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHPMailer hangi amaçla kullanılır?",
+        "options": [
+          "Veritabanı işlemleri",
+          "Gelişmiş e-posta gönderimi",
+          "Dosya yükleme",
+          "Şablon motoru"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "HTML e-posta göndermek için hangi başlık eklenmelidir?",
+        "options": [
+          "Content-Type: text/html",
+          "Content-Type: application/json",
+          "Content-Type: text/plain",
+          "Content-Type: multipart/form-data"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "mail() fonksiyonu hangi durumda başarısız olabilir?",
+        "options": [
+          "İnternet yoksa",
+          "SMTP ayarları yoksa",
+          "Kullanıcı yoksa",
+          "PHP yoksa"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "E-posta başlık enjeksiyonuna karşı nasıl korunulur?",
+        "options": [
+          "addslashes()",
+          "strip_tags()",
+          "trim()",
+          "Başlıkları temizleme"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "order": 31,
+    "title": "PHP ile JSON İşlemleri",
+    "slug": "php-json-islemleri",
+    "content": "<h1>PHP ile JSON İşlemleri</h1><p>JSON (JavaScript Object Notation), veri değişimi için kullanılan hafif bir formattır. PHP'de JSON işlemleri için json_encode() ve json_decode() kullanılır.</p><h2>json_encode()</h2><p>PHP dizisini veya nesnesini JSON string'ine dönüştürür. JSON_PRETTY_PRINT, JSON_UNESCAPED_UNICODE gibi seçenekler alabilir.</p><h2>json_decode()</h2><p>JSON string'ini PHP değişkenine dönüştürür. İkinci parametre true olursa dizi, false (varsayılan) olursa nesne döndürür.</p><h2>JSON Hata Yönetimi</h2><p>json_last_error() ve json_last_error_msg() ile JSON işlem hataları kontrol edilir.</p>",
+    "video_url": "",
+    "code_example": "<?php\n// Diziyi JSON'a çevirme\n$ogrenci = [\n    \"ad\" => \"Ali\",\n    \"soyad\" => \"Yılmaz\",\n    \"notlar\" => [85, 92, 78],\n    \"aktif\" => true\n];\n$json = json_encode($ogrenci, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);\necho $json;\n\n// JSON'u diziye çevirme\n$json_str = '{\"ad\":\"Ayşe\",\"soyad\":\"Kaya\",\"yas\":22}';\n$dizi = json_decode($json_str, true);\necho $dizi[\"ad\"];\n\n// Nesne olarak\necho json_decode($json_str)->ad;\n\n// Hata kontrolü\nif (json_last_error() !== JSON_ERROR_NONE) {\n    echo \"JSON Hatası: \" . json_last_error_msg();\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/ref.json.php",
+    "quiz": [
+      {
+        "question": "PHP dizisini JSON'a çevirmek için hangi fonksiyon kullanılır?",
+        "options": [
+          "json_decode()",
+          "json_encode()",
+          "json_parse()",
+          "to_json()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "JSON'u PHP dizisine çevirmek için json_decode()'un ikinci parametresi ne olmalıdır?",
+        "options": [
+          "false",
+          "true",
+          "null",
+          "0"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "JSON hatasını kontrol etmek için hangi fonksiyon kullanılır?",
+        "options": [
+          "json_error()",
+          "json_last_error()",
+          "json_get_error()",
+          "json_errno()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Türkçe karakterleri düzgün göstermek için json_encode()'a hangi seçenek eklenir?",
+        "options": [
+          "JSON_UNESCAPED_UNICODE",
+          "JSON_PRETTY_PRINT",
+          "JSON_FORCE_OBJECT",
+          "JSON_NUMERIC_CHECK"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "json_decode() varsayılan olarak ne döndürür?",
+        "options": [
+          "Dizi",
+          "Nesne (object)",
+          "String",
+          "Integer"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 32,
+    "title": "PHP ile API Geliştirme",
+    "slug": "php-api-gelistirme",
+    "content": "<h1>PHP ile API Geliştirme</h1><p>API (Application Programming Interface), uygulamalar arası iletişimi sağlar. REST API en yaygın kullanılan API türüdür.</p><h2>REST API Temelleri</h2><p>GET (listeleme), POST (ekleme), PUT (güncelleme), DELETE (silme). JSON formatında veri alışverişi.</p><h2>API Yanıt Formatı</h2><p>header('Content-Type: application/json') ile JSON yanıtı. HTTP durum kodları: 200 (başarılı), 201 (oluşturuldu), 400 (hatalı istek), 404 (bulunamadı), 500 (sunucu hatası).</p><h2>API Güvenliği</h2><p>API anahtarı, JWT (JSON Web Token), rate limiting, CORS ayarları, HTTPS.</p>",
+    "video_url": "",
+    "code_example": "<?php\nheader(\"Content-Type: application/json\");\nheader(\"Access-Control-Allow-Origin: *\");\n\n$metod = $_SERVER[\"REQUEST_METHOD\"];\n\nswitch ($metod) {\n    case \"GET\":\n        $kullanicilar = [\n            [\"id\" => 1, \"ad\" => \"Ali\", \"email\" => \"ali@example.com\"],\n            [\"id\" => 2, \"ad\" => \"Ayşe\", \"email\" => \"ayse@example.com\"]\n        ];\n        echo json_encode($kullanicilar, JSON_UNESCAPED_UNICODE);\n        break;\n    case \"POST\":\n        $girdi = json_decode(file_get_contents(\"php://input\"), true);\n        echo json_encode([\"mesaj\" => \"Kullanıcı oluşturuldu\", \"veri\" => $girdi], JSON_UNESCAPED_UNICODE);\n        break;\n    default:\n        http_response_code(405);\n        echo json_encode([\"hata\" => \"Metot desteklenmiyor\"]);\n}\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/features.http-auth.php",
+    "quiz": [
+      {
+        "question": "API yanıtlarında hangi format yaygın kullanılır?",
+        "options": [
+          "XML",
+          "JSON",
+          "CSV",
+          "HTML"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "API'de kaynak bulunamadığında hangi HTTP kodu döner?",
+        "options": [
+          "200",
+          "201",
+          "404",
+          "500"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "REST API'de güncelleme için hangi HTTP metodu kullanılır?",
+        "options": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "API istek gövdesini okumak için hangi fonksiyon kullanılır?",
+        "options": [
+          "$_POST",
+          "file_get_contents(\"php://input\")",
+          "$_GET",
+          "readfile()"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "JSON Web Token hangi amaçla kullanılır?",
+        "options": [
+          "Veri şifreleme",
+          "API kimlik doğrulama",
+          "Hata yönetimi",
+          "Veritabanı bağlantısı"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 33,
+    "title": "Composer ve Packagist",
+    "slug": "php-composer-packagist",
+    "content": "<h1>Composer ve Packagist</h1><p>Composer, PHP için bağımlılık yönetim aracıdır. Packagist ise PHP paketlerinin bulunduğu ana depodur.</p><h2>Composer Kurulumu</h2><p>getcomposer.org adresinden indirilir veya komut satırından kurulur. composer.json dosyası ile proje yapılandırılır.</p><h2>composer.json</h2><p>require ile bağımlılıklar tanımlanır. composer install ile kurulur. composer update ile güncellenir.</p><h2>Otomatik Yükleme (Autoload)</h2><p>PSR-4 autoloading standartı. composer dump-autoload ile autoload dosyası yenilenir.</p><h2>Sık Kullanılan Paketler</h2><p>Monolog (loglama), Guzzle (HTTP istekleri), PHPUnit (test), Carbon (tarih/zaman), PHP Mailer (e-posta).</p>",
+    "video_url": "",
+    "code_example": "<?php\n// composer.json\n// {\n//     \"require\": {\n//         \"monolog/monolog\": \"^3.0\",\n//         \"guzzlehttp/guzzle\": \"^7.0\"\n//     },\n//     \"autoload\": {\n//         \"psr-4\": {\n//             \"KodLab\\\\\": \"src/\"\n//         }\n//     }\n// }\n\n// Composer autoload\nrequire \"vendor/autoload.php\";\n\nuse Monolog\\Logger;\nuse Monolog\\Handler\\StreamHandler;\n\n$log = new Logger(\"kodlab\");\n$log->pushHandler(new StreamHandler(\"app.log\", Logger::WARNING));\n$log->warning(\"Bu bir uyarı logudur\");\n$log->error(\"Bu bir hata logudur\");\n\n// Kendi namespace'imizi kullanma\nuse KodLab\\Araclar\\Yardimci;\necho Yardimci::temizle(\"<b>test</b>\");\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/install.composer.php",
+    "quiz": [
+      {
+        "question": "Composer hangi amaçla kullanılır?",
+        "options": [
+          "Web sunucusu",
+          "Bağımlılık yönetimi",
+          "Veritabanı",
+          "Test aracı"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Composer bağımlılıkları hangi dosyada tanımlanır?",
+        "options": [
+          "package.json",
+          "composer.json",
+          "composer.yml",
+          "dependencies.json"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Composer ile paketleri yüklemek için hangi komut kullanılır?",
+        "options": [
+          "composer install",
+          "composer update",
+          "composer add",
+          "composer require"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "PSR-4 autoloading için hangi komut çalıştırılır?",
+        "options": [
+          "composer install",
+          "composer dump-autoload",
+          "composer update",
+          "composer autoload"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "PHPUnit hangi amaçla kullanılır?",
+        "options": [
+          "Loglama",
+          "HTTP istekleri",
+          "Test",
+          "E-posta"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "order": 34,
+    "title": "PHP Hata Ayıklama (Xdebug)",
+    "slug": "php-hata-ayiklama-xdebug",
+    "content": "<h1>PHP Hata Ayıklama (Xdebug)</h1><p>Xdebug, PHP için güçlü bir hata ayıklama ve profil çıkarma aracıdır.</p><h2>Xdebug Kurulumu</h2><p>PECL ile kurulur veya XAMPP ile gelir. php.ini dosyasında etkinleştirilir.</p><h2>Temel Özellikler</h2><p>Stack trace gösterimi, var_dump() geliştirmeleri, breakpoint desteği, adım adım çalıştırma.</p><h2>xdebug_info()</h2><p>Xdebug yapılandırmasını gösterir. phpinfo() benzeri bir ekran sunar.</p><h2>İp Uçları</h2><p>IDE entegrasyonu (VS Code, PHPStorm), Xdebug Cloud, profil çıkarma, GC stats.</p>",
+    "video_url": "",
+    "code_example": "<?php\n// php.ini ayarları\n// zend_extension = xdebug\n// xdebug.mode = debug\n// xdebug.start_with_request = yes\n// xdebug.client_host = 127.0.0.1\n// xdebug.client_port = 9003\n\nfunction test($a, $b) {\n    $toplam = $a + $b;\n    // Burada breakpoint\n    return $toplam;\n}\n\n$sonuc = test(5, 3);\n\n// Gelişmiş var_dump\n$xdebug_var = [1, 2, [\"a\" => \"b\"]];\nvar_dump($xdebug_var);\n\n// xdebug_info()\n// phpinfo() sayfasında Xdebug bölümü\n?>\n<!-- Xdebug için VS Code launch.json -->\n<!-- {\n    \"version\": \"0.2.0\",\n    \"configurations\": [\n        {\n            \"name\": \"Xdebug\",\n            \"type\": \"php\",\n            \"request\": \"launch\",\n            \"port\": 9003\n        }\n    ]\n} -->",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/ref.xdebug.php",
+    "quiz": [
+      {
+        "question": "Xdebug hangi amaçla kullanılır?",
+        "options": [
+          "Hız optimizasyonu",
+          "Hata ayıklama",
+          "Veritabanı yönetimi",
+          "Kod derleme"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Xdebug varsayılan port numarası kaçtır?",
+        "options": [
+          "9000",
+          "9003",
+          "8000",
+          "8080"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Xdebug ayarları hangi dosyada yapılır?",
+        "options": [
+          ".htaccess",
+          "php.ini",
+          "config.php",
+          "xdebug.ini"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Xdebug ile hangi işlem yapılabilir?",
+        "options": [
+          "Breakpoint kullanma",
+          "Veritabanı sorgulama",
+          "Dosya silme",
+          "E-posta gönderme"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Xdebug yapılandırmasını gösteren fonksiyon hangisidir?",
+        "options": [
+          "xdebug_info()",
+          "phpinfo()",
+          "xdebug_config()",
+          "debug_info()"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 35,
+    "title": "PHP Proje - Blog Sistemi",
+    "slug": "php-proje-blog-sistemi",
+    "content": "<h1>PHP Proje - Blog Sistemi</h1><p>Bu derste öğrendiğimiz tüm konuları kullanarak bir blog sistemi geliştireceğiz.</p><h2>Proje Yapısı</h2><p>MVC mimarisi kullanılacak. PDO ile veritabanı bağlantısı. Composer ile bağımlılık yönetimi.</p><h2>Özellikler</h2><ul><li>Kullanıcı kayıt/giriş sistemi (Session)</li><li>Blog yazıları CRUD</li><li>Kategori yönetimi</li><li>Yorum sistemi</li><li>Admin paneli</li><li>Arama ve filtreleme</li><li>SEO dostu URL</li></ul><h2>Kullanılacak Teknolojiler</h2><p>PHP 8+, PDO/MySQL, HTML5/CSS3, Bootstrap, Composer, MVC, Xdebug</p>",
+    "video_url": "",
+    "code_example": "<?php\n// Proje Dizini\n// blog/\n// ├── composer.json\n// ├── config/\n// │   └── database.php\n// ├── public/\n// │   └── index.php\n// ├── src/\n// │   ├── Controllers/\n// │   │   ├── AuthController.php\n// │   │   ├── PostController.php\n// │   │   ├── CategoryController.php\n// │   │   └── CommentController.php\n// │   ├── Models/\n// │   │   ├── User.php\n// │   │   ├── Post.php\n// │   │   ├── Category.php\n// │   │   └── Comment.php\n// │   ├── Helpers/\n// │   │   ├── Auth.php\n// │   │   └── Validator.php\n// │   └── Router.php\n// └── views/\n//     ├── layouts/\n//     ├── auth/\n//     ├── posts/\n//     └── admin/\n\n// Örnek veritabanı şeması\n$sql = \"CREATE TABLE posts (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    title VARCHAR(255) NOT NULL,\n    slug VARCHAR(255) NOT NULL UNIQUE,\n    content TEXT NOT NULL,\n    category_id INT,\n    user_id INT,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n    FOREIGN KEY (category_id) REFERENCES categories(id),\n    FOREIGN KEY (user_id) REFERENCES users(id)\n)\";\n?>",
+    "source_ref": "PHP.net: https://www.php.net/manual/en/tutorial.php",
+    "quiz": [
+      {
+        "question": "Blog projesinde hangi mimari kullanıldı?",
+        "options": [
+          "MVP",
+          "MVC",
+          "MVVM",
+          "Singleton"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Kullanıcı giriş durumu hangi yöntemle saklanır?",
+        "options": [
+          "Cookie",
+          "Session",
+          "LocalStorage",
+          "File"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Blog yazıları için hangi veritabanı işlemleri yapılır?",
+        "options": [
+          "Sadece okuma",
+          "CRUD işlemleri",
+          "Sadece yazma",
+          "Sadece silme"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "SEO dostu URL için hangi alan kullanılır?",
+        "options": [
+          "id",
+          "slug",
+          "title",
+          "url"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Projede hangi veritabanı kütüphanesi kullanılır?",
+        "options": [
+          "MySQLi",
+          "PDO",
+          "MySQL",
+          "SQLite"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]

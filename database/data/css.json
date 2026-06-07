@@ -1,0 +1,2137 @@
+[
+  {
+    "order": 1,
+    "title": "CSS Nedir?",
+    "slug": "css-nedir",
+    "content": "<h2>CSS (Cascading Style Sheets) Nedir?</h2><p>CSS, web sayfalarının görünümünü ve düzenini kontrol etmek için kullanılan bir stil dilidir. HTML ile yapılandırılmış içeriğe renk, boyut, aralık ve konum gibi görsel özellikler kazandırır.</p><h3>CSS Sözdizimi</h3><p>CSS, <strong>seçici (selector)</strong> ve <strong>bildirim bloğu (declaration block)</strong> olmak üzere iki ana bölümden oluşur:</p><pre><code>seçici {\n  özellik: değer;\n  özellik: değer;\n}</code></pre><p>Örnek:</p><pre><code>p {\n  color: red;\n  font-size: 16px;\n}</code></pre><h3>CSS Ekleme Yöntemleri</h3><p><strong>1. Inline CSS:</strong> Doğrudan HTML etiketi içinde style attribute ile kullanılır.</p><pre><code>&lt;p style=\"color: blue;\"&gt;Bu mavi bir yazıdır.&lt;/p&gt;</code></pre><p><strong>2. Internal CSS:</strong> HTML sayfasının &lt;head&gt; bölümünde &lt;style&gt; etiketi içinde tanımlanır.</p><pre><code>&lt;head&gt;\n  &lt;style&gt;\n    p { color: green; }\n  &lt;/style&gt;\n&lt;/head&gt;</code></pre><p><strong>3. External CSS:</strong> Ayrı bir .css dosyası oluşturulur ve HTML sayfasına &lt;link&gt; ile bağlanır.</p><pre><code>&lt;head&gt;\n  &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;\n&lt;/head&gt;</code></pre><h3>CSS'in Avantajları</h3><ul><li>İçerik ve tasarım ayrışır, bakım kolaylaşır</li><li>Bir dosyada yapılan değişiklik tüm sayfaları etkiler</li><li>Sayfa yükleme hızı artar</li><li>Arama motoru optimizasyonu (SEO) için daha temiz HTML kodu</li></ul>",
+    "video_url": "https://www.youtube.com/watch?v=example1",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Nedir - Örnek</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <style>\n    h1 { color: navy; text-align: center; }\n  </style>\n</head>\n<body>\n  <h1 style=\"color: darkblue;\">CSS Örnekleri</h1>\n  <p>Bu paragraf external CSS ile stillendirilecek.</p>\n  <p style=\"color: red; font-weight: bold;\">Bu paragraf inline CSS kullanır.</p>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "CSS açılımı nedir?",
+        "options": [
+          "Cascading Style Sheets",
+          "Computer Style System",
+          "Creative Style Sheets",
+          "Colorful Style Sheets"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "CSS kodları hangi HTML etiketi içine yazılır (internal CSS)?",
+        "options": [
+          "<css>",
+          "<style>",
+          "<script>",
+          "<link>"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Inline CSS nasıl uygulanır?",
+        "options": [
+          "<link> etiketi ile",
+          "<style> etiketi ile",
+          "style attribute ile",
+          "class attribute ile"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "CSS dosyasını HTML sayfasına bağlamak için hangi etiket kullanılır?",
+        "options": [
+          "<script>",
+          "<style>",
+          "<meta>",
+          "<link>"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "question": "Aşağıdakilerden hangisi CSS sözdizimi için doğrudur?",
+        "options": [
+          "seçici: değer;",
+          "seçici { özellik: değer; }",
+          "özellik: değer;",
+          "seçici => özellik: değer;"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 2,
+    "title": "CSS Selectors - Temel",
+    "slug": "css-selectors-temel",
+    "content": "<h2>Temel CSS Seçiciler</h2><p>CSS seçiciler, HTML öğelerini hedefleyerek onlara stil uygulamamızı sağlar. Üç temel seçici türü vardır.</p><h3>Element (Tip) Seçici</h3><p>Doğrudan HTML etiket adını kullanarak tüm o türdeki öğeleri seçer.</p><pre><code>p {\n  color: blue;\n}\nh1 {\n  font-size: 32px;\n}</code></pre><p>Bu kod tüm &lt;p&gt; öğelerini mavi, tüm &lt;h1&gt; öğelerini 32px yapar.</p><h3>Class Seçici</h3><p>Nokta (.) ile başlar ve belirli bir sınıfa sahip öğeleri seçer. Bir sınıf birden fazla öğede kullanılabilir.</p><pre><code>.kirmizi-yazi {\n  color: red;\n}\n.kutu {\n  border: 1px solid black;\n  padding: 10px;\n}</code></pre><pre><code>&lt;p class=\"kirmizi-yazi\"&gt;Bu kırmızı yazılacak.&lt;/p&gt;\n&lt;div class=\"kutu\"&gt;Bu bir kutudur.&lt;/div&gt;</code></pre><h3>ID Seçici</h3><p>Kare işareti (#) ile başlar ve benzersiz bir kimliğe sahip öğeyi seçer. Her ID sayfada yalnızca bir kez kullanılmalıdır.</p><pre><code>#logo {\n  width: 200px;\n  height: 100px;\n}\n#header {\n  background-color: #f0f0f0;\n}</code></pre><pre><code>&lt;div id=\"header\"&gt;Bu sayfanın başlık bölümü.&lt;/div&gt;</code></pre><h3>Seçici Öncelik Sırası (Spesifisite)</h3><p>ID (100) &gt; Class (10) &gt; Element (1)</p>",
+    "video_url": "https://www.youtube.com/watch?v=example2",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Temel CSS Seçiciler</title>\n  <style>\n    h2 { color: darkgreen; }\n    p { line-height: 1.6; }\n    .vurgulu { background-color: yellow; font-weight: bold; }\n    .cerceve { border: 2px solid blue; padding: 15px; }\n    #baslik { color: purple; text-align: center; }\n    #ozel-not { background-color: #ffe0e0; padding: 10px; }\n  </style>\n</head>\n<body>\n  <h1 id=\"baslik\">CSS Seçici Örnekleri</h1>\n  <h2>Element Seçici</h2>\n  <p>Tüm paragraflar bu stili alır.</p>\n  <h2>Class Seçici</h2>\n  <p class=\"vurgulu\">Bu paragraf sarı arkaplanlı ve kalındır.</p>\n  <div class=\"cerceve\">Bu div mavi çerçevelidir.</div>\n  <h2>ID Seçici</h2>\n  <p id=\"ozel-not\">Bu özel not kırmızımsı arkaplanlıdır.</p>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Element seçici aşağıdakilerden hangisidir?",
+        "options": [
+          ".class",
+          "#id",
+          "p",
+          "[attribute]"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Class seçici hangi sembolle başlar?",
+        "options": [
+          "#",
+          ".",
+          "*",
+          "&"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "ID seçicinin spesifisite değeri nedir?",
+        "options": [
+          "1",
+          "10",
+          "100",
+          "1000"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Bir ID sayfada kaç kez kullanılabilir?",
+        "options": [
+          "Birden fazla",
+          "Yalnızca bir kez",
+          "En fazla 3",
+          "Sınırsız"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Class ve ID seçici arasındaki fark nedir?",
+        "options": [
+          "ID daha hızlıdır",
+          "Class birden çok öğede kullanılabilir, ID benzersizdir",
+          "ID sadece divlerde kullanılır",
+          "Class sadece yazılarda kullanılır"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 3,
+    "title": "CSS Selectors - İleri",
+    "slug": "css-selectors-ileri",
+    "content": "<h2>İleri Düzey CSS Seçiciler</h2><p>Temel seçicilerin ötesinde, daha hassas ve esnek hedefleme için gelişmiş seçiciler bulunur.</p><h3>Attribute Seçiciler</h3><p>Öğelerin HTML attribute'lerine göre seçim yapar.</p><pre><code>[disabled] { opacity: 0.5; }\n[type=\"text\"] { border: 1px solid blue; }\n[class^=\"icon-\"] { width: 24px; }\n[href$=\".pdf\"] { color: red; }\n[href*=\"example\"] { color: green; }</code></pre><h3>Pseudo-class Seçiciler</h3><p>Öğelerin belirli bir durumunu hedefler.</p><pre><code>a:hover { color: orange; }\ninput:focus { outline: 2px solid blue; }\nli:first-child { font-weight: bold; }\ntr:nth-child(even) { background: #f2f2f2; }</code></pre><h3>Pseudo-element Seçiciler</h3><p>Öğelerin belirli bir kısmını hedefler.</p><pre><code>p::first-letter { font-size: 2em; }\np::first-line { color: gray; }\n.uyari::before { content: \"⚠️ \"; }\n.link::after { content: \" ↗\"; }</code></pre><h3>Combinator Seçiciler</h3><p>Birden çok seçici arasındaki ilişkiyi tanımlar.</p><pre><code>div p { color: blue; }\ndiv > p { font-weight: bold; }\nh2 + p { margin-top: 10px; }\nh2 ~ p { color: gray; }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example3",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>İleri CSS Seçiciler</title>\n  <style>\n    [data-tur=\"önemli\"] { background: #ffcccc; font-weight: bold; }\n    a[href^=\"https\"]::after { content: \" (güvenli)\"; color: green; }\n    li:nth-child(odd) { background: #e0e0ff; }\n    li:nth-child(3) { color: red; }\n    .kapsayici > p { border-left: 3px solid blue; padding-left: 10px; }\n    h3 + p { font-style: italic; }\n    input:focus { border: 2px solid green; outline: none; }\n    button:hover { background: darkblue; color: white; }\n  </style>\n</head>\n<body>\n  <h3>Attribute Seçici</h3>\n  <p data-tur=\"önemli\">Bu önemli bir nottur.</p>\n  <p><a href=\"https://example.com\">Güvenli bağlantı</a></p>\n  <h3>Pseudo-class</h3>\n  <ul>\n    <li>Birinci</li>\n    <li>İkinci</li>\n    <li>Üçüncü (kırmızı)</li>\n    <li>Dördüncü</li>\n  </ul>\n  <input type=\"text\" placeholder=\"Odaklanınca yeşil olur\">\n  <button>Üzerime gel</button>\n  <h3>Combinator</h3>\n  <div class=\"kapsayici\">\n    <p>Doğrudan çocuk (mavi çizgili)</p>\n    <div><p>Torun - etkilenmez</p></div>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Hangi seçici belirli bir attribute'e sahip öğeleri seçer?",
+        "options": [
+          "#id",
+          ".class",
+          "[attribute]",
+          "element"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Doğrudan çocuk öğeleri seçmek için hangi combinator kullanılır?",
+        "options": [
+          "div p",
+          "div > p",
+          "div + p",
+          "div ~ p"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Pseudo-element seçici hangi sembolle belirtilir?",
+        "options": [
+          ":",
+          "::",
+          "..#",
+          "##"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "a:hover ifadesi ne zaman çalışır?",
+        "options": [
+          "Link ziyaret edildiğinde",
+          "Fare linkin üzerine geldiğinde",
+          "Link tıklandığında",
+          "Sayfa yüklendiğinde"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Hangi attribute seçici 'icon-' ile başlayan class'ları seçer?",
+        "options": [
+          "[class*=\"icon-\"]",
+          "[class$=\"icon-\"]",
+          "[class^=\"icon-\"]",
+          "[class~=\"icon-\"]"
+        ],
+        "correctAnswer": 2
+      }
+    ]
+  },
+  {
+    "order": 4,
+    "title": "CSS Renkler ve Arkaplanlar",
+    "slug": "css-renkler-ve-arkaplanlar",
+    "content": "<h2>CSS Renkler ve Arkaplan Özellikleri</h2><p>Renkler ve arkaplan stilleri, web tasarımının en temel görsel öğeleridir.</p><h3>CSS Renk Değerleri</h3><pre><code>color: red;\ncolor: blue;\ncolor: #ff0000;\ncolor: #00ff00;\ncolor: #0000ff;\ncolor: rgb(255, 0, 0);\ncolor: rgba(255, 0, 0, 0.5);\ncolor: hsl(0, 100%, 50%);\ncolor: hsla(0, 100%, 50%, 0.5);</code></pre><h3>Arkaplan Renkleri</h3><pre><code>div { background-color: #f0f0f0; }\nbody { background-color: #ffffff; }</code></pre><h3>Arkaplan Görselleri</h3><pre><code>.hero {\n  background-image: url('bg.jpg');\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-attachment: fixed;\n}\n.hero {\n  background: url('bg.jpg') center/cover no-repeat fixed;\n}</code></pre><h3>Gradyanlar (Gradients)</h3><pre><code>.gradient { background: linear-gradient(to right, red, yellow); }\n.gradient { background: linear-gradient(45deg, #ff6b6b, #556270); }\n.gradient { background: radial-gradient(circle, red, yellow, green); }\n.gradient { background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example4",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Renkler ve Arkaplanlar</title>\n  <style>\n    body { font-family: Arial; background: #f5f5f5; margin: 20px; }\n    .ornek { padding: 20px; margin: 10px 0; border-radius: 8px; color: white; }\n    .hex { background-color: #3498db; }\n    .rgba { background-color: rgba(231, 76, 60, 0.8); }\n    .gradyan-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }\n    .gradyan-2 { background: radial-gradient(circle at center, #f7971e, #ffd200); }\n    .bg-img { background: url('https://via.placeholder.com/800x200') center/cover no-repeat; height: 200px; color: white; display: flex; align-items: center; justify-content: center; }\n  </style>\n</head>\n<body>\n  <div class=\"ornek hex\">HEX Renk: #3498db</div>\n  <div class=\"ornek rgba\">RGBA Renk: rgba(231, 76, 60, 0.8)</div>\n  <div class=\"ornek gradyan-1\">Lineer Gradyan</div>\n  <div class=\"ornek gradyan-2\">Radyal Gradyan</div>\n  <div class=\"bg-img\">Arkaplan Görseli</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "HEX renk kodu #ff0000 hangi rengi temsil eder?",
+        "options": [
+          "Yeşil",
+          "Mavi",
+          "Kırmızı",
+          "Sarı"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Saydamlık (transparency) eklemek için hangi renk modeli kullanılır?",
+        "options": [
+          "HEX",
+          "RGB",
+          "RGBA",
+          "HSL"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Arkaplan görselini tamamen kaplamak için hangi değer kullanılır?",
+        "options": [
+          "contain",
+          "cover",
+          "auto",
+          "fill"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Doğrusal gradyan oluşturmak için hangi fonksiyon kullanılır?",
+        "options": [
+          "radial-gradient()",
+          "linear-gradient()",
+          "gradient()",
+          "color-gradient()"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "HSL'de 'S' hangi anlama gelir?",
+        "options": [
+          "Saturation (Doygunluk)",
+          "Size (Boyut)",
+          "Shadow (Gölge)",
+          "Softness (Yumuşaklık)"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  {
+    "order": 5,
+    "title": "CSS Boyutlandırma",
+    "slug": "css-boyutlandirma",
+    "content": "<h2>CSS ile Boyutlandırma</h2><p>Öğelerin genişlik ve yükseklik değerlerini belirlemek için CSS çeşitli özellikler ve birimler sunar.</p><h3>width ve height</h3><pre><code>div { width: 300px; height: 200px; }</code></pre><h3>min-width, max-width, min-height, max-height</h3><pre><code>.kapsayici {\n  min-width: 320px;\n  max-width: 1200px;\n  min-height: 400px;\n  max-height: 800px;\n  overflow: auto;\n}</code></pre><h3>CSS Boyut Birimleri</h3><p><strong>Mutlak Birimler:</strong> px, cm, mm, in, pt, pc</p><p><strong>Göreceli Birimler:</strong> em, rem, %, vw, vh, vmin, vmax</p><pre><code>.parent { font-size: 20px; }\n.child-em { font-size: 2em; width: 10em; }\n.child-rem { font-size: 2rem; }\n.child-vw { width: 50vw; }\n.child-pct { width: 80%; }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example5",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Boyutlandırma</title>\n  <style>\n    * { box-sizing: border-box; }\n    body { font-family: Arial; margin: 20px; }\n    .kutu { background: #3498db; color: white; padding: 10px; margin: 10px 0; text-align: center; border-radius: 4px; }\n    .px { width: 300px; }\n    .yuzde { width: 80%; }\n    .vw { width: 50vw; }\n    .rem { width: 20rem; }\n    .em { font-size: 1.5em; width: 15em; }\n    .min-max { min-width: 200px; max-width: 600px; background: #e74c3c; color: white; padding: 10px; }\n    .tam-ekran { width: 100vw; height: 30vh; background: linear-gradient(135deg, #667eea, #764ba2); color: white; display: flex; align-items: center; justify-content: center; }\n  </style>\n</head>\n<body>\n  <div class=\"kutu px\">300px sabit genişlik</div>\n  <div class=\"kutu yuzde\">%80 genişlik (parent'a göre)</div>\n  <div class=\"kutu vw\">50vw genişlik (ekrana göre)</div>\n  <div class=\"kutu rem\">20rem genişlik</div>\n  <div class=\"kutu em\">15em genişlik</div>\n  <div class=\"min-max\">min: 200px, max: 600px</div>\n  <div class=\"tam-ekran\">30vh yüksekliğinde bölüm</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "1 rem varsayılan olarak kaç piksele eşittir?",
+        "options": [
+          "10px",
+          "12px",
+          "14px",
+          "16px"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "question": "Viewport genişliğine göre boyutlandırma yapan birim hangisidir?",
+        "options": [
+          "%",
+          "em",
+          "vw",
+          "rem"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "em birimi neye göre hesaplanır?",
+        "options": [
+          "Kök font-size'a göre",
+          "Parent font-size'a göre",
+          "Viewport'a göre",
+          "Piksel değerine göre"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Bir öğeye minimum genişlik vermek için hangi özellik kullanılır?",
+        "options": [
+          "min-w",
+          "min-width",
+          "width-min",
+          "minimum-width"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "% biriminde boyut neye göre hesaplanır?",
+        "options": [
+          "Kök elemente göre",
+          "Parent (ana) elemente göre",
+          "Viewport'a göre",
+          "Kardeş elemente göre"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 6,
+    "title": "CSS Padding ve Margin",
+    "slug": "css-padding-ve-margin",
+    "content": "<h2>CSS Padding ve Margin</h2><p>CSS Box Model'in önemli parçaları olan padding ve margin, öğeler arasındaki ve içindeki boşlukları kontrol eder.</p><h3>Padding (İç Boşluk)</h3><p>Padding, bir öğenin içeriği ile kenarlığı (border) arasındaki boşluktur.</p><pre><code>div { padding: 20px; }\ndiv { padding: 10px 20px 15px 25px; }\ndiv { padding: 10px 20px; }\ndiv { padding-top: 10px; padding-right: 20px; padding-bottom: 15px; padding-left: 25px; }</code></pre><h3>Margin (Dış Boşluk)</h3><p>Margin, bir öğenin dışındaki, diğer öğelerle arasındaki boşluktur.</p><pre><code>div { margin: 20px; }\ndiv { margin: 10px 20px 15px 25px; }\ndiv { margin: 10px 20px; }\ndiv { margin: 0 auto; }</code></pre><h3>Padding vs Margin</h3><p>Padding arkaplan rengini alır, margin saydamdır. Margin collapsing (dikeyde birleşme) sadece margin'de olur.</p>",
+    "video_url": "https://www.youtube.com/watch?v=example6",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Padding ve Margin</title>\n  <style>\n    * { box-sizing: border-box; }\n    body { font-family: Arial; margin: 20px; background: #f0f0f0; }\n    .kapsayici { background: white; border: 3px solid #333; padding: 30px; margin: 20px; }\n    .icerik { background: #3498db; color: white; padding: 15px; text-align: center; }\n    .icerik p { margin: 0; }\n    .kutu { background: #e74c3c; color: white; padding: 15px; text-align: center; margin-bottom: 20px; }\n    .kutu:last-child { margin-bottom: 0; }\n    .ortali { width: 300px; margin: 20px auto; background: #2ecc71; color: white; padding: 15px; text-align: center; }\n  </style>\n</head>\n<body>\n  <h3>Padding Örneği</h3>\n  <div class=\"kapsayici\">\n    <div class=\"icerik\">Bu div'in padding: 15px (iç boşluk)</div>\n  </div>\n  <h3>Margin Örneği</h3>\n  <div class=\"kutu\">Kutu 1 (margin-bottom: 20px)</div>\n  <div class=\"kutu\">Kutu 2 (margin-bottom: 20px)</div>\n  <h3>margin: 0 auto ile ortalama</h3>\n  <div class=\"ortali\">Bu div yatayda ortalanmıştır</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Padding hangi boşluğu ifade eder?",
+        "options": [
+          "Öğeler arası dış boşluk",
+          "İçerik ile border arasındaki iç boşluk",
+          "Border ile margin arasındaki boşluk",
+          "Ekran kenarındaki boşluk"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Bir öğeyi yatayda ortalamak için hangi margin değeri kullanılır?",
+        "options": [
+          "margin: 10px;",
+          "margin: auto;",
+          "margin: 0 auto;",
+          "margin: center;"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Margin collapsing (margin çökmesi) nedir?",
+        "options": [
+          "Marginlerin birbirine karışması",
+          "Dikey marginlerden büyük olanın geçerli olması",
+          "Marginlerin toplanması",
+          "Marginlerin yok olması"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Kısa yazımda padding: 10px 20px; ne anlama gelir?",
+        "options": [
+          "Üst:10px, Sağ:20px, Alt:10px, Sol:20px",
+          "Üst:10px, Alt:20px",
+          "Sağ:10px, Sol:20px",
+          "Hepsi 10px ve 20px"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Padding ile margin arasındaki fark nedir?",
+        "options": [
+          "Padding border dışı, margin border içidir",
+          "Padding arkaplan rengini alır, margin saydamdır",
+          "Margin arkaplan rengini alır, padding saydamdır",
+          "İkisi de aynıdır"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 7,
+    "title": "CSS Border ve Outline",
+    "slug": "css-border-ve-outline",
+    "content": "<h2>CSS Border ve Outline</h2><p>Border (kenarlık) ve outline (dış çerçeve), öğelerin etrafına çizgiler eklemek için kullanılır.</p><h3>Border Özellikleri</h3><pre><code>div { border: 2px solid black; }\ndiv { border-width: 2px; border-style: solid; border-color: black; }\ndiv { border-top: 1px dashed red; border-bottom: 3px double green; }</code></pre><h3>Border Stilleri</h3><p>solid, dashed, dotted, double, groove, ridge, inset, outset, none</p><h3>Border Radius</h3><pre><code>div { border-radius: 10px; }\ndiv { border-radius: 50%; }\ndiv { border-top-left-radius: 10px; border-top-right-radius: 20px; }</code></pre><h3>Outline</h3><p>Outline, border'dan farklı olarak öğenin boyutunu etkilemez ve border'ın dışında çizilir.</p><pre><code>div { outline: 2px solid red; outline-offset: 5px; }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example7",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Border ve Outline</title>\n  <style>\n    body { font-family: Arial; display: flex; gap: 20px; flex-wrap: wrap; padding: 20px; }\n    .kutu { width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; background: #f9f9f9; }\n    .solid { border: 4px solid #e74c3c; }\n    .dashed { border: 4px dashed #3498db; }\n    .dotted { border: 4px dotted #2ecc71; }\n    .double { border: 4px double #9b59b6; }\n    .radius { border: 3px solid #333; border-radius: 15px; }\n    .yuvarlak { border: 3px solid #e67e22; border-radius: 50%; }\n    .outline { border: 3px solid #333; outline: 4px solid #e74c3c; outline-offset: 5px; }\n  </style>\n</head>\n<body>\n  <div class=\"kutu solid\">solid</div>\n  <div class=\"kutu dashed\">dashed</div>\n  <div class=\"kutu dotted\">dotted</div>\n  <div class=\"kutu double\">double</div>\n  <div class=\"kutu radius\">border-radius</div>\n  <div class=\"kutu yuvarlak\">%50 yuvarlak</div>\n  <div class=\"kutu outline\">outline (+5px offset)</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Hangi border stili çift çizgi oluşturur?",
+        "options": [
+          "solid",
+          "double",
+          "dashed",
+          "groove"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Border radius: 50% değeri ne işe yarar?",
+        "options": [
+          "Köşeleri 50px yapar",
+          "Öğeyi tam yuvarlak yapar",
+          "Border'ı %50 inceltir",
+          "Border rengini %50 saydam yapar"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Outline ile border arasındaki fark nedir?",
+        "options": [
+          "Outline daha kalındır",
+          "Outline öğe boyutunu etkilemez",
+          "Border sadece düz çizgidir",
+          "Outline sadece karelerde çalışır"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Shorthand (kısa yazım) border için hangi sıralama doğrudur?",
+        "options": [
+          "renk genişlik stil",
+          "genişlik stil renk",
+          "stil genişlik renk",
+          "renk stil genişlik"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Hangi özellik sadece border-top-left gibi tek tek ayarlanabilir?",
+        "options": [
+          "border-width",
+          "border-style",
+          "border-radius",
+          "border-color"
+        ],
+        "correctAnswer": 2
+      }
+    ]
+  },
+  {
+    "order": 8,
+    "title": "CSS Box Model",
+    "slug": "css-box-model",
+    "content": "<h2>CSS Box Model (Kutu Modeli)</h2><p>CSS Box Model, her HTML öğesinin bir dikdörtgen kutu olarak ele alındığı temel bir konsepttir.</p><h3>Box Model Katmanları</h3><ol><li><strong>Content:</strong> Metin, görsel gibi gerçek içerik</li><li><strong>Padding:</strong> İçerik ile border arası boşluk</li><li><strong>Border:</strong> Padding'i çevreleyen çizgi</li><li><strong>Margin:</strong> Border dışı boşluk, saydam</li></ol><h3>box-sizing</h3><pre><code>/* content-box (varsayılan): width = sadece içerik */\n/* border-box: width = içerik + padding + border */\n* { box-sizing: border-box; }</code></pre><h3>Hesaplama</h3><p>content-box: width:300px + padding:40px + border:10px = 350px toplam<br>border-box: width:300px (padding ve border dahil) = 300px toplam</p>",
+    "video_url": "https://www.youtube.com/watch?v=example8",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Box Model</title>\n  <style>\n    body { font-family: Arial; padding: 20px; background: #eee; }\n    .kutu { width: 250px; padding: 25px; border: 8px solid #e74c3c; margin: 30px; background: #f9f9f9; }\n    .icerik { background: #3498db; color: white; padding: 15px; text-align: center; }\n    .border-box { box-sizing: border-box; width: 250px; padding: 25px; border: 8px solid #2ecc71; margin: 30px; background: #f9f9f9; }\n  </style>\n</head>\n<body>\n  <h2>Box Model Karşılaştırması</h2>\n  <div style=\"display: flex; gap: 40px;\">\n    <div>\n      <h3>content-box</h3>\n      <div class=\"kutu\"><div class=\"icerik\">Toplam: 316px</div></div>\n    </div>\n    <div>\n      <h3>border-box</h3>\n      <div class=\"border-box\"><div class=\"icerik\">Toplam: 250px</div></div>\n    </div>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Box Model'in dıştan içe doğru sıralaması nedir?",
+        "options": [
+          "Content-Padding-Border-Margin",
+          "Margin-Border-Padding-Content",
+          "Border-Margin-Content-Padding",
+          "Content-Border-Padding-Margin"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "box-sizing: border-box kullanıldığında width neyi ifade eder?",
+        "options": [
+          "Sadece içerik alanını",
+          "İçerik + Padding + Border'ı",
+          "Sadece Padding + Border'ı",
+          "Tüm sayfa genişliğini"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Varsayılan box-sizing değeri nedir?",
+        "options": [
+          "border-box",
+          "content-box",
+          "padding-box",
+          "margin-box"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Bir öğenin toplam genişliğini hesaplarken hangi katmanlar dahil edilir?",
+        "options": [
+          "Sadece content",
+          "Content + padding",
+          "Content + padding + border + margin",
+          "Content + padding + border"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Margin katmanının özelliği nedir?",
+        "options": [
+          "Arkaplan rengini alır",
+          "Saydamdır ve öğe boyutuna dahil değildir",
+          "Border'ın içindedir",
+          "İçeriğin bir parçasıdır"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 9,
+    "title": "CSS Fontlar",
+    "slug": "css-fontlar",
+    "content": "<h2>CSS ile Font (Yazı Tipi) Kullanımı</h2><p>CSS, web sayfalarında kullanılan yazı tiplerini ve özelliklerini kontrol eder.</p><h3>Temel Font Özellikleri</h3><pre><code>body {\n  font-family: 'Segoe UI', Arial, sans-serif;\n  font-size: 16px;\n  font-weight: 400;\n  font-style: normal;\n  line-height: 1.6;\n}</code></pre><h3>font-family</h3><p>Birden çok yazı tipi belirtilir, tarayıcı sırayla dener.</p><pre><code>font-family: 'Open Sans', Arial, sans-serif;\nfont-family: 'Times New Roman', Georgia, serif;\nfont-family: 'Courier New', Consolas, monospace;</code></pre><h3>font-weight</h3><pre><code>.ince { font-weight: 300; }\n.normal { font-weight: 400; }\n.kalin { font-weight: 700; }\n.bold { font-weight: bold; }</code></pre><h3>@font-face ve Google Fonts</h3><pre><code>@font-face {\n  font-family: 'BenimFontum';\n  src: url('fonts/benim-fontum.woff2') format('woff2');\n  font-display: swap;\n}\n/* Google Fonts */\n&lt;link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap\" rel=\"stylesheet\"&gt;</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example9",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Fontlar</title>\n  <link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap\" rel=\"stylesheet\">\n  <style>\n    body { font-family: 'Roboto', sans-serif; padding: 20px; }\n    h1 { font-family: 'Playfair Display', serif; font-weight: 700; }\n    .ince { font-weight: 300; }\n    .kalin { font-weight: 700; }\n    .italic { font-style: italic; }\n    .buyuk { font-size: 2rem; }\n    .kucuk { font-size: 0.75rem; color: #888; }\n    .mono { font-family: 'Courier New', monospace; background: #333; color: #0f0; padding: 10px; }\n  </style>\n</head>\n<body>\n  <h1>Playfair Display Başlık</h1>\n  <div class=\"ince\">Roboto Light (300)</div>\n  <div class=\"kalin\">Roboto Bold (700)</div>\n  <div class=\"italic\">Roboto Italic</div>\n  <div class=\"buyuk\">2rem boyutunda yazı</div>\n  <div class=\"mono\">Monospace font</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "font-family'de birden çok yazı tipi belirtmenin amacı nedir?",
+        "options": [
+          "Hepsini aynı anda kullanmak",
+          "Yedek font sağlamak",
+          "Sayfa hızını artırmak",
+          "Daha renkli görünüm"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "font-weight: bold ile hangi sayısal değer eşdeğerdir?",
+        "options": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "question": "Google Fonts kullanmak için hangi HTML etiketi kullanılır?",
+        "options": [
+          "<script>",
+          "<style>",
+          "<link>",
+          "<font>"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "@font-face kuralında font-display: swap ne işe yarar?",
+        "options": [
+          "Font hemen gösterilir, yüklenince değişir",
+          "Font yüklenene kadar bekler",
+          "Font asla gösterilmez",
+          "Sadece mobilde çalışır"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Serif ve sans-serif arasındaki temel fark nedir?",
+        "options": [
+          "Serif kalındır",
+          "Serif'te tırnak (çıkıntı) vardır",
+          "Sans-serif daha büyüktür",
+          "Sans-serif sadece başlıklarda kullanılır"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 10,
+    "title": "CSS Metin Stilleri",
+    "slug": "css-metin-stilleri",
+    "content": "<h2>CSS Metin Stilleri</h2><p>Metinlerin görünümünü düzenlemek için CSS çok sayıda özellik sunar.</p><h3>text-align</h3><pre><code>.sola { text-align: left; }\n.saga { text-align: right; }\n.orta { text-align: center; }\n.iki-yana { text-align: justify; }</code></pre><h3>text-decoration</h3><pre><code>.alt-cizgi { text-decoration: underline; }\n.ustu-cizili { text-decoration: line-through; }\na { text-decoration: none; }</code></pre><h3>text-transform</h3><pre><code>.buyuk-harf { text-transform: uppercase; }\n.kucuk-harf { text-transform: lowercase; }\n.baslik { text-transform: capitalize; }</code></pre><h3>Diğer Metin Özellikleri</h3><pre><code>.harf-ara { letter-spacing: 3px; }\n.kelime-ara { word-spacing: 10px; }\n.yuksek-satir { line-height: 2.5; }\n.tasarsa { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example10",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Metin Stilleri</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .ornek { margin: 15px 0; padding: 15px; background: #f5f5f5; border-radius: 5px; }\n    .sola { text-align: left; }\n    .orta { text-align: center; }\n    .saga { text-align: right; }\n    .iki-yana { text-align: justify; }\n    .alt-cizgi { text-decoration: underline; }\n    .ustu-cizili { text-decoration: line-through; }\n    .buyuk-harf { text-transform: uppercase; }\n    .baslik { text-transform: capitalize; }\n    .harf-ara { letter-spacing: 4px; }\n    .golge { text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }\n  </style>\n</head>\n<body>\n  <div class=\"ornek sola\">text-align: left</div>\n  <div class=\"ornek orta\">text-align: center</div>\n  <div class=\"ornek saga\">text-align: right</div>\n  <div class=\"ornek iki-yana\">text-align: justify - Uzun metinlerde iki yana yaslama</div>\n  <div class=\"ornek\"><span class=\"alt-cizgi\">altı çizgili</span> | <span class=\"ustu-cizili\">üstü çizili</span></div>\n  <div class=\"ornek buyuk-harf\">büyük harfe dönüştürüldü</div>\n  <div class=\"ornek harf-ara\">harf aralığı 4px</div>\n  <div class=\"ornek golge\">text-shadow ile gölgeli metin</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Metni iki yana yaslamak için hangi text-align değeri kullanılır?",
+        "options": [
+          "center",
+          "justify",
+          "left",
+          "right"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Tüm harfleri büyük yapmak için hangi özellik kullanılır?",
+        "options": [
+          "text-transform: uppercase",
+          "font-size: large",
+          "text-decoration: overline",
+          "font-weight: bold"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Taşan metnin sonuna '...' eklemek için hangi özellikler kullanılır?",
+        "options": [
+          "overflow: hidden; text-overflow: ellipsis; white-space: nowrap;",
+          "text-transform: ellipsis",
+          "overflow: ellipsis",
+          "word-break: break-all"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Harf aralığını ayarlamak için hangi özellik kullanılır?",
+        "options": [
+          "word-spacing",
+          "letter-spacing",
+          "line-height",
+          "text-indent"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Linklerdeki alt çizgiyi kaldırmak için hangi değer kullanılır?",
+        "options": [
+          "text-decoration: normal",
+          "text-decoration: none",
+          "text-style: plain",
+          "text-line: hide"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 11,
+    "title": "CSS Display Özelliği",
+    "slug": "css-display-ozelligi",
+    "content": "<h2>CSS Display Özelliği</h2><p>Display özelliği, bir HTML öğesinin nasıl görüntüleneceğini belirler.</p><h3>display: block</h3><p>Block öğeler tüm satırı kaplar, width/height ayarlanabilir.</p><pre><code>div, p, h1-h6, ul, li, section</code></pre><h3>display: inline</h3><p>Inline öğeler sadece içerik kadar yer kaplar, width/height uygulanamaz.</p><pre><code>span, a, strong, em, img</code></pre><h3>display: inline-block</h3><p>Inline gibi yan yana dizilir, block gibi width/height alabilir.</p><h3>display: none</h3><p>Öğeyi tamamen gizler. visibility: hidden yer kaplar, display: none yer kaplamaz.</p><h3>Diğer Değerler</h3><pre><code>display: flex;   display: grid;\ndisplay: table;  display: inline-flex;\ndisplay: inline-grid;  display: list-item;</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example11",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Display Özelliği</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .kutu { background: #3498db; color: white; padding: 10px; margin: 5px; text-align: center; }\n    .inline { display: inline; background: #e74c3c; }\n    .inline-block { display: inline-block; width: 120px; height: 60px; background: #2ecc71; vertical-align: top; }\n    nav a { display: inline-block; background: #f39c12; color: white; padding: 10px 20px; text-decoration: none; margin: 0 5px; border-radius: 4px; }\n  </style>\n</head>\n<body>\n  <h3>block</h3>\n  <div class=\"kutu\">Block 1</div>\n  <div class=\"kutu\">Block 2 (alt satıra geçer)</div>\n  <h3>inline</h3>\n  <span class=\"kutu inline\">Inline 1</span>\n  <span class=\"kutu inline\">Inline 2</span>\n  <h3>inline-block</h3>\n  <div class=\"kutu inline-block\">IB 1</div>\n  <div class=\"kutu inline-block\">IB 2</div>\n  <h3>Menü Örneği</h3>\n  <nav><a href=\"#\">Anasayfa</a><a href=\"#\">Hakkında</a><a href=\"#\">İletişim</a></nav>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Hangi display değeri öğeyi tamamen gizler ve yer kaplamaz?",
+        "options": [
+          "visibility: hidden",
+          "display: none",
+          "opacity: 0",
+          "display: invisible"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "inline-block ile block arasındaki fark nedir?",
+        "options": [
+          "inline-block yan yana dizilebilir, block dizilemez",
+          "inline-block daha hızlıdır",
+          "block sadece mobilde çalışır",
+          "Fark yoktur"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "inline öğelere width ve height uygulanabilir mi?",
+        "options": [
+          "Evet, her zaman",
+          "Hayır, uygulanamaz",
+          "Sadece height uygulanabilir",
+          "Sadece width uygulanabilir"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Aşağıdakilerden hangisi varsayılan olarak inline'dır?",
+        "options": [
+          "<div>",
+          "<p>",
+          "<span>",
+          "<section>"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "display: none ile visibility: hidden arasındaki fark nedir?",
+        "options": [
+          "İkisi de aynıdır",
+          "display: none yer kaplamaz, visibility: hidden yerini korur",
+          "visibility: hidden CSS'de yoktur",
+          "display: none sadece div'lerde çalışır"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 12,
+    "title": "CSS Position",
+    "slug": "css-position",
+    "content": "<h2>CSS Position Özelliği</h2><p>Position, bir öğenin sayfada nasıl konumlandırılacağını belirler. Beş değeri vardır.</p><h3>static</h3><p>Varsayılan değer. Normal akışta olduğu yerde durur. top/left/right/bottom etki etmez.</p><h3>relative</h3><p>Normal konumuna göre kaydırılır. top, left vb. değerler verilebilir.</p><pre><code>.kutu { position: relative; top: 20px; left: 30px; }</code></pre><h3>absolute</h3><p>Normal akıştan çıkar. En yakın position:relative/absolute/fixed olan ata öğeye göre konumlanır.</p><pre><code>.kapsayici { position: relative; }\n.alt-oge { position: absolute; top: 0; right: 0; }</code></pre><h3>fixed</h3><p>Viewport'a göre sabitlenir. Sayfa kaydırılsa da yerinde kalır.</p><pre><code>.navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }</code></pre><h3>sticky</h3><p>Normal akıştadır, belirli eşiğe ulaşınca sabitlenir.</p><pre><code>.baslik { position: sticky; top: 0; background: white; }</code></pre><h3>z-index</h3><p>Yüksek değer üstte görünür. Sadece position değeri static olmayan öğelerde çalışır.</p>",
+    "video_url": "https://www.youtube.com/watch?v=example12",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Position</title>\n  <style>\n    body { font-family: Arial; padding: 20px; margin: 0; }\n    .kapsayici { position: relative; width: 400px; height: 250px; background: #f0f0f0; border: 2px solid #333; margin: 30px auto; }\n    .kutu { width: 100px; height: 60px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }\n    .relative { position: relative; top: 20px; left: 20px; background: #3498db; }\n    .absolute { position: absolute; bottom: 10px; right: 10px; background: #e74c3c; }\n    .fixed { position: fixed; bottom: 20px; right: 20px; background: #2ecc71; width: 150px; height: 50px; z-index: 100; border-radius: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }\n    .sticky { position: sticky; top: 0; background: #f39c12; color: white; padding: 15px; z-index: 50; text-align: center; }\n    .z1 { position: absolute; top: 0; left: 0; width: 150px; height: 80px; background: rgba(231,76,60,0.8); z-index: 1; }\n    .z2 { position: absolute; top: 20px; left: 30px; width: 150px; height: 80px; background: rgba(52,152,219,0.8); z-index: 10; }\n  </style>\n</head>\n<body>\n  <div class=\"sticky\">Sticky Başlık - Scroll yapınca yapışır</div>\n  <h3>relative ve absolute</h3>\n  <div class=\"kapsayici\">\n    <div class=\"kutu relative\">relative</div>\n    <div class=\"kutu absolute\">absolute</div>\n  </div>\n  <h3>z-index</h3>\n  <div style=\"position: relative; height: 100px;\">\n    <div class=\"z1\">z-index: 1</div>\n    <div class=\"z2\">z-index: 10 (üstte)</div>\n  </div>\n  <div style=\"height: 600px;\"></div>\n  <div class=\"fixed\">Fixed buton</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Varsayılan position değeri nedir?",
+        "options": [
+          "relative",
+          "absolute",
+          "static",
+          "fixed"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Hangi position değeri öğeyi viewport'a göre sabitler?",
+        "options": [
+          "static",
+          "relative",
+          "absolute",
+          "fixed"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "question": "absolute konumlandırma hangi ata öğeye göre konum alır?",
+        "options": [
+          "Body'e göre",
+          "En yakın position değeri static olmayan ata öğeye göre",
+          "En yakın div'e göre",
+          "Viewport'a göre"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Hangi özellik öğelerin üst üste binme sırasını belirler?",
+        "options": [
+          "top",
+          "index",
+          "z-index",
+          "layer"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "sticky position hangi ikisinin birleşimi gibidir?",
+        "options": [
+          "static + fixed",
+          "relative + fixed",
+          "absolute + fixed",
+          "static + absolute"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 13,
+    "title": "CSS Overflow ve Float",
+    "slug": "css-overflow-ve-float",
+    "content": "<h2>CSS Overflow ve Float</h2><h3>Overflow (Taşma)</h3><pre><code>.kutu {\n  width: 200px; height: 100px;\n  overflow: visible;  overflow: hidden;\n  overflow: scroll;   overflow: auto;\n}\noverflow-x: hidden; overflow-y: auto;</code></pre><h3>Float (Kaydırma)</h3><pre><code>.sola-kaydir { float: left; }\n.saga-kaydir { float: right; }\n.temizle { clear: both; }</code></pre><h3>Clearfix</h3><pre><code>.kapsayici::after {\n  content: \"\"; display: block; clear: both;\n}</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example13",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Overflow ve Float</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .overflow-kutu { width: 150px; height: 80px; background: #f5f5f5; border: 1px solid #ccc; padding: 5px; margin: 10px 0; }\n    .hidden { overflow: hidden; }\n    .scroll { overflow: scroll; }\n    .auto { overflow: auto; }\n    .float-ornek { background: #f9f9f9; border: 1px solid #ddd; padding: 15px; margin: 20px 0; }\n    .float-img { float: left; width: 100px; height: 100px; margin: 0 15px 10px 0; background: #3498db; color: white; display: flex; align-items: center; justify-content: center; }\n    .clearfix::after { content: \"\"; clear: both; display: block; }\n  </style>\n</head>\n<body>\n  <h3>Overflow</h3>\n  <div class=\"overflow-kutu hidden\"><strong>hidden:</strong> Taşan içerik kesilir ve görünmez.</div>\n  <div class=\"overflow-kutu scroll\"><strong>scroll:</strong> Kaydırma çubuğu her zaman görünür.</div>\n  <h3>Float</h3>\n  <div class=\"float-ornek clearfix\">\n    <div class=\"float-img\">Görsel</div>\n    <p>Bu metin float edilmiş görselin etrafına sarılır. Float: left kullanıldığında görsel sol tarafta konumlanır.</p>\n  </div>\n  <p style=\"clear: both;\">clear: both ile float sonlandırıldı.</p>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Hangi overflow değeri taşan içeriği keser ve gizler?",
+        "options": [
+          "visible",
+          "hidden",
+          "scroll",
+          "auto"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Float işlemini durdurmak için hangi özellik kullanılır?",
+        "options": [
+          "stop",
+          "clear",
+          "break",
+          "end"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Clearfix tekniği hangi sorunu çözer?",
+        "options": [
+          "Taşan içerik sorununu",
+          "Float kullanıldığında kapsayıcının yükseklik kaybetmesini",
+          "Renk uyumsuzluğunu",
+          "Mobil uyumluluk sorununu"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Overflow: auto ile scroll arasındaki fark nedir?",
+        "options": [
+          "Fark yoktur",
+          "auto gerektiğinde scroll çubuğu gösterir, scroll her zaman gösterir",
+          "scroll daha hızlıdır",
+          "auto sadece yatayda çalışır"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Modern web tasarımında float yerine genellikle hangi özellikler tercih edilir?",
+        "options": [
+          "position ve display",
+          "Flexbox ve Grid",
+          "margin ve padding",
+          "overflow ve clear"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 14,
+    "title": "CSS Flexbox - Giriş",
+    "slug": "css-flexbox-giris",
+    "content": "<h2>CSS Flexbox - Giriş</h2><p>Flexbox, öğeleri bir boyutta hizalamak ve dağıtmak için kullanılan güçlü bir düzen modelidir.</p><h3>Temel Kavramlar</h3><ul><li><strong>Flex Container:</strong> display:flex verilen kapsayıcı</li><li><strong>Flex Item:</strong> Container içindeki çocuk öğeler</li><li><strong>Main Axis:</strong> Ana eksen (flex-direction'a göre)</li><li><strong>Cross Axis:</strong> Çapraz eksen (ana eksene dik)</li></ul><h3>flex-direction</h3><pre><code>.container {\n  flex-direction: row;\n  flex-direction: row-reverse;\n  flex-direction: column;\n  flex-direction: column-reverse;\n}</code></pre><h3>flex-wrap</h3><pre><code>.container {\n  flex-wrap: nowrap;  flex-wrap: wrap;\n  flex-wrap: wrap-reverse;\n}\n/* Shorthand */\nflex-flow: row wrap;</code></pre><h3>Container Özellikleri</h3><pre><code>.container {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-items: stretch;\n  align-content: flex-start;\n  gap: 10px;\n}</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example14",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Flexbox Giriş</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .container { display: flex; flex-wrap: wrap; gap: 10px; background: #f0f0f0; padding: 15px; border: 2px solid #333; margin: 15px 0; }\n    .item { background: #3498db; color: white; padding: 20px; text-align: center; border-radius: 4px; font-weight: bold; }\n    .column { flex-direction: column; }\n    .row-reverse { flex-direction: row-reverse; }\n    .orta { justify-content: center; }\n  </style>\n</head>\n<body>\n  <h3>flex-direction: row (varsayılan) + wrap</h3>\n  <div class=\"container\"><div class=\"item\">1</div><div class=\"item\">2</div><div class=\"item\">3</div><div class=\"item\">4</div></div>\n  <h3>flex-direction: column</h3>\n  <div class=\"container column\"><div class=\"item\">1</div><div class=\"item\">2</div><div class=\"item\">3</div></div>\n  <h3>justify-content: center</h3>\n  <div class=\"container orta\"><div class=\"item\">Ortalanmış</div><div class=\"item\">Öğeler</div></div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Flexbox'ta varsayılan flex-direction değeri nedir?",
+        "options": [
+          "column",
+          "row",
+          "row-reverse",
+          "column-reverse"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Öğelerin taşarsa alt satıra geçmesi için hangi özellik kullanılır?",
+        "options": [
+          "flex-wrap: wrap",
+          "flex-overflow: auto",
+          "flex-break: true",
+          "flex-direction: column"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "flex-flow shorthand hangi iki özelliği birleştirir?",
+        "options": [
+          "flex-wrap + justify-content",
+          "flex-direction + flex-wrap",
+          "align-items + justify-content",
+          "flex-grow + flex-shrink"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Flex container'daki öğeler arası boşluk için hangi özellik kullanılır?",
+        "options": [
+          "margin",
+          "gap",
+          "spacing",
+          "padding"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "display: flex hangi öğeye uygulanır?",
+        "options": [
+          "Alt öğelere",
+          "Kapsayıcı (container) öğeye",
+          "Tüm sayfaya",
+          "Sadece div'lere"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 15,
+    "title": "CSS Flexbox - Hizalama",
+    "slug": "css-flexbox-hizalama",
+    "content": "<h2>CSS Flexbox - Hizalama ve Esneklik</h2><h3>justify-content (Ana Eksen)</h3><pre><code>justify-content: flex-start;\njustify-content: flex-end;\njustify-content: center;\njustify-content: space-between;\njustify-content: space-around;\njustify-content: space-evenly;</code></pre><h3>align-items (Çapraz Eksen)</h3><pre><code>align-items: stretch;\nalign-items: flex-start;\nalign-items: flex-end;\nalign-items: center;\nalign-items: baseline;</code></pre><h3>align-self (Tek Öğe)</h3><pre><code>.item { align-self: flex-end; align-self: center; }</code></pre><h3>flex-grow / flex-shrink / flex-basis</h3><pre><code>.item { flex-grow: 1; }   /* Kalan alanı al */\n.item { flex-shrink: 0; } /* Küçülme */\n.item { flex-basis: 200px; } /* Başlangıç boyutu */\n.item { flex: 1 1 200px; }   /* Shorthand */</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example15",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Flexbox Hizalama</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .container { display: flex; gap: 10px; background: #f0f0f0; padding: 15px; border: 2px solid #333; margin: 15px 0; height: 150px; }\n    .item { background: #3498db; color: white; padding: 15px; text-align: center; border-radius: 4px; }\n    .center { justify-content: center; align-items: center; }\n    .between { justify-content: space-between; }\n    .end { justify-content: flex-end; align-items: flex-end; }\n    .grow .item { flex-grow: 1; }\n    .grow .item:nth-child(2) { flex-grow: 2; background: #e74c3c; }\n    .ozel .item:nth-child(2) { align-self: flex-end; background: #e74c3c; }\n    .ozel .item:nth-child(3) { align-self: center; background: #2ecc71; }\n  </style>\n</head>\n<body>\n  <h3>justify-content: center + align-items: center</h3>\n  <div class=\"container center\"><div class=\"item\">Tam ortalama</div><div class=\"item\">Flexbox ile</div></div>\n  <h3>justify-content: space-between</h3>\n  <div class=\"container between\"><div class=\"item\">Sol</div><div class=\"item\">Orta</div><div class=\"item\">Sağ</div></div>\n  <h3>flex-grow</h3>\n  <div class=\"container grow\"><div class=\"item\">1</div><div class=\"item\">2x</div><div class=\"item\">1</div></div>\n  <h3>align-self</h3>\n  <div class=\"container ozel\"><div class=\"item\">start</div><div class=\"item\">end</div><div class=\"item\">center</div></div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "justify-content: space-between ile space-evenly arasındaki fark nedir?",
+        "options": [
+          "space-between kenarlara yapışık, space-evenly her yerde eşit boşluk",
+          "İkisi de aynıdır",
+          "space-evenly sadece yatayda çalışır",
+          "space-between sadece dikeyde çalışır"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Bir flex item'ın diğerlerinden farklı hizalanması için hangi özellik kullanılır?",
+        "options": [
+          "align-items",
+          "align-self",
+          "align-content",
+          "align-flex"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "flex-grow: 1 ne anlama gelir?",
+        "options": [
+          "Öğe büyümez",
+          "Öğe kalan boş alanı alabilir",
+          "Öğe her zaman 1px'dir",
+          "Öğe küçülmez"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Bir öğenin hiç küçülmemesini sağlamak için hangi değer kullanılır?",
+        "options": [
+          "flex-shrink: 0",
+          "flex-shrink: 1",
+          "flex-grow: 0",
+          "flex-basis: auto"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "flex: 1 shorthand'i hangi değerlere eşittir?",
+        "options": [
+          "flex: 1 0 auto",
+          "flex: 1 1 0%",
+          "flex: 0 1 1%",
+          "flex: 1 1 auto"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 16,
+    "title": "CSS Flexbox - Oyun",
+    "slug": "css-flexbox-oyun",
+    "content": "<h2>CSS Flexbox - Uygulama Oyunu</h2><p>Bu derste Flexbox özelliklerini interaktif bir oyun senaryosu üzerinde uygulayacağız.</p><h3>Oyun: Navigasyon Menüsü</h3><pre><code>.navbar {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 1rem 2rem;\n}\n.nav-menu {\n  display: flex;\n  gap: 2rem;\n  list-style: none;\n}</code></pre><h3>Oyun: Profil Kartı</h3><pre><code>.profil-karti {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}</code></pre><h3>Oyun: Responsive Galeri</h3><pre><code>.galeri {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.galeri-item {\n  flex: 1 1 200px;\n  height: 150px;\n}</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example16",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Flexbox Oyun</title>\n  <style>\n    * { box-sizing: border-box; margin: 0; padding: 0; }\n    body { font-family: Arial; background: #f5f5f5; }\n    .navbar { display: flex; justify-content: space-between; align-items: center; background: #2c3e50; color: white; padding: 1rem 2rem; }\n    .logo { font-size: 1.5rem; font-weight: bold; }\n    .nav-menu { display: flex; gap: 2rem; list-style: none; }\n    .nav-menu a { color: white; text-decoration: none; }\n    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }\n    .kartlar { display: flex; gap: 1.5rem; margin-top: 1rem; }\n    .kart { flex: 1; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }\n    .galeri { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 2rem; }\n    .galeri-item { flex: 1 1 200px; height: 150px; background: #3498db; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; border-radius: 8px; }\n    .galeri-item:nth-child(2n) { background: #e74c3c; }\n    @media (max-width: 768px) {\n      .kartlar { flex-direction: column; }\n      .navbar { flex-direction: column; gap: 1rem; }\n    }\n  </style>\n</head>\n<body>\n  <nav class=\"navbar\"><div class=\"logo\">FlexSite</div><ul class=\"nav-menu\"><li><a href=\"#\">Anasayfa</a></li><li><a href=\"#\">Hakkında</a></li><li><a href=\"#\">İletişim</a></li></ul></nav>\n  <div class=\"container\">\n    <h2>Ekip Üyeleri</h2>\n    <div class=\"kartlar\">\n      <div class=\"kart\"><h3>Ali Yılmaz</h3><p>Frontend</p></div>\n      <div class=\"kart\"><h3>Ayşe Demir</h3><p>Backend</p></div>\n      <div class=\"kart\"><h3>Mehmet Can</h3><p>Tasarım</p></div>\n    </div>\n    <h2>Galeri</h2>\n    <div class=\"galeri\">\n      <div class=\"galeri-item\">1</div><div class=\"galeri-item\">2</div>\n      <div class=\"galeri-item\">3</div><div class=\"galeri-item\">4</div>\n    </div>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Navigasyon menüsünde logoyu sola, menüyü sağa hizalamak için hangi özellik kullanılır?",
+        "options": [
+          "align-items: center",
+          "justify-content: space-between",
+          "flex-direction: row",
+          "gap: 2rem"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Üç kartı eşit genişlikte yapmak için hangi flex özelliği kullanılır?",
+        "options": [
+          "flex: 1",
+          "width: 33%",
+          "flex-grow: 0",
+          "justify-content: center"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Flexbox galeride öğelerin alt satıra geçmesini sağlayan özellik hangisidir?",
+        "options": [
+          "flex-wrap: nowrap",
+          "flex-wrap: wrap",
+          "flex-direction: column",
+          "overflow: auto"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Mobil görünümde kartların alt alta gelmesi için ne yapılır?",
+        "options": [
+          "flex-direction: column",
+          "flex-wrap: wrap",
+          "Media query ile flex-direction değiştirilir",
+          "justify-content: center yapılır"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Profil kartında içerikleri dikeyde ortalamak için hangi özellikler kullanılır?",
+        "options": [
+          "flex-direction: column; align-items: center;",
+          "flex-direction: row; justify-content: center;",
+          "text-align: center; margin: auto;",
+          "display: block; margin: 0 auto;"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  {
+    "order": 17,
+    "title": "CSS Grid - Giriş",
+    "slug": "css-grid-giris",
+    "content": "<h2>CSS Grid Layout - Giriş</h2><p>CSS Grid, iki boyutlu (satır ve sütun) düzenler oluşturmak için kullanılır.</p><h3>Temel Kavramlar</h3><ul><li><strong>Grid Container:</strong> display:grid uygulanan kapsayıcı</li><li><strong>Grid Item:</strong> Container içindeki çocuklar</li><li><strong>Grid Line:</strong> Izgara çizgileri</li><li><strong>Grid Cell:</strong> Satır ve sütun kesişimi</li><li><strong>Grid Track:</strong> Satır veya sütunun tamamı</li><li><strong>Grid Area:</strong> Birden çok hücreden oluşan alan</li></ul><h3>display: grid</h3><pre><code>.container {\n  display: grid;\n  grid-template-columns: 200px 200px 200px;\n  grid-template-rows: 100px 100px;\n  gap: 10px;\n}</code></pre><h3>grid-template-columns/rows</h3><pre><code>grid-template-columns: 1fr 2fr 1fr;  /* 1:2:1 oran */\ngrid-template-columns: repeat(3, 1fr);  /* 3 eşit sütun */\ngrid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code></pre><h3>fr Birimi</h3><p>fr (fraction), kalan alanı orantılı paylaşan birimdir.</p>",
+    "video_url": "https://www.youtube.com/watch?v=example17",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Grid Giriş</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .grid { display: grid; gap: 15px; background: #f0f0f0; padding: 15px; border: 2px solid #333; margin: 15px 0; }\n    .item { background: #3498db; color: white; padding: 30px; text-align: center; border-radius: 4px; font-size: 1.2rem; }\n    .uc-esit { grid-template-columns: repeat(3, 1fr); }\n    .farkli-oran { grid-template-columns: 1fr 2fr 1fr; }\n    .auto-fit { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }\n    .sayfa { display: grid; grid-template-columns: 200px 1fr; grid-template-rows: auto 1fr auto; gap: 10px; min-height: 300px; background: #f0f0f0; padding: 10px; border: 2px solid #333; }\n    .sayfa header { grid-column: 1 / -1; background: #e74c3c; color: white; padding: 15px; text-align: center; }\n    .sayfa nav { background: #f39c12; color: white; padding: 15px; }\n    .sayfa main { background: #2ecc71; color: white; padding: 15px; }\n    .sayfa footer { grid-column: 1 / -1; background: #9b59b6; color: white; padding: 15px; text-align: center; }\n  </style>\n</head>\n<body>\n  <h3>repeat(3, 1fr)</h3>\n  <div class=\"grid uc-esit\"><div class=\"item\">1</div><div class=\"item\">2</div><div class=\"item\">3</div></div>\n  <h3>1fr 2fr 1fr</h3>\n  <div class=\"grid farkli-oran\"><div class=\"item\">1fr</div><div class=\"item\">2fr</div><div class=\"item\">1fr</div></div>\n  <h3>Grid ile Sayfa Düzeni</h3>\n  <div class=\"sayfa\">\n    <header>Header</header>\n    <nav>Sidebar</nav>\n    <main>Ana İçerik</main>\n    <footer>Footer</footer>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "CSS Grid'de kalan alanı orantılı paylaşmak için hangi birim kullanılır?",
+        "options": [
+          "%",
+          "em",
+          "fr",
+          "vw"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "grid-column: 1 / -1 ifadesi ne anlama gelir?",
+        "options": [
+          "Sadece 1. sütunda kal",
+          "İlk satırda kal",
+          "Tüm sütunları kapla",
+          "Son sütuna git"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Aynı genişlikteki sütunları tekrarlamak için hangi fonksiyon kullanılır?",
+        "options": [
+          "repeat()",
+          "cycle()",
+          "loop()",
+          "same()"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Grid'de satır ve sütun boşluğu için hangi özellik kullanılır?",
+        "options": [
+          "spacing",
+          "gap",
+          "margin",
+          "padding"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "auto-fit ile auto-fill arasındaki fark nedir?",
+        "options": [
+          "auto-fit boş sütunları daraltır, auto-fill korur",
+          "auto-fill daha hızlıdır",
+          "İkisi de aynıdır",
+          "auto-fit sadece mobilde çalışır"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  {
+    "order": 18,
+    "title": "CSS Grid - Hizalama",
+    "slug": "css-grid-hizalama",
+    "content": "<h2>CSS Grid - Hizalama ve Grid Alanları</h2><h3>Grid Alanları (Grid Areas)</h3><pre><code>.container {\n  display: grid;\n  grid-template-columns: 200px 1fr 200px;\n  grid-template-rows: auto 1fr auto;\n  grid-template-areas:\n    \"header header header\"\n    \"sidebar content aside\"\n    \"footer footer footer\";\n}\nheader { grid-area: header; }\nmain { grid-area: content; }</code></pre><h3>Hizalama Özellikleri</h3><pre><code>.container {\n  justify-items: center;  /* Yatay hizalama */\n  align-items: center;    /* Dikey hizalama */\n  justify-content: center; /* Grid'i yatayda hizala */\n  align-content: center;   /* Grid'i dikeyde hizala */\n}\n.item { justify-self: end; align-self: start; }</code></pre><h3>Öğe Birleştirme</h3><pre><code>.item {\n  grid-column: 1 / 3;\n  grid-row: 1 / 3;\n  grid-area: 1 / 1 / 3 / 3;\n}</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example18",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Grid Hizalama</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .grid-alan { display: grid; grid-template-columns: 1fr 2fr 1fr; grid-template-rows: auto 1fr auto; grid-template-areas: \"header header header\" \"nav main aside\" \"footer footer footer\"; gap: 10px; min-height: 300px; background: #f0f0f0; padding: 10px; border: 2px solid #333; margin: 15px 0; }\n    .grid-alan header { grid-area: header; background: #3498db; color: white; padding: 20px; text-align: center; }\n    .grid-alan nav { grid-area: nav; background: #e74c3c; color: white; padding: 20px; }\n    .grid-alan main { grid-area: main; background: #2ecc71; color: white; padding: 20px; }\n    .grid-alan aside { grid-area: aside; background: #f39c12; color: white; padding: 20px; }\n    .grid-alan footer { grid-area: footer; background: #9b59b6; color: white; padding: 20px; text-align: center; }\n    .hizalama { display: grid; grid-template-columns: repeat(3, 80px); grid-template-rows: repeat(2, 80px); gap: 8px; background: #f0f0f0; padding: 15px; border: 2px solid #333; height: 250px; justify-items: center; align-items: center; justify-content: center; align-content: center; }\n    .hizalama .item { background: #3498db; color: white; display: flex; align-items: center; justify-content: center; }\n    .ozel-item:nth-child(2) { justify-self: end; align-self: start; background: #e74c3c; }\n    .ozel-item:nth-child(3) { justify-self: start; align-self: end; background: #2ecc71; }\n  </style>\n</head>\n<body>\n  <h3>Grid Template Areas</h3>\n  <div class=\"grid-alan\">\n    <header>Header</header>\n    <nav>Sidebar</nav>\n    <main>Ana İçerik</main>\n    <aside>Aside</aside>\n    <footer>Footer</footer>\n  </div>\n  <h3>Grid Hizalama</h3>\n  <div class=\"hizalama\"><div class=\"item\">1</div><div class=\"item\">2</div><div class=\"item\">3</div><div class=\"item\">4</div><div class=\"item\">5</div><div class=\"item\">6</div></div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Grid template areas hangi amaçla kullanılır?",
+        "options": [
+          "Renk belirlemek",
+          "Düzene isim vererek okunabilir layout oluşturmak",
+          "Sütun genişliği ayarlamak",
+          "Boşluk eklemek"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "justify-items hangi eksende hizalama yapar?",
+        "options": [
+          "Dikey",
+          "Yatay",
+          "Her ikisi",
+          "Hiçbiri"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "align-content ile align-items arasındaki fark nedir?",
+        "options": [
+          "align-content tüm grid'i, align-items öğeleri hücre içinde hizalar",
+          "İkisi de aynıdır",
+          "align-items tüm grid'i hizalar",
+          "align-content sadece mobilde çalışır"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Bir öğenin kendi hizalamasını ayarlamak için hangi özellik kullanılır?",
+        "options": [
+          "justify-items",
+          "justify-self",
+          "justify-content",
+          "align-items"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "grid-area: 1 / 1 / 3 / 3 ifadesi ne anlama gelir?",
+        "options": [
+          "1. satır 1. sütundan 3. satır 3. sütuna kadar",
+          "1px kenar boşluğu",
+          "1. alandan 3. alana",
+          "1fr 1fr 3fr 3fr"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  {
+    "order": 19,
+    "title": "CSS Grid - Oyun",
+    "slug": "css-grid-oyun",
+    "content": "<h2>CSS Grid - Uygulama Oyunu</h2><p>Grid ile gerçek dünya düzenleri oluşturma alıştırmaları.</p><h3>Oyun 1: Instagram Profil Sayfası</h3><pre><code>.profil-grid {\n  display: grid;\n  grid-template-columns: 150px 1fr;\n  grid-template-rows: auto auto;\n  gap: 20px;\n  grid-template-areas:\n    \"foto bilgi\"\n    \"gonderi gonderi\";\n}</code></pre><h3>Oyun 2: Dashboard Düzeni</h3><pre><code>.dashboard {\n  display: grid;\n  grid-template-columns: 250px 1fr 1fr;\n  grid-template-rows: auto 1fr auto;\n  grid-template-areas:\n    \"header header header\"\n    \"sidebar widget1 widget2\"\n    \"sidebar chart   chart\"\n    \"footer footer footer\";\n}</code></pre><h3>Oyun 3: Kart Düzeni</h3><pre><code>.kartlar {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n  gap: 20px;\n}</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example19",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Grid Oyun</title>\n  <style>\n    body { font-family: Arial; padding: 20px; background: #f5f5f5; }\n    .dashboard { display: grid; grid-template-columns: 200px 1fr 1fr; grid-template-rows: auto 1fr auto auto; grid-template-areas: \"header header header\" \"sidebar widget1 widget2\" \"sidebar chart chart\" \"footer footer footer\"; gap: 15px; max-width: 1200px; margin: 0 auto; }\n    .dashboard > * { padding: 20px; border-radius: 8px; color: white; text-align: center; }\n    .header { grid-area: header; background: #2c3e50; }\n    .sidebar { grid-area: sidebar; background: #3498db; }\n    .widget1 { grid-area: widget1; background: #e74c3c; }\n    .widget2 { grid-area: widget2; background: #2ecc71; }\n    .chart { grid-area: chart; background: #9b59b6; min-height: 200px; }\n    .footer { grid-area: footer; background: #34495e; }\n    .kartlar { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }\n    .kart { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }\n    .kart h3 { margin: 0 0 10px; color: #333; }\n    .kart p { color: #666; }\n  </style>\n</head>\n<body>\n  <div class=\"dashboard\">\n    <div class=\"header\">Header / Navigasyon</div>\n    <div class=\"sidebar\">Sidebar</div>\n    <div class=\"widget1\">Widget 1</div>\n    <div class=\"widget2\">Widget 2</div>\n    <div class=\"chart\">Grafik Alanı</div>\n    <div class=\"footer\">Footer</div>\n  </div>\n  <div class=\"kartlar\">\n    <div class=\"kart\"><h3>Kart 1</h3><p>İçerik</p></div>\n    <div class=\"kart\"><h3>Kart 2</h3><p>İçerik</p></div>\n    <div class=\"kart\"><h3>Kart 3</h3><p>İçerik</p></div>\n    <div class=\"kart\"><h3>Kart 4</h3><p>İçerik</p></div>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Dashboard düzeninde sidebar iki satır boyunca uzanması için hangi grid özelliği kullanılır?",
+        "options": [
+          "grid-template-areas ile aynı alan adını kullanma",
+          "grid-row: span 2",
+          "sidebar yüksekliği artırma",
+          "flex-grow kullanma"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Kartların otomatik olarak sütun oluşturması için hangi yapı kullanılır?",
+        "options": [
+          "repeat(auto-fill, minmax(250px, 1fr))",
+          "grid-template-columns: 1fr 1fr 1fr",
+          "flex-wrap: wrap",
+          "display: inline-grid"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Grid ile Flexbox arasındaki temel fark nedir?",
+        "options": [
+          "Grid 2 boyutlu, Flexbox 1 boyutludur",
+          "Flexbox daha yenidir",
+          "Grid daha hızlıdır",
+          "Flexbox sadece mobilde çalışır"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "grid-template-areas'da nokta (.) ne anlama gelir?",
+        "options": [
+          "Border ekler",
+          "Boş hücre belirtir",
+          "Yeni satır başlatır",
+          "Yorum satırıdır"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "auto-fill ile auto-fit arasındaki fark nedir?",
+        "options": [
+          "auto-fill varsayılandır",
+          "auto-fill boş sütunları korur, auto-fit daraltır",
+          "auto-fit varsayılandır",
+          "Fark yoktur"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 20,
+    "title": "CSS Responsive Tasarım",
+    "slug": "css-responsive-tasarim",
+    "content": "<h2>CSS Responsive Tasarım</h2><p>Responsive (duyarlı) tasarım, web sitelerinin tüm ekran boyutlarında iyi görünmesini sağlar.</p><h3>Media Queries</h3><pre><code>/* Mobil (max-width: 768px) */\n@media (max-width: 768px) {\n  body { font-size: 14px; }\n  .sidebar { display: none; }\n}\n\n/* Tablet (768px - 1024px) */\n@media (min-width: 768px) and (max-width: 1024px) {\n  .container { grid-template-columns: 1fr 1fr; }\n}\n\n/* Masaüstü (min-width: 1024px) */\n@media (min-width: 1024px) {\n  .container { max-width: 1200px; margin: 0 auto; }\n}</code></pre><h3>Mobile-First Yaklaşım</h3><pre><code>/* Önce mobil stiller */\n.container { padding: 10px; }\n.sidebar { display: none; }\n\n/* Sonra büyük ekran */\n@media (min-width: 768px) {\n  .container { padding: 20px; }\n  .sidebar { display: block; }\n}</code></pre><h3>Breakpoint'ler</h3><ul><li><strong>Telefon:</strong> 0 - 576px</li><li><strong>Tablet:</strong> 576px - 992px</li><li><strong>Masaüstü:</strong> 992px - 1200px</li><li><strong>Geniş Ekran:</strong> 1200px+</li></ul>",
+    "video_url": "https://www.youtube.com/watch?v=example20",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Responsive Tasarım</title>\n  <style>\n    * { box-sizing: border-box; margin: 0; padding: 0; }\n    body { font-family: Arial; }\n    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }\n    .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }\n    .kart { background: #3498db; color: white; padding: 40px; text-align: center; border-radius: 8px; }\n    .navbar { background: #2c3e50; color: white; padding: 15px 20px; }\n    .menu { display: none; }\n    .menu-toggle { display: block; cursor: pointer; }\n    @media (min-width: 600px) {\n      .grid { grid-template-columns: 1fr 1fr; }\n    }\n    @media (min-width: 900px) {\n      .grid { grid-template-columns: 1fr 1fr 1fr; }\n      .menu { display: flex; gap: 20px; list-style: none; }\n      .menu-toggle { display: none; }\n    }\n  </style>\n</head>\n<body>\n  <nav class=\"navbar\">\n    <div style=\"display: flex; justify-content: space-between; align-items: center;\">\n      <span style=\"font-size: 1.5rem; font-weight: bold;\">Logo</span>\n      <ul class=\"menu\">\n        <li>Anasayfa</li>\n        <li>Hakkında</li>\n        <li>İletişim</li>\n      </ul>\n      <span class=\"menu-toggle\">☰</span>\n    </div>\n  </nav>\n  <div class=\"container\">\n    <h2 style=\"margin: 20px 0;\">Responsive Grid</h2>\n    <div class=\"grid\">\n      <div class=\"kart\">1</div><div class=\"kart\">2</div><div class=\"kart\">3</div>\n      <div class=\"kart\">4</div><div class=\"kart\">5</div><div class=\"kart\">6</div>\n    </div>\n    <p style=\"margin-top: 20px; color: #666;\">Ekranı daraltıp genişleterek grid'in değişimini gözlemleyin.</p>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Media query'de max-width: 768px ne anlama gelir?",
+        "options": [
+          "768px ve üzeri",
+          "768px ve altı",
+          "Sadece 768px",
+          "768px hariç"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Mobile-first yaklaşımda önce hangi stiller yazılır?",
+        "options": [
+          "Masaüstü stilleri",
+          "Mobil stilleri",
+          "Tablet stilleri",
+          "Hepsi aynı anda"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Responsive tasarımda viewport meta etiketi neden önemlidir?",
+        "options": [
+          "SEO için",
+          "Mobil cihazlarda doğru ölçekleme için",
+          "Renkler için",
+          "Fontlar için"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Hangi CSS birimi responsive tasarımda en çok kullanılır?",
+        "options": [
+          "px",
+          "rem/em/%/vw/vh",
+          "cm",
+          "pt"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Desktop-first ile mobile-first arasındaki fark nedir?",
+        "options": [
+          "Desktop-first max-width, mobile-first min-width kullanır",
+          "İkisi de aynıdır",
+          "Desktop-first daha yenidir",
+          "Mobile-first sadece mobilde çalışır"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  {
+    "order": 21,
+    "title": "CSS Responsive Görseller",
+    "slug": "css-responsive-gorseller",
+    "content": "<h2>CSS Responsive Görseller</h2><p>Görsellerin farklı ekran boyutlarında doğru şekilde görüntülenmesi için çeşitli teknikler kullanılır.</p><h3>max-width ile Responsive Görsel</h3><pre><code>img {\n  max-width: 100%;\n  height: auto;\n  display: block;\n}</code></pre><h3>&lt;picture&gt; Elementi</h3><pre><code>&lt;picture&gt;\n  &lt;source media=\"(min-width: 1024px)\" srcset=\"buyuk.jpg\"&gt;\n  &lt;source media=\"(min-width: 600px)\" srcset=\"orta.jpg\"&gt;\n  &lt;img src=\"kucuk.jpg\" alt=\"Responsive görsel\"&gt;\n&lt;/picture&gt;</code></pre><h3>srcset ile Çözünürlük Seçimi</h3><pre><code>&lt;img src=\"elma.jpg\"\n     srcset=\"elma-kucuk.jpg 480w,\n             elma-orta.jpg 800w,\n             elma-buyuk.jpg 1200w\"\n     sizes=\"(max-width: 600px) 100vw,\n            (max-width: 1200px) 50vw,\n            33vw\"\n     alt=\"Elma\"&gt;</code></pre><h3>object-fit ve object-position</h3><pre><code>.kart-gorsel {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;      /* cover, contain, fill */\n  object-position: center; /* Konum */\n}</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example21",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Responsive Görseller</title>\n  <style>\n    * { box-sizing: border-box; }\n    body { font-family: Arial; padding: 20px; }\n    .responsive-img { max-width: 100%; height: auto; display: block; }\n    .galeri { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }\n    .kart { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }\n    .kart img { width: 100%; height: 200px; object-fit: cover; }\n    .kart-body { padding: 15px; }\n    .object-ornekleri { display: flex; gap: 20px; flex-wrap: wrap; }\n    .object-ornekleri div { width: 200px; }\n    .object-ornekleri img { width: 200px; height: 150px; background: #eee; }\n    .cover { object-fit: cover; }\n    .contain { object-fit: contain; background: #333; }\n    .fill { object-fit: fill; }\n  </style>\n</head>\n<body>\n  <h2>Responsive Görsel</h2>\n  <img src=\"https://via.placeholder.com/1200x400\" alt=\"Responsive\" class=\"responsive-img\">\n  \n  <h2>object-fit Karşılaştırması</h2>\n  <div class=\"object-ornekleri\">\n    <div><h3>cover</h3><img src=\"https://via.placeholder.com/300x200\" class=\"cover\"></div>\n    <div><h3>contain</h3><img src=\"https://via.placeholder.com/300x200\" class=\"contain\"></div>\n    <div><h3>fill</h3><img src=\"https://via.placeholder.com/300x200\" class=\"fill\"></div>\n  </div>\n  \n  <h2>Galeri</h2>\n  <div class=\"galeri\">\n    <div class=\"kart\"><img src=\"https://via.placeholder.com/400x300\" alt=\"\"><div class=\"kart-body\"><h3>Başlık</h3><p>Açıklama metni</p></div></div>\n    <div class=\"kart\"><img src=\"https://via.placeholder.com/400x300\" alt=\"\"><div class=\"kart-body\"><h3>Başlık</h3><p>Açıklama metni</p></div></div>\n    <div class=\"kart\"><img src=\"https://via.placeholder.com/400x300\" alt=\"\"><div class=\"kart-body\"><h3>Başlık</h3><p>Açıklama metni</p></div></div>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Görselin kapsayıcısını taşmaması için hangi CSS kullanılır?",
+        "options": [
+          "width: 100%",
+          "max-width: 100%",
+          "min-width: 100%",
+          "object-fit: fill"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "object-fit: cover ne işe yarar?",
+        "options": [
+          "Görseli sığdırır, boşluk kalabilir",
+          "Görseli kırparak kapsayıcıyı doldurur",
+          "Görseli uzatır",
+          "Görseli tekrarlar"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "picture elementi hangi amaçla kullanılır?",
+        "options": [
+          "Görsel efektleri için",
+          "Farklı ekranlar için farklı görseller yüklemek",
+          "Görsel galerisi için",
+          "Görsel düzenleme için"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "srcset attribute'u ne işe yarar?",
+        "options": [
+          "CSS sınıfı ekler",
+          "Farklı çözünürlükler için alternatif görseller sunar",
+          "Görsel kaynağını değiştirir",
+          "Görsel boyutunu ayarlar"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Yüksek çözünürlüklü ekranlar için hangisi kullanılır?",
+        "options": [
+          "min-width",
+          "min-resolution",
+          "srcset",
+          "object-fit"
+        ],
+        "correctAnswer": 2
+      }
+    ]
+  },
+  {
+    "order": 22,
+    "title": "CSS Transitions",
+    "slug": "css-transitions",
+    "content": "<h2>CSS Transitions (Geçişler)</h2><p>CSS transitions, bir özellik değiştiğinde animasyonlu geçiş sağlar.</p><h3>Temel Kullanım</h3><pre><code>.kutu {\n  background-color: blue;\n  transition: background-color 0.3s ease;\n}\n.kutu:hover {\n  background-color: red;\n}</code></pre><h3>Transition Özellikleri</h3><pre><code>.element {\n  transition-property: all;          /* Hangi özellik */\n  transition-duration: 0.5s;         /* Süre */\n  transition-timing-function: ease;  /* Hız eğrisi */\n  transition-delay: 0.1s;            /* Gecikme */\n  \n  /* Shorthand */\n  transition: all 0.3s ease 0.1s;\n  transition: background 0.3s, transform 0.5s;\n}</code></pre><h3>Timing Functions (Hız Fonksiyonları)</h3><ul><li><strong>ease</strong> - Yavaş başlar, hızlanır, yavaş biter</li><li><strong>linear</strong> - Sabit hız</li><li><strong>ease-in</strong> - Yavaş başlar</li><li><strong>ease-out</strong> - Yavaş biter</li><li><strong>ease-in-out</strong> - Yavaş başlar ve biter</li><li><strong>cubic-bezier()</strong> - Özel hız eğrisi</li></ul>",
+    "video_url": "https://www.youtube.com/watch?v=example22",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Transitions</title>\n  <style>\n    body { font-family: Arial; padding: 20px; display: flex; gap: 20px; flex-wrap: wrap; }\n    .kutu { width: 150px; height: 150px; background: #3498db; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 8px; }\n    .kutu1 { transition: background 0.3s ease, transform 0.3s ease; }\n    .kutu1:hover { background: #e74c3c; transform: scale(1.1); }\n    .kutu2 { transition: all 0.5s ease-in-out; }\n    .kutu2:hover { background: #2ecc71; border-radius: 50%; transform: rotate(180deg); }\n    .kutu3 { transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); }\n    .kutu3:hover { transform: scale(1.2) rotate(10deg); }\n    .kutu4 { transition: width 1s ease, height 1s ease, background 0.5s; }\n    .kutu4:hover { width: 200px; height: 200px; background: #9b59b6; }\n  </style>\n</head>\n<body>\n  <div class=\"kutu kutu1\">Hover me</div>\n  <div class=\"kutu kutu2\">Turn & round</div>\n  <div class=\"kutu kutu3\">Bounce</div>\n  <div class=\"kutu kutu4\">Grow</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Transition için hangi özellik zorunludur?",
+        "options": [
+          "transition-property",
+          "transition-duration",
+          "transition-timing-function",
+          "transition-delay"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Hangi timing function yavaş başlayıp yavaş biter?",
+        "options": [
+          "linear",
+          "ease-in",
+          "ease-out",
+          "ease-in-out"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "question": "Birden çok özellik için farklı transition nasıl tanımlanır?",
+        "options": [
+          "transition: background 0.3s, transform 0.5s;",
+          "transition: all 0.3s;",
+          "Her özellik ayrı satırda",
+          "transition: background 0.3s & transform 0.5s;"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "transition-delay ne işe yarar?",
+        "options": [
+          "Animasyonu hızlandırır",
+          "Geçişin başlamasını geciktirir",
+          "Geçişi durdurur",
+          "Süreyi uzatır"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "cubic-bezier() fonksiyonu ne için kullanılır?",
+        "options": [
+          "Renk belirlemek",
+          "Özel hız eğrisi oluşturmak",
+          "Süre belirlemek",
+          "Gecikme eklemek"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 23,
+    "title": "CSS Animasyonlar",
+    "slug": "css-animasyonlar",
+    "content": "<h2>CSS Animasyonlar</h2><p>CSS animasyonlar, @keyframes kuralı ile karmaşık animasyonlar oluşturmayı sağlar.</p><h3>@keyframes</h3><pre><code>@keyframes renkDegisimi {\n  0%   { background-color: red; }\n  50%  { background-color: yellow; }\n  100% { background-color: blue; }\n}\n\n@keyframes hareket {\n  from { transform: translateX(0); }\n  to   { transform: translateX(200px); }\n}</code></pre><h3>Animation Özellikleri</h3><pre><code>.element {\n  animation-name: renkDegisimi;\n  animation-duration: 3s;\n  animation-timing-function: ease;\n  animation-delay: 0s;\n  animation-iteration-count: infinite;  /* 1, 2, infinite */\n  animation-direction: alternate;       /* normal, reverse, alternate */\n  animation-fill-mode: forwards;        /* none, forwards, backwards */\n  animation-play-state: running;        /* running, paused */\n  \n  /* Shorthand */\n  animation: renkDegisimi 3s ease 0s infinite alternate;\n}</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example23",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Animasyonlar</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    @keyframes renk-atla {\n      0% { background: #e74c3c; transform: scale(1); }\n      50% { background: #f39c12; transform: scale(1.2); }\n      100% { background: #2ecc71; transform: scale(1); }\n    }\n    @keyframes kaydir {\n      from { transform: translateX(0); opacity: 0; }\n      to { transform: translateX(100px); opacity: 1; }\n    }\n    @keyframes pulse {\n      0%, 100% { transform: scale(1); }\n      50% { transform: scale(1.1); }\n    }\n    @keyframes yukari {\n      0% { transform: translateY(50px); opacity: 0; }\n      100% { transform: translateY(0); opacity: 1; }\n    }\n    .kutu { width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 8px; margin: 20px; }\n    .anim1 { animation: renk-atla 3s ease infinite; }\n    .anim2 { animation: kaydir 1s ease forwards; }\n    .anim3 { animation: pulse 1.5s ease infinite; background: #3498db; }\n    .anim4 { animation: yukari 0.8s ease-out; background: #9b59b6; }\n    .anim5 { animation: renk-atla 2s ease infinite alternate; }\n    .anim5:hover { animation-play-state: paused; }\n  </style>\n</head>\n<body>\n  <div style=\"display: flex; flex-wrap: wrap;\">\n    <div class=\"kutu anim1\">Renk Atlama</div>\n    <div class=\"kutu anim2\">Kaydırma</div>\n    <div class=\"kutu anim3\">Pulse</div>\n    <div class=\"kutu anim4\">Yukarı</div>\n    <div class=\"kutu anim5\">Üzerime gel - durur</div>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "CSS animasyonlarında anahtar kareler hangi kural ile tanımlanır?",
+        "options": [
+          "@keyframe",
+          "@keyframes",
+          "@animation",
+          "@move"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Animasyonun sonsuz tekrarlanması için hangi değer kullanılır?",
+        "options": [
+          "forever",
+          "loop",
+          "infinite",
+          "always"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "animation-direction: alternate ne işe yarar?",
+        "options": [
+          "Animasyonu ters oynatır",
+          "Her seferinde yön değiştirir",
+          "Animasyonu durdurur",
+          "Sadece bir kez oynatır"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Animasyonu durdurmak için hangi özellik kullanılır?",
+        "options": [
+          "animation-stop",
+          "animation-play-state: paused",
+          "animation-pause",
+          "animation-status: stopped"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "animation shorthand'de property sıralaması nedir?",
+        "options": [
+          "duration timing-function delay iteration-count direction",
+          "isim duration timing-function delay iteration-count direction",
+          "duration isim delay timing-function",
+          "isim duration delay timing-function iteration-count"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 24,
+    "title": "CSS Transform",
+    "slug": "css-transform",
+    "content": "<h2>CSS Transform</h2><p>Transform, öğelere 2D veya 3D dönüşümler uygulamayı sağlar.</p><h3>Translate (Taşıma)</h3><pre><code>.kutu { transform: translateX(50px); }  /* Yatay */\n.kutu { transform: translateY(50px); }  /* Dikey */\n.kutu { transform: translate(50px, 30px); }  /* Her ikisi */</code></pre><h3>Rotate (Döndürme)</h3><pre><code>.kutu { transform: rotate(45deg); }    /* Saat yönünde */\n.kutu { transform: rotate(-45deg); }  /* Ters yönde */\n.kutu { transform: rotateX(180deg); } /* X ekseninde */\n.kutu { transform: rotateY(180deg); } /* Y ekseninde */</code></pre><h3>Scale (Ölçekleme)</h3><pre><code>.kutu { transform: scale(1.5); }     /* %150 büyüt */\n.kutu { transform: scaleX(2); }     /* Yatay 2 kat */\n.kutu { transform: scaleY(0.5); }   /* Dikey yarıya */</code></pre><h3>Skew (Eğme)</h3><pre><code>.kutu { transform: skewX(20deg); }   /* X ekseninde eğ */\n.kutu { transform: skewY(20deg); }   /* Y ekseninde eğ */\n.kutu { transform: skew(20deg, 10deg); }</code></pre><h3>Birden Çok Dönüşüm</h3><pre><code>.kutu {\n  transform: translateX(100px) rotate(45deg) scale(1.2);\n}</code></pre><h3>transform-origin (Dönüşüm Merkezi)</h3><pre><code>.kutu { transform-origin: top left; }\n.kutu { transform-origin: 50% 50%; }  /* Varsayılan */</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example24",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Transform</title>\n  <style>\n    body { font-family: Arial; padding: 20px; display: flex; gap: 30px; flex-wrap: wrap; }\n    .kapsayici { text-align: center; }\n    .kutu { width: 120px; height: 120px; background: #3498db; color: white; display: flex; align-items: center; justify-content: center; border-radius: 8px; transition: transform 0.3s; margin: 20px auto; }\n    .kutu1:hover { transform: translateX(50px); }\n    .kutu2:hover { transform: rotate(180deg); }\n    .kutu3:hover { transform: scale(1.3); }\n    .kutu4:hover { transform: skew(15deg, 5deg); }\n    .kutu5:hover { transform: translateX(50px) rotate(45deg) scale(1.1); }\n    .kutu6 { transform-origin: top left; }\n    .kutu6:hover { transform: rotate(45deg); }\n  </style>\n</head>\n<body>\n  <div class=\"kapsayici\"><div class=\"kutu kutu1\">translateX</div><span>Sağa kayar</span></div>\n  <div class=\"kapsayici\"><div class=\"kutu kutu2\">rotate</div><span>180° döner</span></div>\n  <div class=\"kapsayici\"><div class=\"kutu kutu3\">scale</div><span>%130 büyür</span></div>\n  <div class=\"kapsayici\"><div class=\"kutu kutu4\">skew</div><span>Eğilir</span></div>\n  <div class=\"kapsayici\"><div class=\"kutu kutu5\">Kombinasyon</div><span>Hepsi bir arada</span></div>\n  <div class=\"kapsayici\"><div class=\"kutu kutu6\">origin</div><span>Sol üstten döner</span></div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Bir öğeyi yatayda 50px sağa kaydırmak için hangi transform kullanılır?",
+        "options": [
+          "translateY(50px)",
+          "translateX(50px)",
+          "moveX(50px)",
+          "shift(50px)"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "scale(2) değeri ne işe yarar?",
+        "options": [
+          "Öğeyi 2 kat büyütür",
+          "Öğeyi yarıya küçültür",
+          "Öğeyi 2px kaydırır",
+          "Öğeyi 2 derece döndürür"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Birden çok transform işlemi nasıl uygulanır?",
+        "options": [
+          "Virgülle ayrılarak",
+          "Boşlukla ayrılarak",
+          "Ayrı satırlarda",
+          "Sadece bir tane uygulanabilir"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "transform-origin özelliği ne işe yarar?",
+        "options": [
+          "Transform süresini ayarlar",
+          "Dönüşüm merkezini belirler",
+          "Transform'u iptal eder",
+          "Yeni transform ekler"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "rotate(45deg) hangi yönde döndürür?",
+        "options": [
+          "Saat yönünün tersine",
+          "Saat yönünde",
+          "Önce saat yönünde sonra tersine",
+          "Döndürmez"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 25,
+    "title": "CSS Pseudo-classes",
+    "slug": "css-pseudo-classes",
+    "content": "<h2>CSS Pseudo-classes</h2><p>Pseudo-class'lar, öğelerin belirli durumlarına göre stil vermeyi sağlar.</p><h3>Kullanıcı Durumları</h3><pre><code>a:hover { color: orange; }         /* Fare üzerinde */\na:active { color: red; }           /* Tıklama anı */\na:visited { color: purple; }       /* Ziyaret edilmiş */\ninput:focus { outline: 2px solid blue; }  /* Odaklanmış */\ninput:disabled { opacity: 0.5; }   /* Devre dışı */\ninput:checked { border-color: green; }  /* İşaretlenmiş */</code></pre><h3>Yapısal Pseudo-class'lar</h3><pre><code>li:first-child { font-weight: bold; }\nli:last-child { border-bottom: none; }\nli:nth-child(odd) { background: #f2f2f2; }\nli:nth-child(even) { background: white; }\nli:nth-child(3) { color: red; }\nli:nth-child(3n+1) { color: blue; }  /* Her 3'te 1 */\np:first-of-type { font-size: 1.2em; }\n:root { --main-color: blue; }  /* HTML elementi */</code></pre><h3>Olumsuzluk ve Diğer</h3><pre><code>.kutu:not(.ozel) { background: gray; }\n:empty { display: none; }  /* Boş öğeler */\n:target { background: yellow; }  /* URL'de hedef */</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example25",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Pseudo-classes</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    a { display: inline-block; margin: 10px; padding: 10px 20px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; transition: 0.3s; }\n    a:hover { background: #2980b9; transform: translateY(-2px); }\n    a:active { transform: translateY(0); }\n    input { padding: 10px; border: 2px solid #ddd; border-radius: 4px; margin: 10px; }\n    input:focus { border-color: #3498db; outline: none; box-shadow: 0 0 5px rgba(52,152,219,0.5); }\n    input:disabled { background: #eee; cursor: not-allowed; }\n    ul { list-style: none; padding: 0; }\n    li { padding: 10px; border-bottom: 1px solid #ddd; }\n    li:first-child { font-weight: bold; background: #f0f0f0; }\n    li:last-child { border-bottom: none; }\n    li:nth-child(even) { background: #f9f9f9; }\n    li:hover { background: #e8f4fd; }\n    .kutu { width: 80px; height: 80px; background: #e74c3c; margin: 10px; display: inline-flex; align-items: center; justify-content: center; color: white; }\n    .kutu:not(.kirmizi) { background: #3498db; }\n  </style>\n</head>\n<body>\n  <a href=\"#\">Hover &amp; Active</a>\n  <input type=\"text\" placeholder=\"Focus beni\">\n  <input type=\"text\" placeholder=\"Disabled\" disabled>\n  <ul>\n    <li>İlk (first-child)</li><li>İkinci</li>\n    <li>Üçüncü</li><li>Dördüncü</li>\n    <li>Son (last-child)</li>\n  </ul>\n  <div class=\"kutu\">1</div>\n  <div class=\"kutu kirmizi\">2 (kırmızı)</div>\n  <div class=\"kutu\">3</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Fare öğenin üzerine geldiğinde hangi pseudo-class kullanılır?",
+        "options": [
+          ":focus",
+          ":active",
+          ":hover",
+          ":visited"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Her 3. öğeyi seçmek için hangi seçici kullanılır?",
+        "options": [
+          "li:nth-child(3n)",
+          "li:nth-child(3)",
+          "li:nth-of-type(3)",
+          "li:eq(3)"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "İlk çocuk öğeyi seçmek için hangisi kullanılır?",
+        "options": [
+          ":first-of-type",
+          ":first-child",
+          ":nth-child(1)",
+          ":first"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Belirli bir class'a sahip olmayan öğeleri seçmek için hangisi kullanılır?",
+        "options": [
+          ":not(.class)",
+          ":.not(class)",
+          "*.class",
+          ":except(.class)"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": ":focus pseudo-class'ı hangi durumda tetiklenir?",
+        "options": [
+          "Fare tıklandığında",
+          "Öğe odaklandığında (ör. input seçildiğinde)",
+          "Sayfa yüklendiğinde",
+          "Öğe kaybolduğunda"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 26,
+    "title": "CSS Pseudo-elements",
+    "slug": "css-pseudo-elements",
+    "content": "<h2>CSS Pseudo-elements</h2><p>Pseudo-element'ler, öğelerin belirli kısımlarını hedefleyerek stil vermeyi sağlar.</p><h3>Kullanılan Pseudo-element'ler</h3><pre><code>p::first-letter { font-size: 2em; }    /* İlk harf */\np::first-line { font-weight: bold; }    /* İlk satır */\n::selection { background: yellow; }     /* Seçili metin */\nli::marker { color: red; }              /* Liste işareti */</code></pre><h3>::before ve ::after</h3><p>En çok kullanılan pseudo-element'lerdir. content özelliği zorunludur.</p><pre><code>.nota::before {\n  content: \"ℹ️ \";\n  margin-right: 5px;\n}\n\n.link::after {\n  content: \" ↗\";\n  font-size: 0.8em;\n}\n\n/* Dekoratif amaçlı */\n.ayirici::after {\n  content: \"\";\n  display: block;\n  width: 50px;\n  height: 3px;\n  background: #3498db;\n  margin: 10px auto;\n}</code></pre><h3>content Özelliği</h3><pre><code>.element::before { content: \"metin\"; }\n.element::before { content: attr(data-isim); }\n.element::before { content: url('icon.svg'); }\n.element::before { content: counter(sayac); }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example26",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Pseudo-elements</title>\n  <style>\n    body { font-family: Arial; padding: 20px; max-width: 600px; }\n    .buyuk-ilk-harf::first-letter { font-size: 3em; float: left; line-height: 0.8; margin-right: 8px; color: #e74c3c; font-weight: bold; }\n    .ilk-satir::first-line { font-weight: bold; color: #3498db; }\n    ::selection { background: #ffe066; color: #333; }\n    .nota::before { content: \"ℹ️ \"; }\n    .link { text-decoration: none; color: #3498db; }\n    .link::after { content: \" ↗\"; font-size: 0.8em; }\n    .baslik-ustu {\n      text-align: center; margin: 40px 0;\n    }\n    .baslik-ustu::before, .baslik-ustu::after {\n      content: \"\"; display: block; width: 60px; height: 3px;\n      background: linear-gradient(90deg, #3498db, #e74c3c);\n      margin: 10px auto;\n    }\n    [data-icon]::before { content: attr(data-icon); margin-right: 5px; }\n  </style>\n</head>\n<body>\n  <p class=\"buyuk-ilk-harf\">Bu paragrafta ilk harf büyük ve kırmızı gösterilir. Dergi tarzı bir görünüm sağlar.</p>\n  <p class=\"ilk-satir\">Bu paragrafta ilk satır kalın ve mavi. Uzun bir metin olduğunu varsayalım ki ilk satır etkisini görelim.</p>\n  <p class=\"nota\">Bu bir bilgi notudur.</p>\n  <p><a href=\"#\" class=\"link\">Dış bağlantı</a></p>\n  <div class=\"baslik-ustu\"><h2>Dekoratif Başlık</h2></div>\n  <p data-icon=\"📁\">Dosyalar</p>\n  <p data-icon=\"⭐\">Öne Çıkan</p>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Pseudo-element'ler hangi sembolle belirtilir?",
+        "options": [
+          ":",
+          "::",
+          "..",
+          "##"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "::before ve ::after için hangi özellik zorunludur?",
+        "options": [
+          "display",
+          "position",
+          "content",
+          "width"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "İlk harfi büyütmek için hangi pseudo-element kullanılır?",
+        "options": [
+          "::first-line",
+          "::first-letter",
+          "::first-child",
+          "::first"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Seçili metnin stilini değiştirmek için hangisi kullanılır?",
+        "options": [
+          "::selected",
+          "::selection",
+          "::highlight",
+          "::marker"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "::before ile ::after arasındaki fark nedir?",
+        "options": [
+          "::before içerikten önce, ::after içerikten sonra eklenir",
+          "::before sadece metinde çalışır",
+          "Fark yoktur",
+          "::after mobilde çalışmaz"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  {
+    "order": 27,
+    "title": "CSS Variables",
+    "slug": "css-variables",
+    "content": "<h2>CSS Variables (Custom Properties)</h2><p>CSS değişkenleri, tekrar kullanılabilir değerleri depolamak ve yönetmek için kullanılır.</p><h3>Değişken Tanımlama ve Kullanma</h3><pre><code>:root {\n  --primary-color: #3498db;\n  --secondary-color: #2ecc71;\n  --font-size: 16px;\n  --spacing: 20px;\n  --border-radius: 8px;\n}\n\n.button {\n  background-color: var(--primary-color);\n  font-size: var(--font-size);\n  padding: var(--spacing);\n  border-radius: var(--border-radius);\n}</code></pre><h3>Kapsam (Scope)</h3><pre><code>:root {\n  --color: blue;\n}\n\n.container {\n  --color: red;  /* Sadece bu container içinde geçerli */\n}\n\n.item {\n  color: var(--color);  /* Container içinde kırmızı, dışında mavi */\n}</code></pre><h3>Varsayılan Değer</h3><pre><code>.element {\n  color: var(--tanimsiz-renk, black);  /* --tanimsiz-renk yoksa siyah */\n}</code></pre><h3>Değişkenlerle Tema Değiştirme</h3><pre><code>[data-theme=\"dark\"] {\n  --bg: #333;\n  --text: #fff;\n}\n[data-theme=\"light\"] {\n  --bg: #fff;\n  --text: #333;\n}\nbody { background: var(--bg); color: var(--text); }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example27",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Variables</title>\n  <style>\n    :root {\n      --primary: #3498db;\n      --secondary: #2ecc71;\n      --danger: #e74c3c;\n      --dark: #2c3e50;\n      --light: #ecf0f1;\n      --radius: 8px;\n      --shadow: 0 2px 10px rgba(0,0,0,0.1);\n    }\n    body { font-family: Arial; padding: 20px; background: var(--light); }\n    .kart {\n      background: white; border-radius: var(--radius);\n      padding: 20px; margin: 15px 0; box-shadow: var(--shadow);\n    }\n    .btn {\n      padding: 10px 20px; border: none; border-radius: var(--radius);\n      color: white; cursor: pointer; font-size: 16px; margin: 5px;\n    }\n    .btn-primary { background: var(--primary); }\n    .btn-success { background: var(--secondary); }\n    .btn-danger { background: var(--danger); }\n    .kapsam-ornek {\n      --primary: #9b59b6;  /* Sadece bu div içinde geçerli */\n      padding: 15px; background: white; border-radius: var(--radius);\n    }\n    .kapsam-ornek .btn { background: var(--primary); }\n  </style>\n</head>\n<body>\n  <h2>CSS Değişkenleri Örneği</h2>\n  <div class=\"kart\">\n    <h3>Butonlar</h3>\n    <button class=\"btn btn-primary\">Birincil</button>\n    <button class=\"btn btn-success\">Başarılı</button>\n    <button class=\"btn btn-danger\">Tehlike</button>\n  </div>\n  <div class=\"kapsam-ornek\">\n    <h3>Kapsam Değişikliği (mor tema)</h3>\n    <button class=\"btn\">Mor Buton</button>\n    <button class=\"btn\">Mor Buton 2</button>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "CSS değişkeni nasıl tanımlanır?",
+        "options": [
+          "$degisken: değer;",
+          "--degisken: değer;",
+          "@degisken: değer;",
+          "var degisken = değer;"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "CSS değişkenini kullanmak için hangi fonksiyon kullanılır?",
+        "options": [
+          "get()",
+          "var()",
+          "use()",
+          "ref()"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": ":root seçicisi hangi öğeyi temsil eder?",
+        "options": [
+          "Body",
+          "HTML kök öğesi",
+          "İlk div",
+          "Head"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Değişkene varsayılan değer nasıl verilir?",
+        "options": [
+          "var(--renk, siyah)",
+          "var(--renk) or siyah",
+          "--renk: siyah !default",
+          "var(--renk, default: siyah)"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "CSS değişkenlerinin avantajı nedir?",
+        "options": [
+          "Daha hızlı çalışır",
+          "Tema değişimi ve bakım kolaylığı sağlar",
+          "Sadece renkler için kullanılır",
+          "JavaScript gerektirir"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 28,
+    "title": "CSS Counters",
+    "slug": "css-counters",
+    "content": "<h2>CSS Counters (Sayaçlar)</h2><p>CSS sayaçları, öğeleri otomatik numaralandırmak için kullanılır.</p><h3>Temel Kullanım</h3><pre><code>.container {\n  counter-reset: sayac;  /* Sayacı sıfırla */\n}\n.item::before {\n  counter-increment: sayac;           /* Sayacı artır */\n  content: counter(sayac) \". \";       /* Sayacı göster */\n}</code></pre><h3>İç İçe Sayaçlar</h3><pre><code>ol {\n  counter-reset: bolum;\n  list-style-type: none;\n}\nli::before {\n  counter-increment: bolum;\n  content: counters(bolum, \".\") \" \";\n}</code></pre><h3>Sayaç Stilleri</h3><pre><code>.item::before {\n  content: counter(sayac, upper-roman) \". \";\n  /* lower-roman, upper-alpha, lower-alpha, decimal */\n}</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example28",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Counters</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .liste {\n      counter-reset: madde;\n      list-style: none;\n      padding: 0;\n    }\n    .liste li {\n      counter-increment: madde;\n      padding: 8px 12px;\n      border-bottom: 1px solid #eee;\n    }\n    .liste li::before {\n      content: counter(madde) \". \";\n      font-weight: bold;\n      color: #3498db;\n      margin-right: 8px;\n    }\n    .roman {\n      counter-reset: roman;\n      list-style: none;\n    }\n    .roman li {\n      counter-increment: roman;\n      padding: 5px;\n    }\n    .roman li::before {\n      content: counter(roman, upper-roman) \". \";\n      color: #e74c3c;\n      font-weight: bold;\n    }\n    .icice {\n      counter-reset: ana;\n      list-style: none;\n    }\n    .icice > li {\n      counter-increment: ana;\n      counter-reset: alt;\n      font-weight: bold;\n      margin-top: 10px;\n    }\n    .icice > li::before {\n      content: counter(ana) \". \";\n    }\n    .icice > li ul {\n      list-style: none;\n    }\n    .icice > li ul li {\n      counter-increment: alt;\n      font-weight: normal;\n    }\n    .icice > li ul li::before {\n      content: counter(ana) \".\" counter(alt) \" \";\n      color: #666;\n    }\n  </style>\n</head>\n<body>\n  <h3>Basit Sayaç</h3>\n  <ol class=\"liste\">\n    <li>Birinci madde</li><li>İkinci madde</li>\n    <li>Üçüncü madde</li><li>Dördüncü madde</li>\n  </ol>\n  \n  <h3>Roma Rakamları</h3>\n  <ol class=\"roman\">\n    <li>Madde I</li><li>Madde II</li><li>Madde III</li>\n  </ol>\n  \n  <h3>İç İçe Sayaçlar</h3>\n  <ol class=\"icice\">\n    <li>Bölüm 1\n      <ul><li>Alt başlık</li><li>Alt başlık</li></ul>\n    </li>\n    <li>Bölüm 2\n      <ul><li>Alt başlık</li><li>Alt başlık</li></ul>\n    </li>\n  </ol>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Sayaç oluşturmak için hangi özellik kullanılır?",
+        "options": [
+          "counter-start",
+          "counter-reset",
+          "counter-new",
+          "counter-init"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Sayacı artırmak için hangi özellik kullanılır?",
+        "options": [
+          "counter-add",
+          "counter-increment",
+          "counter-plus",
+          "counter-up"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Sayacı göstermek için hangi fonksiyon kullanılır?",
+        "options": [
+          "show()",
+          "counter()",
+          "display()",
+          "value()"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "İç içe sayaçlar için hangi fonksiyon kullanılır?",
+        "options": [
+          "counters()",
+          "counter-all()",
+          "counter-deep()",
+          "counter-nested()"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Sayaçları hangi pseudo-element ile kullanmak gerekir?",
+        "options": [
+          "::first-letter",
+          "::before",
+          "::after",
+          "::marker"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 29,
+    "title": "CSS Blend Modes ve Filtreler",
+    "slug": "css-blend-modes-ve-filtreler",
+    "content": "<h2>CSS Blend Modes ve Filtreler</h2><h3>Filtreler (Filters)</h3><pre><code>.foto { filter: blur(5px); filter: brightness(0.5); filter: contrast(200%); filter: grayscale(100%); filter: sepia(100%); filter: hue-rotate(90deg); filter: invert(100%); filter: opacity(0.5); filter: saturate(200%); }</code></pre><h3>Blend Modes</h3><pre><code>.element { background-blend-mode: multiply; mix-blend-mode: overlay; }</code></pre><h3>backdrop-filter</h3><pre><code>.glass { background: rgba(255,255,255,0.3); backdrop-filter: blur(10px); }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example29",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Blend Modes ve Filtreler</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .gorsel { width: 200px; height: 150px; background: linear-gradient(135deg, #3498db, #e74c3c); display: inline-flex; align-items: center; justify-content: center; color: white; margin: 10px; border-radius: 8px; }\n    .blur { filter: blur(3px); }\n    .grayscale { filter: grayscale(100%); }\n    .sepia { filter: sepia(100%); }\n    .brightness { filter: brightness(1.5); }\n    .invert { filter: invert(100%); }\n    .glass-ornek { position: relative; width: 400px; height: 200px; background: url('https://via.placeholder.com/400x200') center/cover; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin: 20px 0; }\n    .glass { background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); padding: 20px 40px; border-radius: 8px; color: white; font-weight: bold; border: 1px solid rgba(255,255,255,0.3); }\n  </style>\n</head>\n<body>\n  <div><div class=\"gorsel\">Orijinal</div><div class=\"gorsel blur\">blur</div><div class=\"gorsel grayscale\">grayscale</div><div class=\"gorsel sepia\">sepia</div></div>\n  <div><div class=\"gorsel brightness\">brightness</div><div class=\"gorsel invert\">invert</div></div>\n  <h3>backdrop-filter (Glassmorphism)</h3>\n  <div class=\"glass-ornek\"><div class=\"glass\">Cam Efekti</div></div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Bir görseli gri ton yapmak için hangi filtre kullanılır?",
+        "options": [
+          "filter: gray()",
+          "filter: grayscale(100%)",
+          "filter: desaturate()",
+          "filter: black-white()"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "backdrop-filter hangi durumda kullanılır?",
+        "options": [
+          "Öğenin kendisini filtreler",
+          "Öğenin arkasındaki içeriği filtreler",
+          "Sadece görselleri filtreler",
+          "Sadece metinleri filtreler"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Birden çok filtre nasıl uygulanır?",
+        "options": [
+          "Virgülle ayrılarak",
+          "Boşlukla ayrılarak",
+          "Art arda birden çok filter özelliği yazarak",
+          "Sadece bir filtre uygulanabilir"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "mix-blend-mode hangi amaçla kullanılır?",
+        "options": [
+          "Renk paleti oluşturmak",
+          "Öğelerin birbiriyle karışım modunu belirlemek",
+          "Degrade oluşturmak",
+          "Gölge eklemek"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Hangi filtre renkleri ters çevirir?",
+        "options": [
+          "filter: reverse()",
+          "filter: invert(100%)",
+          "filter: negative()",
+          "filter: flip()"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 30,
+    "title": "CSS Box Shadow ve Text Shadow",
+    "slug": "css-box-shadow-ve-text-shadow",
+    "content": "<h2>CSS Box Shadow ve Text Shadow</h2><h3>box-shadow</h3><pre><code>.kutu { box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.3); box-shadow: inset 0 0 20px rgba(0,0,0,0.3); }</code></pre><h3>text-shadow</h3><pre><code>.baslik { text-shadow: 2px 2px 4px rgba(0,0,0,0.3); text-shadow: 1px 1px 2px red, 0 0 1em blue; }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example30",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Box Shadow ve Text Shadow</title>\n  <style>\n    body { font-family: Arial; padding: 20px; display: flex; flex-wrap: wrap; gap: 30px; background: #f5f5f5; }\n    .kutu { width: 200px; height: 200px; background: white; display: flex; align-items: center; justify-content: center; border-radius: 10px; text-align: center; padding: 10px; }\n    .s1 { box-shadow: 5px 5px 15px rgba(0,0,0,0.2); }\n    .s2 { box-shadow: 0 10px 30px rgba(52,152,219,0.4); }\n    .s3 { box-shadow: inset 0 -10px 20px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.2); }\n    .yazi-ornek { background: white; padding: 20px; border-radius: 10px; }\n    .t1 { text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-size: 2rem; }\n    .t2 { text-shadow: 0 0 10px rgba(52,152,219,0.8); font-size: 2rem; color: #3498db; }\n    .t3 { text-shadow: 1px 1px 0 #bbb, 2px 2px 0 #999, 3px 3px 0 #777; font-size: 2rem; }\n  </style>\n</head>\n<body>\n  <div><div class=\"kutu s1\">Temel gölge</div></div>\n  <div><div class=\"kutu s2\">Renkli gölge</div></div>\n  <div><div class=\"kutu s3\">İç + dış gölge</div></div>\n  <div class=\"yazi-ornek\">\n    <div class=\"t1\">Gölgeli Metin</div>\n    <div class=\"t2\">Parlayan Metin</div>\n    <div class=\"t3\">3D Metin</div>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "box-shadow'da ilk iki değer neyi ifade eder?",
+        "options": [
+          "Renk ve bulanıklık",
+          "Yatay ve dikey kayma",
+          "Genişlik ve yükseklik",
+          "Saydamlık ve boyut"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "İç gölge için hangi anahtar kelime kullanılır?",
+        "options": [
+          "inside",
+          "inner",
+          "inset",
+          "internal"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "text-shadow ile box-shadow arasındaki temel fark nedir?",
+        "options": [
+          "text-shadow sadece metinlere uygulanır",
+          "text-shadow renkli olamaz",
+          "box-shadow sadece karelere uygulanır",
+          "Fark yoktur"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "box-shadow'da spread-radius ne işe yarar?",
+        "options": [
+          "Gölgeyi büyütür/küçültür",
+          "Gölgenin rengini değiştirir",
+          "Gölgenin bulanıklığını artırır",
+          "Gölgeyi içe alır"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Çoklu gölgeler nasıl tanımlanır?",
+        "options": [
+          "Virgülle ayrılarak",
+          "Boşlukla ayrılarak",
+          "Ayrı satırlarda",
+          "Sadece tek gölge tanımlanabilir"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  {
+    "order": 31,
+    "title": "CSS Clip Path",
+    "slug": "css-clip-path",
+    "content": "<h2>CSS Clip Path</h2><p>clip-path, bir öğenin hangi bölümünün görüneceğini belirler.</p><pre><code>.daire { clip-path: circle(50%); }\n.elips { clip-path: ellipse(30% 50% at center); }\n.ucgen { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }\n.yildiz { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example31",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>CSS Clip Path</title>\n  <style>\n    body { font-family: Arial; padding: 20px; display: flex; flex-wrap: wrap; gap: 30px; }\n    .kapsayici { text-align: center; }\n    .gorsel { width: 200px; height: 200px; background: linear-gradient(135deg, #3498db, #e74c3c); margin: 10px; }\n    .daire { clip-path: circle(50%); }\n    .elips { clip-path: ellipse(30% 50% at center); }\n    .ucgen { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }\n    .altigen { clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }\n    .yildiz { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }\n    .animasyon { clip-path: circle(30%); transition: clip-path 0.5s ease; }\n    .animasyon:hover { clip-path: circle(50%); }\n  </style>\n</head>\n<body>\n  <div class=\"kapsayici\"><div class=\"gorsel daire\"></div>circle</div>\n  <div class=\"kapsayici\"><div class=\"gorsel elips\"></div>ellipse</div>\n  <div class=\"kapsayici\"><div class=\"gorsel ucgen\"></div>üçgen</div>\n  <div class=\"kapsayici\"><div class=\"gorsel altigen\"></div>altıgen</div>\n  <div class=\"kapsayici\"><div class=\"gorsel yildiz\"></div>yıldız</div>\n  <div class=\"kapsayici\"><div class=\"gorsel animasyon\"></div>hover</div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Daire şeklinde kesmek için hangi clip-path değeri kullanılır?",
+        "options": [
+          "circle(50%)",
+          "ellipse(50%)",
+          "round(50%)",
+          "arc(50%)"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Özel şekiller oluşturmak için hangi clip-path fonksiyonu kullanılır?",
+        "options": [
+          "shape()",
+          "path()",
+          "polygon()",
+          "custom()"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "clip-path hangi özellik ile birleşince animasyonlu olur?",
+        "options": [
+          "animation",
+          "transition",
+          "transform",
+          "display"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "clip-path: inset(10%) ne işe yarar?",
+        "options": [
+          "Öğeyi %10 büyütür",
+          "Her kenardan %10 içerden keser",
+          "%10 saydam yapar",
+          "%10 döndürür"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "clip-path avantajı nedir?",
+        "options": [
+          "Sayfa hızını artırır",
+          "Karmaşık şekiller oluşturmayı sağlar",
+          "Sadece resimlerde çalışır",
+          "Daha az kod yazmayı sağlar"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 32,
+    "title": "CSS Flexbox ve Grid Karşılaştırması",
+    "slug": "css-flexbox-ve-grid-karsilastirmasi",
+    "content": "<h2>CSS Flexbox ve Grid Karşılaştırması</h2><p>Flexbox 1 boyutlu (satır VEYA sütun), Grid 2 boyutlu (satır VE sütun). Flexbox içerik odaklı, Grid düzen odaklı.</p><h3>Ne Zaman Hangisi?</h3><p><strong>Flexbox:</strong> Navigasyon, toolbar, kart grupları, merkezleme</p><p><strong>Grid:</strong> Sayfa düzeni, galeri, dashboard, karmaşık düzenler</p><p><strong>Birlikte:</strong> Grid ile iskelet, Flexbox ile iç öğeler</p>",
+    "video_url": "https://www.youtube.com/watch?v=example32",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Flexbox vs Grid</title>\n  <style>\n    body { font-family: Arial; padding: 20px; }\n    .karsilastirma { display: flex; gap: 40px; flex-wrap: wrap; }\n    .alan { flex: 1; min-width: 300px; }\n    .flex-menu { display: flex; gap: 10px; list-style: none; padding: 10px; background: #2c3e50; border-radius: 4px; }\n    .flex-menu li { background: #3498db; color: white; padding: 8px 16px; border-radius: 4px; }\n    .grid-sayfa { display: grid; grid-template-columns: 1fr 2fr 1fr; grid-template-rows: auto 1fr auto; gap: 10px; min-height: 200px; }\n    .grid-sayfa > * { padding: 15px; border-radius: 4px; color: white; text-align: center; }\n    .grid-header { grid-column: 1 / -1; background: #2c3e50; }\n    .grid-sidebar { background: #3498db; }\n    .grid-content { background: #2ecc71; }\n    .grid-footer { grid-column: 1 / -1; background: #e74c3c; }\n  </style>\n</head>\n<body>\n  <h2>Flexbox vs Grid</h2>\n  <div class=\"karsilastirma\">\n    <div class=\"alan\">\n      <h3>Flexbox - Navigasyon</h3>\n      <ul class=\"flex-menu\"><li>Anasayfa</li><li>Hakkında</li><li>İletişim</li></ul>\n    </div>\n    <div class=\"alan\">\n      <h3>Grid - Sayfa Düzeni</h3>\n      <div class=\"grid-sayfa\">\n        <div class=\"grid-header\">Header</div>\n        <div class=\"grid-sidebar\">Sidebar</div>\n        <div class=\"grid-content\">İçerik</div>\n        <div class=\"grid-footer\">Footer</div>\n      </div>\n    </div>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Flexbox kaç boyutludur?",
+        "options": [
+          "1 boyutlu",
+          "2 boyutlu",
+          "3 boyutlu",
+          "Boyutsuz"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Sayfa ana düzeni için hangisi daha uygundur?",
+        "options": [
+          "Flexbox",
+          "Grid",
+          "Her ikisi de eşit",
+          "Float"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Navigasyon menüsü için hangisi daha uygundur?",
+        "options": [
+          "Grid",
+          "Flexbox",
+          "Float",
+          "Position"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Flexbox hangi durumda yetersiz kalır?",
+        "options": [
+          "Tek satır hizalama",
+          "2 boyutlu düzenlerde",
+          "Öğeleri ortalamada",
+          "Esnek genişliklerde"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "En iyi yaklaşım hangisidir?",
+        "options": [
+          "Sadece Flexbox",
+          "Sadece Grid",
+          "Grid + Flexbox birlikte",
+          "Float kullanmak"
+        ],
+        "correctAnswer": 2
+      }
+    ]
+  },
+  {
+    "order": 33,
+    "title": "CSS Framework'ler - Bootstrap'a Giriş",
+    "slug": "css-frameworkler-bootstrap-giris",
+    "content": "<h2>CSS Framework'ler - Bootstrap 5</h2><p>CSS framework'ler, hazır bileşenler ve grid sistemi sunarak geliştirmeyi hızlandırır.</p><h3>Bootstrap 5 Grid</h3><pre><code>&lt;div class=\"container\"&gt;\n  &lt;div class=\"row\"&gt;\n    &lt;div class=\"col-12 col-md-6 col-lg-4\"&gt;İçerik&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;</code></pre><h3>Kurulum</h3><pre><code>&lt;link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\"&gt;</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example33",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Bootstrap 5</title>\n  <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n  <style>\n    body { padding: 20px; }\n    .card-img-top { height: 200px; background: linear-gradient(135deg, #667eea, #764ba2); }\n  </style>\n</head>\n<body>\n  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark rounded mb-4\">\n    <div class=\"container-fluid\">\n      <a class=\"navbar-brand\" href=\"#\">Bootstrap</a>\n      <div class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav\"><li class=\"nav-item\"><a class=\"nav-link active\" href=\"#\">Anasayfa</a></li></ul>\n      </div>\n    </div>\n  </nav>\n  <div class=\"row g-4\">\n    <div class=\"col-12 col-md-6 col-lg-4\">\n      <div class=\"card shadow-sm\">\n        <div class=\"card-img-top d-flex align-items-center justify-content-center text-white\">Görsel</div>\n        <div class=\"card-body\"><h5 class=\"card-title\">Kart 1</h5><p class=\"card-text\">İçerik</p><a href=\"#\" class=\"btn btn-primary\">Detay</a></div>\n      </div>\n    </div>\n    <div class=\"col-12 col-md-6 col-lg-4\">\n      <div class=\"card shadow-sm\">\n        <div class=\"card-img-top d-flex align-items-center justify-content-center text-white\">Görsel</div>\n        <div class=\"card-body\"><h5 class=\"card-title\">Kart 2</h5><p class=\"card-text\">İçerik</p><a href=\"#\" class=\"btn btn-success\">Detay</a></div>\n      </div>\n    </div>\n  </div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Bootstrap 5 grid sistemi kaç sütunludur?",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "16"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "col-md-6 ifadesi ne anlama gelir?",
+        "options": [
+          "Mobilde 6 sütun",
+          "Tablet ve üzerinde 6 sütun",
+          "Masaüstünde 6 sütun",
+          "Her zaman 6 sütun"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Bootstrap'ı projeye eklemenin en hızlı yolu nedir?",
+        "options": [
+          "npm install",
+          "CDN linki eklemek",
+          "CSS dosyasını indirmek",
+          "SASS ile derlemek"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Bootstrap'te buton için hangi class kullanılır?",
+        "options": [
+          ".button",
+          ".btn",
+          ".buton",
+          ".btn-primary"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Bootstrap container sınıfının amacı nedir?",
+        "options": [
+          "İçeriği ortalamak ve maksimum genişlik vermek",
+          "Arkaplan rengi eklemek",
+          "Gölge eklemek",
+          "Margin sıfırlamak"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  {
+    "order": 34,
+    "title": "CSS Preprocessors - SASS/SCSS",
+    "slug": "css-preprocessors-sass-scss",
+    "content": "<h2>CSS Preprocessors - SASS/SCSS</h2><p>SASS, CSS'e değişkenler, iç içe yazım, mixinler gibi özellikler ekler.</p><h3>Değişkenler</h3><pre><code>$primary: #3498db;\n$padding: 20px;\nbody { color: $primary; }</code></pre><h3>Nesting</h3><pre><code>.navbar {\n  ul { list-style: none; }\n  li { a { color: white; &:hover { color: blue; } } }\n}</code></pre><h3>Mixin ve Extend</h3><pre><code>@mixin flex-center { display: flex; align-items: center; justify-content: center; }\n.hero { @include flex-center; }\n%ortak { padding: 15px; border-radius: 4px; }\n.success { @extend %ortak; background: green; }</code></pre>",
+    "video_url": "https://www.youtube.com/watch?v=example34",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>SCSS Örneği</title>\n  <style>\n    * { box-sizing: border-box; margin: 0; padding: 0; }\n    body { font-family: 'Segoe UI', Arial, sans-serif; padding: 20px; background: #f5f5f5; }\n    .navbar { background: #2c3e50; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; margin-bottom: 30px; }\n    .navbar .logo { color: white; font-size: 1.5rem; font-weight: bold; }\n    .navbar ul { list-style: none; display: flex; gap: 1.5rem; }\n    .navbar ul li a { color: white; text-decoration: none; }\n    .navbar ul li a:hover { color: #3498db; }\n    .kart { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); margin: 15px 0; }\n    .btn { display: inline-block; padding: 12px 24px; border: none; border-radius: 6px; color: white; cursor: pointer; }\n    .btn-primary { background: #3498db; }\n    .btn-success { background: #2ecc71; }\n  </style>\n</head>\n<body>\n  <nav class=\"navbar\"><div class=\"logo\">SCSS</div><ul><li><a href=\"#\">Anasayfa</a></li><li><a href=\"#\">Hakkında</a></li><li><a href=\"#\">İletişim</a></li></ul></nav>\n  <div class=\"kart\"><h3>SCSS Özellikleri</h3><p>Değişkenler, Nesting, Mixin'ler ve Extend.</p><button class=\"btn btn-primary\">Buton</button><button class=\"btn btn-success\">Başarılı</button></div>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "SCSS'de değişken tanımlamak için hangi sembol kullanılır?",
+        "options": [
+          "--",
+          "$",
+          "@",
+          "//"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "SCSS'de nesting ne işe yarar?",
+        "options": [
+          "Daha hızlı çalışır",
+          "Kodu daha okunabilir yazar",
+          "Dosya boyutunu küçültür",
+          "Sadece renkler için kullanılır"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Mixin tanımlamak için hangi kural kullanılır?",
+        "options": [
+          "@mixin",
+          "@include",
+          "@define",
+          "@function"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Mixin kullanmak için hangi kural kullanılır?",
+        "options": [
+          "@mixin",
+          "@include",
+          "@use",
+          "@apply"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "SCSS ile CSS arasındaki temel fark nedir?",
+        "options": [
+          "SCSS tarayıcıda çalışır",
+          "SCSS derlenerek CSS'e dönüştürülür",
+          "CSS daha hızlıdır",
+          "SCSS sadece Bootstrap ile kullanılır"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "order": 35,
+    "title": "CSS Proje - Responsive Landing Page",
+    "slug": "css-proje-responsive-landing-page",
+    "content": "<h2>CSS Proje - Responsive Landing Page</h2><p>Öğrendiğiniz tüm CSS konseptlerini kullanarak responsive landing page oluşturun.</p><h3>Proje İçeriği</h3><ul><li>Navbar: Flexbox ile responsive menü</li><li>Hero: Gradyan arkaplan, ortalanmış içerik</li><li>Features: Grid ile kart düzeni</li><li>Footer: Grid ile çok sütunlu</li></ul><h3>Kullanılan CSS</h3><p>CSS Variables, Flexbox, Grid, Media Queries, Transitions, Box Shadow, Gradients, Animations</p>",
+    "video_url": "https://www.youtube.com/watch?v=example35",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>KodLab - CSS Landing Page</title>\n  <style>\n    :root { --primary: #6c63ff; --dark: #2a2a2a; --shadow: 0 5px 20px rgba(0,0,0,0.1); --radius: 12px; }\n    * { box-sizing: border-box; margin: 0; padding: 0; }\n    body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; line-height: 1.6; }\n    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }\n    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }\n    .logo { font-size: 1.8rem; font-weight: bold; color: var(--primary); }\n    .nav-menu { display: flex; gap: 30px; list-style: none; }\n    .nav-menu a { text-decoration: none; color: #333; transition: color 0.3s; }\n    .nav-menu a:hover { color: var(--primary); }\n    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }\n    .hero { background: linear-gradient(135deg, var(--primary) 0%, #8a84ff 100%); color: white; text-align: center; padding: 120px 20px; border-radius: var(--radius); margin: 30px 0; }\n    .hero h1 { font-size: 3rem; margin-bottom: 20px; animation: fadeInUp 1s ease; }\n    .btn { display: inline-block; padding: 15px 35px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; transition: transform 0.3s; }\n    .btn-primary { background: white; color: var(--primary); }\n    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }\n    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 80px 0; }\n    .feature-card { background: white; padding: 40px 30px; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; transition: transform 0.3s; }\n    .feature-card:hover { transform: translateY(-10px); }\n    .footer { background: var(--dark); color: white; padding: 60px 0; margin-top: 80px; border-radius: var(--radius) var(--radius) 0 0; }\n    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }\n    .footer ul { list-style: none; }\n    .footer ul li a { color: #aaa; text-decoration: none; }\n    .footer-bottom { text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444; color: #888; }\n    @media (max-width: 768px) {\n      .navbar { flex-direction: column; gap: 15px; }\n      .hero h1 { font-size: 2rem; }\n      .features { grid-template-columns: 1fr; }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <nav class=\"navbar\">\n      <div class=\"logo\">KodLab</div>\n      <ul class=\"nav-menu\"><li><a href=\"#\">Anasayfa</a></li><li><a href=\"#\">Özellikler</a></li><li><a href=\"#\">İletişim</a></li></ul>\n    </nav>\n    <section class=\"hero\">\n      <h1>CSS ile Modern Web Tasarımı</h1>\n      <p>Flexbox, Grid, Animasyonlar ve daha fazlası. KodLab ile öğrenin.</p>\n      <button class=\"btn btn-primary\">Hemen Başla</button>\n    </section>\n    <section class=\"features\">\n      <div class=\"feature-card\"><div class=\"feature-icon\" style=\"width:70px;height:70px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;color:white;\">⚡</div><h3>Hızlı</h3><p>Pratik örneklerle öğrenin.</p></div>\n      <div class=\"feature-card\"><div class=\"feature-icon\" style=\"width:70px;height:70px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;color:white;\">🎨</div><h3>Modern</h3><p>Güncel tasarım teknikleri.</p></div>\n      <div class=\"feature-card\"><div class=\"feature-icon\" style=\"width:70px;height:70px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;color:white;\">📱</div><h3>Responsive</h3><p>Tüm cihazlara uyumlu.</p></div>\n    </section>\n  </div>\n  <footer class=\"footer\">\n    <div class=\"container\">\n      <div class=\"footer-grid\">\n        <div><h3>KodLab</h3><p style=\"color:#aaa;\">CSS eğitim platformu</p></div>\n        <div><h3>Dersler</h3><ul><li><a href=\"#\">CSS Temelleri</a></li><li><a href=\"#\">Flexbox</a></li><li><a href=\"#\">Grid</a></li></ul></div>\n      </div>\n      <div class=\"footer-bottom\"><p>&copy; 2026 KodLab</p></div>\n    </div>\n  </footer>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs, CSS-Tricks, W3Schools",
+    "quiz": [
+      {
+        "question": "Navbar düzeni için hangi CSS özelliği kullanıldı?",
+        "options": [
+          "Grid",
+          "Flexbox",
+          "Float",
+          "Position"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Feature kartları düzeni için hangisi kullanıldı?",
+        "options": [
+          "Flexbox",
+          "Grid",
+          "Table",
+          "Float"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Hero bölümünde hangi efekt kullanıldı?",
+        "options": [
+          "Box-shadow",
+          "Gradyan arkaplan",
+          "Clip-path",
+          "Filter"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Projede kaç CSS konsepti bir arada kullanıldı?",
+        "options": [
+          "3",
+          "5",
+          "7+",
+          "10+"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Landing page hangi yaklaşımla responsive yapıldı?",
+        "options": [
+          "Desktop-first",
+          "Mobile-first",
+          "Her ikisi",
+          "Responsive değil"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  }
+]

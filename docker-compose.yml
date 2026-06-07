@@ -1,0 +1,73 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kodlab-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+      - ./storage:/var/www/storage
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - kodlab-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: kodlab-nginx
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - kodlab-network
+
+  mysql:
+    image: mysql:8.4
+    container_name: kodlab-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: kodlab
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: kodlab_user
+      MYSQL_PASSWORD: kodlab_pass
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+    networks:
+      - kodlab-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: kodlab-phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: kodlab_user
+      PMA_PASSWORD: kodlab_pass
+      UPLOAD_LIMIT: 100M
+    depends_on:
+      - mysql
+    networks:
+      - kodlab-network
+
+networks:
+  kodlab-network:
+    driver: bridge
+
+volumes:
+  mysql_data:

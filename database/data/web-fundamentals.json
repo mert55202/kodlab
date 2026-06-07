@@ -1,0 +1,412 @@
+[
+  {
+    "order": 1,
+    "title": "İnternet Nasıl Çalışır?",
+    "slug": "internet-nasil-calisir",
+    "content": "<h1>İnternet Nasıl Çalışır?</h1><p>İnternet, dünya çapında bilgisayar ağlarının birbirine bağlanmasıyla oluşan dev bir ağ sistemidir.</p><h2>Temel Kavramlar</h2><p>İnternet, verileri küçük paketlere bölerek gönderir. TCP/IP protokolü iletişimi yönetir. Her bilgisayarın bir IP adresi vardır.</p><h2>Veri Aktarımı</h2><p>Veriler paketlere bölünür, farklı yollardan hedefe ulaşır ve hedefte tekrar birleştirilir. Buna packet switching denir.</p><h2>İstemci ve Sunucu</h2><p>İstemci (tarayıcı) istek yapar, sunucu yanıt verir. Web sayfaları sunucularda saklanır.</p>",
+    "video_url": "",
+    "code_example": "<!-- İnternet bağlantısı için basit bir HTML sayfası -->\n<!DOCTYPE html>\n<html>\n<head>\n    <title>İnternet Çalışma Prensibi</title>\n</head>\n<body>\n    <h1>İnternet Nasıl Çalışır?</h1>\n    <p>Bu sayfa bir sunucudan tarayıcınıza yüklendi.</p>\n    <p>IP Adresiniz: <span id=\"ip\"></span></p>\n    <script>\n        // IP adresini almak için bir API çağrısı\n        fetch(\"https://api.ipify.org?format=json\")\n            .then(res => res.json())\n            .then(data => document.getElementById(\"ip\").textContent = data.ip);\n    </script>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work",
+    "quiz": [
+      {
+        "question": "İnternet verileri nasıl iletir?",
+        "options": [
+          "Tek parça halinde",
+          "Paketlere bölerek",
+          "Sıkıştırarak",
+          "Şifreleyerek"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Her bilgisayarın internetteki kimliği nedir?",
+        "options": [
+          "MAC adresi",
+          "IP adresi",
+          "DNS adı",
+          "Port numarası"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "İnternet iletişiminde hangi protokol kullanılır?",
+        "options": [
+          "HTTP",
+          "TCP/IP",
+          "FTP",
+          "SMTP"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 2,
+    "title": "HTTP ve HTTPS Protokolleri",
+    "slug": "http-https",
+    "content": "<h1>HTTP ve HTTPS Protokolleri</h1><p>HTTP (HyperText Transfer Protocol), web tarayıcıları ve sunucular arasında veri iletişimini sağlayan protokoldür.</p><h2>HTTP İstek Metotları</h2><p>GET: Veri almak için. POST: Veri göndermek için. PUT: Güncelleme için. DELETE: Silme için.</p><h2>HTTP Durum Kodları</h2><p>1xx: Bilgi, 2xx: Başarılı (200 OK), 3xx: Yönlendirme (301, 404: Bulunamadı), 5xx: Sunucu hatası (500)</p><h2>HTTPS</h2><p>HTTPS = HTTP + SSL/TLS şifrelemesi. Veriler şifrelenir, kimlik doğrulama sağlanır, veri bütünlüğü korunur.</p>",
+    "video_url": "",
+    "code_example": "<!-- HTTP istek örnekleri -->\n<script>\n// GET isteği\nfetch(\"https://api.example.com/kullanicilar\")\n    .then(response => {\n        console.log(\"Durum:\", response.status);\n        return response.json();\n    })\n    .then(data => console.log(\"Veri:\", data));\n\n// POST isteği\nfetch(\"https://api.example.com/kullanicilar\", {\n    method: \"POST\",\n    headers: { \"Content-Type\": \"application/json\" },\n    body: JSON.stringify({ ad: \"Ali\", email: \"ali@example.com\" })\n}).then(res => console.log(\"Oluşturuldu:\", res.status));\n</script>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTTP",
+    "quiz": [
+      {
+        "question": "HTTP nedir?",
+        "options": [
+          "Bir programlama dili",
+          "Web iletişim protokolü",
+          "Bir donanım",
+          "Bir işletim sistemi"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "HTTPS'in HTTP'den farkı nedir?",
+        "options": [
+          "Daha hızlıdır",
+          "Şifreleme kullanır",
+          "Daha az veri kullanır",
+          "Sadece mobilde çalışır"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "HTTP 404 hatası neyi ifade eder?",
+        "options": [
+          "Sunucu hatası",
+          "Sayfa bulunamadı",
+          "Yetkisiz erişim",
+          "Başarılı"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 3,
+    "title": "DNS (Domain Name System)",
+    "slug": "dns-domain-name-system",
+    "content": "<h1>DNS (Domain Name System)</h1><p>DNS, alan adlarını (ornegin.com) IP adreslerine çeviren sistemdir. İnternetin telefon rehberi olarak düşünülebilir.</p><h2>DNS Nasıl Çalışır?</h2><p>Tarayıcıya bir alan adı yazıldığında, DNS sunucusu bu alan adının hangi IP adresine karşılık geldiğini bulur ve yönlendirir.</p><h2>DNS Türleri</h2><p>A (IPv4 adresi), AAAA (IPv6 adresi), CNAME (diğer alan adına yönlendirme), MX (e-posta sunucusu), NS (isim sunucusu), TXT (metin kaydı)</p><h2>DNS Çözümleme Adımları</h2><p>1. Tarayıcı önbelleği, 2. İşletim sistemi önbelleği, 3. DNS sunucusu, 4. Root DNS sunucusu, 5. TLD sunucusu, 6. Yetkili DNS sunucusu</p>",
+    "video_url": "",
+    "code_example": "<!-- DNS sorgulama örneği -->\n<script>\n// DNS çözümleme (tarayıcı API'si)\nif (window.Location) {\n    console.log(\"Hostname:\", location.hostname);\n    console.log(\"Origin:\", location.origin);\n}\n\n// DNS sorgulama için Web API\nasync function dnsCozumle(domain) {\n    const dns = await fetch(\"https://dns.google/resolve?name=\" + domain);\n    const data = await dns.json();\n    console.log(domain + \" için IP:\", data.Answer?.[0]?.data);\n}\ndnsCozumle(\"example.com\");\n</script>\n\n<!-- DNS bilgisi gösterimi -->\n<table border=\"1\">\n    <tr><th>Kayıt Türü</th><th>Açıklama</th><th>Örnek</th></tr>\n    <tr><td>A</td><td>IPv4 adresi</td><td>93.184.216.34</td></tr>\n    <tr><td>AAAA</td><td>IPv6 adresi</td><td>2606:2800:220:1:248:1893:25c8:1946</td></tr>\n    <tr><td>CNAME</td><td>Alan adı yönlendirme</td><td>www -> example.com</td></tr>\n    <tr><td>MX</td><td>E-posta sunucusu</td><td>mail.example.com</td></tr>\n</table>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Glossary/DNS",
+    "quiz": [
+      {
+        "question": "DNS hangi amaçla kullanılır?",
+        "options": [
+          "İnternet hızını artırmak",
+          "Alan adlarını IP adreslerine çevirmek",
+          "Web sayfası oluşturmak",
+          "E-posta göndermek"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "A kaydı neyi gösterir?",
+        "options": [
+          "IPv4 adresini",
+          "IPv6 adresini",
+          "E-posta sunucusunu",
+          "Yönlendirmeyi"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "MX kaydı hangi amaçla kullanılır?",
+        "options": [
+          "Web sitesi yönlendirme",
+          "E-posta sunucusu belirleme",
+          "IPv6 adresi",
+          "Güvenlik sertifikası"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 4,
+    "title": "Web Tarayıcıları Nasıl Çalışır?",
+    "slug": "web-tarayicilari-nasil-calisir",
+    "content": "<h1>Web Tarayıcıları Nasıl Çalışır?</h1><p>Web tarayıcıları (Chrome, Firefox, Safari, Edge), kullanıcının girdiği URL'yi alır, sunucudan HTML/CSS/JS dosyalarını indirir ve görsel bir web sayfası oluşturur.</p><h2>Tarayıcı Mimarisi</h2><p>Kullanıcı Arayüzü, Tarayıcı Motoru, Render Motoru (Blink/Gecko/WebKit), Ağ (Networking), JavaScript Motoru (V8/SpiderMonkey), UI Backend, Veri Depolama</p><h2>Render Süreci</h2><p>1. HTML parsing (DOM ağacı), 2. CSS parsing (CSSOM ağacı), 3. Render Tree oluşturma, 4. Layout (düzen), 5. Paint (boyama), 6. Compositing</p>",
+    "video_url": "",
+    "code_example": "<!-- Tarayıcı işlemleri -->\n<script>\n// DOM ağacını inceleme\nconsole.log(\"DOM Ağacı:\");\nconsole.log(document.documentElement.outerHTML.substring(0, 200));\n\n// Render süresini ölçme\nwindow.addEventListener(\"load\", function() {\n    const perf = performance.timing;\n    const pageLoad = perf.loadEventEnd - perf.navigationStart;\n    console.log(\"Sayfa yükleme süresi:\", pageLoad, \"ms\");\n    \n    const domReady = perf.domContentLoadedEventEnd - perf.navigationStart;\n    console.log(\"DOM hazır olma süresi:\", domReady, \"ms\");\n});\n\n// Sayfa boyutunu hesaplama\nconsole.log(\"Sayfa genişliği:\", window.innerWidth);\nconsole.log(\"Sayfa yüksekliği:\", window.innerHeight);\n</script>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work",
+    "quiz": [
+      {
+        "question": "Tarayıcının HTML'i işleyerek oluşturduğu yapıya ne denir?",
+        "options": [
+          "CSSOM",
+          "DOM ağacı",
+          "Render ağacı",
+          "Layout ağacı"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Chrome hangi JavaScript motorunu kullanır?",
+        "options": [
+          "SpiderMonkey",
+          "V8",
+          "Chakra",
+          "JavaScriptCore"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Tarayıcı render sürecinin ilk adımı nedir?",
+        "options": [
+          "Painting",
+          "Layout",
+          "HTML parsing",
+          "Compositing"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "order": 5,
+    "title": "İstemci-Sunucu Mimarisi",
+    "slug": "istemci-sunucu-mimarisi",
+    "content": "<h1>İstemci-Sunucu Mimarisi</h1><p>İstemci-sunucu mimarisi, ağ üzerinde kaynakları ve hizmetleri paylaşmak için kullanılan bir modeldir.</p><h2>İstemci (Client)</h2><p>İstek gönderen taraftır. Web tarayıcısı, mobil uygulama, masaüstü uygulaması olabilir.</p><h2>Sunucu (Server)</h2><p>İstekleri karşılayan ve yanıt döndüren taraftır. Web sunucusu, veritabanı sunucusu, e-posta sunucusu gibi türleri vardır.</p><h2>İstek-Yanıt Döngüsü</h2><p>1. Kullanıcı URL girer. 2. Tarayıcı DNS sorgusu yapar. 3. Sunucuya HTTP isteği gönderir. 4. Sunucu işler ve yanıt gönderir. 5. Tarayıcı yanıtı render eder.</p>",
+    "video_url": "",
+    "code_example": "<!-- Basit istemci-sunucu iletişimi -->\n<script>\n// İstemci-sunucu iletişimi simülasyonu\nasync function sunucudanVeriAl(apiUrl) {\n    try {\n        // İstek\n        console.log(\"İstek gönderiliyor:\", apiUrl);\n        \n        const yanit = await fetch(apiUrl);\n        \n        // Yanıt kontrolü\n        if (!yanit.ok) {\n            throw new Error(\"Sunucu hatası: \" + yanit.status);\n        }\n        \n        // Yanıtı işleme\n        const veri = await yanit.json();\n        console.log(\"Sunucudan gelen yanıt:\", veri);\n        \n        return veri;\n    } catch (hata) {\n        console.error(\"İletişim hatası:\", hata.message);\n    }\n}\n\n// Örnek kullanım\nsunucudanVeriAl(\"https://jsonplaceholder.typicode.com/posts/1\");\n</script>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction",
+    "quiz": [
+      {
+        "question": "İstemci-sunucu modelinde isteği kim gönderir?",
+        "options": [
+          "Sunucu",
+          "İstemci",
+          "Ağ",
+          "Yönlendirici"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Sunucu hangi amaçla kullanılır?",
+        "options": [
+          "Sadece veri depolamak",
+          "İstekleri karşılamak ve yanıt döndürmek",
+          "Arayüz sağlamak",
+          "Animasyon yapmak"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "İstemci-sunucu iletişiminde hangi protokol yaygın kullanılır?",
+        "options": [
+          "FTP",
+          "HTTP/HTTPS",
+          "SSH",
+          "WebSocket"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 6,
+    "title": "URL ve URI Yapısı",
+    "slug": "url-uri-yapisi",
+    "content": "<h1>URL ve URI Yapısı</h1><p>URL (Uniform Resource Locator), web üzerinde bir kaynağın yerini belirten adrestir. URI (Uniform Resource Identifier) daha genel bir kavramdır.</p><h2>URL Yapısı</h2><p>protocol://hostname:port/path?query#fragment</p><ul><li>protocol: http, https, ftp</li><li>hostname: Alan adı veya IP</li><li>port: 80 (HTTP), 443 (HTTPS)</li><li>path: Sunucudaki dosya yolu</li><li>query: ? ile başlar, parametreler</li><li>fragment: # ile başlar, sayfa içi bölüm</li></ul><h2>URL Encoding</h2><p>Özel karakterler % ile kodlanır: boşluk %20, / %2F, ? %3F</p>",
+    "video_url": "",
+    "code_example": "<script>\n// URL bileşenlerini analiz etme\nconst urlString = \"https://www.kodlab.com:443/egitim/php?seviye=baslangic&sayfa=1#giris\";\n\nconst url = new URL(urlString);\n\nconsole.log(\"Protocol:\", url.protocol);     // https:\nconsole.log(\"Hostname:\", url.hostname);     // www.kodlab.com\nconsole.log(\"Port:\", url.port);             // 443\nconsole.log(\"Path:\", url.pathname);         // /egitim/php\nconsole.log(\"Query:\", url.search);          // ?seviye=baslangic&sayfa=1\nconsole.log(\"Hash:\", url.hash);             // #giris\n\n// URL parametrelerini okuma\nconst params = new URLSearchParams(url.search);\nconsole.log(\"Seviye:\", params.get(\"seviye\"));\nconsole.log(\"Sayfa:\", params.get(\"sayfa\"));\n\n// URL encoding\nconsole.log(encodeURIComponent(\"Merhaba Dünya!\")); // Merhaba%20D%C3%BCnya!\nconsole.log(decodeURIComponent(\"Merhaba%20D%C3%BCnya!\")); // Merhaba Dünya!\n</script>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL",
+    "quiz": [
+      {
+        "question": "URL'de path kısmı neyi belirtir?",
+        "options": [
+          "Protokolü",
+          "Sunucudaki dosya yolunu",
+          "Port numarasını",
+          "Parametreleri"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "URL'de sorgu parametreleri hangi karakterle başlar?",
+        "options": [
+          "#",
+          "?",
+          "&",
+          ":"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "URL encoding'de boşluk karakteri nasıl kodlanır?",
+        "options": [
+          "%20",
+          "+",
+          "_",
+          "-"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 7,
+    "title": "Web Standartları (W3C)",
+    "slug": "web-standartlari-w3c",
+    "content": "<h1>Web Standartları (W3C)</h1><p>W3C (World Wide Web Consortium), web teknolojileri için standartlar belirleyen uluslararası bir kuruluştur. Tim Berners-Lee tarafından 1994'te kurulmuştur.</p><h2>W3C'nin Görevleri</h2><p>HTML, CSS, XML gibi web teknolojileri için standartlar geliştirir. Web erişilebilirliği (WCAG), uluslararasılaştırma, gizlilik, güvenlik gibi alanlarda çalışır.</p><h2>Önemli Standartlar</h2><p>HTML5 (yaşayan standart), CSS3, XML, DOM (Document Object Model), SVG (Scalable Vector Graphics), WCAG (Web Content Accessibility Guidelines)</p><h2>WHATWG</h2><p>WHATWG (Web Hypertext Application Technology Working Group), HTML5 standardını geliştiren gruptur. 2004'te Apple, Mozilla, Opera tarafından kurulmuştur.</p>",
+    "video_url": "",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Web Standartları</title>\n</head>\n<body>\n    <header>\n        <h1>Web Standartları</h1>\n        <nav>\n            <ul>\n                <li><a href=\"#html\">HTML</a></li>\n                <li><a href=\"#css\">CSS</a></li>\n                <li><a href=\"#js\">JavaScript</a></li>\n            </ul>\n        </nav>\n    </header>\n    \n    <main>\n        <article>\n            <h2>Doğru HTML Kullanımı</h2>\n            <!-- Semantik HTML -->\n            <section>\n                <h3>W3C Standartları</h3>\n                <p>Web standartlarına uygun kod yazmak önemlidir.</p>\n            </section>\n        </article>\n    </main>\n    \n    <footer>\n        <p>&copy; 2024 W3C Standartları</p>\n    </footer>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Glossary/W3C",
+    "quiz": [
+      {
+        "question": "W3C açılımı nedir?",
+        "options": [
+          "Web Control Center",
+          "World Wide Web Consortium",
+          "Web Code Council",
+          "World Computer Conference"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "W3C hangi amaçla kurulmuştur?",
+        "options": [
+          "Web standartları belirlemek",
+          "Web sunucuları geliştirmek",
+          "Tarayıcı yapmak",
+          "İnternet sağlamak"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "HTML5 hangi organizasyon tarafından geliştirilmektedir?",
+        "options": [
+          "W3C ve WHATWG",
+          "Sadece W3C",
+          "Sadece WHATWG",
+          "Microsoft"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "order": 8,
+    "title": "Kod Editörü Kurulumu (VS Code)",
+    "slug": "kod-editoru-kurulumu-vscode",
+    "content": "<h1>VS Code Kurulumu</h1><p>Visual Studio Code (VS Code), Microsoft tarafından geliştirilen ücretsiz ve açık kaynaklı bir kod editörüdür.</p><h2>Kurulum Adımları</h2><ol><li>code.visualstudio.com adresinden indirin</li><li>Kurulum sihirbazını çalıştırın</li><li>Kurulum seçeneklerini seçin (Path ekleme, explorer menü)</li><li>VS Code'u başlatın</li></ol><h2>Önerilen Eklentiler</h2><p>Prettier (kod düzenleme), ESLint (JavaScript hata kontrolü), Live Server (canlı önizleme), PHP IntelliSense, MySQL (veritabanı), HTML CSS Support, GitLens (Git entegrasyonu), Thunder Client (API test)</p><h2>Kısayollar</h2><p>Ctrl+P: Dosya aç, Ctrl+Shift+P: Komut paleti, Ctrl+`: Terminal, Ctrl+S: Kaydet, Ctrl+K+C: Yorum satırı, Alt+Z: Satır kaydırma</p>",
+    "video_url": "",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>VS Code Kısayolları</title>\n    <style>\n        body { font-family: Arial, sans-serif; margin: 40px; }\n        table { border-collapse: collapse; width: 100%; }\n        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }\n        th { background: #007acc; color: white; }\n        tr:nth-child(even) { background: #f5f5f5; }\n        kbd {\n            background: #f5f5f5; border: 1px solid #ccc;\n            padding: 2px 8px; border-radius: 4px; font-family: monospace;\n        }\n    </style>\n</head>\n<body>\n    <h1>VS Code Kısayolları</h1>\n    <table>\n        <tr><th>Kısayol</th><th>İşlev</th></tr>\n        <tr><td><kbd>Ctrl+P</kbd></td><td>Dosya aç</td></tr>\n        <tr><td><kbd>Ctrl+Shift+P</kbd></td><td>Komut paleti</td></tr>\n        <tr><td><kbd>Ctrl+`</kbd></td><td>Terminal aç/kapat</td></tr>\n        <tr><td><kbd>Ctrl+S</kbd></td><td>Kaydet</td></tr>\n        <tr><td><kbd>Ctrl+K+C</kbd></td><td>Yorum satırı</td></tr>\n        <tr><td><kbd>Alt+Z</kbd></td><td>Satır kaydırma</td></tr>\n        <tr><td><kbd>Ctrl+D</kbd></td><td>Seçili kelimeyi seç</td></tr>\n        <tr><td><kbd>Ctrl+Shift+L</kbd></td><td>Tüm aynı kelimeleri seç</td></tr>\n    </table>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web",
+    "quiz": [
+      {
+        "question": "VS Code hangi amaçla kullanılır?",
+        "options": [
+          "Web tarayıcısı",
+          "Kod editörü",
+          "Veritabanı",
+          "E-posta istemcisi"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "VS Code'da terminal açmak için hangi kısayol kullanılır?",
+        "options": [
+          "Ctrl+T",
+          "Ctrl+`",
+          "Ctrl+P",
+          "Alt+Z"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "VS Code'da hangi eklenti canlı önizleme sağlar?",
+        "options": [
+          "Prettier",
+          "ESLint",
+          "Live Server",
+          "GitLens"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "order": 9,
+    "title": "İlk Web Sayfanı Oluşturma",
+    "slug": "ilk-web-sayfasi",
+    "content": "<h1>İlk Web Sayfanı Oluşturma</h1><p>Bu derste basit bir HTML sayfası oluşturacağız. HTML, web sayfalarının yapı taşıdır.</p><h2>HTML Temel Yapısı</h2><p>&lt;!DOCTYPE html&gt;: HTML5 belirtimi. &lt;html&gt;: Kök element. &lt;head&gt;: Meta bilgiler. &lt;body&gt;: Görünen içerik.</p><h2>Adımlar</h2><ol><li>Yeni bir dosya oluşturun: index.html</li><li>Temel HTML yapısını yazın</li><li>Başlık ve paragraf ekleyin</li><li>Resim ve bağlantı ekleyin</li><li>Dosyayı tarayıcıda açın</li></ol>",
+    "video_url": "",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>İlk Web Sayfam</title>\n</head>\n<body>\n    <!-- Başlıklar -->\n    <h1>Merhaba Dünya!</h1>\n    <h2>KodLab ile Web Geliştirme</h2>\n    \n    <!-- Paragraf -->\n    <p>Bu benim <strong>ilk web sayfam</strong>. HTML öğreniyorum!</p>\n    <p>Bugün <em>10 derslik</em> Web Temelleri serisine başladım.</p>\n    \n    <!-- Liste -->\n    <h3>Öğrendiklerim:</h3>\n    <ul>\n        <li>HTML yapısı</li>\n        <li>Başlıklar ve paragraflar</li>\n        <li>Listeler</li>\n    </ul>\n    \n    <!-- Sıralı liste -->\n    <h3>Yapılacaklar:</h3>\n    <ol>\n        <li>HTML öğren</li>\n        <li>CSS öğren</li>\n        <li>JavaScript öğren</li>\n    </ol>\n    \n    <!-- Resim -->\n    <img src=\"https://picsum.photos/200/100\" alt=\"Örnek resim\">\n    \n    <!-- Bağlantı -->\n    <p>Daha fazlası için <a href=\"https://kodlab.com\">KodLab</a>'ı ziyaret edin.</p>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Creating_your_first_web_page",
+    "quiz": [
+      {
+        "question": "HTML dosyasının uzantısı nedir?",
+        "options": [
+          ".htm",
+          ".html",
+          ".web",
+          ".page"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "&lt;!DOCTYPE html&gt; bildirimi neyi belirtir?",
+        "options": [
+          "Sayfanın dilini",
+          "HTML5 kullanıldığını",
+          "Sayfanın başlığını",
+          "Karakter setini"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Web sayfasında görünen içerik hangi etiket içine yazılır?",
+        "options": [
+          "&lt;head&gt;",
+          "&lt;body&gt;",
+          "&lt;html&gt;",
+          "&lt;meta&gt;"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "order": 10,
+    "title": "Geliştirici Araçları (DevTools)",
+    "slug": "gelistirici-araclari-devtools",
+    "content": "<h1>Geliştirici Araçları (DevTools)</h1><p>Tarayıcı Geliştirici Araçları, web sayfalarını inceleme, hata ayıklama ve optimize etme için kullanılır.</p><h2>DevTools Panelleri</h2><ul><li><strong>Elements (Öğeler)</strong>: HTML ve CSS inceleme/düzenleme</li><li><strong>Console (Konsol)</strong>: JavaScript hata ayıklama ve test</li><li><strong>Network (Ağ)</strong>: Ağ isteklerini izleme</li><li><strong>Sources (Kaynaklar)</strong>: Dosyaları görüntüleme ve hata ayıklama</li><li><strong>Performance (Performans)</strong>: Sayfa performans analizi</li><li><strong>Application (Uygulama)</strong>: Depolama, Service Worker, Manifest</li></ul><h2>DevTools'u Açma</h2><p>F12 tuşu, Ctrl+Shift+I (Windows) veya Cmd+Opt+I (Mac). Sağ tık &gt; İncele.</p>",
+    "video_url": "",
+    "code_example": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>DevTools Test Sayfası</title>\n    <style>\n        .test { color: blue; font-size: 20px; }\n    </style>\n</head>\n<body>\n    <h1>DevTools Test Sayfası</h1>\n    <p class=\"test\">Bu elementi DevTools ile inceleyin.</p>\n    <button id=\"incele\">Tıkla ve İncele</button>\n    \n    <script>\n        // Konsol testi\n        console.log(\"Bu mesaj konsolda görünür!\");\n        console.warn(\"Bu bir uyarı mesajıdır.\");\n        console.error(\"Bu bir hata mesajıdır.\");\n        \n        // Network testi\n        fetch(\"https://jsonplaceholder.typicode.com/posts/1\")\n            .then(res => res.json())\n            .then(data => console.log(\"Network yanıtı:\", data));\n        \n        // Elements testi\n        document.getElementById(\"incele\").addEventListener(\"click\", function() {\n            this.textContent = \"Tıklandı!\";\n            this.style.background = \"green\";\n            this.style.color = \"white\";\n            console.log(\"Buton tıklandı, stil değişti\");\n        });\n        \n        // Performance testi\n        console.time(\"performansTesti\");\n        let toplam = 0;\n        for (let i = 0; i < 1000000; i++) {\n            toplam += i;\n        }\n        console.timeEnd(\"performansTesti\");\n        console.log(\"Toplam:\", toplam);\n    </script>\n</body>\n</html>",
+    "source_ref": "MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools",
+    "quiz": [
+      {
+        "question": "DevTools hangi tuşla açılır?",
+        "options": [
+          "F5",
+          "F12",
+          "Esc",
+          "Ctrl+D"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "DevTools'da hangi panel ağ isteklerini gösterir?",
+        "options": [
+          "Elements",
+          "Console",
+          "Network",
+          "Sources"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "DevTools'da JavaScript hata ayıklama hangi panelde yapılır?",
+        "options": [
+          "Elements",
+          "Console",
+          "Network",
+          "Performance"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]

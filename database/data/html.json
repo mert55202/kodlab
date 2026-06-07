@@ -1,0 +1,512 @@
+[
+{
+    "order": 1,
+    "title": "HTML Nedir?",
+    "slug": "html-nedir",
+    "content": "<h2>HTML'e Giris</h2><p>HTML (HyperText Markup Language), web sayfalarini olusturmak icin kullanilan standart isaretleme dilidir. Bir programlama dili degil, bir isaretleme dilidir. HTML, web tarayicilarina icerigin nasil yapilandirilacagini soyler.</p><h2>HTML'in Tarihcesi</h2><p>HTML, Tim Berners-Lee tarafindan 1991 yilinda CERN'de gelistirilmistir. Ilk versiyonu sadece metin ve baglantilardan olusuyordu. Gunumuzde HTML5 ile cok daha zengin ve etkilesimli web sayfalari olusturabiliyoruz.</p><h2>HTML Nasil Calisir?</h2><p>HTML belgeleri, etiketler (tags) adi verilen ozel isaretleyiciler kullanir. Tarayici bu etiketleri yorumlar. &lt;h1&gt; en buyuk basligi, &lt;p&gt; paragrafi temsil eder.</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;title&gt;Sayfa Basligi&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;h1&gt;Merhaba Dunya!&lt;/h1&gt;\n    &lt;p&gt;Bu benim ilk HTML sayfam.&lt;/p&gt;\n&lt;/body&gt;\n&lt;/html&gt;</code></pre><div class='note'><strong>Onemli Not:</strong> HTML dosyalari .html veya .htm uzantisiyla kaydedilir.</div><h2>HTML'in Bilesenleri</h2><ul><li><strong>Etiketler (Tags):</strong> &lt;&gt; arasina yazilan anahtar kelimelerdir.</li><li><strong>Elementler:</strong> Acilis etiketi, icerik ve kapanis etiketinden olusan yapilardir.</li><li><strong>Oznitelikler (Attributes):</strong> Etiketlere ek bilgi saglayan yapilardir.</li></ul>",
+    "video_url": "https://www.youtube.com/embed/GEM5Lp7Nc-M",
+    "code_example": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Ilk Sayfam</title>\n</head>\n<body>\n    <h1>Merhaba HTML!</h1>\n    <p>HTML ogrenmeye hos geldiniz.</p>\n</body>\n</html>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "HTML acilimi nedir?", "options": {"a": "HyperText Markup Language", "b": "HighText Machine Language", "c": "HyperTool Markup Language", "d": "HyperText Machine Learning"}, "correct_answer": "a", "explanation": "HTML, HyperText Markup Language anlamina gelir.", "source": "MDN"},
+      {"question_text": "HTML bir programlama dili midir?", "options": {"a": "Evet, tam bir programlama dilidir", "b": "Hayir, bir isaretleme dilidir", "c": "Evet, istemci tarafinda calisir", "d": "Hayir, bir stil dilidir"}, "correct_answer": "b", "explanation": "HTML bir isaretleme dilidir, programlama dili degildir.", "source": "W3Schools"},
+      {"question_text": "HTML dosyalari hangi uzantiyla kaydedilir?", "options": {"a": ".txt", "b": ".html veya .htm", "c": ".doc", "d": ".web"}, "correct_answer": "b", "explanation": "HTML dosyalari .html veya .htm uzantisiyla kaydedilir.", "source": "W3Schools"},
+      {"question_text": "HTML'i kim gelistirmistir?", "options": {"a": "Bill Gates", "b": "Steve Jobs", "c": "Tim Berners-Lee", "d": "Larry Page"}, "correct_answer": "c", "explanation": "HTML, Tim Berners-Lee tarafindan 1991'de gelistirilmistir.", "source": "MDN"},
+      {"question_text": "Asagidakilerden hangisi HTML'in bileseni degildir?", "options": {"a": "Etiketler", "b": "Elementler", "c": "Degiskenler", "d": "Oznitelikler"}, "correct_answer": "c", "explanation": "Degiskenler programlama dillerine ait bir kavramdir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 2,
+    "title": "HTML Editorleri",
+    "slug": "html-editorleri",
+    "content": "<h2>HTML Editorleri</h2><p>HTML kodlari yazmak icin cesitli editorler kullanabiliriz. Not defterinden, gelismis IDE'lere kadar bircok secenek bulunmaktadir.</p><h2>VS Code (Visual Studio Code)</h2><p>Microsoft tarafindan gelistirilen VS Code, ucretsiz ve acik kaynakli bir kod editorudur. HTML gelistirme icin en populer araclardan biridir.</p><h3>VS Code Ozellikleri:</h3><ul><li><strong>Emmet Deste gi:</strong> Kisa kodlarla hizli HTML yazimi</li><li><strong>Eklentiler:</strong> Live Server, Prettier</li><li><strong>Renk Kodlamasi:</strong> Sozdizimi vurgulama</li></ul><pre><code>&lt;!-- VS Code'da ! yazip Tab tusuna basin --&gt;\n&lt;!DOCTYPE html&gt;\n&lt;html lang=&quot;tr&quot;&gt;\n&lt;head&gt;\n    &lt;meta charset=&quot;UTF-8&quot;&gt;\n    &lt;title&gt;VS Code ile HTML&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;/body&gt;\n&lt;/html&gt;</code></pre><h2>Diger Editorler</h2><ul><li><strong>Sublime Text:</strong> Hizli ve hafif</li><li><strong>Atom:</strong> Acik kaynak</li><li><strong>Notepad++:</strong> Ucretsiz</li></ul><div class='tip'><strong>Ipucu:</strong> Yeni baslayanlar icin VS Code en iyi secenektir.</div>",
+    "video_url": "https://www.youtube.com/embed/GEM5Lp7Nc-M",
+    "code_example": "<!DOCTYPE html>\n<html lang=&quot;tr&quot;>\n<head>\n    <meta charset=&quot;UTF-8&quot;>\n    <title>Editor Test</title>\n</head>\n<body>\n    <h1>HTML Editorum</h1>\n    <p>VS Code ile yazildi.</p>\n</body>\n</html>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Asagidakilerden hangisi HTML editoru degildir?", "options": {"a": "VS Code", "b": "Sublime Text", "c": "Microsoft Excel", "d": "Atom"}, "correct_answer": "c", "explanation": "Excel bir hesap tablosu programidir.", "source": "W3Schools"},
+      {"question_text": "VS Code'da HTML iskeletini hizlica olusturmak icin hangisi kullanilir?", "options": {"a": "html + Enter", "b": "! + Tab", "c": "doc + Tab", "d": "Ctrl+H"}, "correct_answer": "b", "explanation": "! yazip Tab tusuna basmak HTML5 iskeletini olusturur.", "source": "W3Schools"},
+      {"question_text": "VS Code hangi sirket tarafindan gelistirilmistir?", "options": {"a": "Google", "b": "Microsoft", "c": "Apple", "d": "JetBrains"}, "correct_answer": "b", "explanation": "VS Code, Microsoft tarafindan gelistirilmistir.", "source": "W3Schools"},
+      {"question_text": "HTML dosyalarini calistirmak icin hangisi yapilir?", "options": {"a": "Derlemek", "b": "Tarayicida acmak", "c": "Sunucuya yuklemek", "d": "Donusturmek"}, "correct_answer": "b", "explanation": "HTML dosyalari tarayicida acilarak calistirilir.", "source": "MDN"},
+      {"question_text": "Hangisi VS Code ozelligi degildir?", "options": {"a": "Emmet destegi", "b": "Eklenti yukleme", "c": "Sadece ucretli surum", "d": "Syntax highlighting"}, "correct_answer": "c", "explanation": "VS Code tamamen ucretsizdir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 3,
+    "title": "HTML Temel Yapisi",
+    "slug": "html-temel-yapisi",
+    "content": "<h2>HTML Temel Yapisi</h2><p>Her HTML belgesi belirli bir yapiya sahiptir. HTML belgeleri, acilis ve kapanis etiketlerinden olusan elementlerle yapilandirilir.</p><h2>DOCTYPE Bildirimi</h2><p>&lt;!DOCTYPE html&gt; bildirimi, tarayiciya belgenin HTML5 ile yazildigini soyler.</p><h2>HTML Elementi</h2><p>&lt;html&gt; tum HTML belgesini saran kok elementtir. lang ozniteligi ile sayfanin dilini belirtebilirsiniz.</p><h2>Head ve Body</h2><p>&lt;head&gt; meta bilgileri icerir. &lt;body&gt; ise sayfada gorunen icerigi kapsar.</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html lang=&quot;tr&quot;&gt;\n&lt;head&gt;\n    &lt;meta charset=&quot;UTF-8&quot;&gt;\n    &lt;title&gt;Sayfa Basligi&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;h1&gt;Hos Geldiniz&lt;/h1&gt;\n    &lt;p&gt;Bu bir HTML belgesidir.&lt;/p&gt;\n&lt;/body&gt;\n&lt;/html&gt;</code></pre><div class='important'><strong>Onemli:</strong> Bazi elementler (br, img, input) kapanis etiketi gerektirmez. Bunlara void element denir.</div>",
+    "video_url": "https://www.youtube.com/embed/GEM5Lp7Nc-M",
+    "code_example": "<!DOCTYPE html>\n<html lang=&quot;tr&quot;>\n<head>\n    <meta charset=&quot;UTF-8&quot;>\n    <title>Temel Yapi</title>\n</head>\n<body>\n    <h1>Ilk Baslik</h1>\n    <p>Ilk paragraf</p>\n</body>\n</html>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "HTML5 belgesinin basinda hangi bildirim bulunmalidir?", "options": {"a": "<html>", "b": "<head>", "c": "<!DOCTYPE html>", "d": "<body>"}, "correct_answer": "c", "explanation": "<!DOCTYPE html> HTML5 ile yazildigini belirtir.", "source": "W3Schools"},
+      {"question_text": "Sayfada gorunen icerik hangi elementin icine yazilir?", "options": {"a": "<head>", "b": "<title>", "c": "<body>", "d": "<meta>"}, "correct_answer": "c", "explanation": "<body> sayfada goruntulenen icerigi kapsar.", "source": "W3Schools"},
+      {"question_text": "Hangisi bir void elementtir?", "options": {"a": "<p>", "b": "<div>", "c": "<br>", "d": "<h1>"}, "correct_answer": "c", "explanation": "<br> kapanis etiketi gerektirmez.", "source": "MDN"},
+      {"question_text": "Sayfanin dilini belirtmek icin hangi oznitelik kullanilir?", "options": {"a": "charset", "b": "lang", "c": "dir", "d": "type"}, "correct_answer": "b", "explanation": "lang ozniteligi sayfanin dilini belirtir.", "source": "MDN"},
+      {"question_text": "<head> elementi ne icin kullanilir?", "options": {"a": "Icerik gostermek", "b": "Meta bilgileri icin", "c": "Gorsel yuklemek", "d": "JS kodlari icin"}, "correct_answer": "b", "explanation": "<head> meta bilgileri icerir.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 4,
+    "title": "Baslik Etiketleri",
+    "slug": "baslik-etiketleri",
+    "content": "<h2>Baslik Etiketleri</h2><p>HTML'de h1'den h6'ya kadar alti farkli baslik seviyesi bulunmaktadir. &lt;h1&gt; en onemli, &lt;h6&gt; en az onemli basliktir.</p><pre><code>&lt;h1&gt;Ana Baslik&lt;/h1&gt;\n&lt;h2&gt;Bolum Basligi&lt;/h2&gt;\n&lt;h3&gt;Alt Bolum&lt;/h3&gt;\n&lt;h4&gt;Dorduncu Seviye&lt;/h4&gt;\n&lt;h5&gt;Besinci Seviye&lt;/h5&gt;\n&lt;h6&gt;Altinci Seviye&lt;/h6&gt;</code></pre><h2>Kullanim Kurallari</h2><ul><li>Sayfada yalnizca bir tane &lt;h1&gt; olmali</li><li>Basliklar sirali kullanilmali</li><li>SEO icin baslik yapisi onemlidir</li></ul><div class='note'><strong>Not:</strong> Basliklari goruntusu icin degil, anlamsal butunluk icin kullanin.</div>",
+    "video_url": "",
+    "code_example": "<h1>Web Siteme Hos Geldiniz</h1>\n<h2>Hakkimda</h2>\n<h3>Egitim</h3>\n<h3>Deneyim</h3>\n<h2>Projeler</h2>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Kac farkli baslik seviyesi vardir?", "options": {"a": "3", "b": "4", "c": "5", "d": "6"}, "correct_answer": "d", "explanation": "h1'den h6'ya kadar 6 seviye vardir.", "source": "W3Schools"},
+      {"question_text": "En onemli baslik hangisidir?", "options": {"a": "<h6>", "b": "<h1>", "c": "<h3>", "d": "<h4>"}, "correct_answer": "b", "explanation": "<h1> en yuksek oneme sahiptir.", "source": "W3Schools"},
+      {"question_text": "SEO icin basliklar nasil kullanilmalidir?", "options": {"a": "Hepsi h1", "b": "Sirali kullanilmali", "c": "Sadece dekorasyon", "d": "h6 en onemli"}, "correct_answer": "b", "explanation": "Basliklar h1'den h6'ya sirali kullanilmalidir.", "source": "MDN"},
+      {"question_text": "Sayfada kac tane <h1> kullanilmasi onerilir?", "options": {"a": "Hic", "b": "En az 3", "c": "Yalnizca 1", "d": "Sinirsiz"}, "correct_answer": "c", "explanation": "Sayfada yalnizca bir tane <h1> onerilir.", "source": "MDN"},
+      {"question_text": "Hangisi dogru baslik kullanimidir?", "options": {"a": "<h1>Baslik</h3>", "b": "<H1>Baslik</h1>", "c": "<h1>Baslik</h1>", "d": "<h1>Baslik"}, "correct_answer": "c", "explanation": "Acilis ve kapanis etiketleri eslesmeli.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 5,
+    "title": "Paragraf ve Metin Bicimlendirme",
+    "slug": "paragraf-ve-metin-bicimlendirme",
+    "content": "<h2>Paragraf Etiketi</h2><p>&lt;p&gt; etiketi paragraflari tanimlar. Her paragraf otomatik bosluk alir.</p><h2>Metin Bicimlendirme</h2><ul><li>&lt;b&gt;: <b>Kalin</b> (gorsel)</li><li>&lt;strong&gt;: <strong>Onemli</strong> (anlamsal)</li><li>&lt;i&gt;: <i>Italik</i> (gorsel)</li><li>&lt;em&gt;: <em>Vurgu</em> (anlamsal)</li><li>&lt;u&gt;: <u>Alti cizili</u></li><li>&lt;mark&gt;: <mark>Isaretli</mark></li><li>&lt;small&gt;: <small>Kucuk</small></li><li>&lt;sub&gt;: Alt simge (H<sub>2</sub>O)</li><li>&lt;sup&gt;: Ust simge (X<sup>2</sup>)</li></ul><pre><code>&lt;p&gt;&lt;strong&gt;Onemli:&lt;/strong&gt; Bunu &lt;em&gt;unutmayin&lt;/em&gt;.&lt;/p&gt;\n&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O ve 10&lt;sup&gt;2&lt;/sup&gt;=100&lt;/p&gt;</code></pre><h2>strong vs b</h2><p>&lt;strong&gt; anlamsaldir, ekran okuyucular tarafindan ozel yorumlanir. &lt;b&gt; sadece gorseldir.</p>",
+    "video_url": "",
+    "code_example": "<p>Bu bir <strong>onemli</strong> paragraftir.</p>\n<p><em>Vurgulanan</em> ve <mark>isaretli</mark> metin.</p>\n<p>H<sub>2</sub>O ve 10<sup>3</sup> = 1000</p>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Anlamsal olarak onemli metin icin hangi etiket kullanilir?", "options": {"a": "<b>", "b": "<strong>", "c": "<i>", "d": "<u>"}, "correct_answer": "b", "explanation": "<strong> anlamsal olarak onemli metin icindir.", "source": "MDN"},
+      {"question_text": "Alt simge (subscript) icin hangisi kullanilir?", "options": {"a": "<sup>", "b": "<small>", "c": "<sub>", "d": "<mark>"}, "correct_answer": "c", "explanation": "<sub> alt simge icindir.", "source": "W3Schools"},
+      {"question_text": "<em> etiketi ne icin kullanilir?", "options": {"a": "Kalin", "b": "Vurgu", "c": "Alti cizili", "d": "Kucuk"}, "correct_answer": "b", "explanation": "<em> vurgulanan metin icindir.", "source": "MDN"},
+      {"question_text": "Paragraf hangi etiketle olusturulur?", "options": {"a": "<paragraph>", "b": "<text>", "c": "<p>", "d": "<pr>"}, "correct_answer": "c", "explanation": "<p> paragraf icindir.", "source": "W3Schools"},
+      {"question_text": "Ust simge ornegi hangisidir?", "options": {"a": "H<sub>2</sub>O", "b": "10<sup>3</sup>", "c": "<mark>metin</mark>", "d": "<small>metin</small>"}, "correct_answer": "b", "explanation": "<sup> ust simge icindir.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 6,
+    "title": "Baglantilar (Linkler)",
+    "slug": "baglantilar-linkler",
+    "content": "<h2>HTML Baglantilari</h2><p>&lt;a&gt; (anchor) etiketi baglanti olusturmak icin kullanilir. href ozniteligi hedef adresi belirtir.</p><pre><code>&lt;!-- Mutlak URL --&gt;\n&lt;a href=&quot;https://www.google.com&quot;&gt;Google'a Git&lt;/a&gt;\n\n&lt;!-- Goreceli URL --&gt;\n&lt;a href=&quot;/hakkimda.html&quot;&gt;Hakkimda&lt;/a&gt;\n\n&lt;!-- E-posta --&gt;\n&lt;a href=&quot;mailto:ornek@mail.com&quot;&gt;E-posta Gonder&lt;/a&gt;\n\n&lt;!-- Yeni sekme --&gt;\n&lt;a href=&quot;https://google.com&quot; target=&quot;_blank&quot;&gt;Yeni Sekme&lt;/a&gt;</code></pre><h2>target Oznitelikleri</h2><ul><li><strong>_self:</strong> Ayni sekme (varsayilan)</li><li><strong>_blank:</strong> Yeni sekme</li></ul><div class='note'><strong>Not:</strong> target=&quot;_blank&quot; ile rel=&quot;noopener noreferrer&quot; kullanin.</div>",
+    "video_url": "https://www.youtube.com/embed/GEM5Lp7Nc-M",
+    "code_example": "<a href=&quot;https://www.google.com&quot; target=&quot;_blank&quot;>Google (yeni sekme)</a><br>\n<a href=&quot;mailto:info@site.com&quot;>E-posta Gonder</a><br>\n<a href=&quot;#footer&quot;>Sayfa Altina Git</a>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Baglantinin hedef adresi hangi oznitelikle belirtilir?", "options": {"a": "src", "b": "link", "c": "href", "d": "url"}, "correct_answer": "c", "explanation": "href ozniteligi adresi belirtir.", "source": "W3Schools"},
+      {"question_text": "Yeni sekmede acmak icin hangi target kullanilir?", "options": {"a": "_self", "b": "_blank", "c": "_parent", "d": "_top"}, "correct_answer": "b", "explanation": "_blank yeni sekmede acar.", "source": "W3Schools"},
+      {"question_text": "E-posta baglantisi icin href'te hangi protokol kullanilir?", "options": {"a": "http://", "b": "https://", "c": "mailto:", "d": "email:"}, "correct_answer": "c", "explanation": "mailto: e-posta protokoludur.", "source": "MDN"},
+      {"question_text": "Varsayilan target degeri hangisidir?", "options": {"a": "_blank", "b": "_self", "c": "_parent", "d": "_top"}, "correct_answer": "b", "explanation": "_self varsayilandir, ayni sekmede acar.", "source": "W3Schools"},
+      {"question_text": "Baglanti etiketi hangisidir?", "options": {"a": "<link>", "b": "<a>", "c": "<href>", "d": "<nav>"}, "correct_answer": "b", "explanation": "<a> (anchor) baglanti etiketidir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 7,
+    "title": "Gorseller",
+    "slug": "gorseller",
+    "content": "<h2>HTML Gorselleri</h2><p>&lt;img&gt; etiketi gorsel eklemek icin kullanilir. Void elementtir, kapanis etiketi gerektirmez.</p><h2>src ve alt</h2><p><strong>src:</strong> Gorselin yolunu belirtir.<br><strong>alt:</strong> Gorsel yuklenemezse gosterilecek alternatif metin.</p><pre><code>&lt;img src=&quot;resim.jpg&quot; alt=&quot;Aciklama&quot;&gt;\n&lt;img src=&quot;https://example.com/resim.png&quot; width=&quot;500&quot; height=&quot;300&quot;&gt;</code></pre><h2>Desteklenen Formatlar</h2><ul><li><strong>JPEG:</strong> Fotograflar icin</li><li><strong>PNG:</strong> Seffaflik destegi</li><li><strong>GIF:</strong> Animasyon</li><li><strong>SVG:</strong> Vektor</li><li><strong>WebP:</strong> Modern format</li></ul><div class='tip'><strong>Ipucu:</strong> Her zaman alt metni ekleyin. SEO ve erisilebilirlik icin onemlidir.</div>",
+    "video_url": "https://www.youtube.com/embed/GEM5Lp7Nc-M",
+    "code_example": "<img src=&quot;logo.png&quot; alt=&quot;Sirket Logosu&quot; width=&quot;200&quot; height=&quot;100&quot;>\n<img src=&quot;https://picsum.photos/400/300&quot; alt=&quot;Rastgele gorsel&quot;>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Gorsel eklemek icin hangi etiket kullanilir?", "options": {"a": "<image>", "b": "<img>", "c": "<picture>", "d": "<src>"}, "correct_answer": "b", "explanation": "<img> gorsel ekler.", "source": "W3Schools"},
+      {"question_text": "Alternatif metin hangi oznitelikle belirtilir?", "options": {"a": "title", "b": "src", "c": "alt", "d": "text"}, "correct_answer": "c", "explanation": "alt alternatif metindir.", "source": "W3Schools"},
+      {"question_text": "Hangisi gorsel formati degildir?", "options": {"a": "JPEG", "b": "PNG", "c": "MP3", "d": "WebP"}, "correct_answer": "c", "explanation": "MP3 ses formatidir.", "source": "MDN"},
+      {"question_text": "<img> icin hangisi dogrudur?", "options": {"a": "Kapanis etiketi gerekir", "b": "Void elementtir", "c": "Sadece CSS ile kullanilir", "d": "Mecburi JPEG"}, "correct_answer": "b", "explanation": "<img> void elementtir, kapanis etiketi gerekmez.", "source": "MDN"},
+      {"question_text": "Hangi format seffaflik destegi sunar?", "options": {"a": "JPEG", "b": "GIF", "c": "PNG", "d": "MP4"}, "correct_answer": "c", "explanation": "PNG seffaflik (alfa kanali) destegi sunar.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 8,
+    "title": "Listeler",
+    "slug": "listeler",
+    "content": "<h2>HTML Listeleri</h2><p>UC tur liste vardir: sirasiz (ul), sirali (ol) ve tanim listeleri (dl).</p><h2>Sirasiz Listeler</h2><pre><code>&lt;ul&gt;\n    &lt;li&gt;Elma&lt;/li&gt;\n    &lt;li&gt;Armut&lt;/li&gt;\n    &lt;li&gt;Muz&lt;/li&gt;\n&lt;/ul&gt;</code></pre><h2>Sirali Listeler</h2><pre><code>&lt;ol type=&quot;A&quot;&gt;\n    &lt;li&gt;Ilk adim&lt;/li&gt;\n    &lt;li&gt;Ikinci adim&lt;/li&gt;\n&lt;/ol&gt;</code></pre><h2>Tanim Listeleri</h2><pre><code>&lt;dl&gt;\n    &lt;dt&gt;HTML&lt;/dt&gt;\n    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;\n&lt;/dl&gt;</code></pre><div class='note'><strong>Not:</strong> type degerleri: 1, A, a, I, i.</div>",
+    "video_url": "",
+    "code_example": "<ol>\n    <li>HTML ogren</li>\n    <li>CSS ogren</li>\n    <li>Proje yap</li>\n</ol>\n<ul>\n    <li>Sut</li>\n    <li>Ekmek</li>\n    <li>Yumurta</li>\n</ul>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Sirasiz liste hangi etiketle olusturulur?", "options": {"a": "<ol>", "b": "<ul>", "c": "<li>", "d": "<dl>"}, "correct_answer": "b", "explanation": "<ul> sirasiz listedir.", "source": "W3Schools"},
+      {"question_text": "Tanim listesinde terim hangi etiketle belirtilir?", "options": {"a": "<dd>", "b": "<dt>", "c": "<dl>", "d": "<term>"}, "correct_answer": "b", "explanation": "<dt> (definition term) terimdir.", "source": "MDN"},
+      {"question_text": "type='I' hangi numaralandirmayi saglar?", "options": {"a": "Sayisal", "b": "Buyuk harf", "c": "Buyuk Roma", "d": "Kucuk Roma"}, "correct_answer": "c", "explanation": "I = Buyuk Roma rakamlari.", "source": "W3Schools"},
+      {"question_text": "Liste ogesi hangi etiketle olusturulur?", "options": {"a": "<list>", "b": "<li>", "c": "<item>", "d": "<dd>"}, "correct_answer": "b", "explanation": "<li> (list item) liste ogesidir.", "source": "W3Schools"},
+      {"question_text": "<dl> hangi liste turudur?", "options": {"a": "Sirali", "b": "Sirasiz", "c": "Tanim", "d": "Ic ice"}, "correct_answer": "c", "explanation": "<dl> tanim listesidir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 9,
+    "title": "Tablolar",
+    "slug": "tablolar",
+    "content": "<h2>HTML Tablolari</h2><p>&lt;table&gt; verileri satir ve sutun halinde duzenler.</p><h2>Temel Tablo Yapisi</h2><ul><li>&lt;table&gt;: Tablo</li><li>&lt;tr&gt;: Satir</li><li>&lt;th&gt;: Baslik hucre</li><li>&lt;td&gt;: Veri hucre</li></ul><pre><code>&lt;table border=&quot;1&quot;&gt;\n    &lt;tr&gt;\n        &lt;th&gt;Ad&lt;/th&gt;&lt;th&gt;Yas&lt;/th&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;td&gt;Ali&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;\n    &lt;/tr&gt;\n&lt;/table&gt;</code></pre><h2>colspan ve rowspan</h2><p><strong>colspan:</strong> Birden fazla sutun birlestirme<br><strong>rowspan:</strong> Birden fazla satir birlestirme</p><div class='note'><strong>Not:</strong> Tablolari sayfa duzeni icin kullanmayin, sadece veri icin kullanin.</div>",
+    "video_url": "",
+    "code_example": "<table border=&quot;1&quot;>\n    <tr><th colspan=&quot;2&quot;>Ders Programi</th></tr>\n    <tr><td>Pazartesi</td><td>HTML</td></tr>\n    <tr><td>Sali</td><td>CSS</td></tr>\n</table>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Baslik hucreleri hangi etiketle olusturulur?", "options": {"a": "<td>", "b": "<th>", "c": "<tr>", "d": "<thead>"}, "correct_answer": "b", "explanation": "<th> baslik hucreleridir.", "source": "W3Schools"},
+      {"question_text": "Birden fazla sutun birlestirmek icin hangisi kullanilir?", "options": {"a": "rowspan", "b": "colspan", "c": "merge", "d": "span"}, "correct_answer": "b", "explanation": "colspan sutun birlestirir.", "source": "W3Schools"},
+      {"question_text": "Tablo satiri hangi etiketle olusturulur?", "options": {"a": "<td>", "b": "<th>", "c": "<tr>", "d": "<table>"}, "correct_answer": "c", "explanation": "<tr> (table row) satirdir.", "source": "W3Schools"},
+      {"question_text": "Tablolar hangi amacla kullanilmalidir?", "options": {"a": "Sayfa duzeni", "b": "Veri sunumu", "c": "Menu", "d": "Form duzeni"}, "correct_answer": "b", "explanation": "Tablolar sadece veri sunumu icindir.", "source": "MDN"},
+      {"question_text": "rowspan='2' ne anlama gelir?", "options": {"a": "2 sutun", "b": "2 satir", "c": "2px kenarlik", "d": "2 hucre"}, "correct_answer": "b", "explanation": "rowspan satir birlestirir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 10,
+    "title": "Div ve Span",
+    "slug": "div-ve-span",
+    "content": "<h2>Div ve Span</h2><p>&lt;div&gt; blok, &lt;span&gt; inline elementtir.</p><h2>Div (Block)</h2><p>Div bulundugu satirin tamamini kaplar. Bolumleri gruplamak icin kullanilir.</p><pre><code>&lt;div style=&quot;background: #f0f0f0; padding: 20px;&quot;&gt;\n    &lt;h2&gt;Baslik&lt;/h2&gt;\n    &lt;p&gt;Paragraf&lt;/p&gt;\n&lt;/div&gt;</code></pre><h2>Span (Inline)</h2><p>Span sadece icerigi kadar yer kaplar. Metin icinde belirli bolumleri isaretler.</p><pre><code>&lt;p&gt;&lt;span style=&quot;color: red;&quot;&gt;kirmizi&lt;/span&gt; metin&lt;/p&gt;</code></pre><h2>Farklar</h2><p>Div tum satiri kaplar, span icerigi kadar. Div blok, span inline elementtir.</p>",
+    "video_url": "",
+    "code_example": "<div style=&quot;border: 1px solid #ccc; padding: 10px;&quot;>\n    <h3>Blog Gonderisi</h3>\n    <p>Bu bir <span style=&quot;font-weight: bold;&quot;>onemli</span> gonderidir.</p>\n</div>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "<div> hangi seviye elementtir?", "options": {"a": "Inline", "b": "Block", "c": "Inline-block", "d": "Flex"}, "correct_answer": "b", "explanation": "<div> blok seviyesi elementtir.", "source": "W3Schools"},
+      {"question_text": "<span> ne kadar yer kaplar?", "options": {"a": "Tum satiri", "b": "Icerigi kadar", "c": "Ust elementi", "d": "Yarim sayfa"}, "correct_answer": "b", "explanation": "<span> inline oldugu icin icerigi kadar yer kaplar.", "source": "W3Schools"},
+      {"question_text": "Hangisi dogrudur?", "options": {"a": "Div inline, span block", "b": "Div block, span inline", "c": "Ikisi de block", "d": "Ikisi de inline"}, "correct_answer": "b", "explanation": "Div block, span inline elementtir.", "source": "MDN"},
+      {"question_text": "HTML5'te div yerine hangisi anlamsaldir?", "options": {"a": "<span>", "b": "<b>", "c": "<section>", "d": "<i>"}, "correct_answer": "c", "explanation": "<section> anlamsal bir elementtir.", "source": "MDN"},
+      {"question_text": "Metin icinde bolum isaretlemek icin hangisi kullanilir?", "options": {"a": "<div>", "b": "<span>", "c": "<section>", "d": "<article>"}, "correct_answer": "b", "explanation": "<span> metin ici isaretleme icindir.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 11,
+    "title": "HTML5 Semantic Elements",
+    "slug": "html5-semantic-elements",
+    "content": "<h2>Semantic Elementler</h2><p>HTML5 ile gelen anlamsal elementler sayfa yapisini daha anlasilir yapar.</p><h2>Onemli Semantic Elementler</h2><ul><li><strong>&lt;header&gt;:</strong> Baslik, logo</li><li><strong>&lt;nav&gt;:</strong> Navigasyon</li><li><strong>&lt;main&gt;:</strong> Ana icerik (1 tane)</li><li><strong>&lt;section&gt;:</strong> Bolum</li><li><strong>&lt;article&gt;:</strong> Bagimsiz icerik</li><li><strong>&lt;aside&gt;:</strong> Yan icerik</li><li><strong>&lt;footer&gt;:</strong> Alt bilgi</li></ul><pre><code>&lt;body&gt;\n    &lt;header&gt;\n        &lt;h1&gt;Web Sitem&lt;/h1&gt;\n        &lt;nav&gt;&lt;a href=&quot;#&quot;&gt;Ana Sayfa&lt;/a&gt;&lt;/nav&gt;\n    &lt;/header&gt;\n    &lt;main&gt;\n        &lt;article&gt;\n            &lt;h2&gt;Blog&lt;/h2&gt;\n            &lt;p&gt;Icerik...&lt;/p&gt;\n        &lt;/article&gt;\n    &lt;/main&gt;\n    &lt;footer&gt;&lt;p&gt;&amp;copy; 2025&lt;/p&gt;&lt;/footer&gt;\n&lt;/body&gt;</code></pre><div class='note'>Semantic elementler SEO ve erisilebilirlik icin onemlidir.</div>",
+    "video_url": "https://www.youtube.com/embed/GEM5Lp7Nc-M",
+    "code_example": "<article>\n    <header>\n        <h2>HTML5 Semantic Elements</h2>\n        <p>Yayin: 01.01.2025</p>\n    </header>\n    <section>\n        <p>Semantic elementler sayfamizi anlamli kilar.</p>\n    </section>\n    <footer>\n        <p>Yazar: Ahmet</p>\n    </footer>\n</article>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Hangisi semantic element degildir?", "options": {"a": "<header>", "b": "<nav>", "c": "<div>", "d": "<article>"}, "correct_answer": "c", "explanation": "<div> semantic degildir.", "source": "W3Schools"},
+      {"question_text": "Kac tane <main> olabilir?", "options": {"a": "Sinirsiz", "b": "2", "c": "1", "d": "Hic"}, "correct_answer": "c", "explanation": "Sayfada 1 tane <main> olmali.", "source": "MDN"},
+      {"question_text": "Navigasyon hangi elementle yapilir?", "options": {"a": "<header>", "b": "<nav>", "c": "<section>", "d": "<aside>"}, "correct_answer": "b", "explanation": "<nav> navigasyon icindir.", "source": "W3Schools"},
+      {"question_text": "Bagimsiz icerik hangi elementtir?", "options": {"a": "<section>", "b": "<aside>", "c": "<article>", "d": "<figure>"}, "correct_answer": "c", "explanation": "<article> bagimsiz icerik icindir.", "source": "MDN"},
+      {"question_text": "Semantic elementler hangi acidan onemlidir?", "options": {"a": "Gorsel", "b": "SEO ve erisilebilirlik", "c": "Hiz", "d": "Guvenlik"}, "correct_answer": "b", "explanation": "SEO ve erisilebilirlik icin onemlidir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 12,
+    "title": "Formlar - Giris",
+    "slug": "formlar-giris",
+    "content": "<h2>HTML Formlari</h2><p>&lt;form&gt; ile kullanicidan veri toplanir. action (hedef) ve method (GET/POST) oznitelikleri vardir.</p><pre><code>&lt;form action=&quot;/kaydet&quot; method=&quot;POST&quot;&gt;\n    &lt;label for=&quot;ad&quot;&gt;Ad:&lt;/label&gt;\n    &lt;input type=&quot;text&quot; id=&quot;ad&quot; name=&quot;ad&quot;&gt;\n    &lt;label for=&quot;email&quot;&gt;E-posta:&lt;/label&gt;\n    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;\n    &lt;label for=&quot;sifre&quot;&gt;Sifre:&lt;/label&gt;\n    &lt;input type=&quot;password&quot; id=&quot;sifre&quot; name=&quot;sifre&quot;&gt;\n    &lt;button type=&quot;submit&quot;&gt;Gonder&lt;/button&gt;\n&lt;/form&gt;</code></pre><h2>Method</h2><p><strong>GET:</strong> Veriler URL'de gorunur<br><strong>POST:</strong> Veriler gizli gonderilir</p><div class='note'>Her input icin <label> ekleyin, for ile id eslesmeli.</div>",
+    "video_url": "https://www.youtube.com/embed/ok-plXXHlWw",
+    "code_example": "<form action=&quot;/kayit&quot; method=&quot;POST&quot;>\n    <label>Kullanici: <input type=&quot;text&quot; name=&quot;kullanici&quot;></label><br>\n    <label>Sifre: <input type=&quot;password&quot; name=&quot;sifre&quot;></label><br>\n    <button>Giris Yap</button>\n</form>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Form verilerinin adresi hangi oznitelikle belirtilir?", "options": {"a": "method", "b": "action", "c": "target", "d": "href"}, "correct_answer": "b", "explanation": "action ozniteligi hedef adrestir.", "source": "W3Schools"},
+      {"question_text": "Sifre icin hangi input tipi kullanilir?", "options": {"a": "text", "b": "email", "c": "password", "d": "hidden"}, "correct_answer": "c", "explanation": "password sifre karakterlerini gizler.", "source": "W3Schools"},
+      {"question_text": "Hangi method verileri URL'de gosterir?", "options": {"a": "POST", "b": "GET", "c": "PUT", "d": "DELETE"}, "correct_answer": "b", "explanation": "GET URL'de gosterir.", "source": "MDN"},
+      {"question_text": "label'in for ozniteligi hangisiyle eslesmeli?", "options": {"a": "name", "b": "type", "c": "id", "d": "class"}, "correct_answer": "c", "explanation": "for, input'un id'si ile eslesmeli.", "source": "MDN"},
+      {"question_text": "Hangisi bir input tipi degildir?", "options": {"a": "text", "b": "email", "c": "link", "d": "password"}, "correct_answer": "c", "explanation": "link input tipi yoktur.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 13,
+    "title": "Form Input Tipleri",
+    "slug": "form-input-tipleri",
+    "content": "<h2>HTML5 Input Tipleri</h2><p>HTML5 ile bircok yeni input tipi gelmistir.</p><pre><code>&lt;!-- Sayi --&gt;\n&lt;input type=&quot;number&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;\n\n&lt;!-- Tarih --&gt;\n&lt;input type=&quot;date&quot;&gt;\n&lt;input type=&quot;time&quot;&gt;\n\n&lt;!-- Renk --&gt;\n&lt;input type=&quot;color&quot;&gt;\n\n&lt;!-- Slider --&gt;\n&lt;input type=&quot;range&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;\n\n&lt;!-- Dosya --&gt;\n&lt;input type=&quot;file&quot; accept=&quot;image/*&quot;&gt;\n\n&lt;!-- Telefon, URL, Arama --&gt;\n&lt;input type=&quot;tel&quot;&gt;\n&lt;input type=&quot;url&quot;&gt;\n&lt;input type=&quot;search&quot;&gt;\n\n&lt;!-- Secim --&gt;\n&lt;input type=&quot;checkbox&quot;&gt; Kabul\n&lt;input type=&quot;radio&quot; name=&quot;cinsiyet&quot;&gt; Erkek</code></pre>",
+    "video_url": "https://www.youtube.com/embed/ok-plXXHlWw",
+    "code_example": "<form>\n    <label>Dogum: <input type=&quot;date&quot;></label><br>\n    <label>Renk: <input type=&quot;color&quot;></label><br>\n    <label>Seviye: <input type=&quot;range&quot; min=&quot;1&quot; max=&quot;10&quot;></label><br>\n    <label>Dosya: <input type=&quot;file&quot;></label><br>\n    <label><input type=&quot;checkbox&quot;> Abone ol</label><br>\n    <button>Gonder</button>\n</form>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Renk secici hangi input tipiyle kullanilir?", "options": {"a": "range", "b": "picker", "c": "color", "d": "select"}, "correct_answer": "c", "explanation": "type='color' renk secicidir.", "source": "W3Schools"},
+      {"question_text": "Slider olarak hangi tip gorunur?", "options": {"a": "number", "b": "slider", "c": "range", "d": "scale"}, "correct_answer": "c", "explanation": "type='range' sliderdir.", "source": "W3Schools"},
+      {"question_text": "Dosya yuklemek icin hangi tip?", "options": {"a": "upload", "b": "file", "c": "document", "d": "image"}, "correct_answer": "b", "explanation": "type='file' dosya yukler.", "source": "MDN"},
+      {"question_text": "Radio butonlari hangi oznitelikle gruplanir?", "options": {"a": "id", "b": "class", "c": "name", "d": "group"}, "correct_answer": "c", "explanation": "Ayni name ile gruplanirlar.", "source": "MDN"},
+      {"question_text": "Artis miktarini hangi oznitelik belirler?", "options": {"a": "min", "b": "max", "c": "step", "d": "inc"}, "correct_answer": "c", "explanation": "step artis miktarini belirler.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 14,
+    "title": "Form Elemanlari",
+    "slug": "form-elemanlari",
+    "content": "<h2>Form Elemanlari</h2><h2>Select (Acilir Menu)</h2><pre><code>&lt;select name=&quot;sehir&quot;&gt;\n    &lt;option&gt;Istanbul&lt;/option&gt;\n    &lt;option&gt;Ankara&lt;/option&gt;\n&lt;/select&gt;</code></pre><h2>Textarea</h2><p>Cok satirli metin icin:</p><pre><code>&lt;textarea rows=&quot;4&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;</code></pre><h2>Button Tipleri</h2><ul><li><strong>submit:</strong> Formu gonderir (varsayilan)</li><li><strong>reset:</strong> Formu temizler</li><li><strong>button:</strong> Ozel islem</li></ul><h2>Fieldset ve Legend</h2><p>&lt;fieldset&gt; alanlari gruplar, &lt;legend&gt; baslik ekler.</p>",
+    "video_url": "https://www.youtube.com/embed/ok-plXXHlWw",
+    "code_example": "<form>\n    <fieldset>\n        <legend>Kullanici Bilgileri</legend>\n        <label>Ulke:\n            <select name=&quot;ulke&quot;>\n                <option>Turkiye</option>\n                <option>Almanya</option>\n            </select>\n        </label><br>\n        <label>Aciklama:<br>\n            <textarea rows=&quot;4&quot; cols=&quot;40&quot;></textarea>\n        </label><br>\n        <button>Kaydet</button>\n    </fieldset>\n</form>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Acilir menu hangi etiketle olusturulur?", "options": {"a": "<menu>", "b": "<dropdown>", "c": "<select>", "d": "<list>"}, "correct_answer": "c", "explanation": "<select> acilir menudur.", "source": "W3Schools"},
+      {"question_text": "Cok satirli metin icin hangisi?", "options": {"a": "<input type='text'>", "b": "<textarea>", "c": "<input type='multi'>", "d": "<paragraph>"}, "correct_answer": "b", "explanation": "<textarea> cok satirli metin icindir.", "source": "W3Schools"},
+      {"question_text": "<fieldset> ne icin kullanilir?", "options": {"a": "Alanlari gruplamak", "b": "Formu suslemek", "c": "Sifrelemek", "d": "Formu silmek"}, "correct_answer": "a", "explanation": "<fieldset> form alanlarini gruplar.", "source": "MDN"},
+      {"question_text": "Varsayilan button tipi hangisidir?", "options": {"a": "button", "b": "reset", "c": "submit", "d": "click"}, "correct_answer": "c", "explanation": "Varsayilan submit'tir.", "source": "W3Schools"},
+      {"question_text": "<legend> hangisiyle birlikte kullanilir?", "options": {"a": "<form>", "b": "<fieldset>", "c": "<select>", "d": "<textarea>"}, "correct_answer": "b", "explanation": "<legend> <fieldset> icinde kullanilir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 15,
+    "title": "Form Dogrulama",
+    "slug": "form-dogrulama",
+    "content": "<h2>HTML5 Form Dogrulama</h2><p>HTML5, form verilerini gondermeden once istemci tarafinda dogrulama yapar.</p><h2>Dogrulama Oznitelikleri</h2><ul><li><strong>required:</strong> Zorunlu alan</li><li><strong>minlength/maxlength:</strong> Karakter siniri</li><li><strong>min/max:</strong> Deger siniri</li><li><strong>pattern:</strong> Regex deseni</li></ul><pre><code>&lt;input type=&quot;text&quot; required&gt;\n&lt;input type=&quot;text&quot; minlength=&quot;3&quot; maxlength=&quot;20&quot;&gt;\n&lt;input type=&quot;number&quot; min=&quot;18&quot; max=&quot;65&quot;&gt;\n&lt;input type=&quot;text&quot; pattern=&quot;[0-9]{5}&quot;&gt;\n&lt;input type=&quot;email&quot; required&gt;</code></pre><div class='note'>pattern'de ^ ve $ otomatik eklenir.</div>",
+    "video_url": "",
+    "code_example": "<form>\n    <label>E-posta: <input type=&quot;email&quot; required></label><br>\n    <label>Sifre: <input type=&quot;password&quot; minlength=&quot;6&quot; required></label><br>\n    <label>Yas: <input type=&quot;number&quot; min=&quot;18&quot; max=&quot;65&quot;></label><br>\n    <label>Tel: <input type=&quot;text&quot; pattern=&quot;[0-9]{10}&quot;></label><br>\n    <button>Kaydol</button>\n</form>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Zorunlu alan icin hangi oznitelik?", "options": {"a": "mandatory", "b": "required", "c": "obligatory", "d": "force"}, "correct_answer": "b", "explanation": "required zorunlu yapar.", "source": "W3Schools"},
+      {"question_text": "Regex kontrolu icin hangisi?", "options": {"a": "regex", "b": "format", "c": "pattern", "d": "match"}, "correct_answer": "c", "explanation": "pattern regex icindir.", "source": "W3Schools"},
+      {"question_text": "Maksimum karakter sayisi hangi oznitelik?", "options": {"a": "minchar", "b": "maxchar", "c": "minlength", "d": "maxlength"}, "correct_answer": "d", "explanation": "maxlength karakter sinirlar.", "source": "MDN"},
+      {"question_text": "Hangi tip otomatik e-posta dogrulamasi yapar?", "options": {"a": "text", "b": "email", "c": "url", "d": "tel"}, "correct_answer": "b", "explanation": "type='email' e-posta dogrular.", "source": "W3Schools"},
+      {"question_text": "HTML5 dogrulama hangi tarafta calisir?", "options": {"a": "Sunucu", "b": "Istemci", "c": "Veritabani", "d": "Proxy"}, "correct_answer": "b", "explanation": "Istemci tarafinda (tarayicida) calisir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 16,
+    "title": "Multimedia - Video",
+    "slug": "multimedia-video",
+    "content": "<h2>HTML5 Video</h2><p>&lt;video&gt; etiketi ile web sayfasina video eklenir.</p><pre><code>&lt;video width=&quot;640&quot; height=&quot;360&quot; controls&gt;\n    &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;&gt;\n    &lt;source src=&quot;video.webm&quot; type=&quot;video/webm&quot;&gt;\n    Tarayiciniz desteklemiyor.\n&lt;/video&gt;</code></pre><h2>Oznitelikler</h2><ul><li><strong>controls:</strong> Oynatma kontrolleri</li><li><strong>autoplay:</strong> Otomatik oynatma</li><li><strong>loop:</strong> Dongu</li><li><strong>muted:</strong> Sessiz</li><li><strong>poster:</strong> On izleme resmi</li></ul><div class='tip'>MP4 en yaygin video formatidir. WebM de ekleyin.</div>",
+    "video_url": "",
+    "code_example": "<video width=&quot;100%&quot; controls>\n    <source src=&quot;https://www.w3schools.com/html/mov_bbb.mp4&quot; type=&quot;video/mp4&quot;>\n    Tarayiciniz desteklemiyor.\n</video>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Video hangi etiketle eklenir?", "options": {"a": "<media>", "b": "<movie>", "c": "<video>", "d": "<player>"}, "correct_answer": "c", "explanation": "<video> ile video eklenir.", "source": "W3Schools"},
+      {"question_text": "Kontrolleri gostermek icin hangi oznitelik?", "options": {"a": "showcontrols", "b": "controls", "c": "playbar", "d": "toolbar"}, "correct_answer": "b", "explanation": "controls kontrolleri gosterir.", "source": "W3Schools"},
+      {"question_text": "Otomatik oynatma icin hangisi?", "options": {"a": "play", "b": "start", "c": "autoplay", "d": "auto"}, "correct_answer": "c", "explanation": "autoplay otomatik oynatir.", "source": "MDN"},
+      {"question_text": "En yaygin video formati hangisi?", "options": {"a": "AVI", "b": "MP4", "c": "MKV", "d": "FLV"}, "correct_answer": "b", "explanation": "MP4 en yaygin format.", "source": "W3Schools"},
+      {"question_text": "Autoplay icin hangisi zorunludur?", "options": {"a": "loop", "b": "poster", "c": "muted", "d": "preload"}, "correct_answer": "c", "explanation": "muted genellikle zorunludur.", "source": "MDN"}
+    ]
+},
+{
+    "order": 17,
+    "title": "Multimedia - Audio",
+    "slug": "multimedia-audio",
+    "content": "<h2>HTML5 Audio</h2><p>&lt;audio&gt; etiketi ile ses dosyasi eklenir.</p><pre><code>&lt;audio controls&gt;\n    &lt;source src=&quot;ses.mp3&quot; type=&quot;audio/mpeg&quot;&gt;\n    &lt;source src=&quot;ses.ogg&quot; type=&quot;audio/ogg&quot;&gt;\n    Tarayiciniz desteklemiyor.\n&lt;/audio&gt;</code></pre><h2>Oznitelikler</h2><ul><li>controls, autoplay, loop, muted, preload</li></ul><h2>Formatlar</h2><ul><li><strong>MP3:</strong> En yaygin</li><li><strong>WAV:</strong> Kaliteli ama buyuk</li><li><strong>OGG:</strong> Acik kaynak</li></ul>",
+    "video_url": "",
+    "code_example": "<audio controls>\n    <source src=&quot;https://www.w3schools.com/html/horse.mp3&quot; type=&quot;audio/mpeg&quot;>\n    Tarayiciniz desteklemiyor.\n</audio>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Ses dosyasi hangi etiketle eklenir?", "options": {"a": "<sound>", "b": "<music>", "c": "<audio>", "d": "<voice>"}, "correct_answer": "c", "explanation": "<audio> ile ses eklenir.", "source": "W3Schools"},
+      {"question_text": "En yaygin ses formati hangisi?", "options": {"a": "WAV", "b": "OGG", "c": "FLAC", "d": "MP3"}, "correct_answer": "d", "explanation": "MP3 en yaygindir.", "source": "W3Schools"},
+      {"question_text": "Kontroller hangi oznitelikle gosterilir?", "options": {"a": "show", "b": "controls", "c": "display", "d": "visible"}, "correct_answer": "b", "explanation": "controls kontrolleri icin.", "source": "MDN"},
+      {"question_text": "Neden birden cok source eklenir?", "options": {"a": "Kalite", "b": "Tarayici uyumlulugu", "c": "Hiz", "d": "Boyut"}, "correct_answer": "b", "explanation": "Farkli tarayicilar icin.", "source": "MDN"},
+      {"question_text": "Hangisi audio ozniteligi degildir?", "options": {"a": "controls", "b": "poster", "c": "loop", "d": "muted"}, "correct_answer": "b", "explanation": "poster video'ya aittir.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 18,
+    "title": "IFrame Kullanimi",
+    "slug": "iframe-kullanimi",
+    "content": "<h2>IFrame Nedir?</h2><p>&lt;iframe&gt; ile bir sayfaya baska bir sayfa gomulur. YouTube, Google Haritalar sikca iframe ile eklenir.</p><pre><code>&lt;iframe src=&quot;https://www.example.com&quot;\n    width=&quot;800&quot; height=&quot;600&quot;\n    title=&quot;Ornek&quot; allowfullscreen&gt;\n&lt;/iframe&gt;</code></pre><h2>Oznitelikler</h2><ul><li><strong>src:</strong> Kaynak URL</li><li><strong>width/height:</strong> Boyut</li><li><strong>title:</strong> Baslik (erisilebilirlik)</li><li><strong>allowfullscreen:</strong> Tam ekran izni</li><li><strong>sandbox:</strong> Guvenlik kisitlamalari</li></ul><div class='warning'>Guvenmediginiz kaynaklari sandbox ile ekleyin.</div>",
+    "video_url": "https://www.youtube.com/embed/GEM5Lp7Nc-M",
+    "code_example": "<iframe width=&quot;560&quot; height=&quot;315&quot;\n    src=&quot;https://www.youtube.com/embed/GEM5Lp7Nc-M&quot;\n    title=&quot;HTML Egitimi&quot; allowfullscreen>\n</iframe>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Sayfaya baska sayfa gommek icin hangi etiket?", "options": {"a": "<frame>", "b": "<embed>", "c": "<iframe>", "d": "<object>"}, "correct_answer": "c", "explanation": "<iframe> sayfa gomer.", "source": "W3Schools"},
+      {"question_text": "Guvenlik kisitlamalari icin hangi oznitelik?", "options": {"a": "security", "b": "restrict", "c": "sandbox", "d": "protect"}, "correct_answer": "c", "explanation": "sandbox guvenlik saglar.", "source": "MDN"},
+      {"question_text": "Tam ekran izni hangi oznitelik?", "options": {"a": "fullscreen", "b": "allowfullscreen", "c": "full-screen", "d": "allow-fullscreen"}, "correct_answer": "b", "explanation": "allowfullscreen tam ekran izni.", "source": "W3Schools"},
+      {"question_text": "IFrame boyutlari hangi ozniteliklerle belirlenir?", "options": {"a": "height/length", "b": "width/height", "c": "size/dimension", "d": "x/y"}, "correct_answer": "b", "explanation": "width ve height ile.", "source": "W3Schools"},
+      {"question_text": "Erisilebilirlik icin hangi oznitelik onemli?", "options": {"a": "name", "b": "alt", "c": "title", "d": "desc"}, "correct_answer": "c", "explanation": "title ekran okuyucular icindir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 19,
+    "title": "HTML5 Canvas",
+    "slug": "html5-canvas",
+    "content": "<h2>Canvas Nedir?</h2><p>&lt;canvas&gt; JavaScript ile grafik cizmek icin kullanilir. Oyun, animasyon, veri gorsellestirme gibi alanlarda kullanilir.</p><pre><code>&lt;canvas id=&quot;tuval&quot; width=&quot;400&quot; height=&quot;300&quot;\n    style=&quot;border:1px solid black;&quot;&gt;\n    Desteklenmiyor.\n&lt;/canvas&gt;</code></pre><h2>JavaScript ile Kullanim</h2><pre><code>&lt;script&gt;\n    var c = document.getElementById('tuval');\n    var ctx = c.getContext('2d');\n    ctx.fillStyle = 'red';\n    ctx.fillRect(50, 50, 150, 100);\n&lt;/script&gt;</code></pre><h2>Canvas ile Yapilabilecekler</h2><ul><li>Sekil cizimi</li><li>Metin yazma</li><li>Animasyon</li><li>Oyun</li></ul>",
+    "video_url": "",
+    "code_example": "<canvas id=&quot;myCanvas&quot; width=&quot;500&quot; height=&quot;300&quot; style=&quot;border:1px solid #ccc;&quot;></canvas>\n<script>\n    var c = document.getElementById('myCanvas');\n    var ctx = c.getContext('2d');\n    ctx.fillStyle = '#3498db';\n    ctx.fillRect(20, 20, 150, 100);\n    ctx.fillStyle = '#e74c3c';\n    ctx.beginPath();\n    ctx.arc(350, 70, 50, 0, 2 * Math.PI);\n    ctx.fill();\n    ctx.fillStyle = '#000';\n    ctx.font = '20px Arial';\n    ctx.fillText('Canvas Grafik', 150, 250);\n</script>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Canvas'ta hangi context kullanilir?", "options": {"a": "3d", "b": "2d", "c": "webgl", "d": "svg"}, "correct_answer": "b", "explanation": "2d context kullanilir.", "source": "W3Schools"},
+      {"question_text": "Canvas hangi tabanlidir?", "options": {"a": "Vektor", "b": "Bitmap (piksel)", "c": "Metin", "d": "Ses"}, "correct_answer": "b", "explanation": "Canvas piksel tabanlidir.", "source": "MDN"},
+      {"question_text": "fillRect() ne yapar?", "options": {"a": "Cizgi cizer", "b": "Dolu dikdortgen cizer", "c": "Daire cizer", "d": "Metin yazar"}, "correct_answer": "b", "explanation": "fillRect dolu dikdortgen cizer.", "source": "W3Schools"},
+      {"question_text": "Canvas'a cizim yapmak icin hangi dil?", "options": {"a": "Python", "b": "PHP", "c": "JavaScript", "d": "Java"}, "correct_answer": "c", "explanation": "JavaScript ile cizilir.", "source": "MDN"},
+      {"question_text": "getContext() ne doner?", "options": {"a": "HTML elementi", "b": "Cizim nesnesi", "c": "Renk", "d": "Sayi"}, "correct_answer": "b", "explanation": "Cizim context'i doner.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 20,
+    "title": "HTML5 SVG",
+    "slug": "html5-svg",
+    "content": "<h2>SVG Nedir?</h2><p>SVG (Scalable Vector Graphics), vektor tabanli grafiklerdir. HTML5 ile dogrudan kullanilabilir.</p><h2>SVG'nin Avantajlari</h2><ul><li>Olceklenebilir (kalite kaybi yok)</li><li>Kucuk dosya boyutu</li><li>CSS ve JS ile kontrol</li><li>SEO dostu</li></ul><pre><code>&lt;svg width=&quot;400&quot; height=&quot;200&quot;&gt;\n    &lt;rect x=&quot;10&quot; y=&quot;10&quot; width=&quot;100&quot; height=&quot;80&quot; fill=&quot;blue&quot;/&gt;\n    &lt;circle cx=&quot;200&quot; cy=&quot;50&quot; r=&quot;40&quot; fill=&quot;red&quot;/&gt;\n    &lt;text x=&quot;10&quot; y=&quot;190&quot;&gt;SVG Grafik&lt;/text&gt;\n&lt;/svg&gt;</code></pre><h2>SVG vs Canvas</h2><p>SVG vektor, Canvas bitmap tabanlidir. SVG DOM'a erisir, Canvas erisemez.</p>",
+    "video_url": "",
+    "code_example": "<svg width=&quot;300&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>\n    <rect x=&quot;20&quot; y=&quot;20&quot; width=&quot;120&quot; height=&quot;100&quot; rx=&quot;10&quot; fill=&quot;#3498db&quot; stroke=&quot;#2980b9&quot; stroke-width=&quot;3&quot;/>\n    <circle cx=&quot;220&quot; cy=&quot;70&quot; r=&quot;50&quot; fill=&quot;#e74c3c&quot; opacity=&quot;0.8&quot;/>\n    <text x=&quot;30&quot; y=&quot;160&quot; font-size=&quot;16&quot; fill=&quot;#333&quot;>SVG Ornegi</text>\n</svg>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/SVG",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "SVG acilimi nedir?", "options": {"a": "Standard Vector Graphics", "b": "Scalable Vector Graphics", "c": "Simple Visual Graphics", "d": "Scalable Visual Guide"}, "correct_answer": "b", "explanation": "Scalable Vector Graphics.", "source": "W3Schools"},
+      {"question_text": "SVG hangi tabanlidir?", "options": {"a": "Piksel", "b": "Vektor", "c": "Ses", "d": "Video"}, "correct_answer": "b", "explanation": "SVG vektor tabanlidir.", "source": "MDN"},
+      {"question_text": "SVG'nin avantaji hangisi?", "options": {"a": "Video oynatma", "b": "Olceklenebilirlik", "c": "Ses duzenleme", "d": "Veritabani"}, "correct_answer": "b", "explanation": "SVG kalite kaybi olmadan olceklenir.", "source": "W3Schools"},
+      {"question_text": "SVG'de daire hangi etiketle cizilir?", "options": {"a": "<circle>", "b": "<round>", "c": "<ellipse>", "d": "<sphere>"}, "correct_answer": "a", "explanation": "<circle> daire icin.", "source": "W3Schools"},
+      {"question_text": "SVG icin hangisi dogru?", "options": {"a": "DOM erisimi yok", "b": "CSS ile stillenebilir", "c": "Sadece animasyon", "d": "JS ile kullanilamaz"}, "correct_answer": "b", "explanation": "SVG CSS ile stillenebilir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 21,
+    "title": "Meta Etiketleri ve SEO",
+    "slug": "meta-etiketleri-ve-seo",
+    "content": "<h2>Meta Etiketleri</h2><p>&lt;meta&gt; etiketleri sayfa hakkinda bilgi verir. <head> icinde yer alir.</p><pre><code>&lt;meta charset=&quot;UTF-8&quot;&gt;\n&lt;meta name=&quot;description&quot; content=&quot;HTML rehberi&quot;&gt;\n&lt;meta name=&quot;keywords&quot; content=&quot;HTML, web&quot;&gt;\n&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;\n&lt;meta name=&quot;robots&quot; content=&quot;index, follow&quot;&gt;</code></pre><h2>Open Graph</h2><p>Sosyal medya paylasimlari icin:</p><pre><code>&lt;meta property=&quot;og:title&quot; content=&quot;HTML Egitimi&quot;&gt;\n&lt;meta property=&quot;og:description&quot; content=&quot;HTML ogrenin&quot;&gt;\n&lt;meta property=&quot;og:image&quot; content=&quot;https://site.com/resim.jpg&quot;&gt;</code></pre><div class='tip'>Description 150-160 karakter olmali.</div>",
+    "video_url": "",
+    "code_example": "<!DOCTYPE html>\n<html lang=&quot;tr&quot;>\n<head>\n    <meta charset=&quot;UTF-8&quot;>\n    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>\n    <meta name=&quot;description&quot; content=&quot;HTML dersleri ile sifirdan ileri seviyeye web gelistirme ogrenin.&quot;>\n    <meta name=&quot;keywords&quot; content=&quot;HTML, ders, egitim&quot;>\n    <meta property=&quot;og:title&quot; content=&quot;HTML Dersleri&quot;>\n    <title>HTML Dersleri</title>\n</head>\n<body>\n    <h1>HTML Ogreniyorum</h1>\n</body>\n</html>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Mobil uyumluluk hangi meta etiketiyle saglanir?", "options": {"a": "charset", "b": "viewport", "c": "description", "d": "author"}, "correct_answer": "b", "explanation": "viewport mobil uyumluluk icin.", "source": "MDN"},
+      {"question_text": "SEO icin sayfa aciklamasi hangi meta?", "options": {"a": "title", "b": "description", "c": "keywords", "d": "author"}, "correct_answer": "b", "explanation": "description SEO icin onemli.", "source": "W3Schools"},
+      {"question_text": "Open Graph hangi amacla kullanilir?", "options": {"a": "Veritabani", "b": "Sosyal medya", "c": "E-posta", "d": "Dosya yukleme"}, "correct_answer": "b", "explanation": "OG sosyal medya icindir.", "source": "MDN"},
+      {"question_text": "Karakter seti hangi meta ile belirtilir?", "options": {"a": "meta charset", "b": "meta encoding", "c": "meta language", "d": "meta unicode"}, "correct_answer": "a", "explanation": "charset karakter kodlamasidir.", "source": "W3Schools"},
+      {"question_text": "Arama motoru talimati hangi meta ile verilir?", "options": {"a": "index", "b": "robots", "c": "google", "d": "search"}, "correct_answer": "b", "explanation": "robots arama motoru talimati icin.", "source": "MDN"}
+    ]
+},
+{
+    "order": 22,
+    "title": "HTML Kod Yapisi ve IDler",
+    "slug": "html-kod-yapisi-ve-idler",
+    "content": "<h2>HTML ID Ozniteligi</h2><p>id bir elemente benzersiz kimlik verir. Sayfada ayni id'den sadece bir tane olabilir.</p><h2>Kullanim Alanlari</h2><ul><li>CSS (#id ile)</li><li>JavaScript (getElementById)</li><li>Sayfa ici baglanti (#id)</li><li>Form label eslestirme</li></ul><pre><code>&lt;nav&gt;\n    &lt;a href=&quot;#bolum1&quot;&gt;Bolum 1&lt;/a&gt;\n    &lt;a href=&quot;#iletisim&quot;&gt;Iletisim&lt;/a&gt;\n&lt;/nav&gt;\n\n&lt;section id=&quot;bolum1&quot;&gt;\n    &lt;h2&gt;Bolum 1&lt;/h2&gt;\n    &lt;p&gt;Icerik...&lt;/p&gt;\n&lt;/section&gt;\n\n&lt;footer id=&quot;iletisim&quot;&gt;\n    &lt;p&gt;Iletisim bilgileri...&lt;/p&gt;\n&lt;/footer&gt;</code></pre><h2>ID Kurallari</h2><ul><li>Benzersiz olmali</li><li>Bosluk icermemeli</li><li>Rakamla baslamamali</li></ul>",
+    "video_url": "",
+    "code_example": "<a href=&quot;#hakkimda&quot;>Hakkimda</a>\n<section id=&quot;hakkimda&quot;>\n    <h2>Hakkimda</h2>\n    <p>Ben bir web gelistiriciyim.</p>\n</section>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "id'ler sayfada nasil olmalidir?", "options": {"a": "Ayni olabilir", "b": "Benzersiz olmali", "c": "En az 3 tane", "d": "Opsiyonel"}, "correct_answer": "b", "explanation": "id'ler benzersiz olmali.", "source": "W3Schools"},
+      {"question_text": "Sayfa ici baglanti icin href'te ne kullanilir?", "options": {"a": "#id", "b": ".class", "c": "/id", "d": "~id"}, "correct_answer": "a", "explanation": "#id ile sayfa ici baglanti.", "source": "W3Schools"},
+      {"question_text": "id hangi karakterle baslayamaz?", "options": {"a": "Harf", "b": "Rakam", "c": "_", "d": "-"}, "correct_answer": "b", "explanation": "id rakamla baslayamaz.", "source": "MDN"},
+      {"question_text": "CSS'te id secici hangisidir?", "options": {"a": ".id", "b": "#id", "c": "*id", "d": "&id"}, "correct_answer": "b", "explanation": "#id CSS'te id secicidir.", "source": "W3Schools"},
+      {"question_text": "JavaScript'te id'ye erisim hangi methodla?", "options": {"a": "getByClass", "b": "getElementById", "c": "getByTag", "d": "getByName"}, "correct_answer": "b", "explanation": "getElementById() ile erisilir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 23,
+    "title": "HTML Classlar",
+    "slug": "html-classlar",
+    "content": "<h2>HTML Class Ozniteligi</h2><p>class ozniteligi birden fazla elemente ayni stili uygulamak icin kullanilir. Bir element birden fazla class'a sahip olabilir.</p><pre><code>&lt;!-- Tek class --&gt;\n&lt;div class=&quot;kutu&quot;&gt;Icerik&lt;/div&gt;\n\n&lt;!-- Birden fazla class --&gt;\n&lt;div class=&quot;kutu kirmizi kenar&quot;&gt;Icerik&lt;/div&gt;\n\n&lt;!-- CSS ile kullanim --&gt;\n&lt;style&gt;\n    .kutu { padding: 20px; }\n    .kirmizi { color: red; }\n&lt;/style&gt;</code></pre><h2>Class vs ID</h2><p>Class'lar birden fazla elementte kullanilabilir. ID'ler benzersiz olmalidir. CSS'te class icin nokta (.), ID icin # kullanilir.</p><div class='tip'>Bir elemente birden fazla class vermek icin boslukla ayirin: class=&quot;birinci ikinci&quot;</div>",
+    "video_url": "",
+    "code_example": "<style>\n    .card { border: 1px solid #ddd; padding: 15px; margin: 10px; }\n    .highlight { background: yellow; }\n</style>\n<div class=&quot;card&quot;>\n    <h3>Normal Kart</h3>\n</div>\n<div class=&quot;card highlight&quot;>\n    <h3>Vurgulanmis Kart</h3>\n</div>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Class'lar birden fazla elementte kullanilabilir mi?", "options": {"a": "Hayir, benzersiz olmali", "b": "Evet, kullanilabilir", "c": "Sadece 3 elementte", "d": "Sadece div'lerde"}, "correct_answer": "b", "explanation": "Class'lar birden cok elementte kullanilabilir.", "source": "W3Schools"},
+      {"question_text": "CSS'te class secici hangisidir?", "options": {"a": "#class", "b": ".class", "c": "*class", "d": "&class"}, "correct_answer": "b", "explanation": ".class class secicidir.", "source": "W3Schools"},
+      {"question_text": "Bir elemente birden fazla class nasil verilir?", "options": {"a": "class='bir,iki'", "b": "class='bir iki'", "c": "class='bir+iki'", "d": "class='bir;iki'"}, "correct_answer": "b", "explanation": "Boslukla ayrilir.", "source": "W3Schools"},
+      {"question_text": "Class ile ID arasindaki fark nedir?", "options": {"a": "ID birden cokta kullanilir", "b": "Class benzersizdir", "c": "ID benzersizdir, class tekrarlanabilir", "d": "Fark yoktur"}, "correct_answer": "c", "explanation": "ID benzersiz, class tekrarlanabilir.", "source": "MDN"},
+      {"question_text": "Hangisi dogru class kullanimidir?", "options": {"a": "class='kutu'", "b": "class=kutu", "c": "class:=kutu", "d": "class:'kutu'"}, "correct_answer": "a", "explanation": "class=&quot;kutu&quot; dogru kullanim.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 24,
+    "title": "HTML Data Attribute",
+    "slug": "html-data-attribute",
+    "content": "<h2>Data Attribute Nedir?</h2><p>data-* oznitelikleri, HTML elementlerine ozel veri eklemek icin kullanilir. JavaScript ile bu verilere kolayca erisilebilir.</p><pre><code>&lt;!-- Data attribute kullanimi --&gt;\n&lt;button data-id=&quot;123&quot; data-kategori=&quot;html&quot;&gt;Tikla&lt;/button&gt;\n\n&lt;div data-user=&quot;{\\\"ad\\\": \\\"Ali\\\", \\\"yas\\\": 25}&quot;&gt;\n    Kullanici Bilgisi\n&lt;/div&gt;</code></pre><h2>JavaScript ile Erisim</h2><pre><code>&lt;script&gt;\n    var btn = document.querySelector('button');\n    console.log(btn.dataset.id);      // 123\n    console.log(btn.dataset.kategori); // html\n&lt;/script&gt;</code></pre><h2>Kullanim Alanlari</h2><ul><li>Ozel veri depolama</li><li>JavaScript iletisimi</li><li>Dinamik icerik yonetimi</li></ul><div class='note'>data- sonrasi gelen kisim dataset API ile camelCase'e donusur. Orn: data-user-id =&gt; dataset.userId</div>",
+    "video_url": "",
+    "code_example": "<ul>\n    <li data-id=&quot;1&quot; data-urun=&quot;laptop&quot; data-fiyat=&quot;15000&quot;>Dizustu Bilgisayar</li>\n    <li data-id=&quot;2&quot; data-urun=&quot;telefon&quot; data-fiyat=&quot;8000&quot;>Akilli Telefon</li>\n</ul>\n<script>\n    document.querySelectorAll('li').forEach(function(el) {\n        console.log(el.dataset.urun + ': ' + el.dataset.fiyat);\n    });\n</script>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Data attribute hangi amacla kullanilir?", "options": {"a": "Stil verme", "b": "Ozel veri depolama", "c": "Baglanti olusturma", "d": "Form gonderimi"}, "correct_answer": "b", "explanation": "data-* ozel veri depolamak icin.", "source": "W3Schools"},
+      {"question_text": "JavaScript'te data-user-id'ye nasil erisilir?", "options": {"a": "dataset.user-id", "b": "dataset.userId", "c": "data.userId", "d": "getAttr('user-id')"}, "correct_answer": "b", "explanation": "data-user-id = dataset.userId (camelCase).", "source": "MDN"},
+      {"question_text": "Data attribute nasil baslar?", "options": {"a": "data_", "b": "data-", "c": "attr-", "d": "custom-"}, "correct_answer": "b", "explanation": "data- ile baslar.", "source": "W3Schools"},
+      {"question_text": "Hangisi dogru data attribute kullanimidir?", "options": {"a": "data id='1'", "b": "data-id='1'", "c": "id-data='1'", "d": "data_id='1'"}, "correct_answer": "b", "explanation": "data-id='1' dogru kullanim.", "source": "W3Schools"},
+      {"question_text": "dataset API hangi dili kullanir?", "options": {"a": "Python", "b": "PHP", "c": "JavaScript", "d": "CSS"}, "correct_answer": "c", "explanation": "dataset JavaScript API'sidir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 25,
+    "title": "HTML Entities ve Karakter Kodlama",
+    "slug": "html-entities-ve-karakter-kodlama",
+    "content": "<h2>HTML Entities (Varliklar)</h2><p>HTML'de ozel karakterleri gostermek icin entity'ler kullanilir. &amp; ile baslar, ; ile biter.</p><pre><code>&amp;amp;   = &amp; (ampersand)\n&amp;lt;    = &lt; (kucuktur)\n&amp;gt;    = &gt; (buyuktur)\n&amp;nbsp;  = Bosluk (non-breaking space)\n&amp;quot;  = &quot; (cift tirnak)\n&amp;#169;  = &amp;copy; (telif hakki)\n&amp;#8364; = &amp;euro; (euro sembolu)</code></pre><h2>Neden Kullanilir?</h2><p>Tarayicilar &lt; ve &gt; i HTML etiketi olarak yorumlar. Bu karakterleri goruntulemek icin entity kullanmak gerekir.</p><pre><code>&lt;p&gt;HTML'de &amp;lt;h1&amp;gt; baslik etiketidir.&lt;/p&gt;\n&lt;!-- Gosterim: HTML'de &lt;h1&gt; baslik etiketidir. --&gt;</code></pre><h2>UTF-8 Karakter Kodlama</h2><p>&lt;meta charset=&quot;UTF-8&quot;&gt; ile Turkce karakterler (Ä±, ÅŸ, Ã§, Ã¼, ÄŸ, Ã¶) dogru goruntulenir.</p>",
+    "video_url": "",
+    "code_example": "<p>Entity ornekleri:</p>\n<p>1 &amp;lt; 2: 1 &lt; 2</p>\n<p>&amp;quot;Merhaba&amp;quot;: &quot;Merhaba&quot;</p>\n<p>Fiyat: 10 &amp;euro; (Euro)</p>\n<p>Telif hakki: &amp;copy; 2025</p>\n<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;Girintili metin</p>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Glossary/Entity",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "&amp; hangi karakteri temsil eder?", "options": {"a": "<", "b": ">", "c": "&", "d": "\""}, "correct_answer": "c", "explanation": "&amp; = & (ampersand).", "source": "W3Schools"},
+      {"question_text": "&lt; hangi karakterdir?", "options": {"a": "<", "b": ">", "c": "&", "d": " "}, "correct_answer": "a", "explanation": "&lt; = < (less than).", "source": "W3Schools"},
+      {"question_text": "Non-breaking space hangi entity'dir?", "options": {"a": "&amp;ensp;", "b": "&amp;nbsp;", "c": "&amp;sp;", "d": "&amp;space;"}, "correct_answer": "b", "explanation": "&amp;nbsp; non-breaking space.", "source": "W3Schools"},
+      {"question_text": "HTML'de neden entity kullanilir?", "options": {"a": "Daha hizli yukleme", "b": "Ozel karakterleri guvenle gosterme", "c": "SEO icin", "d": "CSS icin"}, "correct_answer": "b", "explanation": "Ozel karakterleri HTML'de guvenle gostermek icin.", "source": "MDN"},
+      {"question_text": "Turkce karakterler icin hangi charset kullanilmalidir?", "options": {"a": "ISO-8859-1", "b": "UTF-8", "c": "ASCII", "d": "Windows-1252"}, "correct_answer": "b", "explanation": "UTF-8 Turkce karakterler icin en uygun.", "source": "MDN"}
+    ]
+},
+{
+    "order": 26,
+    "title": "HTML ve JavaScript",
+    "slug": "html-ve-javascript",
+    "content": "<h2>HTML ve JavaScript</h2><p>&lt;script&gt; etiketi ile HTML'e JavaScript eklenir. JavaScript, sayfaya etkilesim ve dinamik ozellikler kazandirir.</p><h2>Script Kullanimi</h2><pre><code>&lt;!-- Harici JS dosyasi --&gt;\n&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;\n\n&lt;!-- Sayfa ici JS --&gt;\n&lt;script&gt;\n    alert('Merhaba Dunya!');\n&lt;/script&gt;</code></pre><h2>Event Attributes (Olay Oznitelikleri)</h2><p>HTML elementlerine dogrudan JavaScript eklenebilir:</p><pre><code>&lt;button onclick=&quot;alert('Tiklandi!')&quot;&gt;Tikla&lt;/button&gt;\n\n&lt;input type=&quot;text&quot; onfocus=&quot;this.style.background='yellow'&quot;&gt;\n\n&lt;div onmouseover=&quot;this.style.color='red'&quot;&gt;\n    Uzerime Gel\n&lt;/div&gt;</code></pre><h2>Script Yerlestirme</h2><ul><li>&lt;head&gt; icinde: Sayfa yuklenirken calisir</li><li>&lt;body&gt; sonunda: Sayfa yuklendikten sonra</li><li>async/defer: Performans icin</li></ul><div class='tip'>Modern web'de script'leri body sonunda veya defer ile yukleyin.</div>",
+    "video_url": "",
+    "code_example": "<button onclick=&quot;document.getElementById('mesaj').innerHTML = 'Butona tiklandi!'&quot;>\n    Tikla\n</button>\n<p id=&quot;mesaj&quot;></p>\n\n<script>\n    function tarihGoster() {\n        document.getElementById('tarih').innerHTML = new Date();\n    }\n</script>\n<button onclick=&quot;tarihGoster()&quot;>Tarihi Goster</button>\n<p id=&quot;tarih&quot;></p>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "HTML'e JS eklemek icin hangi etiket kullanilir?", "options": {"a": "<javascript>", "b": "<script>", "c": "<code>", "d": "<js>"}, "correct_answer": "b", "explanation": "<script> JS ekler.", "source": "W3Schools"},
+      {"question_text": "Hangi event attribute butona tiklandiginda calisir?", "options": {"a": "onhover", "b": "onclick", "c": "onpress", "d": "ontap"}, "correct_answer": "b", "explanation": "onclick tiklanma olayi.", "source": "W3Schools"},
+      {"question_text": "Harici JS dosyasi hangi oznitelikle eklenir?", "options": {"a": "href", "b": "src", "c": "link", "d": "file"}, "correct_answer": "b", "explanation": "src ile harici dosya eklenir.", "source": "MDN"},
+      {"question_text": "Script'lerin performansli yuklenmesi icin hangisi kullanilir?", "options": {"a": "async/defer", "b": "fast/quick", "c": "sync/load", "d": "pre/post"}, "correct_answer": "a", "explanation": "async ve defer performans icin.", "source": "MDN"},
+      {"question_text": "Hangisi bir JavaScript event ozniteligidir?", "options": {"a": "onload", "b": "onhtml", "c": "onweb", "d": "oncode"}, "correct_answer": "a", "explanation": "onload sayfa yuklenme olayi.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 27,
+    "title": "HTML ve CSS",
+    "slug": "html-ve-css",
+    "content": "<h2>HTML ve CSS</h2><p>CSS (Cascading Style Sheets), HTML elementlerini stillendirmek icin kullanilir. UC farkli yontemle CSS eklenebilir.</p><h2>1. Inline CSS</h2><p>style ozniteligi ile dogrudan elemente:</p><pre><code>&lt;p style=&quot;color: blue; font-size: 18px;&quot;&gt;Mavi metin&lt;/p&gt;</code></pre><h2>2. Internal CSS (Sayfa Ici)</h2><p>&lt;style&gt; etiketi ile head icinde:</p><pre><code>&lt;head&gt;\n    &lt;style&gt;\n        p { color: red; }\n        .kutu { background: yellow; }\n    &lt;/style&gt;\n&lt;/head&gt;</code></pre><h2>3. External CSS (Harici Dosya)</h2><p>&lt;link&gt; etiketi ile harici CSS dosyasi:</p><pre><code>&lt;head&gt;\n    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;\n&lt;/head&gt;</code></pre><div class='tip'>En iyi yontem external CSS'dir. Kod tekrarini onler ve bakimi kolaylastirir.</div>",
+    "video_url": "",
+    "code_example": "<!DOCTYPE html>\n<html>\n<head>\n    <style>\n        body { font-family: Arial; margin: 20px; }\n        h1 { color: #2c3e50; }\n        .kart { border: 1px solid #ddd; padding: 15px; border-radius: 5px; }\n    </style>\n</head>\n<body>\n    <h1>CSS Ornegi</h1>\n    <div class=&quot;kart&quot;>\n        <p style=&quot;color: #e74c3c;&quot;>Bu kirmizi inline CSS'dir.</p>\n        <p>Bu paragraf internal CSS ile stillenir.</p>\n    </div>\n</body>\n</html>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Inline CSS hangi oznitelikle kullanilir?", "options": {"a": "class", "b": "style", "c": "css", "d": "design"}, "correct_answer": "b", "explanation": "style ozniteligi inline CSS icin.", "source": "W3Schools"},
+      {"question_text": "Harici CSS dosyasi hangi etiketle eklenir?", "options": {"a": "<script>", "b": "<style>", "c": "<link>", "d": "<css>"}, "correct_answer": "c", "explanation": "<link> ile harici CSS eklenir.", "source": "W3Schools"},
+      {"question_text": "Internal CSS hangi etiket icinde yazilir?", "options": {"a": "<head>", "b": "<body>", "c": "<footer>", "d": "<html>"}, "correct_answer": "a", "explanation": "<style> <head> icinde yazilir.", "source": "MDN"},
+      {"question_text": "En iyi CSS yontemi hangisidir?", "options": {"a": "Inline", "b": "Internal", "c": "External", "d": "Hepsi ayni"}, "correct_answer": "c", "explanation": "External CSS en iyi pratiktir.", "source": "MDN"},
+      {"question_text": "link etiketinde rel ozniteligi hangi degeri alir?", "options": {"a": "css", "b": "stylesheet", "c": "style", "d": "design"}, "correct_answer": "b", "explanation": "rel='stylesheet' CSS icin.", "source": "W3Schools"}
+    ]
+},
+{
+    "order": 28,
+    "title": "HTML Erisilebilirlik (Accessibility)",
+    "slug": "html-erisilebilirlik-accessibility",
+    "content": "<h2>HTML Erisilebilirlik (a11y)</h2><p>Erisilebilirlik, web sitelerinin herkes tarafindan kullanilabilmesini saglar. Gorme engelli, isitme engelli ve diger engelli kullanicilar icin onemlidir.</p><h2>Temel Erisilebilirlik Ilkeleri</h2><ul><li><strong>alt metin:</strong> Gorsellere aciklama ekleyin</li><li><strong>label:</strong> Form alanlarina label ekleyin</li><li><strong>ARIA:</strong> Erisilebilirlik icin ozel oznitelikler</li><li><strong>role:</strong> Elementlerin rolunu belirtin</li><li><strong>tabindex:</strong> Klavye navigasyonu</li></ul><pre><code>&lt;!-- ARIA label --&gt;\n&lt;button aria-label=&quot;Kapat&quot; onclick=&quot;close()&quot;&gt;X&lt;/button&gt;\n\n&lt;!-- ARIA role --&gt;\n&lt;nav role=&quot;navigation&quot;&gt;\n    &lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;\n&lt;/nav&gt;\n\n&lt;!-- tabindex ile klavye sirasi --&gt;\n&lt;button tabindex=&quot;1&quot;&gt;Ilk&lt;/button&gt;\n&lt;button tabindex=&quot;2&quot;&gt;Ikinci&lt;/button&gt;\n\n&lt;!-- aria-labelledby --&gt;\n&lt;h2 id=&quot;baslik&quot;&gt;Projeler&lt;/h2&gt;\n&lt;div aria-labelledby=&quot;baslik&quot;&gt;\n    &lt;p&gt;Proje icerigi...&lt;/p&gt;\n&lt;/div&gt;</code></pre><div class='important'>WCAG (Web Content Accessibility Guidelines) standartlarina uymak yasal bir zorunluluk olabilir.</div>",
+    "video_url": "",
+    "code_example": "<!DOCTYPE html>\n<html lang=&quot;tr&quot;>\n<head>\n    <title>Erisilebilir Sayfa</title>\n</head>\n<body>\n    <header role=&quot;banner&quot;>\n        <h1>Erisilebilir Web Sitesi</h1>\n    </header>\n    <nav role=&quot;navigation&quot; aria-label=&quot;Ana Menu&quot;>\n        <a href=&quot;#&quot; tabindex=&quot;1&quot;>Ana Sayfa</a>\n        <a href=&quot;#&quot; tabindex=&quot;2&quot;>Hakkimda</a>\n    </nav>\n    <main role=&quot;main&quot;>\n        <img src=&quot;foto.jpg&quot; alt=&quot;Proje ekibinin grup fotografi&quot;>\n        <form>\n            <label for=&quot;ad&quot;>Adiniz:</label>\n            <input type=&quot;text&quot; id=&quot;ad&quot; name=&quot;ad&quot; aria-required=&quot;true&quot;>\n            <button aria-label=&quot;Formu Gonder&quot;>Gonder</button>\n        </form>\n    </main>\n</body>\n</html>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Gorsellere hangi oznitelik eklenmelidir?", "options": {"a": "title", "b": "alt", "c": "desc", "d": "caption"}, "correct_answer": "b", "explanation": "alt metni erisilebilirlik icin.", "source": "W3Schools"},
+      {"question_text": "ARIA acilimi nedir?", "options": {"a": "Accessible Rich Internet Applications", "b": "Advanced Resource Interface Access", "c": "Automated Response Internet App", "d": "Accessible Reduced Interface App"}, "correct_answer": "a", "explanation": "ARIA = Accessible Rich Internet Applications.", "source": "MDN"},
+      {"question_text": "Klavye navigasyon sirasi hangi oznitelikle belirlenir?", "options": {"a": "taborder", "b": "tabindex", "c": "keynav", "d": "focusorder"}, "correct_answer": "b", "explanation": "tabindex klavye sirasini belirler.", "source": "W3Schools"},
+      {"question_text": "Bir elementin rolunu belirtmek icin hangi oznitelik kullanilir?", "options": {"a": "type", "b": "role", "c": "function", "d": "purpose"}, "correct_answer": "b", "explanation": "role ozniteligi elementi tanimlar.", "source": "MDN"},
+      {"question_text": "Erisilebilirlik standartlari hangi kisaltmayla bilinir?", "options": {"a": "WCAG", "b": "W3C", "c": "HTTP", "d": "HTML"}, "correct_answer": "a", "explanation": "WCAG = Web Content Accessibility Guidelines.", "source": "MDN"}
+    ]
+},
+{
+    "order": 29,
+    "title": "HTML Optimizasyonu",
+    "slug": "html-optimizasyonu",
+    "content": "<h2>HTML Optimizasyonu</h2><p>Web sayfasi performansini artirmak icin HTML optimizasyonu onemlidir. Hizli yuklenen sayfalar daha iyi kullanici deneyimi ve SEO saglar.</p><h2>En Iyi Pratikler</h2><ul><li><strong>Semantic HTML kullanin:</strong> Dogru etiketlerle erisilebilirlik ve SEO</li><li><strong>CSS ve JS dosyalarini birlestirin:</strong> HTTP isteklerini azaltin</li><li><strong>Gorselleri optimize edin:</strong> WebP kullanin, boyutlandirin</li><li><strong>Lazy loading:</strong> Gorselleri ihtiyac aninda yukleyin</li></ul><pre><code>&lt;!-- Lazy loading --&gt;\n&lt;img src=&quot;buyuk-resim.jpg&quot; loading=&quot;lazy&quot; alt=&quot;Buyuk resim&quot;&gt;\n\n&lt;!-- Async script --&gt;\n&lt;script src=&quot;analytics.js&quot; async&gt;&lt;/script&gt;\n\n&lt;!-- Defer script --&gt;\n&lt;script src=&quot;app.js&quot; defer&gt;&lt;/script&gt;\n\n&lt;!-- Preload onemli kaynaklar --&gt;\n&lt;link rel=&quot;preload&quot; href=&quot;font.woff2&quot; as=&quot;font&quot;&gt;</code></pre><h2>Performans Metrikleri</h2><ul><li>First Contentful Paint (FCP)</li><li>Largest Contentful Paint (LCP)</li><li>Cumulative Layout Shift (CLS)</li><li>Time to Interactive (TTI)</li></ul>",
+    "video_url": "",
+    "code_example": "<!DOCTYPE html>\n<html lang=&quot;tr&quot;>\n<head>\n    <meta charset=&quot;UTF-8&quot;>\n    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>\n    <title>Optimize Sayfa</title>\n    <!-- CSS erken yuklenir -->\n    <link rel=&quot;stylesheet&quot; href=&quot;style.min.css&quot;>\n    <!-- Onemli font onceden yuklenir -->\n    <link rel=&quot;preload&quot; href=&quot;fonts/roboto.woff2&quot; as=&quot;font&quot; crossorigin>\n</head>\n<body>\n    <h1>Optimize Sayfa</h1>\n    <img src=&quot;resim.webp&quot; alt=&quot;Optimize resim&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;400&quot;>\n    <!-- JS sayfa sonunda yuklenir -->\n    <script src=&quot;app.js&quot; defer></script>\n    <script src=&quot;analytics.js&quot; async></script>\n</body>\n</html>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/Performance",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Gorsellerin ihtiyac aninda yuklenmesi hangi tekniktir?", "options": {"a": "Eager loading", "b": "Lazy loading", "c": "Fast loading", "d": "Pre loading"}, "correct_answer": "b", "explanation": "Lazy loading ihtiyac aninda yukler.", "source": "W3Schools"},
+      {"question_text": "Script'lerin sayfa yuklenmesini engellememesi icin hangisi kullanilir?", "options": {"a": "async/defer", "b": "fast/quick", "c": "sync/load", "d": "pre/post"}, "correct_answer": "a", "explanation": "async/defer sayfa blokajini onler.", "source": "MDN"},
+      {"question_text": "Hangi gorsel formati daha kucuk boyutludur?", "options": {"a": "JPEG", "b": "PNG", "c": "WebP", "d": "BMP"}, "correct_answer": "c", "explanation": "WebP daha kucuk boyutludur.", "source": "MDN"},
+      {"question_text": "Onemli kaynaklari onceden yuklemek icin hangi rel degeri kullanilir?", "options": {"a": "prefetch", "b": "preload", "c": "preconnect", "d": "prerender"}, "correct_answer": "b", "explanation": "rel='preload' onceden yukler.", "source": "W3Schools"},
+      {"question_text": "Hangisi bir performans metrigidir?", "options": {"a": "HTML", "b": "LCP", "c": "HTTP", "d": "URL"}, "correct_answer": "b", "explanation": "LCP Largest Contentful Paint metrigidir.", "source": "MDN"}
+    ]
+},
+{
+    "order": 30,
+    "title": "HTML Proje - Kisisel Portfoy Sayfasi",
+    "slug": "html-proje-kisisel-portfoy-sayfasi",
+    "content": "<h2>HTML Proje: Kisisel Portfoy Sayfasi</h2><p>Bu derste ogrendiklerimizle kapsamli bir kisisel portfoy sayfasi olusturacagiz.</p><h2>Proje Icerigi</h2><ul><li>Semantic HTML yapisi</li><li>Navigasyon menusu</li><li>Hakkimda bolumu</li><li>Projeler galerisi</li><li>Iletisim formu</li><li>Footer</li></ul><h2>Kullanilan HTML Elementleri</h2><ul><li>header, nav, main, section, article, footer</li><li>h1-h3, p, ul, li</li><li>a, img</li><li>form, input, textarea, button</li><li>div, span</li></ul><p>Iste tam bir portfoy sayfasi ornegi:</p>",
+    "video_url": "https://www.youtube.com/embed/GEM5Lp7Nc-M",
+    "code_example": "<!DOCTYPE html>\n<html lang=&quot;tr&quot;>\n<head>\n    <meta charset=&quot;UTF-8&quot;>\n    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>\n    <meta name=&quot;description&quot; content=&quot;Kisisel portfoy sayfam&quot;>\n    <title>Portfoy</title>\n</head>\n<body>\n    <header>\n        <h1>Ahmet Yilmaz</h1>\n        <nav>\n            <a href=&quot;#hakkimda&quot;>Hakkimda</a>\n            <a href=&quot;#projeler&quot;>Projeler</a>\n            <a href=&quot;#iletisim&quot;>Iletisim</a>\n        </nav>\n    </header>\n    <main>\n        <section id=&quot;hakkimda&quot;>\n            <h2>Hakkimda</h2>\n            <img src=&quot;profil.jpg&quot; alt=&quot;Profil fotografi&quot; width=&quot;200&quot; height=&quot;200&quot;>\n            <p>Merhaba! Ben Ahmet, web gelistiriciyim.</p>\n        </section>\n        <section id=&quot;projeler&quot;>\n            <h2>Projelerim</h2>\n            <article>\n                <h3>Web Sitesi</h3>\n                <p>HTML ve CSS ile kurumsal site</p>\n            </article>\n            <article>\n                <h3>E-Ticaret</h3>\n                <p>Online satis platformu</p>\n            </article>\n        </section>\n        <section id=&quot;iletisim&quot;>\n            <h2>Iletisim</h2>\n            <form action=&quot;/mesaj&quot; method=&quot;POST&quot;>\n                <label for=&quot;adi&quot;>Adiniz:</label>\n                <input type=&quot;text&quot; id=&quot;adi&quot; name=&quot;adi&quot; required>\n                <label for=&quot;eposta&quot;>E-posta:</label>\n                <input type=&quot;email&quot; id=&quot;eposta&quot; name=&quot;eposta&quot; required>\n                <label for=&quot;mesaj&quot;>Mesajiniz:</label>\n                <textarea id=&quot;mesaj&quot; name=&quot;mesaj&quot; rows=&quot;5&quot;></textarea>\n                <button type=&quot;submit&quot;>Gonder</button>\n            </form>\n        </section>\n    </main>\n    <footer>\n        <p>&amp;copy; 2025 Ahmet Yilmaz. Tum haklari saklidir.</p>\n    </footer>\n</body>\n</html>",
+    "source_ref": "MDN: https://developer.mozilla.org/en-US/docs/Web/HTML",
+    "source": "MDN Web Docs, W3Schools, HTML.com",
+    "quiz": [
+      {"question_text": "Portfoy sayfasinda hangi semantic element kullanilmali?", "options": {"a": "Sadece div", "b": "header, nav, main, section, footer", "c": "Sadece p", "d": "Sadece table"}, "correct_answer": "b", "explanation": "Semantic elementler sayfayi yapilandirir.", "source": "MDN"},
+      {"question_text": "Iletisim formunda hangi input tipleri kullanilmali?", "options": {"a": "Sadece text", "b": "text, email, textarea", "c": "Sadece button", "d": "Sadece password"}, "correct_answer": "b", "explanation": "Formda uygun input tipleri kullanilmali.", "source": "W3Schools"},
+      {"question_text": "Projeler bolumunde hangi element kullanilmali?", "options": {"a": "<div>", "b": "<article>", "c": "<table>", "d": "<form>"}, "correct_answer": "b", "explanation": "<article> bagimsiz projeler icin.", "source": "MDN"},
+      {"question_text": "Navigasyon hangi elementle olusturulur?", "options": {"a": "<header>", "b": "<nav>", "c": "<ul>", "d": "<menu>"}, "correct_answer": "b", "explanation": "<nav> navigasyon icin.", "source": "W3Schools"},
+      {"question_text": "Sayfa alt bilgisi hangi elementle yapilir?", "options": {"a": "<header>", "b": "<footer>", "c": "<aside>", "d": "<section>"}, "correct_answer": "b", "explanation": "<footer> alt bilgi icin.", "source": "W3Schools"}
+    ]
+}
+]
