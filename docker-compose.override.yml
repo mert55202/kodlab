@@ -1,0 +1,12 @@
+services:
+  nginx:
+    ports: !override
+      - "8115:80"
+  mysql:
+    ports: !override
+      - "33115:3306"
+    mem_limit: 384m
+  phpmyadmin:
+    profiles: ["tools"]
+    ports:
+      - "9115:80"
